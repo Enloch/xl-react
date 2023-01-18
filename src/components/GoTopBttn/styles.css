@@ -1,0 +1,51 @@
+.top-to-btm {
+  position: relative;
+}
+
+.icon-position {
+  position: fixed;
+  top: 30px;
+  left: 25px;
+  z-index: 20;
+}
+
+
+.icon-style {
+  height: 4em;
+  width: 3em;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+@media screen and (max-width: 980px) {
+  .icon-position {
+      position: fixed;
+      top: 30px;
+      left: 10px;
+      z-index: 20;
+    }
+  .icon-style {
+    height: 4em;
+    width: 3em;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+  }
+}
+@media screen and (max-width: 480px) {
+  .icon-style {
+    height: 4em;
+    width: 3em;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+  }
+}
+
+.icon-style:hover {
+  animation: none;
+}
+
+@keyframes movebtn {
+  from {}
+  to{}
+}
