@@ -66,6 +66,7 @@ export const SidebarWrapper = styled.div`
     grid-column-start: 1;
   }
 `;
+
 export const SidebarWrapper2 = styled.div`
   grid-column-start: 2;
   grid-row-start: 1;
@@ -108,6 +109,35 @@ export const SidebarLink = styled(LinkScroll)`
 
     color: #fff;
   }
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5rem;
+  transition: 0.4s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+  border-top: 1px solid #fff;
+
+  :hover {
+    color: rgba(85, 113, 119);
+    transform: translateX(20px);
+    transition: 0.2s ease-in-out;
+  }
+`;
+export const SidebarLink3 = styled(LinkRouter)`
+  ::before {
+    content: counter(counter, decimal-leading-zero);
+    counter-increment: counter;
+
+    position: absolute;
+    right: calc(100% + 20px);
+
+    border-top: 1px solid transparent; // para que tenga el mismo tamaño que el a de StyledElementoLista
+    padding: 0.625rem 0;
+
+    color: #fff;
+  }
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: left;

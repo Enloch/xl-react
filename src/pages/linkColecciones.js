@@ -178,6 +178,8 @@ import PrivSection from "../modules/10_PrivacidadSection";
 import { privObj } from "../modules/10_PrivacidadSection/data";
 import LegalSection from "../modules/11_LegalSection";
 import { legalObj } from "../modules/11_LegalSection/data";
+import ContactoSection from "../modules/12_Contacto";
+import { contactoObj } from "../modules/12_Contacto/data";
 import Intercambiador from "./intercambiador";
 import Rotador from "./rotador";
 const PaginasColeccion = () => {
@@ -191,6 +193,7 @@ const PaginasColeccion = () => {
         <Route path="/bath" element={<Bath />} />
         <Route path="/privacidad" element={<PrivSection {...privObj} />} />
         <Route path="/legal" element={<LegalSection {...legalObj} />} />
+        <Route path="/contacto" element={<ContactoSection {...contactoObj} />} />
         <Route path="/intercambiador" element={<Intercambiador />} />
         <Route path="/rotador" element={<Rotador />} />
         {/* ---------------------Cementos--------------------- */}
