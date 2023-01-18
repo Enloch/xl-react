@@ -24,6 +24,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/wega-black",
     urlsiguiente: "/en/colecciones/allure-light-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "allure_light_grey",
@@ -45,6 +47,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/allure-anthracite",
     urlsiguiente: "/en/colecciones/amsterdam-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "amsterdam_grey",
@@ -67,6 +71,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/allure-light-grey",
     urlsiguiente: "/en/colecciones/basalt-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "basalt_grey",
@@ -85,6 +91,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/amsterdam-grey",
     urlsiguiente: "/en/colecciones/basaltina-beige",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "basaltina_beige",
@@ -103,6 +111,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/basalt-grey",
     urlsiguiente: "/en/colecciones/bateig-blue",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "bateig_blue",
@@ -125,6 +135,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/basaltina-beige",
     urlsiguiente: "/en/colecciones/bera-ice",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "bera_ice",
@@ -147,6 +159,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/bateig-blue",
     urlsiguiente: "/en/colecciones/beren-black",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "beren_black",
@@ -169,6 +183,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/bera-ice",
     urlsiguiente: "/en/colecciones/beren-light-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "beren_light_grey",
@@ -191,6 +207,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/beren-black",
     urlsiguiente: "/en/colecciones/camargue-arena",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "camargue_arena",
@@ -209,6 +227,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/beren-light-grey",
     urlsiguiente: "/en/colecciones/camargue-blanco",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "camargue_blanco",
@@ -227,6 +247,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/camargue-arena",
     urlsiguiente: "/en/colecciones/edra-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "edra_grey",
@@ -249,6 +271,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/camargue-blanco",
     urlsiguiente: "/en/colecciones/edra-light",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "edra_light",
@@ -271,6 +295,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/edra-grey",
     urlsiguiente: "/en/colecciones/edra-sand",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "edra_sand",
@@ -293,6 +319,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/edra-light",
     urlsiguiente: "/en/colecciones/eme-light-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "eme_light_grey",
@@ -315,6 +343,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/edra-sand",
     urlsiguiente: "/en/colecciones/eme-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "eme_grey",
@@ -337,6 +367,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/eme-light-grey",
     urlsiguiente: "/en/colecciones/kendo-classic",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "kendo_classic",
@@ -359,6 +391,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/eme-grey",
     urlsiguiente: "/en/colecciones/kendo-light",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "kendo_light",
@@ -381,6 +415,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/kendo-classic",
     urlsiguiente: "/en/colecciones/noon-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "noon_grey",
@@ -403,6 +439,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/kendo-light",
     urlsiguiente: "/en/colecciones/noon-sand",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "noon_sand",
@@ -425,6 +463,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/noon-grey",
     urlsiguiente: "/en/colecciones/porfido-brown",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "porfido_brown",
@@ -443,6 +483,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/noon-sand",
     urlsiguiente: "/en/colecciones/porfido-sand",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "porfido_sand",
@@ -461,6 +503,8 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/porfido-brown",
     urlsiguiente: "/en/colecciones/wega-black",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "wega_black",
@@ -483,5 +527,7 @@ export const PaginasPiedra = [
     altVid: "video",
     urlanterior: "/en/colecciones/porfido-sand",
     urlsiguiente: "/en/colecciones/allure-anthracite",
+    pdfNombre: "",
+    pdfLink: "",
   },
 ];

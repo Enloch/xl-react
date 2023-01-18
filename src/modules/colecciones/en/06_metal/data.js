@@ -19,6 +19,8 @@ export const PaginasMetal = [
     altVid: "video",
     urlanterior: "/en/en/colecciones/lava-iron",
     urlsiguiente: "/en/en/colecciones/distrito-marfil",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "distrito_marfil",
@@ -36,6 +38,8 @@ export const PaginasMetal = [
     altVid: "video",
     urlanterior: "/en/en/colecciones/distrito-aluminio",
     urlsiguiente: "/en/en/colecciones/lava-iron",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "lava_iron",
@@ -54,5 +58,7 @@ export const PaginasMetal = [
     altVid: "video",
     urlanterior: "/en/en/colecciones/distrito-marfil",
     urlsiguiente: "/en/en/colecciones/distrito-aluminio",
+    pdfNombre: "",
+    pdfLink: "",
   },
 ];

@@ -22,6 +22,8 @@ export const PaginasMadera = [
     altVid: "video",
     urlanterior: "/en/colecciones/irati-abeto",
     urlsiguiente: "/en/colecciones/irati-abeto",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "irati_abeto",
@@ -40,5 +42,7 @@ export const PaginasMadera = [
     altVid: "video",
     urlanterior: "/en/colecciones/canada",
     urlsiguiente: "/en/colecciones/canada",
+    pdfNombre: "",
+    pdfLink: "",
   },
 ];
