@@ -39,21 +39,6 @@ import { PaginasMadera } from "../05_madera/data";
 import { PaginasMetal } from "../06_metal/data";
 import { PaginasPiedra } from "../07_piedra/data";
 
-// function onButtonClick(elemento){
-//   // using Java Script method to get PDF file
-//   fetch(elemento).then((response) => {
-//     response.blob().then((blob) => {
-//       // Creating new object of PDF file
-//       const fileURL = window.URL.createObjectURL(blob);
-//       // Setting various property values
-//       let alink = document.createElement("a");
-//       alink.href = fileURL;
-//       alink.download = elemento;
-//       alink.click();
-//     });
-//   });
-// };
-
 //cemento
 export const PagiCementoStyle1 = PaginasCemento.map((elemento) => (
   <>
@@ -108,13 +93,14 @@ export const PagiCementoStyle1 = PaginasCemento.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
-        <DescargaPdf href={elemento.pdfLink} download="">
-          <TextoDescarga >
-            Descarga ficha técnica //
-            Download Technical sheet
-          </TextoDescarga>
-          <DescargaPdfIcon />
-        </DescargaPdf>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -197,6 +183,14 @@ export const PagiCementoStyle2 = PaginasCemento.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -262,6 +256,14 @@ export const PagiCementoStyle3 = PaginasCemento.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -335,6 +337,14 @@ export const PagiColorStyle1 = PaginasColor.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -400,6 +410,14 @@ export const PagiColorStyle3 = PaginasColor.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -488,6 +506,14 @@ export const PagiColorStyle4 = PaginasColor.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -561,6 +587,14 @@ export const PagiMarmolesStyle1 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -585,8 +619,6 @@ export const PagiMarmolesStyle2 = PaginasMarmol.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} loading={"lazy"} />
@@ -643,6 +675,14 @@ export const PagiMarmolesStyle2 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -708,6 +748,14 @@ export const PagiMarmolesStyle3 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -732,8 +780,6 @@ export const PagiMarmolesStyle4 = PaginasMarmol.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} loading={"lazy"} />
@@ -796,6 +842,14 @@ export const PagiMarmolesStyle4 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -821,8 +875,6 @@ export const PagiMaderaStyle1 = PaginasMadera.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} />
@@ -871,6 +923,14 @@ export const PagiMaderaStyle1 = PaginasMadera.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -952,6 +1012,14 @@ export const PagiMaderaStyle2 = PaginasMadera.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -1025,6 +1093,14 @@ export const PagiMetalStyle1 = PaginasMetal.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -1107,6 +1183,14 @@ export const PagiMetalStyle2 = PaginasMetal.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -1172,6 +1256,14 @@ export const PagiMetalStyle3 = PaginasMetal.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -1245,6 +1337,14 @@ export const PagiPiedraStyle1 = PaginasPiedra.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -1327,6 +1427,14 @@ export const PagiPiedraStyle2 = PaginasPiedra.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
@@ -1392,6 +1500,14 @@ export const PagiPiedraStyle3 = PaginasPiedra.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>

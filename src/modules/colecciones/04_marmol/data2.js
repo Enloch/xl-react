@@ -23,6 +23,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/volakas",
     urlsiguiente: "/colecciones/atlantis",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "atlantis",
@@ -44,6 +46,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/arabescatto-corchia",
     urlsiguiente: "/colecciones/blanc-arabescato",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     // <----------------------------Falta Video!
@@ -66,6 +70,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/atlantis",
     urlsiguiente: "/colecciones/blanc-borghini",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "blanc_borghini",
@@ -89,6 +95,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/blanc-arabescato",
     urlsiguiente: "/colecciones/blanc-calacatta",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "blanc_calacatta",
@@ -112,6 +120,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/blanc-borghini",
     urlsiguiente: "/colecciones/blanc-calacatta-gold",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "blanc_calacatta_gold",
@@ -135,6 +145,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/blanc-calacatta",
     urlsiguiente: "/colecciones/blanc-invisible",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "blanc_invisible",
@@ -156,6 +168,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/blanc-calacatta-gold",
     urlsiguiente: "/colecciones/blanc-statuario-gold",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -180,6 +194,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/blanc-invisible",
     urlsiguiente: "/colecciones/blanc-statuarietto",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -202,6 +218,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/blanc-statuario-gold",
     urlsiguiente: "/colecciones/brazil-super-white",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "brazil_super_white",
@@ -226,6 +244,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/blanc-statuarietto",
     urlsiguiente: "/colecciones/calacatta",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "calacatta",
@@ -251,6 +271,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/brazil-super-white",
     urlsiguiente: "/colecciones/calacatta-gold",
+    pdfNombre: "Ficha-Técnica-Calacata",
+    pdfLink: "/downloads/Ficha-Técnica-Calacata.pdf",
   },
   {
     id: "calacatta_gold",
@@ -274,6 +296,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/calacatta",
     urlsiguiente: "/colecciones/calacatta-paonazzo",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     // <----------------------------Falta Video!
@@ -299,6 +323,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/calacatta-gold",
     urlsiguiente: "/colecciones/corinto",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -323,6 +349,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/calacatta-paonazzo",
     urlsiguiente: "/colecciones/cuarzo-reno",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -343,6 +371,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/corinto",
     urlsiguiente: "/colecciones/estatuario",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "estatuario",
@@ -367,6 +397,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/cuarzo-reno",
     urlsiguiente: "/colecciones/estatuario-bk-a",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -389,6 +421,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/estatuario",
     urlsiguiente: "/colecciones/iceberg",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "iceberg",
@@ -410,6 +444,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/estatuario-bk-a",
     urlsiguiente: "/colecciones/invisible-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -432,6 +468,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/iceberg",
     urlsiguiente: "/colecciones/lilac",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -456,6 +494,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/lilac",
     urlsiguiente: "/colecciones/negro-marquina",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -478,6 +518,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/lilac",
     urlsiguiente: "/colecciones/nero-ardi",
+    pdfNombre: "Ficha-Técnica-NegroMarquina",
+    pdfLink: "/downloads/Ficha-Técnica-NegroMarquina.pdf",
   },
 
   {
@@ -501,6 +543,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/negro-marquina",
     urlsiguiente: "/colecciones/paladio",
+    pdfNombre: "",
+    pdfLink: "",
   },
 
   {
@@ -525,6 +569,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/nero-ardi",
     urlsiguiente: "/colecciones/rosa-persia",
+    pdfNombre: "Ficha-Técnica-Paladio",
+    pdfLink: "/downloads/Ficha-Técnica-Paladio.pdf",
   },
   {
     id: "rosa_persia",
@@ -548,6 +594,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/paladio",
     urlsiguiente: "/colecciones/syrac",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "syrac",
@@ -570,6 +618,8 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/rosa-persia",
     urlsiguiente: "/colecciones/volakas",
+    pdfNombre: "Ficha-Técnica-Syrac",
+    pdfLink: "/downloads/Ficha-Técnica-Syrac.pdf",
   },
   {
     id: "volakas",
@@ -591,5 +641,7 @@ export const PaginasMarmol = [
     altVid: "video",
     urlanterior: "/colecciones/syrac",
     urlsiguiente: "/colecciones/arabescatto-corchia",
+    pdfNombre: "",
+    pdfLink: "",
   },
 ];

@@ -34,6 +34,7 @@ export const ContentWrapper = styled.div`
 
 export const Title = styled.p`
   grid-column: 2/6;
+  grid-row:1;
   //margin-left: 10rem;
   margin-bottom: 2.25rem;
   font-size: 40px;

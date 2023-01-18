@@ -30,6 +30,8 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/pure-super-white",
     urlsiguiente: "/colecciones/basic-negro",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "basic_negro",
@@ -52,6 +54,8 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/basic-blanco",
     urlsiguiente: "/colecciones/era-deep-black",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "era_deep_black",
@@ -74,6 +78,8 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/basic-negro",
     urlsiguiente: "/colecciones/era-grey",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "era_grey",
@@ -96,6 +102,8 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/era-deep-black",
     urlsiguiente: "/colecciones/era-infinity-white",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "era_infinity_white",
@@ -118,6 +126,8 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/era-grey",
     urlsiguiente: "/colecciones/era-white",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "era_white",
@@ -140,6 +150,8 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/era-infinity-white",
     urlsiguiente: "/colecciones/pure-black",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "pure_black",
@@ -158,6 +170,8 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/era-white",
     urlsiguiente: "/colecciones/pure-super-white",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "pure_super_white",
@@ -180,5 +194,7 @@ export const PaginasColor = [
     altVid: "video",
     urlanterior: "/colecciones/pure-black",
     urlsiguiente: "/colecciones/basic-blanco",
+    pdfNombre: "Ficha-Técnica-SuperWhite",
+    pdfLink: "/downloads/Ficha-Técnica-SuperWhite.pdf",
   },
 ];

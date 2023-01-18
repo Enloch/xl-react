@@ -40,8 +40,8 @@ export const PaginasCemento = [
     altVid: "video",
     urlanterior: "/colecciones/blue-stone-gris",
     urlsiguiente: "/colecciones/moma-gris",
-    pdfNombre: "DataTest.pdf",
-    pdfLink: "/downloads/test.pdf",
+    pdfNombre: "",
+    pdfLink: "",
   },
   {
     id: "moma_gris",
@@ -60,8 +60,8 @@ export const PaginasCemento = [
     altVid: "video",
     urlanterior: "/colecciones/moma-arena",
     urlsiguiente: "/colecciones/kron-grey",
-    pdfNombre: "null",
-    pdfLink: "null",
+    pdfNombre: "Ficha-Técnica-MomaGris",
+    pdfLink: "/downloads/Ficha-Técnica-MomaGris.pdf",
   },
 
   {
