@@ -193,18 +193,21 @@ const PaginasColeccion = () => {
         <Route path="/bath" element={<Bath />} />
         <Route path="/privacidad" element={<PrivSection {...privObj} />} />
         <Route path="/legal" element={<LegalSection {...legalObj} />} />
-        <Route path="/contacto" element={<ContactoSection {...contactoObj} />} />
+        <Route
+          path="/contacto"
+          element={<ContactoSection {...contactoObj} />}
+        />
         <Route path="/intercambiador" element={<Intercambiador />} />
         <Route path="/rotador" element={<Rotador />} />
         {/* ---------------------Cementos--------------------- */}
         <Route path="/colecciones/blue-stone-gris" element={<BlueStone />} />
+        <Route path="/colecciones/kron-grey" element={<KronGrey />} />
         <Route path="/colecciones/moma-arena" element={<MomaArena />} />
         <Route path="/colecciones/moma-gris" element={<MomaGris />} />
-        <Route path="/colecciones/kron-grey" element={<KronGrey />} />
-        <Route path="/colecciones/titan-antracita" element={<TitanAnt />} />
-        <Route path="/colecciones/titan-cemento" element={<TitanCem />} />
         <Route path="/colecciones/mood-anthracite" element={<MoodAntra />} />
         <Route path="/colecciones/mood-grey" element={<MoodGrey />} />
+        <Route path="/colecciones/titan-antracita" element={<TitanAnt />} />
+        <Route path="/colecciones/titan-cemento" element={<TitanCem />} />
         <Route path="/colecciones/vulcano" element={<Vulcano />} />
         {/* ---------------------Color--------------------- */}
         <Route path="/colecciones/basic-blanco" element={<BasicBlanco />} />

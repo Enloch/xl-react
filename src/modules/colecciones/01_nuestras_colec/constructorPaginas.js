@@ -125,8 +125,6 @@ export const PagiCementoStyle2 = PaginasCemento.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} loading={"lazy"} />

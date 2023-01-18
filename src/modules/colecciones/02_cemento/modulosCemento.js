@@ -1,11 +1,11 @@
 export {
   BlueStone,
+  KronGrey,
   MomaArena,
   MomaGris,
-  KronGrey,
-  TitanAnt,
-  TitanCem,
   MoodAntra,
   MoodGrey,
+  TitanAnt,
+  TitanCem,
   Vulcano,
 } from "./cementosConsolidados.js";

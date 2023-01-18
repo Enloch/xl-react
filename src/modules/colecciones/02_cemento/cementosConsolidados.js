@@ -11,6 +11,12 @@ export const BlueStone = () => {
   }, []);
   return <>{PagiCementoStyle1[0]}</>;
 };
+export const KronGrey = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return <>{PagiCementoStyle2[3]}</>;
+};
 export const MomaArena = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,11 +29,17 @@ export const MomaGris = () => {
   }, []);
   return <>{PagiCementoStyle1[2]}</>;
 };
-export const KronGrey = () => {
+export const MoodAntra = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <>{PagiCementoStyle2[3]}</>;
+  return <>{PagiCementoStyle1[6]}</>;
+};
+export const MoodGrey = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return <>{PagiCementoStyle1[7]}</>;
 };
 export const TitanAnt = () => {
   useEffect(() => {
@@ -40,18 +52,6 @@ export const TitanCem = () => {
     window.scrollTo(0, 0);
   }, []);
   return <>{PagiCementoStyle1[5]}</>;
-};
-export const MoodAntra = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <>{PagiCementoStyle1[6]}</>;
-};
-export const MoodGrey = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <>{PagiCementoStyle1[7]}</>;
 };
 export const Vulcano = () => {
   useEffect(() => {
