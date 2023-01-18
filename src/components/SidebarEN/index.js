@@ -10,6 +10,7 @@ import {
   SidebarMenu,
   SidebarLink,
   SidebarLink2,
+  SidebarLink3,
 } from "./SidebarElements";
 
 export const SidebarEN = ({ isOpen, toggle }) => {
@@ -49,6 +50,9 @@ export const SidebarEN = ({ isOpen, toggle }) => {
           <SidebarLink to="coleccionEN" smooth={true} onClick={toggle}>
             Our Collections
           </SidebarLink>
+          <SidebarLink3 to="contacto" onClick={null}>
+            Contact
+          </SidebarLink3>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

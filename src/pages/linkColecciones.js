@@ -182,6 +182,8 @@ import ContactoSection from "../modules/12_Contacto";
 import { contactoObj } from "../modules/12_Contacto/data";
 import Intercambiador from "./intercambiador";
 import Rotador from "./rotador";
+import ContactoSectionEN from "../modules/en/12_Contacto";
+import {contactoObjEN} from "../modules/en/12_Contacto/data";
 const PaginasColeccion = () => {
   return (
     <Router>
@@ -196,6 +198,10 @@ const PaginasColeccion = () => {
         <Route
           path="/contacto"
           element={<ContactoSection {...contactoObj} />}
+        />
+        <Route
+          path="/en/contacto"
+          element={<ContactoSectionEN {...contactoObjEN} />}
         />
         <Route path="/intercambiador" element={<Intercambiador />} />
         <Route path="/rotador" element={<Rotador />} />
