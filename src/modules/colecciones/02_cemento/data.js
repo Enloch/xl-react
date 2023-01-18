@@ -60,8 +60,8 @@ export const PaginasCemento = [
     altVid: "video",
     urlanterior: "/colecciones/moma-arena",
     urlsiguiente: "/colecciones/kron-grey",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "null",
+    pdfLink: "null",
   },
 
   {

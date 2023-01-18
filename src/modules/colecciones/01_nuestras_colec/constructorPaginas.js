@@ -30,6 +30,7 @@ import {
   VerVid,
   DescargaPdf,
   DescargaPdfIcon,
+  TextoDescarga,
 } from "../styleTwo";
 import { PaginasCemento, Footer } from "../02_cemento/data";
 import { PaginasColor } from "../03_color/data";
@@ -108,6 +109,10 @@ export const PagiCementoStyle1 = PaginasCemento.map((elemento) => (
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
         <DescargaPdf href={elemento.pdfLink} download="">
+          <TextoDescarga >
+            Descarga ficha técnica //
+            Download Technical sheet
+          </TextoDescarga>
           <DescargaPdfIcon />
         </DescargaPdf>
       </ContentWrapper>

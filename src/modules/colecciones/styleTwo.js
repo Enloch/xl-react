@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { COLORS, DISTANCES } from "../../global/GlobalStyles";
-import { GrDocumentPdf } from "react-icons/gr";
+import { BsDownload } from "react-icons/bs";
 
 export const Wrapper = styled.div`
   background: #d3cec9;
@@ -75,6 +75,7 @@ export const EspesorWrapper = styled.div`
   @media screen and (max-width: 480px) {
     grid-column: 1/-1;
     margin: 0;
+    grid-row: 4;
   }
 `;
 export const Espesor = styled.img`
@@ -91,6 +92,7 @@ export const EspesorWrapper2 = styled.div`
   @media screen and (max-width: 480px) {
     grid-column: 1/-1;
     margin: 0;
+    grid-row: 4;
   }
 `;
 export const Cambiador = styled.div`
@@ -104,6 +106,7 @@ export const Cambiador = styled.div`
   }
   @media screen and (max-width: 480px) {
     grid-column: 1/-1;
+    grid-row: 5;
     grid-template-columns: repeat(3, fr);
   }
 `;
@@ -288,51 +291,44 @@ export const VerVid = styled.p`
 `;
 
 export const DescargaPdf = styled.a`
-  grid-column: -2;
-  grid-row: 4;
-  height: 50px;
-  width: 50px;
-  margin-left: -50px;
-  align-self: center;
-  border: 0px;
+  grid-column: 6;
+  grid-row: 1;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
 
   @media screen and (max-width: 1400px) {
-    margin-left: -75px;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 8/11;
-    margin-left: -55px;
-    grid-row: 4;
+    grid-column: 9/12;
   }
   @media screen and (max-width: 480px) {
     grid-column: 1/-1;
-    grid-row: 8;
+    grid-row: 2;
     margin: 0.5rem 0;
   }
 `;
-export const DescargaPdfIcon = styled(GrDocumentPdf)`
-  grid-column: -2;
-  grid-row: 4;
+export const DescargaPdfIcon = styled(BsDownload)`
+  grid-column: 6;
+  grid-row: 1;
   /* margin-left: -50px; */
-  height: 50px;
-  width: 50px;
-  align-self: center;
+  height: 35px;
+  width: 35px;
   cursor: pointer;
 
   @media screen and (max-width: 1400px) {
-    margin-left: -75px;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 8/11;
-    margin-left: -55px;
-    grid-row: 4;
   }
   @media screen and (max-width: 480px) {
-    grid-column: 1/-1;
-    grid-row: 8;
-    margin: 0.5rem 0;
   }
 `;
+export const TextoDescarga = styled.span`
+  width:200px;
+  font-size: 14px
+`
 export const FooterContainer = styled.div`
   background: #000000;
   width: 100%;
