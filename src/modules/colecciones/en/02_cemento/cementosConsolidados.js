@@ -11,43 +11,43 @@ export const BlueStoneEN = () => {
   }, []);
   return <>{PagiCementoStyle1[0]}</>;
 };
-export const MomaArenaEN = () => {
+export const KronGreyEN = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <>{PagiCementoStyle1[1]}</>;
+  return <>{PagiCementoStyle2[1]}</>;
 };
-export const MomaGrisEN = () => {
+export const MomaArenaEN = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return <>{PagiCementoStyle1[2]}</>;
 };
-export const KronGreyEN = () => {
+export const MomaGrisEN = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <>{PagiCementoStyle2[3]}</>;
-};
-export const TitanAntEN = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <>{PagiCementoStyle1[4]}</>;
-};
-export const TitanCemEN = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  return <>{PagiCementoStyle1[5]}</>;
+  return <>{PagiCementoStyle1[3]}</>;
 };
 export const MoodAntraEN = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <>{PagiCementoStyle1[6]}</>;
+  return <>{PagiCementoStyle1[4]}</>;
 };
 export const MoodGreyEN = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return <>{PagiCementoStyle1[5]}</>;
+};
+export const TitanAntEN = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return <>{PagiCementoStyle1[6]}</>;
+};
+export const TitanCemEN = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
