@@ -39,7 +39,7 @@ export const FooterLogo = styled.img`
 `;
 export const FooterLink = styled.p`
   color: #ffffff;
-  width: 220px;
+  width: 280px;
   font-size: 30px;
   padding: 0.625rem 0;
   border-bottom: 2px solid #ffffff;
@@ -149,13 +149,10 @@ export const ImageBoxWrapper = styled.div`
 `;
 export const ImageBox = styled.div`
   @media screen and (max-width: 1400px) {
-
   }
   @media screen and (max-width: 980px) {
-
   }
   @media screen and (max-width: 480px) {
-
   }
 `;
 export const ImgMini = styled.img`
@@ -187,7 +184,7 @@ export const LinkBox = styled.div`
     grid-column: 9/ 12;
   }
   @media screen and (max-width: 480px) {
-    margin:1rem 0;
+    margin: 1rem 0;
     grid-column: 2 /8;
     grid-row: 4;
   }

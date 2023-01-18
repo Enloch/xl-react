@@ -27,6 +27,9 @@ import {
   VerImg,
   Vid,
   VerVid,
+  DescargaPdf,
+  DescargaPdfIcon,
+  TextoDescarga,
 } from "../../styleTwo";
 import { PaginasCemento, Footer } from "../02_cemento/data";
 import { PaginasColor } from "../03_color/data";
@@ -89,13 +92,21 @@ export const PagiCementoStyle1 = PaginasCemento.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -113,8 +124,6 @@ export const PagiCementoStyle2 = PaginasCemento.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} loading={"lazy"} />
@@ -171,13 +180,21 @@ export const PagiCementoStyle2 = PaginasCemento.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -236,13 +253,21 @@ export const PagiCementoStyle3 = PaginasCemento.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -309,13 +334,21 @@ export const PagiColorStyle1 = PaginasColor.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -374,13 +407,21 @@ export const PagiColorStyle3 = PaginasColor.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -462,13 +503,21 @@ export const PagiColorStyle4 = PaginasColor.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -535,13 +584,21 @@ export const PagiMarmolesStyle1 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -559,8 +616,6 @@ export const PagiMarmolesStyle2 = PaginasMarmol.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} loading={"lazy"} />
@@ -617,13 +672,21 @@ export const PagiMarmolesStyle2 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -682,13 +745,21 @@ export const PagiMarmolesStyle3 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -706,8 +777,6 @@ export const PagiMarmolesStyle4 = PaginasMarmol.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} loading={"lazy"} />
@@ -770,13 +839,21 @@ export const PagiMarmolesStyle4 = PaginasMarmol.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -795,8 +872,6 @@ export const PagiMaderaStyle1 = PaginasMadera.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
-      </ContentWrapper>
-      <ContentWrapper>
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} />
@@ -845,13 +920,21 @@ export const PagiMaderaStyle1 = PaginasMadera.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -926,13 +1009,21 @@ export const PagiMaderaStyle2 = PaginasMadera.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -999,13 +1090,21 @@ export const PagiMetalStyle1 = PaginasMetal.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -1081,13 +1180,21 @@ export const PagiMetalStyle2 = PaginasMetal.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -1146,13 +1253,21 @@ export const PagiMetalStyle3 = PaginasMetal.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -1219,13 +1334,21 @@ export const PagiPiedraStyle1 = PaginasPiedra.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -1301,13 +1424,21 @@ export const PagiPiedraStyle2 = PaginasPiedra.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
@@ -1366,13 +1497,21 @@ export const PagiPiedraStyle3 = PaginasPiedra.map((elemento) => (
           />
         </ColWrapper>
         <VerVid>{elemento.vervid}</VerVid>
+        {elemento.pdfLink !== "" && (
+          <DescargaPdf href={elemento.pdfLink} download="">
+            <TextoDescarga>
+              Descarga ficha técnica // Download Technical sheet
+            </TextoDescarga>
+            <DescargaPdfIcon />
+          </DescargaPdf>
+        )}
       </ContentWrapper>
     </Wrapper>
     <FooterContainer>
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/en/colecciones"
+          to="/colecciones"
           style={{
             textDecoration: "none",
             color: "#000000",
