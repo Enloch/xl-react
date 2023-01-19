@@ -174,16 +174,16 @@ import {
 } from "../modules/colecciones/en/07_piedra/piedrasConsolidados";
 
 /*----------------------------------------------------------------------------------*/
-import PrivSection from "../modules/10_PrivacidadSection";
-import { privObj } from "../modules/10_PrivacidadSection/data";
-import LegalSection from "../modules/11_LegalSection";
-import { legalObj } from "../modules/11_LegalSection/data";
-import ContactoSection from "../modules/12_Contacto";
-import { contactoObj } from "../modules/12_Contacto/data";
+import PrivSection from "../modules/PrivacidadSection";
+import { privObj } from "../modules/PrivacidadSection/data";
+import LegalSection from "../modules/LegalSection";
+import { legalObj } from "../modules/LegalSection/data";
+import ContactoSection from "../modules/Contacto";
+import { contactoObj } from "../modules/Contacto/data";
 import Intercambiador from "./intercambiador";
 import Rotador from "./rotador";
-import ContactoSectionEN from "../modules/en/12_Contacto";
-import {contactoObjEN} from "../modules/en/12_Contacto/data";
+import ContactoSectionEN from "../modules/en/Contacto";
+import {contactoObjEN} from "../modules/en/Contacto/data";
 const PaginasColeccion = () => {
   return (
     <Router>

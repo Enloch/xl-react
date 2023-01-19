@@ -182,7 +182,7 @@ export const PaginasCemento = [
     espesor: require("../../../assets/icons/espesores/12mm.png"),
     img1: require("../../../assets/images/cementos/vulcano_01.webp"),
     img2: require("../../../assets/images/cementos/vulcano_02.webp"),
-    imgVid: require("../../../assets/videos/moma_gris.mp4"),
+    imgVid: require("../../../assets/videos/vulcano.mp4"),
     desc: [
       "silk 1600x3200 mm/ 63”x126”",
       "cemento / cement",

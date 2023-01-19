@@ -10,7 +10,8 @@ import VentajasSection from "../modules/05_VentajasSection";
 import FormatoSection from "../modules/06_FormatoSection";
 import AcabadoSection from "../modules/07_AcabadoSection";
 import ColecSection from "../modules/08_ColecSection";
-import FooterSection from "../modules/09_FooterSection";
+import DescargasSection from "../modules/09_Descargas";
+import FooterSection from "../modules/FooterSection";
 import { heroObj } from "../modules/01_HeroSection/Data";
 import { homeObj } from "../modules/02_InfoSection/Data";
 import { caraObj } from "../modules/03_CaracteristicasSection/Data";
@@ -19,8 +20,8 @@ import { ventajasObj } from "../modules/05_VentajasSection/Data";
 import { formatoObj } from "../modules/06_FormatoSection/Data";
 import { acabadoObj } from "../modules/07_AcabadoSection/Data";
 import { colecObj } from "../modules/08_ColecSection/Data";
-import { LandingFooter } from "../modules/09_FooterSection/data";
-
+import { LandingFooter } from "../modules/FooterSection/data";
+import { descargasObj } from "../modules/09_Descargas/Data";
 import ScrollToTop from "../components/GoTopBttn/ScrollToTop";
 const Home = () => {
   const indiceRef = useRef();
@@ -42,6 +43,7 @@ const Home = () => {
       <FormatoSection {...formatoObj} />
       <AcabadoSection {...acabadoObj} />
       <ColecSection {...colecObj} />
+      <DescargasSection {...descargasObj} />
       <FooterSection {...LandingFooter} />
     </>
   );
