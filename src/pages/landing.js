@@ -43,7 +43,7 @@ const Home = () => {
       <FormatoSection {...formatoObj} />
       <AcabadoSection {...acabadoObj} />
       <ColecSection {...colecObj} />
-      <DescargasSection {...descargasObj} />
+      {/* <DescargasSection {...descargasObj} /> */}
       <FooterSection {...LandingFooter} />
     </>
   );

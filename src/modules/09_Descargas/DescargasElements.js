@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DescargasContainer = styled.div`
   background: #d3cec9;
   display: grid;
-  grid-template-columns: repeat(12, 1fr); 
+  grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
   padding: 6rem 4rem 1rem 4rem;
@@ -56,7 +56,6 @@ export const Heading = styled.p`
 `;
 export const ContCat = styled.div`
   display: flex;
-  justify-content: space-evenly;
   background-color: #ffbe7d;
   height: auto;
   width: auto;
@@ -65,6 +64,15 @@ export const ContCat = styled.div`
 `;
 export const Catalogo = styled.div`
   background-color: #7df6ff;
-  height: 175px;
-  width: 100px;
+  height: 300px;
+  width: 200px;
+`;
+export const CatalogoLink = styled.a``;
+export const CatalogoImg = styled.div`
+  background-color: #7dffa4;
+  height: 80%;
+  width: 100%;
+`;
+export const CatalogoTexto = styled.span`
+  align-self: center;
 `;

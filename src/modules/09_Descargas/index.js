@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import {
   DescargasContainer,
   TextWrapper,
   Heading,
   ContCat,
   Catalogo,
+  CatalogoLink,
+  CatalogoImg,
+  CatalogoTexto,
 } from "./DescargasElements";
 
 const DescargasSection = ({ headLine, description, description2, alt }) => {
@@ -15,7 +18,12 @@ const DescargasSection = ({ headLine, description, description2, alt }) => {
         <TextWrapper>
           <Heading> {headLine}</Heading>
           <ContCat>
-            <Catalogo></Catalogo>
+            <Catalogo>
+              <CatalogoLink>
+                <CatalogoImg></CatalogoImg>
+                <CatalogoTexto>Test 1233</CatalogoTexto>
+              </CatalogoLink>
+            </Catalogo>
             <Catalogo></Catalogo>
             <Catalogo></Catalogo>
             <Catalogo></Catalogo>
