@@ -39,8 +39,16 @@ const Bath = () => {
       <InfoBath {...infoBath} />
       <ServicioBath {...serviciosbath} />
       <EncimeraBath {...encimerabath} />
-      <Slider1 />
       <EncimeraTop {...encimeratop} />
+      <iframe
+        src="https://itch.io/embed-upload/7217863?color=333333"
+        allowfullscreen=""
+        height={window.innerHeight}
+        width={window.innerWidth}
+        frameborder="0"
+        title="Rotador"
+      />
+      <Slider1 />
       <EncimeraAuto {...encimeraauto} />
       <Slider2 />
       <ForradoMueble {...forradomuebles} />

@@ -142,7 +142,7 @@ const EncimeraBath = ({
           <Img src={imgheader} alt={alt} />
         </IconContainer>
       </ImgWrap>
-      <CaraContainer id={id}>
+      {/* <CaraContainer id={id}>
         <TextWrapper>
           <Heading> {headLine[0]}</Heading>
           <Subtitle>{description[0]}</Subtitle>
@@ -237,7 +237,7 @@ const EncimeraBath = ({
             {caracteristicas[5]}
           </Subtitle3>
         </TextWrapper6>
-      </CaraContainer2>
+      </CaraContainer2> */}
     </>
   );
 };
