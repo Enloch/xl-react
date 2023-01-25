@@ -101,7 +101,7 @@ const EncimeraBath = ({
               }}
             />
           </Link>
-          <Link to={config[6].id} scroll="smooth">
+          {/* <Link to={config[6].id} scroll="smooth">
             <Icono1
               src={icono}
               style={{
@@ -109,7 +109,7 @@ const EncimeraBath = ({
                 left: config[6].left,
               }}
             />
-          </Link>
+          </Link> */}
           <Link to={config[7].id} scroll="smooth">
             <Icono1
               src={icono}

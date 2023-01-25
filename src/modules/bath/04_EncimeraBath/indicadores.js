@@ -2,31 +2,31 @@ const config = [
   {
     id: "forrado de modulos",
     top: "38%",
-    left: "9.5%",
+    left: "11%",
   },
   {
     id: "revestimiento",
-    top: "73.5%",
-    left: "27%",
+    top: "60%",
+    left: "23%",
   },
   {
     id: "xlshelf",
-    top: "88.5% ",
-    left: "27%",
+    top: "75.5% ",
+    left: "19%",
   },
   {
     id: "frentes",
-    top: "59.5%",
+    top: "61%",
     left: "32%",
   },
   {
     id: "encimerabath",
-    top: "66.7%",
-    left: "34%",
+    top: "55%",
+    left: "36%",
   },
   {
     id: "lavabos",
-    top: "65%",
+    top: "58%",
     left: "47.7%",
   },
   {
@@ -36,18 +36,18 @@ const config = [
   },
   {
     id: "forradomuebles",
-    top: "69.7%",
-    left: "58.3%",
+    top: "77%",
+    left: "44%",
   },
   {
     id: "paneles de ducha",
-    top: "47%",
-    left: "79.3%",
+    top: "50%",
+    left: "65%",
   },
   {
     id: "platos de ducha",
-    top: "84.5%",
-    left: "79.3%",
+    top: "90%",
+    left: "70%",
   },
 ];
 
