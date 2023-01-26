@@ -98,6 +98,7 @@ export const Icono1 = styled.img`
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
+    scale: 0.5;
   }
   transition: all 0.2s linear;
   :hover {

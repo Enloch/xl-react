@@ -21,21 +21,26 @@ const ServicioBath = ({ id, headLine, description }) => {
         </TextWrapper>
         <ListaUno>
           <Lista>
-            <LiEl>Encimeras sobremueble</LiEl>
-            <LiEl>Encimeras autoportantes</LiEl>
-            <LiEl>Frentes</LiEl>
-            <LiEl>Baldas</LiEl>
-            <LiEl>Forrado de muebles</LiEl>
-            <LiEl>Forrado de módulos auxiliares</LiEl>
+            <LiEl>
+              XL bathroom adapt //
+              <ul>Encimeras</ul>
+              <ul>Forrado de muebles</ul>
+              <ul>Forrado de módulos auxiliares</ul>
+              <ul>Revestimiento de cajones y costados</ul>
+              <ul>Etc..</ul>
+            </LiEl>
           </Lista>
         </ListaUno>
         <ListaDos>
           <Lista>
-            <LiEl>Revestimiento de cajones y costados</LiEl>
+            <LiEl>XL top // encimeras sobremueble</LiEl>
+            <LiEl>XL frente</LiEl>
+            <LiEl>Encimeras autoportantes</LiEl>
+            <LiEl>XL shelf // baldas</LiEl>
             <LiEl>XL bath specials // lavabos</LiEl>
             <LiEl>Muebles de baño especiales</LiEl>
-            <LiEl>Platos de ducha</LiEl>
-            <LiEl>Paneles de ducha</LiEl>
+            <LiEl>XL light shower tray // platos de ducha medida</LiEl>
+            <LiEl>XL shower panel // paneles de ducha a medida</LiEl>
           </Lista>
         </ListaDos>
       </CaraContainer>
