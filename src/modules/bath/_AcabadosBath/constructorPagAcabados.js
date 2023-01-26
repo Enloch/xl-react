@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Zoom from "react-medium-image-zoom";
-import "./styles.css";
 
 import {
   Wrapper,
@@ -31,11 +29,11 @@ import {
   DescargaPdf,
   DescargaPdfIcon,
   TextoDescarga,
-} from "../styleTwo";
-import { PaginasCemento, Footer } from "../02_cemento/data";
+} from "./styleTwo";
+import { PaginasAcabado, Footer } from "./dataAcabados";
 
 //cemento
-export const PagiCementoStyle1 = PaginasCemento.map((elemento) => (
+export const PaginasAcabadoStyle1 = PaginasAcabado.map((elemento) => (
   <>
     <Wrapper>
       <ContentWrapper>
@@ -70,24 +68,14 @@ export const PagiCementoStyle1 = PaginasCemento.map((elemento) => (
           </Link>
         </Cambiador>
         <ColWrapper>
-          <ColImagenes>
-            <Zoom>
-              <Imagen1Style1
-                src={elemento.img1}
-                alt={elemento.altImg1}
-                loading={"lazy"}
-              />
-            </Zoom>
-            <VerImg>{elemento.verimg}</VerImg>
-          </ColImagenes>
           <Vid
             controls
             src={elemento.imgVid}
             alt={elemento.altVid}
             loading={"lazy"}
           />
+          <VerVid>{elemento.vervid}</VerVid>
         </ColWrapper>
-        <VerVid>{elemento.vervid}</VerVid>
         {elemento.pdfLink !== "" && (
           <DescargaPdf href={elemento.pdfLink} download="">
             <TextoDescarga>
@@ -102,7 +90,7 @@ export const PagiCementoStyle1 = PaginasCemento.map((elemento) => (
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/colecciones"
+          to="/bath"
           style={{
             textDecoration: "none",
             color: "#000000",
