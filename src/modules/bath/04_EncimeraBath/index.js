@@ -49,6 +49,7 @@ const EncimeraBath = ({
     <>
       <ImgWrap>
         <IconContainer>
+          <Img src={imgheader} alt={alt} />
           <Link to={config[0].id} scroll="smooth">
             <Icono1
               id={config[0].tooltip}
@@ -173,8 +174,6 @@ const EncimeraBath = ({
               content={config[10].tooltip}
             />
           </Link> */}
-
-          <Img src={imgheader} alt={alt} />
         </IconContainer>
       </ImgWrap>
       {/* <CaraContainer id={id}>

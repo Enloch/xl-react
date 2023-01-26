@@ -9,7 +9,7 @@ import {
   ImgGradient,
   ImgWrap,
   Img,
-} from "./InfoElements";
+} from "./infoElements";
 import config from "../04_EncimeraBath/indicadores";
 const InfoBath = ({ id, headLine, description, img, alt }) => {
   return (
