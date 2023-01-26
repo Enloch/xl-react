@@ -26,6 +26,11 @@ import { inter1 } from "../modules/bath/10_IntercambiadorForrado/Data";
 import { xlshelf } from "../modules/bath/11_XLShelf/Data";
 import { xlspecial } from "../modules/bath/13_XLSpecial/Data";
 import { inter2 } from "../modules/bath/14_RotadorLavabo/Data";
+import AcabadosBath from "../modules/bath/_AcabadosBath";
+import {
+  Acabados_InfoGeneral,
+  Acabados_Materiales,
+} from "../modules/bath/_AcabadosBath/data";
 const Bath = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -38,6 +43,7 @@ const Bath = () => {
       <HeroBath {...heroBath} />
       <InfoBath {...infoBath} />
       <ServicioBath {...serviciosbath} />
+      <AcabadosBath {...Acabados_InfoGeneral} />
       <EncimeraBath {...encimerabath} />
       <EncimeraTop {...encimeratop} />
       <iframe

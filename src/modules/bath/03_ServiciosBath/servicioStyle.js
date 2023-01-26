@@ -43,7 +43,6 @@ export const Heading = styled.p`
     max-width: 450px;
     margin-right: 0;
     margin-bottom: 30px;
-    font-size: 60px;
   }
   @media screen and (max-width: 980px) {
     margin-right: 0;
@@ -79,7 +78,7 @@ export const Subtitle = styled.p`
   //color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 `;
 export const ListaUno = styled.div`
-  grid-column: 4 / span 3;
+  grid-column: 4 / span 4;
   margin-left: 125px;
   @media screen and (max-width: 1400px) {
     grid-column: 2 / 7;
@@ -112,6 +111,20 @@ export const Lista = styled.ul`
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 2rem;
+`;
+export const ListaInterna = styled.ul`
+  color: #797979;
+  font-size: 30px;
+  @media screen and (max-width: 980px) {
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 32px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 16px;
+  }
 `;
 export const LiEl = styled.li`
   font-size: 30px;

@@ -7,6 +7,7 @@ import {
   ListaUno,
   ListaDos,
   Lista,
+  ListaInterna,
   LiEl,
   ImgWrap,
   Img,
@@ -21,14 +22,12 @@ const ServicioBath = ({ id, headLine, description }) => {
         </TextWrapper>
         <ListaUno>
           <Lista>
-            <LiEl>
-              XL bathroom adapt //
-              <ul>Encimeras</ul>
-              <ul>Forrado de muebles</ul>
-              <ul>Forrado de módulos auxiliares</ul>
-              <ul>Revestimiento de cajones y costados</ul>
-              <ul>Etc..</ul>
-            </LiEl>
+            <LiEl>XL bathroom adapt //</LiEl>
+            <ListaInterna>Encimeras</ListaInterna>
+            <ListaInterna>Forrado de muebles</ListaInterna>
+            <ListaInterna>Forrado de módulos auxiliares</ListaInterna>
+            <ListaInterna>Revestimiento de cajones y costados</ListaInterna>
+            <ListaInterna>Etc..</ListaInterna>
           </Lista>
         </ListaUno>
         <ListaDos>
