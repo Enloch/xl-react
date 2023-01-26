@@ -93,7 +93,12 @@ export const IconContainer = styled.div`
 export const Icono1 = styled.img`
   position: absolute;
   cursor: pointer;
-
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+  }
   transition: all 0.2s linear;
   :hover {
     transform: rotate(-45deg);

@@ -159,6 +159,20 @@ const EncimeraBath = ({
             />
             <Tooltip anchorId={config[9].tooltip} content={config[9].tooltip} />
           </Link>
+          {/* <Link to={config[10].id} scroll="smooth">
+            <Icono1
+              id={config[10].tooltip}
+              src={icono}
+              style={{
+                top: config[10].top,
+                left: config[10].left,
+              }}
+            />
+            <Tooltip
+              anchorId={config[10].tooltip}
+              content={config[10].tooltip}
+            />
+          </Link> */}
 
           <Img src={imgheader} alt={alt} />
         </IconContainer>

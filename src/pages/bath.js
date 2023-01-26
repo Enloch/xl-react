@@ -41,7 +41,7 @@ const Bath = () => {
       <EncimeraBath {...encimerabath} />
       <EncimeraTop {...encimeratop} />
       <iframe
-        src="https://itch.io/embed-upload/7223388?color=333333"
+        src="https://itch.io/embed-upload/7225630?color=333333"
         allowfullscreen=""
         height={window.innerHeight}
         width={window.innerWidth}
