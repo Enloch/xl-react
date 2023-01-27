@@ -8,4 +8,4 @@ export {
   TitanAnt,
   TitanCem,
   Vulcano,
-} from "./cementosConsolidados.js";
+} from "./cementosConsolidados";

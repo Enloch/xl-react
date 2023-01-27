@@ -8,4 +8,4 @@ export {
   MoodAntraEN,
   MoodGreyEN,
   VulcanoEN,
-} from "./cementosConsolidados.js";
+} from "./cementosConsolidados";

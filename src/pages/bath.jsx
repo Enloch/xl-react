@@ -4,7 +4,7 @@ import SidebarBath from "../components/SidebarBath";
 import HeroBath from "../modules/bath/01_HeroBath";
 import InfoBath from "../modules/bath/02_InfoBath";
 import ServicioBath from "../modules/bath/03_ServiciosBath";
-import EncimeraBath from "../modules/bath/04_EncimeraBath";
+import MenuInteractivo from "../modules/bath/04_EncimeraBath";
 import Slider1 from "../modules/bath/05_Slider1";
 import EncimeraTop from "../modules/bath/06_EncimeraTop";
 import Slider2 from "../modules/bath/07_Slider2";
@@ -31,6 +31,8 @@ import {
   Acabados_InfoGeneral,
   Acabados_Materiales,
 } from "../modules/bath/_AcabadosBath/data";
+import AdaptBath from "../modules/bath/_AdaptBath";
+import { AdaptObj } from "../modules/bath/_AdaptBath/data";
 const Bath = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -44,7 +46,8 @@ const Bath = () => {
       <InfoBath {...infoBath} />
       <ServicioBath {...serviciosbath} />
       <AcabadosBath {...Acabados_InfoGeneral} />
-      <EncimeraBath {...encimerabath} />
+      <MenuInteractivo {...encimerabath} />
+      <AdaptBath {...AdaptObj} />
       <EncimeraTop {...encimeratop} />
       <iframe
         src="https://itch.io/embed-upload/7225630?color=333333"

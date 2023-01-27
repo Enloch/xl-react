@@ -25,4 +25,4 @@ export {
   RosaPersia,
   Syrac,
   Volakas,
-} from "./marmolesConsolidados.js";
+} from "./marmolesConsolidados";

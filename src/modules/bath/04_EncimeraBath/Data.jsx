@@ -1,5 +1,7 @@
 export const encimerabath = {
   id: "encimerabath",
+  titulo: "menu interactivo //",
+  subtitulo: "Navega a las diferentes secciones utilizando la imagen inferior",
   headLine: [
     "encimeras sobremueble sin lavabo//",
     "encimeras sobremueble con lavabo integrado//",

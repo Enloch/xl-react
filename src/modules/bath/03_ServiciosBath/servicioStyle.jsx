@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CaraContainer = styled.div`
-  background: rgba(211, 206, 201);
+  background: rgb(211, 206, 201);
   height: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);

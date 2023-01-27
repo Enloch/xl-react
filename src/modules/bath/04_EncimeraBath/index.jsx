@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import {
-  CaraContainer,
+  MenuIntContainter,
   CaraContainer2,
   CaraContainer3,
   TextWrapper,
@@ -31,9 +31,11 @@ import icono from "../../../assets/icons/botones/boton.png";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import config from "./indicadores";
-const EncimeraBath = ({
+const MenuInteractivo = ({
   id,
+  titulo,
   imgheader,
+  subtitulo,
   headLine,
   description,
   description2,
@@ -47,6 +49,10 @@ const EncimeraBath = ({
   const [caracteristica2, setCaracteristica2] = useState(caracteristicas[4]);
   return (
     <>
+      <MenuIntContainter>
+        <Heading>{titulo}</Heading>
+        <Subtitle>{subtitulo}</Subtitle>
+      </MenuIntContainter>
       <ImgWrap>
         <IconContainer>
           <Img src={imgheader} alt={alt} />
@@ -276,4 +282,4 @@ const EncimeraBath = ({
   );
 };
 
-export default EncimeraBath;
+export default MenuInteractivo;

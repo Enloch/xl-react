@@ -25,4 +25,4 @@ export {
   RosaPersiaEN,
   SyracEN,
   VolakasEN,
-} from "./marmolesConsolidados.js";
+} from "./marmolesConsolidados";
