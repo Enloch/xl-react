@@ -1,6 +1,6 @@
 export const menuIntObj = {
   id: "encimerabath",
-  titulo: "menu interactivo //",
+  titulo: "menú interactivo //",
   subtitulo: "Navega a las diferentes secciones utilizando la imagen inferior",
   headLine: [
     "encimeras sobremueble sin lavabo//",
