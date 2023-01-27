@@ -15,10 +15,22 @@ const AdaptBath = ({ titulo, subtitulo, ImagenTemp }) => {
       <Subtitle>{subtitulo}</Subtitle>
       <ImgWrapper>
         <Img src={ImagenTemp} />
-        <TxtSubimagen> Acabado cajón: <b>datos aquí</b> </TxtSubimagen>
-        <TxtSubimagen> Acabado encimera: <b>datos aquí</b> </TxtSubimagen>
-        <TxtSubimagen> Acabado lateral: <b>datos aquí</b> </TxtSubimagen>
-        <TxtSubimagen> Acabado forrado mueble: <b>datos aquí</b> </TxtSubimagen>
+        <TxtSubimagen>
+          {" "}
+          Acabado cajón: <b>datos aquí</b>{" "}
+        </TxtSubimagen>
+        <TxtSubimagen>
+          {" "}
+          Acabado encimera: <b>datos aquí</b>{" "}
+        </TxtSubimagen>
+        <TxtSubimagen>
+          {" "}
+          Acabado lateral: <b>datos aquí</b>{" "}
+        </TxtSubimagen>
+        <TxtSubimagen>
+          {" "}
+          Acabado forrado mueble: <b>datos aquí</b>{" "}
+        </TxtSubimagen>
       </ImgWrapper>
     </MainContainer>
   );

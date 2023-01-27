@@ -71,6 +71,7 @@ export const ImgWrapper = styled.div`
     grid-column: 2/-2;
   }
   @media screen and (max-width: 480px) {
+    grid-column: 1/-1;
   }
 `;
 
