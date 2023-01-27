@@ -42,6 +42,7 @@ export const Heading = styled.p`
   @media screen and (max-width: 1400px) {
     grid-column: 2/10;
     margin: 0;
+    font-size: 60px;
   }
   @media screen and (max-width: 980px) {
     grid-column: 2/8;
@@ -49,6 +50,7 @@ export const Heading = styled.p`
     font-size: 60px;
   }
   @media screen and (max-width: 480px) {
+    grid-column: 1 / -2;
     margin-left: 0rem;
     font-size: 40px;
   }
@@ -71,6 +73,7 @@ export const SubtitleWrapper = styled.div`
     margin: 0;
   }
   @media screen and (max-width: 480px) {
+    grid-column: 1 / -1;
     gap: 0.5rem;
     margin: 1rem 0;
   }

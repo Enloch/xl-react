@@ -53,6 +53,7 @@ export const Heading = styled.p`
   color: #fff;
   //grid-column: 4 / span 8;
   @media screen and (max-width: 1400px) {
+    font-size: 60px;
   }
   @media screen and (max-width: 980px) {
     margin-bottom: 30px;

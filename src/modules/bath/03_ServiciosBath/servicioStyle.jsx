@@ -43,6 +43,7 @@ export const Heading = styled.p`
     max-width: 450px;
     margin-right: 0;
     margin-bottom: 30px;
+    font-size: 60px;
   }
   @media screen and (max-width: 980px) {
     margin-right: 0;
