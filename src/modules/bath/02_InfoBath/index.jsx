@@ -10,7 +10,7 @@ import {
   ImgWrap,
   Img,
 } from "./infoElements";
-import config from "../04_EncimeraBath/indicadores";
+import config from "../04_MenuInteractivoBath/indicadores";
 const InfoBath = ({ id, headLine, description, img, alt }) => {
   return (
     <>

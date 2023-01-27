@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export const MenuIntContainter = styled.div`
   background: rgb(211, 206, 201);
@@ -44,11 +45,11 @@ export const Heading = styled.p`
     font-size: 60px;
   }
   @media screen and (max-width: 980px) {
+    grid-column: 1/-1;
     margin-bottom: 30px;
     font-size: 60px;
   }
   @media screen and (max-width: 480px) {
-    grid-column: 1/-1;
     margin-bottom: 10px;
     font-size: 40px;
   }
@@ -78,17 +79,32 @@ export const Subtitle = styled.p`
 `;
 
 export const ImgWrap = styled.div`
-  margin-bottom: -10px;
-  width: 100%;
+  margin-bottom: -5px;
+  position: relative;
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
   }
 `;
 export const IconContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+    height: 92%;
+    width: 94%;
+  }
+`;
+export const LinkSecciones = styled(Link)`
+  width: 0px;
+  height: 0px;
 `;
 export const Icono1 = styled.img`
   position: absolute;
@@ -96,6 +112,7 @@ export const Icono1 = styled.img`
   @media screen and (max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {
+    scale: 0.75;
   }
   @media screen and (max-width: 480px) {
     scale: 0.5;

@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 import NavbarBath from "../components/NavbarBath";
 import SidebarBath from "../components/SidebarBath";
-import HeroBath from "../modules/bath/01_HeroBath";
+import HeroBath from '../modules/bath/01_HeroBath';
 import InfoBath from "../modules/bath/02_InfoBath";
 import ServicioBath from "../modules/bath/03_ServiciosBath";
-import MenuInteractivo from "../modules/bath/04_EncimeraBath";
+import MenuInteractivo from "../modules/bath/04_MenuInteractivoBath";
 import Slider1 from "../modules/bath/05_Slider1";
 import EncimeraTop from "../modules/bath/06_EncimeraTop";
 import Slider2 from "../modules/bath/07_Slider2";
@@ -18,7 +18,7 @@ import RotadorLavabo from "../modules/bath/14_RotadorLavabo";
 import { heroBath } from "../modules/bath/01_HeroBath/Data";
 import { infoBath } from "../modules/bath/02_InfoBath/Data";
 import { serviciosbath } from "../modules/bath/03_ServiciosBath/Data";
-import { encimerabath } from "../modules/bath/04_EncimeraBath/Data";
+import { menuIntObj } from "../modules/bath/04_MenuInteractivoBath/Data";
 import { encimeratop } from "../modules/bath/06_EncimeraTop/Data";
 import { encimeraauto } from "../modules/bath/08_EncimeraAuto/Data";
 import { forradomuebles } from "../modules/bath/09_ForradoMuebles/Data";
@@ -29,6 +29,7 @@ import { inter2 } from "../modules/bath/14_RotadorLavabo/Data";
 import AcabadosBath from "../modules/bath/_AcabadosBath";
 import {
   Acabados_InfoGeneral,
+  // eslint-disable-next-line no-unused-vars
   Acabados_Materiales,
 } from "../modules/bath/_AcabadosBath/data";
 import AdaptBath from "../modules/bath/_AdaptBath";
@@ -46,7 +47,7 @@ const Bath = () => {
       <InfoBath {...infoBath} />
       <ServicioBath {...serviciosbath} />
       <AcabadosBath {...Acabados_InfoGeneral} />
-      <MenuInteractivo {...encimerabath} />
+      <MenuInteractivo {...menuIntObj} />
       <AdaptBath {...AdaptObj} />
       <EncimeraTop {...encimeratop} />
       <iframe

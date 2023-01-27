@@ -27,13 +27,13 @@ const AcabadoSection = ({
   const [caracteristic, setCaracteristica] = useState(caracteristicas.carac0);
   return (
     <>
-      <AcabadoContainer id="acabados">
+      <AcabadoContainer id='acabados'>
         <TextWrapper>
           <Heading> {headLine}</Heading>
           <Subtitle>{description}</Subtitle>
         </TextWrapper>
         <ImgWrap>
-          <Img id="img" src={seleccionada} alt={alt} />
+          <Img id='img' src={seleccionada} alt={alt} />
           <Caracteristics>
             Acabado mostrado: <b>{caracteristic}</b>
           </Caracteristics>

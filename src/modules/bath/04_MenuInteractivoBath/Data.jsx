@@ -1,4 +1,4 @@
-export const encimerabath = {
+export const menuIntObj = {
   id: "encimerabath",
   titulo: "menu interactivo //",
   subtitulo: "Navega a las diferentes secciones utilizando la imagen inferior",

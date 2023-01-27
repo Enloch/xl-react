@@ -56,7 +56,7 @@ const config = [
   {
     id: "platos de ducha",
     tooltip: "Platos de ducha",
-    top: "92%",
+    top: "90% ",
     left: "70%",
   },
   // {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import {
   MenuIntContainter,
   CaraContainer2,
@@ -17,6 +16,7 @@ import {
   ImgWrap2,
   Img,
   IconContainer,
+  LinkSecciones,
   Icono1,
   ImgGradient,
   ImgGradWrap,
@@ -26,7 +26,7 @@ import {
   Subtitle3,
   Subtitle4,
   ImgSelector2,
-} from "./encimeraStyle";
+} from "./menuIntStyle";
 import icono from "../../../assets/icons/botones/boton.png";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
@@ -54,9 +54,9 @@ const MenuInteractivo = ({
         <Subtitle>{subtitulo}</Subtitle>
       </MenuIntContainter>
       <ImgWrap>
+        <Img src={imgheader} alt={alt} />
         <IconContainer>
-          <Img src={imgheader} alt={alt} />
-          <Link to={config[0].id} scroll="smooth">
+          <LinkSecciones to={config[0].id} scroll='smooth'>
             <Icono1
               id={config[0].tooltip}
               src={icono}
@@ -66,8 +66,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[0].tooltip} content={config[0].tooltip} />
-          </Link>
-          <Link to={config[1].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[1].id} scroll='smooth'>
             <Icono1
               id={config[1].tooltip}
               src={icono}
@@ -77,8 +77,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[1].tooltip} content={config[1].tooltip} />
-          </Link>
-          <Link to={config[2].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[2].id} scroll='smooth'>
             <Icono1
               id={config[2].tooltip}
               src={icono}
@@ -88,8 +88,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[2].tooltip} content={config[2].tooltip} />
-          </Link>
-          <Link to={config[3].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[3].id} scroll='smooth'>
             <Icono1
               id={config[3].tooltip}
               src={icono}
@@ -99,8 +99,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[3].tooltip} content={config[3].tooltip} />
-          </Link>
-          <Link to={config[4].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[4].id} scroll='smooth'>
             <Icono1
               id={config[4].tooltip}
               src={icono}
@@ -110,8 +110,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[4].tooltip} content={config[4].tooltip} />
-          </Link>
-          <Link to={config[5].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[5].id} scroll='smooth'>
             <Icono1
               id={config[5].tooltip}
               src={icono}
@@ -121,8 +121,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[5].tooltip} content={config[5].tooltip} />
-          </Link>
-          <Link to={config[6].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[6].id} scroll='smooth'>
             <Icono1
               id={config[6].tooltip}
               src={icono}
@@ -132,8 +132,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[6].tooltip} content={config[6].tooltip} />
-          </Link>
-          <Link to={config[7].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[7].id} scroll='smooth'>
             <Icono1
               id={config[7].tooltip}
               src={icono}
@@ -143,8 +143,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[7].tooltip} content={config[7].tooltip} />
-          </Link>
-          <Link to={config[8].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[8].id} scroll='smooth'>
             <Icono1
               id={config[8].tooltip}
               src={icono}
@@ -154,8 +154,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[8].tooltip} content={config[8].tooltip} />
-          </Link>
-          <Link to={config[9].id} scroll="smooth">
+          </LinkSecciones>
+          <LinkSecciones to={config[9].id} scroll='smooth'>
             <Icono1
               id={config[9].tooltip}
               src={icono}
@@ -165,8 +165,8 @@ const MenuInteractivo = ({
               }}
             />
             <Tooltip anchorId={config[9].tooltip} content={config[9].tooltip} />
-          </Link>
-          {/* <Link to={config[10].id} scroll="smooth">
+          </LinkSecciones>
+          {/* <LinkSecciones to={config[10].id} scroll="smooth">
             <Icono1
               id={config[10].tooltip}
               src={icono}
@@ -179,7 +179,7 @@ const MenuInteractivo = ({
               anchorId={config[10].tooltip}
               content={config[10].tooltip}
             />
-          </Link> */}
+          </LinkSecciones> */}
         </IconContainer>
       </ImgWrap>
       {/* <CaraContainer id={id}>
