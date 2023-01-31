@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
-  background: rgb(85, 113, 119);
+  background: rgb(211, 206, 201);
   height: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
-  row-gap: 3.125rem;
+  row-gap: 1.563rem;
   padding: 6rem 4rem 4rem 4rem;
   @media screen and (max-width: 1400px) {
     margin-top: -5%;
@@ -41,10 +41,9 @@ export const Heading = styled.p`
   margin-right: 10%;
   font-size: 100px;
   line-height: 0.9;
-  margin-right: 50%;
   margin-bottom: 77px;
   justify-content: center;
-  color: #fff;
+  color: #000;
   //grid-column: 4 / span 8;
   @media screen and (max-width: 1920px) {
     margin-right: 30%;
@@ -69,7 +68,7 @@ export const Subtitle = styled.p`
   margin-left: -100px;
   margin-bottom: 35px;
   padding-right: 100px;
-  color: #fff;
+  color: #000;
   @media screen and (max-width: 1400px) {
     padding-right: 0;
     margin-left: 0;
@@ -104,4 +103,18 @@ export const Img = styled.img`
   width: auto;
   margin-left: auto;
   margin-right: auto;
+`;
+export const WrapperIframe = styled.div`
+  grid-column: 3 / -3;
+  grid-row: 3;
+  height: 1080px;
+  width: 1920px;
+  @media screen and (max-width: 1400px) {
+    grid-column: 3 / -3;
+  }
+  @media screen and (max-width: 980px) {
+    grid-column: 1 / -1;
+  }
+  @media screen and (max-width: 480px) {
+  }
 `;

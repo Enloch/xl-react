@@ -17,14 +17,19 @@ const fadeImages = [
   require("../../../assets/images/acabado_hond.webp"),
   require("../../../assets/images/acabado_mate_sr.webp"),
 ];
-const EncimeraTop = ({ id, headLine, description, img, alt }) => {
+const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
   return (
     <>
       <InfoContainer id={id}>
         <TextWrapper>
           <Heading> {headLine}</Heading>
         </TextWrapper>
-        <Subtitle>{description}</Subtitle>
+        <Subtitle>
+          {description2}
+          <br />
+          <br />
+          {description}
+        </Subtitle>
         <GeneralContainer>
           <SliderWrapper>
             <SliderContainer className='slide-container'>

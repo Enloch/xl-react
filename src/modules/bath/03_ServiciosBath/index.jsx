@@ -34,9 +34,8 @@ const ServicioBath = ({ id, headLine, description }) => {
           <Lista>
             <LiEl>XL top // encimeras sobremueble</LiEl>
             <LiEl>XL frente</LiEl>
-            <LiEl>Encimeras autoportantes</LiEl>
-            <LiEl>XL shelf // baldas</LiEl>
-            <LiEl>XL bath specials // lavabos</LiEl>
+            <LiEl>XL shelf // baldas y encimeras autoportantes //</LiEl>
+            <LiEl>XL bath specials // lavabos y tótems</LiEl>
             <LiEl>XL light shower tray // platos de ducha medida</LiEl>
             <LiEl>XL shower panel // paneles de ducha a medida</LiEl>
           </Lista>

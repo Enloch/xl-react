@@ -63,13 +63,13 @@ const Bath = () => {
       {/* <Slider1 /> */}
       <Frente {...frenteObj} />
       <EncimeraAuto {...encimeraauto} />
-      <Slider2 />
+      {/* <XLShelf {...xlshelf} /> */}
+      {/* <Slider2 />
       <ForradoMueble {...forradomuebles} />
       <InterForrado {...inter1} />
-      <XLShelf {...xlshelf} />
-      <Slider3 />
+      <Slider3 /> */}
       <XLSpecial {...xlspecial} />
-      <RotadorLavabo {...inter2} />
+      {/* <RotadorLavabo {...inter2} /> */}
     </>
   );
 };
