@@ -8,10 +8,6 @@ import { motion } from "framer-motion";
 
 export const medidas1 = (
   <AnimacionContainer>
-    <TituloAnimacion>
-      todas las encimeras en las siguientes medidas
-    </TituloAnimacion>
-    <Linea></Linea>
     <Barra
       initial={{ width: 0 }}
       whileInView={{
@@ -106,11 +102,6 @@ export const medidas1 = (
 );
 export const medidas2 = (
   <AnimacionContainer>
-    <TituloAnimacion>
-      <br />
-      <br />
-    </TituloAnimacion>
-    <Linea></Linea>
     <Barra
       initial={{ width: 0 }}
       whileInView={{
@@ -205,11 +196,6 @@ export const medidas2 = (
 );
 export const medidas3 = (
   <AnimacionContainer>
-    <TituloAnimacion>
-      <br />
-      <br />
-    </TituloAnimacion>
-    <Linea></Linea>
     <Barra
       initial={{ width: 0 }}
       whileInView={{

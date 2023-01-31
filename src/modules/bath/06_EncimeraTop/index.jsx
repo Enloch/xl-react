@@ -1,5 +1,6 @@
 import React from "react";
 import { medidas1, medidas2, medidas3 } from "./animacionesAncho";
+import { TituloAnimacion, Linea } from "./animacionesStyles";
 import {
   InfoContainer,
   TextWrapper,
@@ -111,6 +112,10 @@ const EncimeraTop = ({
             descarga4
           )}
         </Wrapper>
+        <TituloAnimacion>
+          todas las encimeras en las siguientes medidas
+          <Linea />
+        </TituloAnimacion>
         <WrapperAnim>
           {medidas1}
           {medidas2}
