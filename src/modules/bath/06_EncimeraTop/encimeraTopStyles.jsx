@@ -6,7 +6,7 @@ export const InfoContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
-  padding: 6rem 4rem 4rem 4rem;
+  padding: 2rem 4rem 4rem 4rem;
   @media screen and (max-width: 1400px) {
     padding: calc(8px + 1.5625vw);
   }

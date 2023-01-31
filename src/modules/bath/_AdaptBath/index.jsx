@@ -1,5 +1,7 @@
 import React from "react";
 import Intercambiador from "./intercambiador";
+import { Slide } from "react-slideshow-image";
+import "./styles.css";
 import {
   Heading,
   MainContainer,
@@ -12,9 +14,16 @@ import {
   ImgGradient,
   ImgWrap,
   Img2,
+  Img3,
+  GeneralContainer,
+  SliderWrapper,
+  SliderContainer,
 } from "./adaptElements";
 import { IntercambiadorObj } from "./dataIntercambiador";
-
+const fadeImages = [
+  require("../../../assets/images/bath/XL BATH detalle web 1_OK.webp"),
+  require("../../../assets/images/acabado_mate_sr.webp"),
+];
 const AdaptBath = ({
   titulo,
   subtitulo,
@@ -37,25 +46,30 @@ const AdaptBath = ({
           <Caracteristics></Caracteristics>
           <WrapperTexto>
             <TxtSubimagen>
-              Acabado cajón: <b>datos aquí</b> //
+              Acabado cajón: <strong>datos aquí //</strong>
             </TxtSubimagen>
             <TxtSubimagen>
-              Acabado encimera: <b>datos aquí</b> //
+              Acabado encimera: <b>datos aquí //</b>
             </TxtSubimagen>
             <TxtSubimagen>
-              Acabado lateral: <b>datos aquí</b> //
+              Acabado lateral: <b>datos aquí //</b>
             </TxtSubimagen>
             <TxtSubimagen>
-              Acabado forrado mueble: <b>datos aquí</b> //
+              Acabado forrado mueble: <b>datos aquí //</b>
             </TxtSubimagen>
           </WrapperTexto>
         </ImgWrapper>
       </MainContainer>
-      <ImgGradient>
-        <ImgWrap>
-          <Img2 src={ImagenTemp2} alt={"test"} />
-        </ImgWrap>
-      </ImgGradient>
+      <GeneralContainer>
+        <SliderWrapper>
+          <SliderContainer className='slide-container'>
+            <Slide arrows={false} indicators={true}>
+              <Img3 src={fadeImages[0]} />
+              <Img3 src={fadeImages[1]} />
+            </Slide>
+          </SliderContainer>
+        </SliderWrapper>
+      </GeneralContainer>
     </>
   );
 };

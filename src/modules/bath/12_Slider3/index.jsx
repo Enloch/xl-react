@@ -18,7 +18,7 @@ const Slider3 = () => {
   return (
     <GeneralContainer>
       <SliderWrapper>
-        <SliderContainer className="slide-container">
+        <SliderContainer className='slide-container'>
           <Slide arrows={false} indicators={true}>
             <Img src={fadeImages[0]} />
             <Img src={fadeImages[1]} />
