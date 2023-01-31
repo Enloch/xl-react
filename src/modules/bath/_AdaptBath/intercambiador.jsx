@@ -88,6 +88,14 @@ const Intercambiador = ({ base }) => {
                 left: "65%",
               }}
             />
+            <Icono1
+              src={icono_b}
+              alt='lateral'
+              style={{
+                top: "70%",
+                left: "32%",
+              }}
+            />
           </ContenedorIconos>
         )}
         <ContenedorImagenBase id='fondo' descripcion='Mueble lacado en blanco.'>
