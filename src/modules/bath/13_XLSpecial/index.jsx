@@ -15,7 +15,7 @@ const XLSpecialBath = ({ id, headLine, description }) => {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <>
-      <InfoContainer id={id}>
+      <InfoContainer id='xlspecial'>
         <TextWrapper>
           <Heading>{headLine}</Heading>
           <Subtitle>{description}</Subtitle>

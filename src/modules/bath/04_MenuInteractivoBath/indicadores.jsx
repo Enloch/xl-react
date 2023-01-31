@@ -1,13 +1,13 @@
 const config = [
   {
-    id: "forrado de modulos",
+    id: "forradomuebles",
     tooltip: "Forrado de módulos auxiliares",
     top: "38%",
     left: "11%",
     n: "0",
   },
   {
-    id: "revestimiento",
+    id: "forradomuebles",
     tooltip: "Revestimiento de cajones y costados",
     top: "60%",
     left: "23%",
@@ -15,7 +15,7 @@ const config = [
   },
   {
     id: "xlshelf",
-    tooltip: "Encimeras autoportantes",
+    tooltip: "Xl shelf y encimeras autoportantes",
     top: "80% ",
     left: "22%",
     n: "2",
@@ -30,12 +30,12 @@ const config = [
   {
     id: "encimerabath",
     tooltip: "Encimera sobremueble",
-    top: "55%",
+    top: "57.5%",
     left: "27%",
     n: "4",
   },
   {
-    id: "xlspecials",
+    id: "xlspecial",
     tooltip: "XL bath specials // lavabos",
     top: "58%",
     left: "38%",

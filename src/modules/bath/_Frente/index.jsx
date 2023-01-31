@@ -24,7 +24,7 @@ const fadeImages = [
 const Frente = ({ id, headLine, description, img, alt }) => {
   return (
     <>
-      <InfoContainer id={id}>
+      <InfoContainer id='frentes'>
         <TextWrapper>
           <Heading> {headLine}</Heading>
         </TextWrapper>

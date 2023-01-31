@@ -104,7 +104,7 @@ const MenuInteractivo = ({
           <LinkSecciones to={config[4].id} scroll='smooth'>
             <Icono1
               id={config[4].tooltip}
-              src={icono_b}
+              src={icono}
               style={{
                 top: config[4].top,
                 left: config[4].left,

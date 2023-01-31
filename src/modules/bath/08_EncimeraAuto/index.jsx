@@ -20,7 +20,7 @@ const fadeImages = [
 const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
   return (
     <>
-      <InfoContainer id={id}>
+      <InfoContainer id='xlshelf'>
         <TextWrapper>
           <Heading> {headLine}</Heading>
         </TextWrapper>

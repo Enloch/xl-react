@@ -13,6 +13,24 @@ import {
   Img,
 } from "./servicioStyle";
 const ServicioBath = ({ id, headLine, description }) => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        ease: "easeIn",
+        duration: 0.8,
+        delayChildren: 0.8,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
   return (
     <>
       <CaraContainer id={id}>
@@ -21,23 +39,31 @@ const ServicioBath = ({ id, headLine, description }) => {
           <Subtitle>{description}</Subtitle>
         </TextWrapper>
         <ListaUno>
-          <Lista>
-            <LiEl>XL bathroom adapt //</LiEl>
-            <ListaInterna>Encimeras</ListaInterna>
-            <ListaInterna>Forrado de muebles</ListaInterna>
-            <ListaInterna>Forrado de módulos auxiliares</ListaInterna>
+          <Lista variants={container} initial='hidden' whileInView='show'>
+            <LiEl variants={item}>XL bathroom adapt //</LiEl>
+            <ListaInterna variants={item}>Encimeras</ListaInterna>
+            <ListaInterna variants={item}>Forrado de muebles</ListaInterna>
+            <ListaInterna variants={item}>
+              Forrado de módulos auxiliares
+            </ListaInterna>
             <ListaInterna>Revestimiento de cajones y costados</ListaInterna>
             <ListaInterna>Etc..</ListaInterna>
           </Lista>
         </ListaUno>
         <ListaDos>
-          <Lista>
-            <LiEl>XL top // encimeras sobremueble</LiEl>
-            <LiEl>XL frente</LiEl>
-            <LiEl>XL shelf // baldas y encimeras autoportantes //</LiEl>
-            <LiEl>XL bath specials // lavabos y tótems</LiEl>
-            <LiEl>XL light shower tray // platos de ducha medida</LiEl>
-            <LiEl>XL shower panel // paneles de ducha a medida</LiEl>
+          <Lista variants={container} initial='hidden' whileInView='show'>
+            <LiEl variants={item}>XL top // encimeras sobremueble</LiEl>
+            <LiEl variants={item}>XL frente</LiEl>
+            <LiEl variants={item}>
+              XL shelf // baldas y encimeras autoportantes //
+            </LiEl>
+            <LiEl variants={item}>XL bath specials // lavabos y tótems</LiEl>
+            <LiEl variants={item}>
+              XL light shower tray // platos de ducha medida
+            </LiEl>
+            <LiEl variants={item}>
+              XL shower panel // paneles de ducha a medida
+            </LiEl>
           </Lista>
         </ListaDos>
       </CaraContainer>

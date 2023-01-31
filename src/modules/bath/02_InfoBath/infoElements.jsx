@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const InfoContainer = styled.div`
   background: rgb(85, 113, 119);
@@ -44,10 +45,11 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   max-width: 500px;
   font-size: 100px;
   line-height: 0.9;
+  margin-left: 50px;
   margin-bottom: 77px;
   justify-content: center;
   color: #fff;
@@ -65,7 +67,7 @@ export const Heading = styled.p`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(motion.p)`
   font-size: 40px;
   //max-width: 440px;
   line-height: 1.1;
@@ -103,7 +105,7 @@ export const ImgGradient = styled.div`
   @media screen and (max-width: 480px) {
   }
 `;
-export const ImgWrap = styled.div`
+export const ImgWrap = styled(motion.div)`
   display: grid;
   grid-column: 3 / span 8;
   padding-left: 100px;

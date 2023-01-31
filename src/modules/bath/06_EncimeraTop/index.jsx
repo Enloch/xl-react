@@ -58,7 +58,7 @@ const EncimeraTop = ({
 }) => {
   return (
     <>
-      <InfoContainer id={id}>
+      <InfoContainer id='encimerabath'>
         <TextWrapper>
           <Heading> {headLine}</Heading>
           <Subtitle>

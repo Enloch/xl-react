@@ -33,7 +33,7 @@ const AdaptBath = ({
 }) => {
   return (
     <>
-      <MainContainer>
+      <MainContainer id='forradomuebles'>
         <Heading>{titulo}</Heading>
         <Subtitle>
           {subtitulo}

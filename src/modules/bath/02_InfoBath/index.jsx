@@ -16,8 +16,33 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
     <>
       <InfoContainer id={id}>
         <TextWrapper>
-          <Heading> {headLine}</Heading>
-          <Subtitle>
+          <Heading
+            initial={{ y: 300, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              y: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {" "}
+            {headLine}
+          </Heading>
+          <Subtitle
+            initial={{ y: 300, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              y: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
             {description[0]}
             <br />
             {description[1]}
@@ -25,7 +50,18 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
         </TextWrapper>
       </InfoContainer>
       <ImgGradient>
-        <ImgWrap>
+        <ImgWrap
+          initial={{ x: 400, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.9,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <Img src={img} alt={"test"} />
         </ImgWrap>
       </ImgGradient>

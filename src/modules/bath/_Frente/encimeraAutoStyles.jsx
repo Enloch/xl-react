@@ -19,7 +19,7 @@ export const InfoContainer = styled.div`
 
 export const TextWrapper = styled.div`
   display: grid;
-  grid-column: 3 / span 3;
+  grid-column: 2 / span 3;
   @media screen and(max-width: 1920px) {
     //grid-column: 1/span 8;
   }

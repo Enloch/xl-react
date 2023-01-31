@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const CaraContainer = styled.div`
   background: rgb(211, 206, 201);
@@ -78,7 +79,7 @@ export const Subtitle = styled.p`
 
   //color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 `;
-export const ListaUno = styled.div`
+export const ListaUno = styled(motion.div)`
   grid-column: 4 / span 4;
   margin-left: 125px;
   @media screen and (max-width: 1400px) {
@@ -91,7 +92,7 @@ export const ListaUno = styled.div`
   @media screen and (max-width: 480px) {
   }
 `;
-export const ListaDos = styled.div`
+export const ListaDos = styled(motion.div)`
   grid-column: 8 / span 4;
 
   @media screen and (max-width: 1400px) {
@@ -107,7 +108,7 @@ export const ListaDos = styled.div`
     margin-top: -15px;
   }
 `;
-export const Lista = styled.ul`
+export const Lista = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -127,7 +128,7 @@ export const ListaInterna = styled.ul`
     font-size: 16px;
   }
 `;
-export const LiEl = styled.li`
+export const LiEl = styled(motion.li)`
   font-size: 30px;
   color: #303030;
   @media screen and (max-width: 980px) {
