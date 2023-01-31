@@ -22,7 +22,7 @@ import {
 import { IntercambiadorObj } from "./dataIntercambiador";
 const fadeImages = [
   require("../../../assets/images/bath/XL BATH detalle web 1_OK.webp"),
-  require("../../../assets/images/acabado_mate_sr.webp"),
+  require("../../../assets/images/bath/XL BATH web detalle 2_OK.webp"),
 ];
 const AdaptBath = ({
   titulo,

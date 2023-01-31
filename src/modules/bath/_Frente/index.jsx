@@ -17,8 +17,8 @@ import {
   WrapperAnim,
 } from "./encimeraAutoStyles";
 const fadeImages = [
-  require("../../../assets/images/acabado_hond.webp"),
-  require("../../../assets/images/acabado_mate_sr.webp"),
+  require("../../../assets/images/bath/XL BATH web detalle frontal_OK.webp"),
+  require("../../../assets/images/bath/XL BATH web detalle frontal PICADO_ok.webp"),
 ];
 
 const Frente = ({ id, headLine, description, img, alt }) => {
