@@ -37,7 +37,6 @@ const ServicioBath = ({ id, headLine, description }) => {
             <LiEl>Encimeras autoportantes</LiEl>
             <LiEl>XL shelf // baldas</LiEl>
             <LiEl>XL bath specials // lavabos</LiEl>
-            <LiEl>Muebles de baño especiales</LiEl>
             <LiEl>XL light shower tray // platos de ducha medida</LiEl>
             <LiEl>XL shower panel // paneles de ducha a medida</LiEl>
           </Lista>

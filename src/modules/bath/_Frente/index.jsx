@@ -1,5 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
+import { medidas1, medidas2, medidas3 } from "./animacionesAncho";
+import { TituloAnimacion, Linea } from "./animacionesStyles";
 import {
   InfoContainer,
   InfoWrapper,
@@ -12,12 +14,14 @@ import {
   GeneralContainer,
   SliderWrapper,
   SliderContainer,
+  WrapperAnim,
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/acabado_hond.webp"),
   require("../../../assets/images/acabado_mate_sr.webp"),
 ];
-const EncimeraTop = ({ id, headLine, description, img, alt }) => {
+
+const Frente = ({ id, headLine, description, img, alt }) => {
   return (
     <>
       <InfoContainer id={id}>
@@ -35,9 +39,18 @@ const EncimeraTop = ({ id, headLine, description, img, alt }) => {
             </SliderContainer>
           </SliderWrapper>
         </GeneralContainer>
+        <TituloAnimacion>
+          frentes disponibles en las siguientes medidas
+          <Linea />
+        </TituloAnimacion>
+        <WrapperAnim>
+          {medidas1}
+          {medidas2}
+          {medidas3}
+        </WrapperAnim>
       </InfoContainer>
     </>
   );
 };
 
-export default EncimeraTop;
+export default Frente;

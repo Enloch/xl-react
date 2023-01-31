@@ -100,7 +100,7 @@ export const Img = styled.img`
 `;
 
 export const Wrapper = styled.div`
-  grid-column: 5 / -1;
+  grid-column: 4 / -2;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -119,7 +119,7 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperAnim = styled.div`
-  grid-column: 5 / -1;
+  grid-column: 4 / -2;
   display: flex;
   flex-direction: row;
   /* height: 100%; */

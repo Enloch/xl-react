@@ -7,7 +7,7 @@ export const CaraContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
-  padding: 6rem 4rem 6rem 4rem;
+  padding: 6rem 4rem 1rem 4rem;
   @media screen and (max-width: 1400px) {
     padding: calc(8px + 1.5625vw);
   }
@@ -111,7 +111,7 @@ export const Lista = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  row-gap: 2rem;
+  row-gap: 0.75rem;
 `;
 export const ListaInterna = styled.ul`
   color: #797979;

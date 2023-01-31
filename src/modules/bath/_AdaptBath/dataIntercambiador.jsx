@@ -15,7 +15,7 @@ export const IntercambiadorObj = {
   noonSFRONTAL: require("../../../assets/images/bath/intercambiador/CAPAS/FRONTAL/INTERCAMBIADOR XL BATH_FRONTAL_NOON_SAND.webp"),
   paladioFRONTAL: require("../../../assets/images/bath/intercambiador/CAPAS/FRONTAL/INTERCAMBIADOR XL BATH_FRONTAL_PALADIO_MARRON_NATURAL.webp"),
   syracFRONTAL: require("../../../assets/images/bath/intercambiador/CAPAS/FRONTAL/INTERCAMBIADOR XL BATH_FRONTAL_SYRAC.webp"),
-
+  rojoFRONTAL: require("../../../assets/images/bath/intercambiador/CAPAS/FRONTAL/INTERCAMBIADOR XL BATH__FRONTAL_SELECCION.png"),
   //modulos
   allureMODULO: require("../../../assets/images/bath/intercambiador/CAPAS/MODULO/INTERCAMBIADOR XL BATH_MODULO_ALLURE_ANTHRACITE.webp"),
   berenMODULO: require("../../../assets/images/bath/intercambiador/CAPAS/MODULO/INTERCAMBIADOR XL BATH_MODULO_BEREN_LIGHT_GREY.webp"),
@@ -32,7 +32,7 @@ export const IntercambiadorObj = {
   noonSMODULO: require("../../../assets/images/bath/intercambiador/CAPAS/MODULO/INTERCAMBIADOR XL BATH_MODULO_NOON_SAND.webp"),
   paladioMODULO: require("../../../assets/images/bath/intercambiador/CAPAS/MODULO/INTERCAMBIADOR XL BATH_MODULO_PALADIO_MARRON_NATURAL.webp"),
   syracMODULO: require("../../../assets/images/bath/intercambiador/CAPAS/MODULO/INTERCAMBIADOR XL BATH_MODULO_SYRAC.webp"),
-
+  rojoMODULO: require("../../../assets/images/bath/intercambiador/CAPAS/MODULO/INTERCAMBIADOR XL BATH_MODULO_SELECCION.png"),
   //MUEBLE
   allureMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_ALLURE_ANTHRACITE.webp"),
   berenMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_BEREN_LIGHT_GREY.webp"),
@@ -50,6 +50,8 @@ export const IntercambiadorObj = {
   paladioMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_PALADIO_MARRON_NATURAL.webp"),
   syracMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_SYRAC.webp"),
   //mueble especial
+  rojoTAPA: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH__LATERALES_SELECCION.png"),
+  rojoMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH__TAPA_SELECCION.png"),
   maderaMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_LATERALES_MADERA.webp"),
 };
 
@@ -68,6 +70,7 @@ const noonGf = IntercambiadorObj.noonGFRONTAL;
 const noonSf = IntercambiadorObj.noonSFRONTAL;
 const paladiof = IntercambiadorObj.paladioFRONTAL;
 const syracf = IntercambiadorObj.syracFRONTAL;
+const rojof = IntercambiadorObj.rojoFRONTAL;
 
 export const frontales = {
   alluref,
@@ -85,6 +88,7 @@ export const frontales = {
   noonSf,
   paladiof,
   syracf,
+  rojof,
 };
 
 const allurem = IntercambiadorObj.allureMODULO;
@@ -102,6 +106,7 @@ const noonGm = IntercambiadorObj.noonGMODULO;
 const noonSm = IntercambiadorObj.noonSMODULO;
 const paladiom = IntercambiadorObj.paladioMODULO;
 const syracm = IntercambiadorObj.syracMODULO;
+const rojom = IntercambiadorObj.rojoMODULO;
 
 export const modulos = {
   allurem,
@@ -119,25 +124,27 @@ export const modulos = {
   noonSm,
   paladiom,
   syracm,
+  rojom,
 };
 
-const allurel = IntercambiadorObj.allureLATERAL;
-const berenl = IntercambiadorObj.berenLATERAL;
-const blancborgl = IntercambiadorObj.blancborgLATERAL;
-const blancinvl = IntercambiadorObj.blancinvLATERAL;
-const brazill = IntercambiadorObj.brazilLATERAL;
-const calacattal = IntercambiadorObj.calacattaLATERAL;
-const emel = IntercambiadorObj.emeLATERAL;
-const kendoCl = IntercambiadorObj.kendoCLATERAL;
-const kendoLl = IntercambiadorObj.kendoLLATERAL;
-const momal = IntercambiadorObj.momaLATERAL;
-const negrol = IntercambiadorObj.negroLATERAL;
-const noonGl = IntercambiadorObj.noonGLATERAL;
-const noonSl = IntercambiadorObj.noonSLATERAL;
-const paladiol = IntercambiadorObj.paladioLATERAL;
-const syracl = IntercambiadorObj.syracLATERAL;
-const maderal = IntercambiadorObj.maderal;
-
+const allurel = IntercambiadorObj.allureMUEBLE;
+const berenl = IntercambiadorObj.berenMUEBLE;
+const blancborgl = IntercambiadorObj.blancborgMUEBLE;
+const blancinvl = IntercambiadorObj.blancinvMUEBLE;
+const brazill = IntercambiadorObj.brazilMUEBLE;
+const calacattal = IntercambiadorObj.calacattaMUEBLE;
+const emel = IntercambiadorObj.emeMUEBLE;
+const kendoCl = IntercambiadorObj.kendoCMUEBLE;
+const kendoLl = IntercambiadorObj.kendoLMUEBLE;
+const momal = IntercambiadorObj.momaMUEBLE;
+const negrol = IntercambiadorObj.negroMUEBLE;
+const noonGl = IntercambiadorObj.noonGMUEBLE;
+const noonSl = IntercambiadorObj.noonSMUEBLE;
+const paladiol = IntercambiadorObj.paladioMUEBLE;
+const syracl = IntercambiadorObj.syracMUEBLE;
+const maderal = IntercambiadorObj.maderaMUEBLE;
+const rojol = IntercambiadorObj.rojoMUEBLE;
+const rojot = IntercambiadorObj.rojoTAPA;
 export const laterales = {
   allurel,
   berenl,
@@ -155,4 +162,5 @@ export const laterales = {
   paladiol,
   syracl,
   maderal,
+  rojol,
 };

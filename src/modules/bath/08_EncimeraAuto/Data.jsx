@@ -1,8 +1,8 @@
 export const encimeraauto = {
   id: "encimeraauto",
-  headLine: "encimeras top autoportante //",
+  headLine: "encimeras autoportantes y XL shelf //",
   description:
-    "Nos adaptamos a cualquier diseño para encimeras autoportantes en espesores tanto de 6 como de 12 mm.",
+    "solucionamos todo tipo de necesidades en encimeras autoportantes y estantes de baño",
   img: require("../../../assets/images/bath/encimera img.png"),
   alt: "encimeraauto",
 };

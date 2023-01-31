@@ -35,7 +35,7 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.p`
   //max-width: 500px;
-  grid-column: 3 / span 4;
+  grid-column: 3 / span 5;
   font-size: 100px;
   line-height: 0.9;
   margin-bottom: 77px;
