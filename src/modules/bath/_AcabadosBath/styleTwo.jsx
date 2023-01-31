@@ -47,6 +47,23 @@ export const Title = styled.p`
     grid-column: 1/-1;
   }
 `;
+export const CloseX = styled.p`
+  grid-column: 12/-1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+  //margin-left: 10rem;
+  margin-bottom: 2.25rem;
+  font-size: 40px;
+  //color: ${COLORS.gray09};
+
+  @media screen and (max-width: 980px) {
+    grid-column: 12/-1;
+  }
+  @media screen and (max-width: 480px) {
+    grid-column: 12/-1;
+  }
+`;
 
 export const ImagenXL = styled.img`
   grid-column: 2/ 7;
@@ -109,6 +126,7 @@ export const Cambiador = styled.div`
     grid-column: 1/-1;
     grid-row: 5;
     grid-template-columns: repeat(3, fr);
+    margin-bottom: 1.5rem;
   }
 `;
 export const Cambiador2 = styled.div`
@@ -262,6 +280,7 @@ export const Vid = styled.video`
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
+    margin-top: 1 rem;
   }
 `;
 export const VerVid = styled.p`
@@ -326,15 +345,17 @@ export const TextoDescarga = styled.span`
 export const FooterContainer = styled.div`
   background: #000000;
   width: 100%;
-  padding: 2rem;
-  @media screen and (max-width: 980px) {
-  }
-  @media screen and (max-width: 480px) {
-  }
+  padding: 1rem;
 `;
 export const FooterWrapper = styled.div`
   display: grid;
   grid-template-columns: 25% 75%;
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+    height: 100px;
+    align-content: center;
+  }
 `;
 export const FooterLogo = styled.img`
   @media screen and (max-width: 980px) {
@@ -347,7 +368,7 @@ export const FooterLogo = styled.img`
 export const FooterLink = styled.p`
   color: #ffffff;
   align-self: center;
-  width: 300px;
+  width: 425px;
   font-size: 30px;
   padding: 0.625rem 0;
   border-bottom: 2px solid #ffffff;
@@ -361,5 +382,6 @@ export const FooterLink = styled.p`
   }
   @media screen and (max-width: 480px) {
     scale: 0.7;
+    width: 275px;
   }
 `;

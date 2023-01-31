@@ -10,7 +10,7 @@ export const encimeratop = {
   titulo2: "XL top plus",
   titulo3: "XL top integrity",
   titulo4: "XL top plus integrity",
-
+  iconodescarga: require("../../../assets/images/bath/download_negro.png"),
   sub1: " encimera de 12mm sobre mueble",
   sub2: "encimeras regruesadas sobre mueble",
   sub3: " encimeras con lavabo",
@@ -49,8 +49,8 @@ export const encimeratop = {
   desc2: {
     text1: "XL top plus 4",
     text2: "XL top plus 8",
-    text3: "XL top plus",
-    subtext: " (se puede realizar con cualquiera e los 3 tipos de encaste",
+    text3: "XL top plus 12",
+    subtext: " (se puede realizar con cualquiera e los 3 tipos de encastre",
   },
   desc3: {
     text1: "XL top integrity con lavabo centrado",

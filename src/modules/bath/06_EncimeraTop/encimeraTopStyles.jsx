@@ -61,7 +61,6 @@ export const Subtitle = styled.p`
   line-height: 1.1;
   font-weight: 100;
   margin-left: 100px;
-  margin-bottom: 35px;
   color: #000;
   @media screen and (max-width: 1400px) {
     margin-left: 0;
@@ -118,10 +117,31 @@ export const Wrapper = styled.div`
     grid-column: 1 / -1;
   }
 `;
+
+export const WrapperAnim = styled.div`
+  grid-column: 5 / -1;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  @media screen and(max-width: 1920px) {
+    //grid-column: 1/span 8;
+  }
+  @media screen and (max-width: 1400px) {
+    grid-column: 2/-2;
+  }
+  @media screen and (max-width: 980px) {
+    grid-column: 1 / -1;
+  }
+  @media screen and (max-width: 480px) {
+    grid-column: 1 / -1;
+  }
+`;
 export const BloqueTitulo = styled.p`
   height: 72px;
   display: flex;
+  flex-direction: row;
   gap: 2%;
+  margin-top: 2rem;
   @media screen and (max-width: 1400px) {
     height: 48px;
   }
@@ -149,18 +169,27 @@ export const WrapperTitulo = styled.div`
   }
 `;
 export const ImagenTitulo = styled.img`
-  height: 72px;
+  height: 45px;
   width: auto;
   align-self: center;
   @media screen and (max-width: 1400px) {
-    height: 48px;
+    height: 40px;
   }
   @media screen and (max-width: 980px) {
-    height: 40px;
+    height: 32px;
   }
   @media screen and (max-width: 480px) {
     height: 24px;
   }
+`;
+
+export const BloqueDescarga = styled.div`
+  justify-self: end;
+`;
+export const TextoDescarga = styled.a``;
+export const IconoDescarga = styled.img`
+  height: auto;
+  width: 40px;
 `;
 export const BloqueSubtitulo = styled.p`
   font-size: 30px;
@@ -179,20 +208,38 @@ export const ContenedorEncimera = styled.div`
   flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  gap: 2%;
+  justify-content: space-evenly;
+  gap: 2rem;
 `;
 export const BloqueEncimeras3 = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 30%;
+  max-width: 27%;
 `;
 export const IconoEncimera = styled.img`
+  height: 180px;
+  width: 483.9px;
+  @media screen and (max-width: 1400px) {
+    height: 112px;
+    width: 355.9px;
+  }
+  @media screen and (max-width: 980px) {
+    height: 110px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 116px;
+    height: 56px;
+  }
+`;
+export const DetalleEncimera = styled.img`
   width: auto;
   height: auto;
+  margin-top: 2rem;
 `;
 export const InfoEncimera = styled.p`
   font-size: 24px;
   height: auto;
+  margin-top: 1rem;
 
   @media screen and (max-width: 1400px) {
   }
@@ -200,6 +247,6 @@ export const InfoEncimera = styled.p`
     font-size: 24px;
   }
   @media screen and (max-width: 480px) {
-    font-size: 16px;
+    font-size: 11px;
   }
 `;

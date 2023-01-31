@@ -1,10 +1,12 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import {
   InfoContainer,
   TextWrapper,
   Heading,
   Subtitle,
   Wrapper,
+  WrapperAnim,
   WrapperTitulo,
   BloqueTitulo,
   ImagenTitulo,
@@ -13,7 +15,12 @@ import {
   ContenedorEncimera,
   IconoEncimera,
   InfoEncimera,
+  DetalleEncimera,
+  BloqueDescarga,
+  TextoDescarga,
+  IconoDescarga,
 } from "./encimeraTopStyles";
+import "./info.css";
 const EncimeraTop = ({
   id,
   headLine,
@@ -40,7 +47,12 @@ const EncimeraTop = ({
   desc4,
   detalleseccion,
   textoseccion,
+  iconodescarga,
 }) => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
   return (
     <>
       <InfoContainer id={id}>
@@ -53,26 +65,56 @@ const EncimeraTop = ({
           </Subtitle>
         </TextWrapper>
         <Wrapper id='envoltorio'>
-          {bloque(titulo1, mm12, sub1, imagenes2, desc1)}
-          {bloque(titulo2, mm06, sub2, imagenes2, desc2)}
-          <IconoEncimera src={detalleseccion} />
+          {bloque(titulo1, mm12, sub1, imagenes2, desc1, iconodescarga)}
+          {bloque(titulo2, mm06, sub2, imagenes2, desc2, iconodescarga)}
+          <DetalleEncimera src={detalleseccion} />
           <InfoEncimera>
             {textoseccion}
             <br />
             <br />
           </InfoEncimera>
 
-          {bloque(titulo3, mm06, sub3, imagenes3, desc3)}
-          {bloque(titulo4, mm12, sub4, imagenes4, desc4)}
+          {bloque(titulo3, mm06, sub3, imagenes3, desc3, iconodescarga)}
+          {bloque(titulo4, mm12, sub4, imagenes4, desc4, iconodescarga)}
         </Wrapper>
+        <WrapperAnim ref={ref}>
+          <div class='medTer'>
+            <div class='titulete'>
+              todas las encimeras en las siguientes medidas
+            </div>
+            <div class='rayita'></div>
+            <div class='barra' id='w36'>
+              61
+            </div>
+            <div class='barra' id='w48'>
+              71
+            </div>
+            <div class='barra' id='w60'>
+              81
+            </div>
+            <div class='barra' id='w72'>
+              91
+            </div>
+            <div class='barra' id='w96'>
+              101
+            </div>
+            <div class='barra' id='w120'>
+              111
+            </div>
+          </div>
+        </WrapperAnim>
       </InfoContainer>
     </>
   );
 };
-
 export default EncimeraTop;
 
-function bloque(titulo, icono, subtitulo, imagenes, texto) {
+// function animmedida() {
+//   return (
+
+//   );
+// }
+function bloque(titulo, icono, subtitulo, imagenes, texto, iconodownload) {
   return (
     <>
       <BloqueTitulo>
@@ -80,7 +122,12 @@ function bloque(titulo, icono, subtitulo, imagenes, texto) {
           <b>{titulo}</b>
         </WrapperTitulo>
         <ImagenTitulo src={icono}></ImagenTitulo>
+        <BloqueDescarga>
+          <TextoDescarga>Esp.Técnicas</TextoDescarga>
+          <IconoDescarga src={iconodownload} />
+        </BloqueDescarga>
       </BloqueTitulo>
+
       <BloqueSubtitulo>
         <br />
         {subtitulo}

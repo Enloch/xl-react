@@ -28,6 +28,7 @@ import {
   ImgSelector2,
 } from "./menuIntStyle";
 import icono from "../../../assets/icons/botones/boton.png";
+import icono_b from "../../../assets/icons/botones/boton_b.png";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import config from "./indicadores";
@@ -92,7 +93,7 @@ const MenuInteractivo = ({
           <LinkSecciones to={config[3].id} scroll='smooth'>
             <Icono1
               id={config[3].tooltip}
-              src={icono}
+              src={icono_b}
               style={{
                 top: config[3].top,
                 left: config[3].left,
@@ -103,7 +104,7 @@ const MenuInteractivo = ({
           <LinkSecciones to={config[4].id} scroll='smooth'>
             <Icono1
               id={config[4].tooltip}
-              src={icono}
+              src={icono_b}
               style={{
                 top: config[4].top,
                 left: config[4].left,
@@ -114,7 +115,7 @@ const MenuInteractivo = ({
           <LinkSecciones to={config[5].id} scroll='smooth'>
             <Icono1
               id={config[5].tooltip}
-              src={icono}
+              src={icono_b}
               style={{
                 top: config[5].top,
                 left: config[5].left,
@@ -125,7 +126,7 @@ const MenuInteractivo = ({
           <LinkSecciones to={config[6].id} scroll='smooth'>
             <Icono1
               id={config[6].tooltip}
-              src={icono}
+              src={icono_b}
               style={{
                 top: config[6].top,
                 left: config[6].left,
@@ -136,7 +137,7 @@ const MenuInteractivo = ({
           <LinkSecciones to={config[7].id} scroll='smooth'>
             <Icono1
               id={config[7].tooltip}
-              src={icono}
+              src={icono_b}
               style={{
                 top: config[7].top,
                 left: config[7].left,

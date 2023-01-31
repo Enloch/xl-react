@@ -11,6 +11,7 @@ import {
   ColWrapper,
   ColImagenes,
   Title,
+  CloseX,
   ImagenXL,
   EspesorWrapper,
   EspesorWrapper2,
@@ -38,6 +39,20 @@ export const PaginasAcabadoStyle1 = PaginasAcabado.map((elemento) => (
     <Wrapper>
       <ContentWrapper>
         <Title>{elemento.titulo}</Title>
+
+        <CloseX>
+          <Link
+            to='/bath'
+            style={{
+              textDecoration: "none",
+              color: "#000000",
+              alignSelf: "center",
+            }}
+          >
+            x
+          </Link>
+        </CloseX>
+
         <ImagenXL src={elemento.imgL} alt={elemento.altL} loading={"lazy"} />
         <EspesorWrapper>
           <Espesor src={elemento.espesor} />
@@ -77,7 +92,7 @@ export const PaginasAcabadoStyle1 = PaginasAcabado.map((elemento) => (
           <VerVid>{elemento.vervid}</VerVid>
         </ColWrapper>
         {elemento.pdfLink !== "" && (
-          <DescargaPdf href={elemento.pdfLink} download="">
+          <DescargaPdf href={elemento.pdfLink} download=''>
             <TextoDescarga>
               Descarga ficha técnica // Download Technical sheet
             </TextoDescarga>
@@ -90,7 +105,7 @@ export const PaginasAcabadoStyle1 = PaginasAcabado.map((elemento) => (
       <FooterWrapper>
         <FooterLogo src={Footer.footerImg} />
         <Link
-          to="/bath"
+          to='/bath'
           style={{
             textDecoration: "none",
             color: "#000000",

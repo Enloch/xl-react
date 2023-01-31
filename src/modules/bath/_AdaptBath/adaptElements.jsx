@@ -41,7 +41,7 @@ export const Heading = styled.p`
 `;
 
 export const Subtitle = styled.p`
-  grid-column: 4 / span 10;
+  grid-column: 4 / span 8;
   font-size: 40px;
   line-height: 1.1;
   font-weight: 100;
@@ -78,16 +78,94 @@ export const ImgWrapper = styled.div`
 export const Img = styled.img`
   width: 100%;
 `;
+export const Caracteristics = styled.p`
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 100;
+  margin-bottom: 35px;
+  color: #fff;
+  @media screen and (max-width: 980px) {
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+`;
+export const WrapperTexto = styled.div`
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
 
 export const TxtSubimagen = styled.p`
-  font-size: 16px;
-  color: #000;
+  background-color: transparent;
+  border: 0;
+  font-size: 40px;
+  max-width: auto;
+  line-height: 1;
+  font-weight: 100;
+  color: #fff;
+  /* cursor: pointer; */
+
+  /* :hover {
+    color: rgba(85, 113, 119);
+    //transform: translateX(20px);
+    transition: 0.2s ease-in-out;
+  } */
+
+  @media screen and (max-width: 980px) {
+    max-width: auto;
+    font-size: 32px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: auto;
+    font-size: 16px;
+  }
+`;
+export const ImgGradient = styled.div`
+  background: linear-gradient(
+    to bottom,
+    rgba(85, 113, 119) 0%,
+    rgba(85, 113, 119) 50%,
+    rgba(211, 206, 201) 50%,
+    rgba(211, 206, 201) 100%
+  );
+
+  height: auto;
+  padding: 2rem;
   @media screen and (max-width: 1400px) {
-    font-size: 14px;
+    padding: calc(8px + 1.5625vw);
   }
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
-    font-size: 12px;
   }
+`;
+export const ImgWrap = styled.div`
+  display: grid;
+  grid-column: 3 / span 8;
+  padding-left: 100px;
+  max-width: 100%;
+  height: auto;
+  @media screen and (max-width: 1400px) {
+    grid-column: 2 / span 10;
+    padding-left: 0;
+  }
+  @media screen and (max-width: 980px) {
+    grid-column: 1/5;
+  }
+  @media screen and (max-width: 480px) {
+  }
+`;
+
+export const Img2 = styled.img`
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 `;

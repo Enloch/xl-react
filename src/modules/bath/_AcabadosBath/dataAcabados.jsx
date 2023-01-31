@@ -1,5 +1,5 @@
 export const Footer = {
-  footer: "volver // return",
+  footer: "volver a bath // return to bath",
   footerImg: require("../../../assets/icons/introduccion/logo.png"),
 };
 
