@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const InfoContainer = styled.div`
   background: rgb(211, 206, 201);
@@ -83,32 +84,27 @@ export const Subtitle = styled.p`
 `;
 
 export const ImgWrap = styled.div`
-  display: grid;
-  padding-left: 100px;
   max-width: 100%;
-  height: auto;
+  cursor: pointer;
   @media screen and (max-width: 1400px) {
-    padding-left: 0;
   }
   @media screen and (max-width: 980px) {
-    margin-top: 3%;
   }
   @media screen and (max-width: 480px) {
   }
 `;
 
 export const Img = styled.img`
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-height: 100%;
+  position: absolute;
 `;
 export const WrapperIframe = styled.div`
   grid-column: 3 / -3;
   grid-row: 3;
   height: 1080px;
   width: 1920px;
+  position: relative;
   @media screen and (max-width: 1400px) {
     grid-column: 3 / -3;
   }
@@ -117,4 +113,13 @@ export const WrapperIframe = styled.div`
   }
   @media screen and (max-width: 480px) {
   }
+`;
+export const TextoImagen = styled(motion.p)`
+  position: absolute;
+  z-index: 3;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  left: 25%;
+  top: 50%;
 `;
