@@ -122,10 +122,8 @@ export const WrapperAnim = styled.div`
   grid-column: 5 / -1;
   display: flex;
   flex-direction: row;
+
   height: 100%;
-  @media screen and(max-width: 1920px) {
-    //grid-column: 1/span 8;
-  }
   @media screen and (max-width: 1400px) {
     grid-column: 2/-2;
   }
@@ -133,6 +131,8 @@ export const WrapperAnim = styled.div`
     grid-column: 1 / -1;
   }
   @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    flex-direction: column;
     grid-column: 1 / -1;
   }
 `;
@@ -140,7 +140,7 @@ export const WrapperAnim = styled.div`
 export const BloqueTitulo = styled.p`
   height: 72px;
   display: grid;
-  gap: 2%;
+  grid-template-columns: 70% 30%;
   margin-top: 2rem;
   align-items: center;
   @media screen and (max-width: 1400px) {
@@ -186,20 +186,37 @@ export const ImagenTitulo = styled.img`
 
 export const BloqueDescarga = styled.div`
   grid-column: 2;
-  display: grid;
   justify-self: end;
+  display: grid;
   align-items: center;
 `;
 export const TextoDescarga = styled.a`
+  grid-column: 1;
   margin-right: 1rem;
+  font-size: 1rem;
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
+  }
 `;
 export const LinkDescarga = styled.a`
+  justify-self: end;
   grid-column: 2;
 `;
 export const IconoDescarga = styled.img`
   //grid-column: 2;
   height: auto;
-  width: 40px;
+  width: 2rem;
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+    width: 1.2rem;
+  }
 `;
 export const BloqueSubtitulo = styled.p`
   font-size: 30px;
@@ -228,7 +245,7 @@ export const BloqueEncimeras3 = styled.div`
 `;
 export const IconoEncimera = styled.img`
   height: 180px;
-  width: 483.9px;
+  max-width: 100%;
   @media screen and (max-width: 1400px) {
     height: 112px;
     width: 355.9px;

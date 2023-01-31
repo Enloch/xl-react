@@ -1,5 +1,5 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
+import { medidas1, medidas2, medidas3 } from "./animacionesAncho";
 import {
   InfoContainer,
   TextWrapper,
@@ -22,6 +22,7 @@ import {
   LinkDescarga,
 } from "./encimeraTopStyles";
 import "./info.css";
+
 const EncimeraTop = ({
   id,
   headLine,
@@ -54,10 +55,6 @@ const EncimeraTop = ({
   descarga3,
   descarga4,
 }) => {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0,
-  });
   return (
     <>
       <InfoContainer id={id}>
@@ -114,31 +111,10 @@ const EncimeraTop = ({
             descarga4
           )}
         </Wrapper>
-        <WrapperAnim ref={ref}>
-          <div class='medTer'>
-            <div class='titulete'>
-              todas las encimeras en las siguientes medidas
-            </div>
-            <div class='rayita'></div>
-            <div class='barra' id='w36'>
-              61
-            </div>
-            <div class='barra' id='w48'>
-              71
-            </div>
-            <div class='barra' id='w60'>
-              81
-            </div>
-            <div class='barra' id='w72'>
-              91
-            </div>
-            <div class='barra' id='w96'>
-              101
-            </div>
-            <div class='barra' id='w120'>
-              111
-            </div>
-          </div>
+        <WrapperAnim>
+          {medidas1}
+          {medidas2}
+          {medidas3}
         </WrapperAnim>
       </InfoContainer>
     </>
@@ -146,11 +122,6 @@ const EncimeraTop = ({
 };
 export default EncimeraTop;
 
-// function animmedida() {
-//   return (
-
-//   );
-// }
 function bloque(
   titulo,
   icono,
