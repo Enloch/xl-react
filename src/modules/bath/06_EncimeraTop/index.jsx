@@ -19,6 +19,7 @@ import {
   BloqueDescarga,
   TextoDescarga,
   IconoDescarga,
+  LinkDescarga,
 } from "./encimeraTopStyles";
 import "./info.css";
 const EncimeraTop = ({
@@ -48,6 +49,10 @@ const EncimeraTop = ({
   detalleseccion,
   textoseccion,
   iconodescarga,
+  descarga1,
+  descarga2,
+  descarga3,
+  descarga4,
 }) => {
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -65,8 +70,24 @@ const EncimeraTop = ({
           </Subtitle>
         </TextWrapper>
         <Wrapper id='envoltorio'>
-          {bloque(titulo1, mm12, sub1, imagenes2, desc1, iconodescarga)}
-          {bloque(titulo2, mm06, sub2, imagenes2, desc2, iconodescarga)}
+          {bloque(
+            titulo1,
+            mm12,
+            sub1,
+            imagenes2,
+            desc1,
+            iconodescarga,
+            descarga1
+          )}
+          {bloque(
+            titulo2,
+            mm06,
+            sub2,
+            imagenes2,
+            desc2,
+            iconodescarga,
+            descarga2
+          )}
           <DetalleEncimera src={detalleseccion} />
           <InfoEncimera>
             {textoseccion}
@@ -74,8 +95,24 @@ const EncimeraTop = ({
             <br />
           </InfoEncimera>
 
-          {bloque(titulo3, mm06, sub3, imagenes3, desc3, iconodescarga)}
-          {bloque(titulo4, mm12, sub4, imagenes4, desc4, iconodescarga)}
+          {bloque(
+            titulo3,
+            mm06,
+            sub3,
+            imagenes3,
+            desc3,
+            iconodescarga,
+            descarga3
+          )}
+          {bloque(
+            titulo4,
+            mm12,
+            sub4,
+            imagenes4,
+            desc4,
+            iconodescarga,
+            descarga4
+          )}
         </Wrapper>
         <WrapperAnim ref={ref}>
           <div class='medTer'>
@@ -114,17 +151,27 @@ export default EncimeraTop;
 
 //   );
 // }
-function bloque(titulo, icono, subtitulo, imagenes, texto, iconodownload) {
+function bloque(
+  titulo,
+  icono,
+  subtitulo,
+  imagenes,
+  texto,
+  iconodownload,
+  descarga
+) {
   return (
     <>
       <BloqueTitulo>
         <WrapperTitulo>
           <b>{titulo}</b>
+          <ImagenTitulo src={icono}></ImagenTitulo>
         </WrapperTitulo>
-        <ImagenTitulo src={icono}></ImagenTitulo>
         <BloqueDescarga>
           <TextoDescarga>Esp.Técnicas</TextoDescarga>
-          <IconoDescarga src={iconodownload} />
+          <LinkDescarga href={descarga} download=''>
+            <IconoDescarga src={iconodownload} />
+          </LinkDescarga>
         </BloqueDescarga>
       </BloqueTitulo>
 

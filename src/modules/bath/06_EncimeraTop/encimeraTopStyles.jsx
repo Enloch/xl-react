@@ -136,12 +136,13 @@ export const WrapperAnim = styled.div`
     grid-column: 1 / -1;
   }
 `;
+
 export const BloqueTitulo = styled.p`
   height: 72px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
   gap: 2%;
   margin-top: 2rem;
+  align-items: center;
   @media screen and (max-width: 1400px) {
     height: 48px;
   }
@@ -169,9 +170,9 @@ export const WrapperTitulo = styled.div`
   }
 `;
 export const ImagenTitulo = styled.img`
+  margin-left: 1.5rem;
   height: 45px;
   width: auto;
-  align-self: center;
   @media screen and (max-width: 1400px) {
     height: 40px;
   }
@@ -184,10 +185,19 @@ export const ImagenTitulo = styled.img`
 `;
 
 export const BloqueDescarga = styled.div`
+  grid-column: 2;
+  display: grid;
   justify-self: end;
+  align-items: center;
 `;
-export const TextoDescarga = styled.a``;
+export const TextoDescarga = styled.a`
+  margin-right: 1rem;
+`;
+export const LinkDescarga = styled.a`
+  grid-column: 2;
+`;
 export const IconoDescarga = styled.img`
+  //grid-column: 2;
   height: auto;
   width: 40px;
 `;

@@ -62,4 +62,8 @@ export const encimeratop = {
     text2: "XL top integrity con lavabo desplazado izda. o dcha.",
     text3: "XL top integrity con dos lavabos",
   },
+  descarga1: "/downloads/Ficha-Técnica-MomaGris.pdf",
+  descarga2: "/downloads/Ficha-Técnica-Calacata.pdf",
+  descarga3: "/downloads/Ficha-Técnica-NegroMarquina.pdf",
+  descarga4: "/downloads/Ficha-Técnica-SuperWhite.pdf",
 };
