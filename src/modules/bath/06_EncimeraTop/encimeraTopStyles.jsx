@@ -122,8 +122,7 @@ export const WrapperAnim = styled.div`
   grid-column: 5 / -1;
   display: flex;
   flex-direction: row;
-
-  height: 100%;
+  /* height: 100%; */
   @media screen and (max-width: 1400px) {
     grid-column: 2/-2;
   }
@@ -132,7 +131,7 @@ export const WrapperAnim = styled.div`
   }
   @media screen and (max-width: 480px) {
     flex-wrap: wrap;
-    flex-direction: column;
+    /* flex-direction: column; */
     grid-column: 1 / -1;
   }
 `;

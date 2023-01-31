@@ -1,10 +1,18 @@
+import {
+  AnimacionContainer,
+  TituloAnimacion,
+  Linea,
+  Barra,
+} from "./animacionesStyles";
 import { motion } from "framer-motion";
 
 export const medidas1 = (
-  <div class='medTer'>
-    <div class='titulete'>todas las encimeras en las siguientes medidas</div>
-    <motion.div class='rayita'></motion.div>
-    <motion.div
+  <AnimacionContainer>
+    <TituloAnimacion>
+      todas las encimeras en las siguientes medidas
+    </TituloAnimacion>
+    <Linea></Linea>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -18,8 +26,8 @@ export const medidas1 = (
       id='w36'
     >
       61
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -33,8 +41,8 @@ export const medidas1 = (
       id='w48'
     >
       71
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0, opacity: 0 }}
       whileInView={{
         transition: {
@@ -48,8 +56,8 @@ export const medidas1 = (
       id='w60'
     >
       81
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -63,8 +71,8 @@ export const medidas1 = (
       id='w72'
     >
       91
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -78,8 +86,8 @@ export const medidas1 = (
       id='w96'
     >
       101
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -93,17 +101,17 @@ export const medidas1 = (
       id='w120'
     >
       111
-    </motion.div>
-  </div>
+    </Barra>
+  </AnimacionContainer>
 );
 export const medidas2 = (
-  <div class='medTer'>
-    <div class='titulete'>
+  <AnimacionContainer>
+    <TituloAnimacion>
       <br />
       <br />
-    </div>
-    <motion.div class='rayita'></motion.div>
-    <motion.div
+    </TituloAnimacion>
+    <Linea></Linea>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -117,8 +125,8 @@ export const medidas2 = (
       id='w36'
     >
       121
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -132,8 +140,8 @@ export const medidas2 = (
       id='w48'
     >
       131
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0, opacity: 0 }}
       whileInView={{
         transition: {
@@ -147,8 +155,8 @@ export const medidas2 = (
       id='w60'
     >
       141
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -162,8 +170,8 @@ export const medidas2 = (
       id='w72'
     >
       151
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -177,8 +185,8 @@ export const medidas2 = (
       id='w96'
     >
       161
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -192,17 +200,17 @@ export const medidas2 = (
       id='w120'
     >
       171
-    </motion.div>
-  </div>
+    </Barra>
+  </AnimacionContainer>
 );
 export const medidas3 = (
-  <div class='medTer'>
-    <div class='titulete'>
+  <AnimacionContainer>
+    <TituloAnimacion>
       <br />
       <br />
-    </div>
-    <motion.div class='rayita'></motion.div>
-    <motion.div
+    </TituloAnimacion>
+    <Linea></Linea>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -216,8 +224,8 @@ export const medidas3 = (
       id='w36'
     >
       181
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -231,8 +239,8 @@ export const medidas3 = (
       id='w48'
     >
       191
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0, opacity: 0 }}
       whileInView={{
         transition: {
@@ -246,8 +254,8 @@ export const medidas3 = (
       id='w60'
     >
       201
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -261,8 +269,8 @@ export const medidas3 = (
       id='w72'
     >
       211
-    </motion.div>
-    <motion.div
+    </Barra>
+    <Barra
       initial={{ width: 0 }}
       whileInView={{
         transition: {
@@ -276,6 +284,6 @@ export const medidas3 = (
       id='w96'
     >
       221
-    </motion.div>
-  </div>
+    </Barra>
+  </AnimacionContainer>
 );
