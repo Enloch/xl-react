@@ -32,13 +32,12 @@ export const ContenedorMenu = styled(motion.div)`
   right: 0;
   bottom: 0;
   height: 10%;
-  background-color: #000;
 `;
 export const PestañaMenu = styled.div`
   background-color: #ff9a9a;
 `;
-export const Menu = styled.div`
-  background-color: #420505;
+export const MenuIntrucciones = styled.div`
+  background-color: #303030;
   width: 100%;
   height: 100%;
 `;
@@ -49,8 +48,13 @@ export const BotonExpandir = styled.button`
   z-index: 1;
   bottom: 1%;
   width: 10%;
-  height: 10%;
+  /* height: 10%; */
   left: 50%;
   font-size: 2rem;
+  cursor: pointer;
+`;
+export const BotonContinuar = styled.button`
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 `;

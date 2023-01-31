@@ -39,7 +39,7 @@ export const Heading = styled.p`
   font-size: 100px;
   line-height: 0.9;
   margin-bottom: 77px;
-  color: #000;
+  color: #303030;
   @media screen and (max-width: 1400px) {
     margin-bottom: 30px;
     font-size: 60px;
@@ -61,7 +61,7 @@ export const Subtitle = styled.p`
   line-height: 1.1;
   font-weight: 100;
   margin-bottom: 35px;
-  color: #000;
+  color: #303030;
   @media screen and (max-width: 1400px) {
     margin-right: 75px;
   }

@@ -38,7 +38,7 @@ export const Heading = styled.p`
   line-height: 0.9;
   margin-right: 75px;
   margin-bottom: 77px;
-  color: #000;
+  color: #303030;
   @media screen and (max-width: 1400px) {
     max-width: 450px;
     margin-right: 0;
@@ -64,7 +64,7 @@ export const Subtitle = styled.p`
   font-weight: 100;
   margin-left: 100px;
   margin-bottom: 35px;
-  color: #000;
+  color: #303030;
   @media screen and (max-width: 980px) {
     margin-bottom: 0;
     margin-left: 0;
@@ -129,6 +129,7 @@ export const ListaInterna = styled.ul`
 `;
 export const LiEl = styled.li`
   font-size: 30px;
+  color: #303030;
   @media screen and (max-width: 980px) {
     margin-bottom: 0;
     margin-left: 0;

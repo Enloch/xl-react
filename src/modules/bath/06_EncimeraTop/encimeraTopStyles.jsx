@@ -38,7 +38,7 @@ export const Heading = styled.p`
   line-height: 0.9;
   margin-bottom: 77px;
   justify-content: center;
-  color: #000;
+  color: #303030;
   //grid-column: 4 / span 8;
   @media screen and (max-width: 1920px) {
     margin-right: 30%;
@@ -61,7 +61,7 @@ export const Subtitle = styled.p`
   line-height: 1.1;
   font-weight: 100;
   margin-left: 100px;
-  color: #000;
+  color: #303030;
   @media screen and (max-width: 1400px) {
     margin-left: 0;
     font-size: 36px;
@@ -154,6 +154,7 @@ export const BloqueTitulo = styled.p`
 `;
 export const WrapperTitulo = styled.div`
   font-size: 60px;
+  color: #303030;
   align-self: center;
 
   @media screen and (max-width: 1400px) {
@@ -193,6 +194,7 @@ export const TextoDescarga = styled.a`
   grid-column: 1;
   margin-right: 1rem;
   font-size: 1rem;
+  color: #303030;
   @media screen and (max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {
@@ -219,6 +221,7 @@ export const IconoDescarga = styled.img`
 `;
 export const BloqueSubtitulo = styled.p`
   font-size: 30px;
+  color: #303030;
   @media screen and (max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {
@@ -266,6 +269,7 @@ export const InfoEncimera = styled.p`
   font-size: 24px;
   height: auto;
   margin-top: 1rem;
+  color: #303030;
 
   @media screen and (max-width: 1400px) {
   }

@@ -140,7 +140,7 @@ function bloque(
     <>
       <BloqueTitulo>
         <WrapperTitulo>
-          <b>{titulo}</b>
+          <strong>{titulo}</strong>
           <ImagenTitulo src={icono}></ImagenTitulo>
         </WrapperTitulo>
         <BloqueDescarga>

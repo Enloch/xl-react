@@ -7,8 +7,9 @@ import {
   Imagen,
   ContenedorMenu,
   PestañaMenu,
-  Menu,
+  MenuIntrucciones,
   BotonExpandir,
+  BotonContinuar,
 } from "./intercambiadorStyles";
 import { frontales, modulos, laterales } from "./dataIntercambiador";
 const Intercambiador = ({ base }) => {
@@ -20,12 +21,24 @@ const Intercambiador = ({ base }) => {
           ^
         </BotonExpandir>
         {isVisible && (
-          <ContenedorMenu id='menu lateral' animate
+          <ContenedorMenu
+            id='menu lateral'
+            initial={{
+              height: "0%",
+            }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              height: "10%",
+            }}
           >
             <PestañaMenu></PestañaMenu>
-            <Menu>
-              <button onClick={() => console.log("hola")}>hola</button>
-            </Menu>
+            <MenuIntrucciones>
+              <button onClick={() => setIsVisible(!isVisible)}>hola</button>
+              <BotonContinuar>Continuar</BotonContinuar>
+            </MenuIntrucciones>
           </ContenedorMenu>
         )}
         <ContenedorImagenBase id='fondo' descripcion='Mueble lacado en blanco.'>

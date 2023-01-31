@@ -38,7 +38,7 @@ export const Heading = styled.p`
   margin-right: 3.9rem;
   grid-column: 2 / span 2;
   font-size: 100px;
-  color: ${COLORS.gray08};
+  color: #303030;
   @media screen and (max-width: 1400px) {
     grid-column: 2/10;
     margin: 0;
@@ -154,10 +154,12 @@ export const LinkHeader = styled.div`
   font-weight: 500;
   font-size: 1.4rem;
   margin-bottom: 2.625rem;
+  color: #303030;
 `;
 export const LinkLista = styled.div`
   color: ${COLORS.gray08};
   font-size: 1rem;
+  color: #303030;
   cursor: pointer;
   :hover {
     font-size: 1.1rem;
