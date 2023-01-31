@@ -1,4 +1,5 @@
 import React from "react";
+import Intercambiador from "./intercambiador";
 import {
   Heading,
   MainContainer,
@@ -12,6 +13,7 @@ import {
   ImgWrap,
   Img2,
 } from "./adaptElements";
+import { IntercambiadorObj } from "./dataIntercambiador";
 
 const AdaptBath = ({
   titulo,
@@ -24,11 +26,15 @@ const AdaptBath = ({
     <>
       <MainContainer>
         <Heading>{titulo}</Heading>
-        <Subtitle>{subtitulo}</Subtitle>
-        <Subtitle>{subtitulo2}</Subtitle>
+        <Subtitle>
+          {subtitulo}
+          <br />
+          {subtitulo2}
+        </Subtitle>
         <ImgWrapper>
-          <Img src={ImagenTemp} />
-          <Caracteristics>Abcd</Caracteristics>
+          <Intercambiador {...IntercambiadorObj} />
+          {/* <Img src={ImagenTemp} /> */}
+          <Caracteristics></Caracteristics>
           <WrapperTexto>
             <TxtSubimagen>
               Acabado cajón: <b>datos aquí</b> //
