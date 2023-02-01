@@ -145,6 +145,7 @@ export const ContIconText = styled.div`
   flex-direction: column;
   align-items: center;
   width: 86px;
+  cursor: pointer;
 `;
 export const IconoMaterial = styled(motion.img)`
   width: 64px;
