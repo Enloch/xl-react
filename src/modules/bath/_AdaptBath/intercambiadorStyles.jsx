@@ -119,13 +119,39 @@ export const MenuMateriales = styled(motion.div)`
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 15%;
-  visibility: hidden;
+  height: 27%;
+  /* visibility: hidden; */
 `;
 export const ContenedorMateriales = styled.div`
   background-color: #303030;
   width: 100%;
   height: 100%;
   display: grid;
+  grid-template-columns: 1.25fr 2fr 1.25fr;
 `;
-export const IconoMaterial = styled(motion.img)``;
+export const CajaMaterial = styled.div`
+  grid-column: 2;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  row-gap: 0.5rem;
+  column-gap: 0.2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+`;
+export const ContIconText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 86px;
+`;
+export const IconoMaterial = styled(motion.img)`
+  width: 64px;
+  height: auto;
+  border-radius: 50%;
+`;
+export const TextoMaterial = styled.p`
+  text-align: center;
+  color: white;
+`;

@@ -16,6 +16,9 @@ import {
   MenuMateriales,
   ContenedorMateriales,
   IconoMaterial,
+  CajaMaterial,
+  ContIconText,
+  TextoMaterial,
 } from "./intercambiadorStyles";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
 import chevron from "../../../assets/icons/botones/arrow-up.png";
@@ -46,7 +49,15 @@ const Intercambiador = ({ base }) => {
   return (
     <>
       <ContenedorIntercambiador>
-        <BotonExpandir onClick={() => setIsVisible(!isVisible)}>
+        <BotonExpandir
+          onClick={() => {
+            setIsVisible(!isVisible);
+            SetModulos(false);
+            SetFrente(false);
+            SetLateral(false);
+            SetEncimera(false);
+          }}
+        >
           <img
             src={chevron}
             alt='chevron'
@@ -89,7 +100,68 @@ const Intercambiador = ({ base }) => {
               height: "12%",
             }}
           >
-            <IconoMaterial></IconoMaterial>
+            <CajaMaterial>
+              <ContIconText>
+                <IconoMaterial src={iconos.allureIco}></IconoMaterial>
+                <TextoMaterial>Allure</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.berenIco}></IconoMaterial>
+                <TextoMaterial>Beren</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.blancborgIco}></IconoMaterial>
+                <TextoMaterial>Blanc Borghini</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.blancinvIco}></IconoMaterial>
+                <TextoMaterial>Blanc Invisible</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.brazilIco}></IconoMaterial>
+                <TextoMaterial>Brazil Super White</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.calacattaIco}></IconoMaterial>
+                <TextoMaterial>Calacatta</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.emeIco}></IconoMaterial>
+                <TextoMaterial>Eme Light Grey</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.kendoCIco}></IconoMaterial>
+                <TextoMaterial>Kendo Classic</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.kendoLIco}></IconoMaterial>
+                <TextoMaterial>Kendo Light</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.momaIco}></IconoMaterial>
+                <TextoMaterial>Moma Gris</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.negroIco}></IconoMaterial>
+                <TextoMaterial>Negro Marquina</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.noonGIco}></IconoMaterial>
+                <TextoMaterial>Noon Grey</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.noonSIco}></IconoMaterial>
+                <TextoMaterial>Noon Sand</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.paladioIco}></IconoMaterial>
+                <TextoMaterial>Paladio</TextoMaterial>
+              </ContIconText>
+              <ContIconText>
+                <IconoMaterial src={iconos.syracIco}></IconoMaterial>
+                <TextoMaterial>Syrac</TextoMaterial>
+              </ContIconText>
+            </CajaMaterial>
           </ContenedorMateriales>
         </MenuMateriales>
         {isVisible && (
