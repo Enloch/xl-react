@@ -29,26 +29,32 @@ export const SidebarBath = ({ isOpen, toggle }) => {
       </SidebarWrapper2> */}
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" smooth={true} onClick={toggle}>
-            Sobre XL
+          <SidebarLink to='infobath' smooth={true} onClick={toggle}>
+            Qué es XL Bath
           </SidebarLink>
-          <SidebarLink to="caracteristica" smooth={true} onClick={toggle}>
-            Características
+          <SidebarLink to='serviciosbath' smooth={true} onClick={toggle}>
+            Nuestros Servicios
           </SidebarLink>
-          <SidebarLink to="materiales" smooth={true} onClick={toggle}>
-            Materiales
+          <SidebarLink to='Acabados_InfoGeneral' smooth={true} onClick={toggle}>
+            Nuestros Acabados
           </SidebarLink>
-          <SidebarLink to="ventajas" smooth={true} onClick={toggle}>
-            Ventajas
+          <SidebarLink to='menuinteractivo' smooth={true} onClick={toggle}>
+            Menú Interactivo
           </SidebarLink>
-          <SidebarLink to="formato" smooth={true} onClick={toggle}>
-            Espesores y formatos
+          <SidebarLink to='forradomuebles' smooth={true} onClick={toggle}>
+            XL Bathroom Adapt
           </SidebarLink>
-          <SidebarLink to="acabados" smooth={true} onClick={toggle}>
-            Acabados
+          <SidebarLink to='encimerabath' smooth={true} onClick={toggle}>
+            XL Top
           </SidebarLink>
-          <SidebarLink to="coleccion" smooth={true} onClick={toggle}>
-            Nuestras Colecciones
+          <SidebarLink to='frentes' smooth={true} onClick={toggle}>
+            XL Frente
+          </SidebarLink>
+          <SidebarLink to='xlshelf' smooth={true} onClick={toggle}>
+            XL Shelf y encimeras autoportantes
+          </SidebarLink>
+          <SidebarLink to='xlspecial' smooth={true} onClick={toggle}>
+            XL Bath specials
           </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>

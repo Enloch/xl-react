@@ -65,10 +65,10 @@ export const Subtitle = styled.p`
 export const ImgWrapper = styled.div`
   grid-column: 4 / span 8;
   @media screen and (max-width: 1400px) {
-    grid-column: 3/-1;
+    grid-column: 2/-1;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 2/-2;
+    grid-column: 1/-1;
   }
   @media screen and (max-width: 480px) {
     grid-column: 1/-1;

@@ -120,7 +120,21 @@ export const MenuMateriales = styled(motion.div)`
   right: 0;
   bottom: 0;
   height: 27%;
-  /* visibility: hidden; */
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 1200px) {
+    height: 30%;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 37%;
+  }
+
+  @media screen and (max-width: 980px) {
+    height: 35%;
+  }
+  @media screen and (max-width: 480px) {
+    height: 27%;
+  }
 `;
 export const ContenedorMateriales = styled.div`
   background-color: #303030;
@@ -128,6 +142,19 @@ export const ContenedorMateriales = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1.25fr 2fr 1.25fr;
+  @media screen and (max-width: 1400px) {
+    align-content: center;
+    grid-template-columns: 1.2fr 3fr 1.2fr;
+  }
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 0.75fr 3fr 0.75fr;
+  }
 `;
 export const CajaMaterial = styled.div`
   grid-column: 2;
@@ -146,15 +173,45 @@ export const ContIconText = styled.div`
   align-items: center;
   width: 86px;
   cursor: pointer;
+  @media screen and (max-width: 1400px) {
+    width: 72px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 60px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 45px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 30px;
+  }
 `;
 export const IconoMaterial = styled(motion.img)`
   width: 64px;
   height: auto;
   border-radius: 50%;
+  @media screen and (max-width: 1400px) {
+    width: 48px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 36px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 24px;
+  }
 `;
 export const TextoMaterial = styled.p`
   text-align: center;
   color: #fff;
+  @media screen and (max-width: 1400px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 0;
+  }
 `;
 export const WrapperTexto = styled.div`
   padding-top: 2rem;

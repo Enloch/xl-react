@@ -65,9 +65,10 @@ export const Subtitle = styled.p`
   @media screen and (max-width: 1400px) {
     padding-right: 0;
     margin-left: 0;
+    grid-column: 2 / 6;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 2 / 5;
+    grid-column: 1 / 6;
     font-size: 32px;
   }
   @media screen and (max-width: 480px) {

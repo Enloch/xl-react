@@ -17,7 +17,7 @@ const AcabadosBath = ({ id, titulo, subtitulo }) => {
   // }, []);
   return (
     <>
-      <ColecContainer>
+      <ColecContainer id={id}>
         <ContentWrapper>
           <Heading>{titulo}</Heading>
           <SubtitleWrapper>

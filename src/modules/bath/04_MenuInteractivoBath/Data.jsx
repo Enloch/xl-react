@@ -1,5 +1,5 @@
 export const menuIntObj = {
-  id: "encimerabath",
+  id: "menuinteractivo",
   titulo: "menú interactivo //",
   subtitulo:
     "Descubre todas las opciones que XL ofrece, navegando en la imagen inferior.",

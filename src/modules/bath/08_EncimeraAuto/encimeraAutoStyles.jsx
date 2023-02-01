@@ -5,11 +5,15 @@ export const InfoContainer = styled.div`
   height: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
   column-gap: 1.563rem;
   row-gap: 1.563rem;
   padding: 6rem 4rem 4rem 4rem;
   @media screen and (max-width: 1400px) {
+    row-gap: 1rem;
+    column-gap: 1rem;
     padding: calc(8px + 1.5625vw);
+    padding-bottom: 4rem;
   }
   @media screen and (max-width: 980px) {
   }
@@ -45,6 +49,7 @@ export const Heading = styled.p`
     margin-right: 30%;
   }
   @media screen and (max-width: 1400px) {
+    font-size: 75px;
     margin-right: 0;
   }
   @media screen and (max-width: 980px) {
@@ -65,10 +70,11 @@ export const Subtitle = styled.p`
   @media screen and (max-width: 1400px) {
     padding-right: 0;
     margin-left: 0;
+    grid-column: 2/ 6;
+    font-size: 32px;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 2 / 5;
-    font-size: 32px;
+    grid-column: 1 / 6;
   }
   @media screen and (max-width: 480px) {
     font-size: 16px;
@@ -99,10 +105,10 @@ export const GeneralContainer = styled.div`
     rgba(85, 113, 119) 50%,
     rgba(85, 113, 119) 100%
   ); */
-  background-color: rgb(85, 113, 119);
   /* height: auto; */
   grid-column: 6/-1;
   @media screen and (max-width: 1400px) {
+    grid-row: 2;
   }
   @media screen and (max-width: 980px) {
   }
@@ -125,7 +131,7 @@ export const SliderWrapper = styled.div`
 export const SliderContainer = styled.div``;
 export const ImgGradWrap = styled.div`
   max-width: auto;
-  height: auto;
+  /* height: auto; */
   @media screen and (max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {

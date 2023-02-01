@@ -43,8 +43,8 @@ const Bath = () => {
   };
   return (
     <>
-      {/* <SidebarBath toggle={toggle} isOpen={isOpen} />
-      <NavbarBath toggle={toggle} /> */}
+      <SidebarBath toggle={toggle} isOpen={isOpen} />
+      <NavbarBath toggle={toggle} />
       <HeroBath {...heroBath} />
       <InfoBath {...infoBath} />
       <ServicioBath {...serviciosbath} />
@@ -52,14 +52,6 @@ const Bath = () => {
       <MenuInteractivo {...menuIntObj} />
       <AdaptBath {...AdaptObj} />
       <EncimeraTop {...encimeratop} />
-      {/* <iframe
-        src="https://itch.io/embed-upload/7225630?color=333333"
-        allowfullscreen=""
-        height={window.innerHeight}
-        width={window.innerWidth}
-        frameborder="0"
-        title="Rotador"
-      /> */}
       {/* <Slider1 /> */}
       <Frente {...frenteObj} />
       <EncimeraAuto {...encimeraauto} />

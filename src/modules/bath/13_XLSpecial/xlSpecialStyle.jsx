@@ -102,8 +102,8 @@ export const Img = styled.img`
 export const WrapperIframe = styled.div`
   grid-column: 3 / -3;
   grid-row: 3;
-  height: 1080px;
-  width: 1920px;
+  height: 100vh;
+  width: 100%;
   position: relative;
   @media screen and (max-width: 1400px) {
     grid-column: 3 / -3;
@@ -123,3 +123,4 @@ export const TextoImagen = styled(motion.p)`
   left: 25%;
   top: 50%;
 `;
+export const PanelInferior = styled.div``;

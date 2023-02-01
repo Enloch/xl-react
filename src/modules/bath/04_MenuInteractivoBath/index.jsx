@@ -50,7 +50,7 @@ const MenuInteractivo = ({
   const [caracteristica2, setCaracteristica2] = useState(caracteristicas[4]);
   return (
     <>
-      <MenuIntContainter>
+      <MenuIntContainter id={id}>
         <Heading>{titulo}</Heading>
         <Subtitle>{subtitulo}</Subtitle>
       </MenuIntContainter>

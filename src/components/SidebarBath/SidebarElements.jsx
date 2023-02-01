@@ -10,7 +10,7 @@ export const SidebarContainer = styled.aside`
   height: 100%;
   background: #000;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   align-items: center;
   top: 0;
   left: 0;
@@ -19,13 +19,13 @@ export const SidebarContainer = styled.aside`
   //opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   @media screen and (max-width: 980px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(12, 1fr);
     /* This is better for small screens, once min() is better supported */
     /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
     gap: 1rem;
   }
   @media screen and (max-width: 480px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(12, 1fr);
     /* This is better for small screens, once min() is better supported */
     /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
     gap: 1rem;
@@ -51,19 +51,21 @@ export const Icon = styled.div`
 
 export const SidebarWrapper = styled.div`
   counter-reset: counter -1;
-  grid-column-start: 2;
-  grid-row-start: 2;
+  grid-column: 4/ 6;
+  grid-row-start: 1;
   color: #fff;
+  @media screen and (max-width: 1400px) {
+    grid-column: 3/7;
+  }
   @media screen and (max-width: 980px) {
     margin-left: 40px;
     margin-right: 40px;
-    grid-column-start: 1;
-    grid-column-end: span 3;
+    grid-column: 3 / span 8;
   }
   @media screen and (max-width: 480px) {
     margin-left: 40px;
     margin-right: 40px;
-    grid-column-start: 1;
+    grid-column: 1/-1;
   }
 `;
 export const SidebarWrapper2 = styled.div`
@@ -75,8 +77,7 @@ export const SidebarWrapper2 = styled.div`
   @media screen and (max-width: 980px) {
     margin-left: 40px;
     margin-right: 40px;
-    grid-column-start: 1;
-    grid-column-end: span 3;
+    grid-column: 1 / span 3;
   }
   @media screen and (max-width: 480px) {
     margin-left: 40px;
@@ -87,11 +88,16 @@ export const SidebarWrapper2 = styled.div`
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 80px);
+  grid-template-rows: repeat(12, 80px);
   text-align: left;
-
+  @media screen and (max-width: 1400px) {
+    grid-template-rows: repeat(12, 60px);
+  }
+  @media screen and (max-width: 980px) {
+    grid-template-rows: repeat(12, 40px);
+  }
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(8, 60px);
+    grid-template-rows: repeat(12, 60px);
   }
 `;
 
@@ -121,6 +127,11 @@ export const SidebarLink = styled(LinkScroll)`
     color: rgba(85, 113, 119);
     transform: translateX(20px);
     transition: 0.2s ease-in-out;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 480px) {
   }
 `;
 

@@ -32,8 +32,8 @@ const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
           <br />
           {description}
         </Subtitle>
-        <GeneralContainer>
-          <SliderWrapper>
+        <GeneralContainer class='what?'>
+          <SliderWrapper className='isthis'>
             <SliderContainer className='slide-container'>
               <Slide arrows={false} indicators={true}>
                 <Img src={fadeImages[0]} />
