@@ -23,7 +23,6 @@ import {
 import icono_b from "../../../assets/icons/botones/boton_b.png";
 import chevron from "../../../assets/icons/botones/arrow-up.png";
 import { frontales, modulos, laterales, iconos } from "./dataIntercambiador";
-const Elementos = [{ id: 1 }];
 const Intercambiador = ({ base }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [materialesVisible, SetMateriales] = useState(false);
@@ -42,7 +41,6 @@ const Intercambiador = ({ base }) => {
   const [noonsVisible, SetNoons] = useState(false);
   const [paladioVisible, SetPaladio] = useState(false);
   const [syracVisible, SetSyrac] = useState(false);
-  const [rojoSelected, SetRojo] = useState(false);
   const [frenteSelected, SetFrente] = useState(false);
   const [modulosSelected, SetModulos] = useState(false);
   const [lateralSelected, SetLateral] = useState(false);
@@ -72,7 +70,6 @@ const Intercambiador = ({ base }) => {
             SetNoons(false);
             SetPaladio(false);
             SetSyrac(false);
-            SetRojo(false);
           }}
         >
           <img
@@ -115,9 +112,9 @@ const Intercambiador = ({ base }) => {
               initial={{
                 height: "0%",
               }}
-              whileInView={{
+              animate={{
                 transition: {
-                  duration: 0.6,
+                  duration: 1,
                   ease: "easeIn",
                 },
                 height: "12%",
@@ -298,17 +295,19 @@ const Intercambiador = ({ base }) => {
                 left: "65%",
               }}
             />
-            <Icono1
-              onClick={() => {
-                SetLateral(!lateralSelected);
-              }}
-              src={icono_b}
-              alt='lateral'
-              style={{
-                top: "70%",
-                left: "32%",
-              }}
-            />
+            {encimeraSelected && (
+              <Icono1
+                onClick={() => {
+                  SetLateral(!lateralSelected);
+                }}
+                src={icono_b}
+                alt='lateral'
+                style={{
+                  top: "70%",
+                  left: "32%",
+                }}
+              />
+            )}
           </ContenedorIconos>
         )}
         <ContenedorImagenBase
