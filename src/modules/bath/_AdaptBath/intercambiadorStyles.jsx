@@ -16,7 +16,7 @@ export const ContenedorImagen = styled.div`
   width: 100%;
   position: absolute;
   top: 0;
-`;  
+`;
 export const Imagen = styled.img`
   width: 100%;
 `;
@@ -45,7 +45,7 @@ export const BotonExpandir = styled.button`
   bottom: 1%;
   width: 10%;
   /* height: 10%; */
-  left: 50%;
+  left: 45%;
   font-size: 2rem;
   cursor: pointer;
 `;
@@ -111,3 +111,21 @@ export const Icono1 = styled.img`
     transform: rotate(-45deg);
   }
 `;
+export const MenuMateriales = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 15%;
+  visibility: hidden;
+`;
+export const ContenedorMateriales = styled.div`
+  background-color: #303030;
+  width: 100%;
+  height: 100%;
+  display: grid;
+`;
+export const IconoMaterial = styled(motion.img)``;

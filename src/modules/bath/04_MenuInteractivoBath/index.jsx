@@ -57,7 +57,7 @@ const MenuInteractivo = ({
       <ImgWrap>
         <Img src={imgheader} alt={alt} />
         <IconContainer>
-          <LinkSecciones to={config[0].id} scroll='smooth'>
+          <LinkSecciones to={config[0].id} smooth={true}>
             <Icono1
               id={config[0].tooltip}
               src={icono}
@@ -68,7 +68,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[0].tooltip} content={config[0].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[1].id} scroll='smooth'>
+          <LinkSecciones to={config[1].id} smooth={true}>
             <Icono1
               id={config[1].tooltip}
               src={icono}
@@ -79,7 +79,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[1].tooltip} content={config[1].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[2].id} scroll='smooth'>
+          <LinkSecciones to={config[2].id} smooth={true}>
             <Icono1
               id={config[2].tooltip}
               src={icono}
@@ -90,7 +90,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[2].tooltip} content={config[2].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[3].id} scroll='smooth'>
+          <LinkSecciones to={config[3].id} smooth={true}>
             <Icono1
               id={config[3].tooltip}
               src={icono_b}
@@ -101,7 +101,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[3].tooltip} content={config[3].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[4].id} scroll='smooth'>
+          <LinkSecciones to={config[4].id} smooth={true}>
             <Icono1
               id={config[4].tooltip}
               src={icono}
@@ -112,7 +112,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[4].tooltip} content={config[4].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[5].id} scroll='smooth'>
+          <LinkSecciones to={config[5].id} smooth={true}>
             <Icono1
               id={config[5].tooltip}
               src={icono_b}
@@ -123,7 +123,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[5].tooltip} content={config[5].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[6].id} scroll='smooth'>
+          <LinkSecciones to={config[6].id} smooth={true}>
             <Icono1
               id={config[6].tooltip}
               src={icono_b}
@@ -134,7 +134,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[6].tooltip} content={config[6].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[7].id} scroll='smooth'>
+          <LinkSecciones to={config[7].id} smooth={true}>
             <Icono1
               id={config[7].tooltip}
               src={icono_b}
@@ -145,7 +145,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[7].tooltip} content={config[7].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[8].id} scroll='smooth'>
+          <LinkSecciones to={config[8].id} smooth={true}>
             <Icono1
               id={config[8].tooltip}
               src={icono}
@@ -156,7 +156,7 @@ const MenuInteractivo = ({
             />
             <Tooltip anchorId={config[8].tooltip} content={config[8].tooltip} />
           </LinkSecciones>
-          <LinkSecciones to={config[9].id} scroll='smooth'>
+          <LinkSecciones to={config[9].id} smooth={true}>
             <Icono1
               id={config[9].tooltip}
               src={icono}

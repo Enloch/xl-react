@@ -53,6 +53,22 @@ export const IntercambiadorObj = {
   rojoTAPA: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH__LATERALES_SELECCION.png"),
   rojoMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH__TAPA_SELECCION.png"),
   maderaMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_LATERALES_MADERA.webp"),
+  //mueble especial
+  allureIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Allure Anthracite_1_icono.png"),
+  berenIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Beren Light Grey_1_icono.png"),
+  blancborgIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Blanc Borghini_2_icono.png"),
+  blancinvIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Blanc Invisible_1_icono.png"),
+  brazilIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Brazil Super White_1_icono.png"),
+  calacattaIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Calacata Natural_2_icono.png"),
+  emeIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Eme Light Grey_1_icono.png"),
+  kendoCIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Kendo Classic_1_icono.png"),
+  kendoLIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Kendo Light_1_icono.png"),
+  momaIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Moma Gris_1_icono.png"),
+  negroIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Negro Marquina_1_icono.png"),
+  noonGIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Noon Grey_1_icono.png"),
+  noonSIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Noon Sand_1_icono.png"),
+  paladioIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Paladio Marron Natural_1_icono.png"),
+  syracIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Syrac_1_icono.png"),
 };
 
 const alluref = IntercambiadorObj.allureFRONTAL;
@@ -163,4 +179,38 @@ export const laterales = {
   syracl,
   maderal,
   rojol,
+  rojot,
+};
+
+const allureIco = IntercambiadorObj.allureIcon;
+const berenIco = IntercambiadorObj.berenIcon;
+const blancborgIco = IntercambiadorObj.blancborgIcon;
+const blancinvIco = IntercambiadorObj.blancinvIcon;
+const brazilIco = IntercambiadorObj.brazilIcon;
+const calacattaIco = IntercambiadorObj.calacattaIcon;
+const emeIco = IntercambiadorObj.emeIcon;
+const kendoCIco = IntercambiadorObj.kendoCIcon;
+const kendoLIco = IntercambiadorObj.kendoLIcon;
+const momaIco = IntercambiadorObj.momaIcon;
+const negroIco = IntercambiadorObj.negroIcon;
+const noonGIco = IntercambiadorObj.noonGIcon;
+const noonSIco = IntercambiadorObj.noonSIcon;
+const paladioIco = IntercambiadorObj.paladioIcon;
+const syracIco = IntercambiadorObj.syracIcon;
+export const iconos = {
+  allureIco,
+  berenIco,
+  blancborgIco,
+  blancinvIco,
+  brazilIco,
+  calacattaIco,
+  emeIco,
+  kendoCIco,
+  kendoLIco,
+  momaIco,
+  negroIco,
+  noonGIco,
+  noonSIco,
+  paladioIco,
+  syracIco,
 };

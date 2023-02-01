@@ -13,14 +13,18 @@ import {
   TextoIntro,
   ContenedorIconos,
   Icono1,
+  MenuMateriales,
+  ContenedorMateriales,
+  IconoMaterial,
 } from "./intercambiadorStyles";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
-import { frontales, modulos, laterales } from "./dataIntercambiador";
+import chevron from "../../../assets/icons/botones/arrow-up.png";
+import { frontales, modulos, laterales, iconos } from "./dataIntercambiador";
 const Elementos = [{ id: 1 }];
 const Intercambiador = ({ base }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [AllureVisible, SetAllure] = useState(false);
-  const [BerenVisibe, SetBeren] = useState(false);
+  const [allureVisible, SetAllure] = useState(false);
+  const [berenVisibe, SetBeren] = useState(false);
   const [blancborgVisible, SetBlancborg] = useState(false);
   const [blancinvVisible, SetBlancinv] = useState(false);
   const [brazilVisible, SetBrazil] = useState(false);
@@ -34,15 +38,24 @@ const Intercambiador = ({ base }) => {
   const [noonsVisible, SetNoons] = useState(false);
   const [paladioVisible, SetPaladio] = useState(false);
   const [syracVisible, SetSyrac] = useState(false);
+  const [rojoSelected, SetRojo] = useState(false);
+  const [frenteSelected, SetFrente] = useState(false);
+  const [modulosSelected, SetModulos] = useState(false);
+  const [lateralSelected, SetLateral] = useState(false);
+  const [encimeraSelected, SetEncimera] = useState(false);
   return (
     <>
       <ContenedorIntercambiador>
         <BotonExpandir onClick={() => setIsVisible(!isVisible)}>
-          ^
+          <img
+            src={chevron}
+            alt='chevron'
+            style={{ height: "35%", width: "35%" }}
+          />
         </BotonExpandir>
         {isVisible && (
           <ContenedorMenu
-            id='menu lateral'
+            id='menu inferior'
             initial={{
               height: "0%",
             }}
@@ -56,15 +69,35 @@ const Intercambiador = ({ base }) => {
           >
             <MenuIntrucciones>
               <TextoIntro>Selecciona que partes quieres forrar</TextoIntro>
-              <BotonContinuar>
+              <BotonContinuar onClick={() => setIsVisible(!isVisible)}>
                 <strong>Continuar</strong>
               </BotonContinuar>
             </MenuIntrucciones>
           </ContenedorMenu>
         )}
+        <MenuMateriales>
+          <ContenedorMateriales
+            id='menu material'
+            initial={{
+              height: "0%",
+            }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              height: "12%",
+            }}
+          >
+            <IconoMaterial></IconoMaterial>
+          </ContenedorMateriales>
+        </MenuMateriales>
         {isVisible && (
           <ContenedorIconos>
             <Icono1
+              onClick={() => {
+                SetModulos(!modulosSelected);
+              }}
               src={icono_b}
               alt='modulo'
               style={{
@@ -73,6 +106,9 @@ const Intercambiador = ({ base }) => {
               }}
             />
             <Icono1
+              onClick={() => {
+                SetEncimera(!encimeraSelected);
+              }}
               src={icono_b}
               alt='encimera'
               style={{
@@ -81,6 +117,9 @@ const Intercambiador = ({ base }) => {
               }}
             />
             <Icono1
+              onClick={() => {
+                SetFrente(!frenteSelected);
+              }}
               src={icono_b}
               alt='frente'
               style={{
@@ -89,6 +128,9 @@ const Intercambiador = ({ base }) => {
               }}
             />
             <Icono1
+              onClick={() => {
+                SetLateral(!lateralSelected);
+              }}
               src={icono_b}
               alt='lateral'
               style={{
@@ -98,12 +140,46 @@ const Intercambiador = ({ base }) => {
             />
           </ContenedorIconos>
         )}
-        <ContenedorImagenBase id='fondo' descripcion='Mueble lacado en blanco.'>
+        <ContenedorImagenBase
+          id='fondo'
+          descripcion='Mueble de madera sin forrar'
+        >
           <Imagen src={base} alt='fondo' />
         </ContenedorImagenBase>
-        <ContenedorImagen id='pon-alluref' sitio='frontal'>
-          <Imagen src={frontales.alluref} alt='frontal' />
-        </ContenedorImagen>
+        {frenteSelected && (
+          <ContenedorImagen id='pon-alluref' sitio='frontal'>
+            <Imagen
+              src={frontales.rojof}
+              alt='frontal'
+              style={{ opacity: 0.3 }}
+            />
+          </ContenedorImagen>
+        )}
+        {modulosSelected && (
+          <ContenedorImagen id='pon-alluref' sitio='modulo'>
+            <Imagen src={modulos.rojom} alt='modulo' style={{ opacity: 0.3 }} />
+          </ContenedorImagen>
+        )}
+        {encimeraSelected && (
+          <ContenedorImagen id='pon-alluref' sitio='lateral'>
+            <Imagen
+              src={laterales.rojol}
+              alt='lateral'
+              style={{ opacity: 0.3 }}
+            />
+          </ContenedorImagen>
+        )}
+        {lateralSelected && (
+          <ContenedorImagen id='pon-alluref' sitio='tapa'>
+            <Imagen src={laterales.rojot} alt='tapa' style={{ opacity: 0.3 }} />
+          </ContenedorImagen>
+        )}
+        {/* ------------------FRONTALES------------------ */}
+        {frenteSelected && allureVisible && (
+          <ContenedorImagen id='pon-alluref' sitio='frontal'>
+            <Imagen src={frontales.alluref} alt='frontal' />
+          </ContenedorImagen>
+        )}
         {/* <ContenedorImagen>
           <Imagen src={frontales.berenf} alt='frontal' />
         </ContenedorImagen>
@@ -146,6 +222,12 @@ const Intercambiador = ({ base }) => {
         <ContenedorImagen>
           <Imagen src={frontales.syracf} alt='frontal' />
         </ContenedorImagen> */}
+        {/* ------------------MODULOS------------------ */}
+        {modulosSelected && allureVisible && (
+          <ContenedorImagen>
+            <Imagen src={modulos.allurem} alt='modulo' />
+          </ContenedorImagen>
+        )}
       </ContenedorIntercambiador>
     </>
   );
