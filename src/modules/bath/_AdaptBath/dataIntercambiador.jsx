@@ -69,6 +69,24 @@ export const IntercambiadorObj = {
   noonSIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Noon Sand_1_icono.png"),
   paladioIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Paladio Marron Natural_1_icono.png"),
   syracIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Syrac_1_icono.png"),
+
+  //---------------- TEXTOS----------------
+  acabadoAllure: "allure anthracite",
+  acabadoBeren: "beren light grey",
+  acabadoBlancBorghini: "blanc borghini",
+  acabadoBlancInvisible: "blanc invisible",
+  acabadoBrazil: "brazil super white",
+  acabadoCalacatta: "calacatta",
+  acabadoEme: "eme light grey",
+  acabadoKendoC: "kendo classic",
+  acabadoKendoL: "kendo light",
+  acabadoMoma: "moma gris",
+  acabadoNegroM: "negro marquina",
+  acabadoNoonG: "noon grey",
+  acabadoNoonS: "noon sand",
+  acabadoPaladio: "paladio",
+  acabadoSyrac: "syrac",
+  acabadoNordik: "nordik",
 };
 
 const alluref = IntercambiadorObj.allureFRONTAL;
@@ -213,4 +231,40 @@ export const iconos = {
   noonSIco,
   paladioIco,
   syracIco,
+};
+
+const acAllure = IntercambiadorObj.acabadoAllure;
+const acBeren = IntercambiadorObj.acabadoBeren;
+const acBlancborg = IntercambiadorObj.acabadoBlancBorghini;
+const acBlancinv = IntercambiadorObj.acabadoBlancinv;
+const acBrazil = IntercambiadorObj.acabadoBrazil;
+const acCalacatta = IntercambiadorObj.acabadoCalacatta;
+const acEme = IntercambiadorObj.acabadoEme;
+const acKendoC = IntercambiadorObj.acabadoKendoC;
+const acKendoL = IntercambiadorObj.acabadoKendoL;
+const acMoma = IntercambiadorObj.acabadoMoma;
+const acNegro = IntercambiadorObj.acabadoNegroM;
+const acNoonG = IntercambiadorObj.acabadoNoonG;
+const acNoonS = IntercambiadorObj.acabadoNoonS;
+const acPaladio = IntercambiadorObj.acabadoPaladio;
+const acSyrac = IntercambiadorObj.acabadoSyrac;
+const acNordik = IntercambiadorObj.acabadoNordik;
+
+export const txtacabados = {
+  acAllure,
+  acBeren,
+  acBlancborg,
+  acBlancinv,
+  acBrazil,
+  acCalacatta,
+  acEme,
+  acKendoC,
+  acKendoL,
+  acMoma,
+  acNegro,
+  acNoonG,
+  acNoonS,
+  acPaladio,
+  acSyrac,
+  acNordik,
 };

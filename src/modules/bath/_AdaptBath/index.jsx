@@ -30,6 +30,7 @@ const AdaptBath = ({
   subtitulo2,
   ImagenTemp,
   ImagenTemp2,
+  acabados,
 }) => {
   return (
     <>
@@ -42,22 +43,6 @@ const AdaptBath = ({
         </Subtitle>
         <ImgWrapper>
           <Intercambiador {...IntercambiadorObj} />
-          {/* <Img src={ImagenTemp} /> */}
-          <Caracteristics></Caracteristics>
-          <WrapperTexto>
-            <TxtSubimagen>
-              Acabado cajón: <strong>datos aquí //</strong>
-            </TxtSubimagen>
-            <TxtSubimagen>
-              Acabado encimera: <b>datos aquí //</b>
-            </TxtSubimagen>
-            <TxtSubimagen>
-              Acabado lateral: <b>datos aquí //</b>
-            </TxtSubimagen>
-            <TxtSubimagen>
-              Acabado forrado mueble: <b>datos aquí //</b>
-            </TxtSubimagen>
-          </WrapperTexto>
         </ImgWrapper>
       </MainContainer>
       <GeneralContainer>

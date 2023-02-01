@@ -19,10 +19,18 @@ import {
   CajaMaterial,
   ContIconText,
   TextoMaterial,
+  WrapperTexto,
+  TxtSubimagen,
 } from "./intercambiadorStyles";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
 import chevron from "../../../assets/icons/botones/arrow-up.png";
-import { frontales, modulos, laterales, iconos } from "./dataIntercambiador";
+import {
+  frontales,
+  modulos,
+  laterales,
+  iconos,
+  txtacabados,
+} from "./dataIntercambiador";
 const Intercambiador = ({ base }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [materialesVisible, SetMateriales] = useState(false);
@@ -45,6 +53,12 @@ const Intercambiador = ({ base }) => {
   const [modulosSelected, SetModulos] = useState(false);
   const [lateralSelected, SetLateral] = useState(false);
   const [encimeraSelected, SetEncimera] = useState(false);
+  //acabados
+  const [txtfrente, setTxtF] = useState(txtacabados.acNordik);
+  const [txtmodulo, setTxtM] = useState(txtacabados.acNordik);
+  const [txtlateral, setTxtL] = useState(txtacabados.acNordik);
+  const [txtencimera, setTxtE] = useState(txtacabados.acNordik);
+
   return (
     <>
       <ContenedorIntercambiador>
@@ -70,6 +84,10 @@ const Intercambiador = ({ base }) => {
             SetNoons(false);
             SetPaladio(false);
             SetSyrac(false);
+            setTxtF(txtacabados.acNordik);
+            setTxtM(txtacabados.acNordik);
+            setTxtL(txtacabados.acNordik);
+            setTxtE(txtacabados.acNordik);
           }}
         >
           <img
@@ -125,6 +143,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetAllure(!allureVisible);
+                    if (frenteSelected && !allureVisible) {
+                      setTxtF(txtacabados.acAllure);
+                    }
+                    if (lateralSelected && !allureVisible) {
+                      setTxtL(txtacabados.acAllure);
+                    }
+                    if (encimeraSelected && !allureVisible) {
+                      setTxtE(txtacabados.acAllure);
+                    }
+                    if (modulosSelected && !allureVisible) {
+                      setTxtM(txtacabados.acAllure);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.allureIco}></IconoMaterial>
@@ -134,6 +164,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetBeren(!berenVisible);
+                    if (frenteSelected && !berenVisible) {
+                      setTxtF(txtacabados.acBeren);
+                    }
+                    if (lateralSelected && !berenVisible) {
+                      setTxtL(txtacabados.acBeren);
+                    }
+                    if (encimeraSelected && !berenVisible) {
+                      setTxtE(txtacabados.acBeren);
+                    }
+                    if (modulosSelected && !berenVisible) {
+                      setTxtM(txtacabados.acBeren);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.berenIco}></IconoMaterial>
@@ -143,6 +185,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetBlancborg(!blancborgVisible);
+                    if (frenteSelected && !blancborgVisible) {
+                      setTxtF(txtacabados.acBlancB);
+                    }
+                    if (lateralSelected && !blancborgVisible) {
+                      setTxtL(txtacabados.acBlancB);
+                    }
+                    if (encimeraSelected && !blancborgVisible) {
+                      setTxtE(txtacabados.acBlancB);
+                    }
+                    if (modulosSelected && !blancborgVisible) {
+                      setTxtM(txtacabados.acBlancB);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.blancborgIco}></IconoMaterial>
@@ -152,6 +206,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetBlancinv(!blancinvVisible);
+                    if (frenteSelected && !blancinvVisible) {
+                      setTxtF(txtacabados.acBlancI);
+                    }
+                    if (lateralSelected && !blancinvVisible) {
+                      setTxtL(txtacabados.acBlancI);
+                    }
+                    if (encimeraSelected && !blancinvVisible) {
+                      setTxtE(txtacabados.acBlancI);
+                    }
+                    if (modulosSelected && !blancinvVisible) {
+                      setTxtM(txtacabados.acBlancI);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.blancinvIco}></IconoMaterial>
@@ -161,6 +227,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetBrazil(!brazilVisible);
+                    if (frenteSelected && !brazilVisible) {
+                      setTxtF(txtacabados.acBrazil);
+                    }
+                    if (lateralSelected && !brazilVisible) {
+                      setTxtL(txtacabados.acBrazil);
+                    }
+                    if (encimeraSelected && !brazilVisible) {
+                      setTxtE(txtacabados.acBrazil);
+                    }
+                    if (modulosSelected && !brazilVisible) {
+                      setTxtM(txtacabados.acBrazil);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.brazilIco}></IconoMaterial>
@@ -170,6 +248,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetCalacatta(!calacattaVisible);
+                    if (frenteSelected && !calacattaVisible) {
+                      setTxtF(txtacabados.acCalacatta);
+                    }
+                    if (lateralSelected && !calacattaVisible) {
+                      setTxtL(txtacabados.acCalacatta);
+                    }
+                    if (encimeraSelected && !calacattaVisible) {
+                      setTxtE(txtacabados.acCalacatta);
+                    }
+                    if (modulosSelected && !calacattaVisible) {
+                      setTxtM(txtacabados.acCalacatta);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.calacattaIco}></IconoMaterial>
@@ -179,6 +269,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetEme(!emeVisible);
+                    if (frenteSelected && !emeVisible) {
+                      setTxtF(txtacabados.acEme);
+                    }
+                    if (lateralSelected && !emeVisible) {
+                      setTxtL(txtacabados.acEme);
+                    }
+                    if (encimeraSelected && !emeVisible) {
+                      setTxtE(txtacabados.acEme);
+                    }
+                    if (modulosSelected && !emeVisible) {
+                      setTxtM(txtacabados.acEme);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.emeIco}></IconoMaterial>
@@ -188,6 +290,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetKendoc(!kendocVisible);
+                    if (frenteSelected && !kendocVisible) {
+                      setTxtF(txtacabados.acKendoC);
+                    }
+                    if (lateralSelected && !kendocVisible) {
+                      setTxtL(txtacabados.acKendoC);
+                    }
+                    if (encimeraSelected && !kendocVisible) {
+                      setTxtE(txtacabados.acKendoC);
+                    }
+                    if (modulosSelected && !kendocVisible) {
+                      setTxtM(txtacabados.acKendoC);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.kendoCIco}></IconoMaterial>
@@ -197,6 +311,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetKendol(!kendolVisible);
+                    if (frenteSelected && !kendolVisible) {
+                      setTxtF(txtacabados.acKendoL);
+                    }
+                    if (lateralSelected && !kendolVisible) {
+                      setTxtL(txtacabados.acKendoL);
+                    }
+                    if (encimeraSelected && !kendolVisible) {
+                      setTxtE(txtacabados.acKendoL);
+                    }
+                    if (modulosSelected && !kendolVisible) {
+                      setTxtM(txtacabados.acKendoL);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.kendoLIco}></IconoMaterial>
@@ -206,6 +332,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetMoma(!momaVisible);
+                    if (frenteSelected && !momaVisible) {
+                      setTxtF(txtacabados.acMoma);
+                    }
+                    if (lateralSelected && !momaVisible) {
+                      setTxtL(txtacabados.acMoma);
+                    }
+                    if (encimeraSelected && !momaVisible) {
+                      setTxtE(txtacabados.acMoma);
+                    }
+                    if (modulosSelected && !momaVisible) {
+                      setTxtM(txtacabados.acMoma);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.momaIco}></IconoMaterial>
@@ -215,6 +353,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetNegro(!negroVisible);
+                    if (frenteSelected && !negroVisible) {
+                      setTxtF(txtacabados.acNegro);
+                    }
+                    if (lateralSelected && !negroVisible) {
+                      setTxtL(txtacabados.acNegro);
+                    }
+                    if (encimeraSelected && !negroVisible) {
+                      setTxtE(txtacabados.acNegro);
+                    }
+                    if (modulosSelected && !negroVisible) {
+                      setTxtM(txtacabados.acNegro);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.negroIco}></IconoMaterial>
@@ -224,6 +374,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetNoonG(!noonGVisible);
+                    if (frenteSelected && !noonGVisible) {
+                      setTxtF(txtacabados.acNoonG);
+                    }
+                    if (lateralSelected && !noonGVisible) {
+                      setTxtL(txtacabados.acNoonG);
+                    }
+                    if (encimeraSelected && !noonGVisible) {
+                      setTxtE(txtacabados.acNoonG);
+                    }
+                    if (modulosSelected && !noonGVisible) {
+                      setTxtM(txtacabados.acNoonG);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.noonGIco}></IconoMaterial>
@@ -233,6 +395,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetNoons(!noonsVisible);
+                    if (frenteSelected && !noonsVisible) {
+                      setTxtF(txtacabados.acNoonS);
+                    }
+                    if (lateralSelected && !noonsVisible) {
+                      setTxtL(txtacabados.acNoonS);
+                    }
+                    if (encimeraSelected && !noonsVisible) {
+                      setTxtE(txtacabados.acNoonS);
+                    }
+                    if (modulosSelected && !noonsVisible) {
+                      setTxtM(txtacabados.acNoonS);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.noonSIco}></IconoMaterial>
@@ -242,6 +416,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetPaladio(!paladioVisible);
+                    if (frenteSelected && !paladioVisible) {
+                      setTxtF(txtacabados.acPaladio);
+                    }
+                    if (lateralSelected && !paladioVisible) {
+                      setTxtL(txtacabados.acPaladio);
+                    }
+                    if (encimeraSelected && !paladioVisible) {
+                      setTxtE(txtacabados.acPaladio);
+                    }
+                    if (modulosSelected && !paladioVisible) {
+                      setTxtM(txtacabados.acPaladio);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.paladioIco}></IconoMaterial>
@@ -251,6 +437,18 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     SetMateriales(!materialesVisible);
                     SetSyrac(!syracVisible);
+                    if (frenteSelected && !syracVisible) {
+                      setTxtF(txtacabados.acSyrac);
+                    }
+                    if (lateralSelected && !syracVisible) {
+                      setTxtL(txtacabados.acSyrac);
+                    }
+                    if (encimeraSelected && !syracVisible) {
+                      setTxtE(txtacabados.acSyrac);
+                    }
+                    if (modulosSelected && !syracVisible) {
+                      setTxtM(txtacabados.acSyrac);
+                    }
                   }}
                 >
                   <IconoMaterial src={iconos.syracIco}></IconoMaterial>
@@ -578,6 +776,21 @@ const Intercambiador = ({ base }) => {
           </ContenedorImagen>
         )}
       </ContenedorIntercambiador>
+      <WrapperTexto>
+        <TxtSubimagen>
+          forrado frente mueble Basyk: <strong>{txtfrente}</strong> //&nbsp;{" "}
+        </TxtSubimagen>
+        <TxtSubimagen>
+          forrado encimera: <strong>{txtencimera}</strong> //&nbsp;{" "}
+        </TxtSubimagen>
+        <TxtSubimagen>
+          forrado lateral: <strong>{txtlateral}</strong> //&nbsp;
+        </TxtSubimagen>
+        <TxtSubimagen>
+          forrado mueble auxiliar: <strong>{txtmodulo}</strong>
+          //&nbsp;
+        </TxtSubimagen>
+      </WrapperTexto>
     </>
   );
 };

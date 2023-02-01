@@ -154,5 +154,34 @@ export const IconoMaterial = styled(motion.img)`
 `;
 export const TextoMaterial = styled.p`
   text-align: center;
-  color: white;
+  color: #fff;
+`;
+export const WrapperTexto = styled.div`
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+export const TxtSubimagen = styled.p`
+  font-size: 40px;
+  /* max-width: auto; */
+  color: #fff;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  /* cursor: pointer; */
+
+  /* :hover {
+    color: rgba(85, 113, 119);
+    //transform: translateX(20px);
+    transition: 0.2s ease-in-out;
+  } */
+
+  @media screen and (max-width: 980px) {
+    max-width: auto;
+    font-size: 32px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: auto;
+    font-size: 16px;
+  }
 `;

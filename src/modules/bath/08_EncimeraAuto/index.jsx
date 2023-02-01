@@ -14,8 +14,10 @@ import {
   SliderContainer,
 } from "./encimeraAutoStyles";
 const fadeImages = [
-  require("../../../assets/images/acabado_hond.webp"),
-  require("../../../assets/images/acabado_mate_sr.webp"),
+  require("../../../assets/images/bath/XL BATH web Encimera Autoportante DETALLE 2_OK.webp"),
+  require("../../../assets/images/bath/XL BATH web Encimera Autoportante_OK.webp"),
+  require("../../../assets/images/bath/XL BATH web Encimera Autoportante DETALLE 3_OK.webp"),
+  require("../../../assets/images/bath/XL BATH web Encimera Autoportante DETALLE_OK.webp"),
 ];
 const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
   return (
@@ -36,6 +38,8 @@ const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
               <Slide arrows={false} indicators={true}>
                 <Img src={fadeImages[0]} />
                 <Img src={fadeImages[1]} />
+                <Img src={fadeImages[2]} />
+                <Img src={fadeImages[3]} />
               </Slide>
             </SliderContainer>
           </SliderWrapper>
