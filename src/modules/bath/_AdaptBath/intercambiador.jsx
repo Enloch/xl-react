@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState } from "react";
 
 import {
@@ -6,7 +7,6 @@ import {
   ContenedorImagen,
   Imagen,
   ContenedorMenu,
-  PestañaMenu,
   MenuIntrucciones,
   BotonExpandir,
   BotonContinuar,
@@ -207,16 +207,16 @@ const Intercambiador = ({ base }) => {
                     SetMateriales(!materialesVisible);
                     SetBlancinv(!blancinvVisible);
                     if (frenteSelected && !blancinvVisible) {
-                      setTxtF(txtacabados.acBlancI);
+                      setTxtF(txtacabados.acBlancinv);
                     }
                     if (lateralSelected && !blancinvVisible) {
-                      setTxtL(txtacabados.acBlancI);
+                      setTxtL(txtacabados.acBlancinv);
                     }
                     if (encimeraSelected && !blancinvVisible) {
-                      setTxtE(txtacabados.acBlancI);
+                      setTxtE(txtacabados.acBlancinv);
                     }
                     if (modulosSelected && !blancinvVisible) {
-                      setTxtM(txtacabados.acBlancI);
+                      setTxtM(txtacabados.acBlancinv);
                     }
                   }}
                 >
@@ -778,16 +778,16 @@ const Intercambiador = ({ base }) => {
       </ContenedorIntercambiador>
       <WrapperTexto>
         <TxtSubimagen>
-          forrado frente mueble Basyk: <strong>{txtfrente}</strong> //&nbsp;{" "}
+          mueble basyk frente: <strong>{txtfrente}</strong> //&nbsp;{" "}
         </TxtSubimagen>
         <TxtSubimagen>
-          forrado encimera: <strong>{txtencimera}</strong> //&nbsp;{" "}
+          mueble basyk encimera: <strong>{txtencimera}</strong> //&nbsp;{" "}
         </TxtSubimagen>
         <TxtSubimagen>
-          forrado lateral: <strong>{txtlateral}</strong> //&nbsp;
+          mueble basyk lateral: <strong>{txtlateral}</strong> //&nbsp;
         </TxtSubimagen>
         <TxtSubimagen>
-          forrado mueble auxiliar: <strong>{txtmodulo}</strong>
+          modulo basyk frente: <strong>{txtmodulo}</strong>
           //&nbsp;
         </TxtSubimagen>
       </WrapperTexto>

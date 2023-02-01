@@ -159,12 +159,12 @@ export const TextoMaterial = styled.p`
 export const WrapperTexto = styled.div`
   padding-top: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 `;
 
 export const TxtSubimagen = styled.p`
-  font-size: 40px;
+  font-size: 16px;
   /* max-width: auto; */
   color: #fff;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
@@ -178,10 +178,10 @@ export const TxtSubimagen = styled.p`
 
   @media screen and (max-width: 980px) {
     max-width: auto;
-    font-size: 32px;
+    font-size: 14px;
   }
   @media screen and (max-width: 480px) {
     max-width: auto;
-    font-size: 16px;
+    font-size: 12px;
   }
 `;
