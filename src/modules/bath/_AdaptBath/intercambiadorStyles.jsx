@@ -120,11 +120,14 @@ export const MenuMateriales = styled(motion.div)`
   right: 0;
   bottom: 0;
   height: 27%;
-  @media screen and (max-width: 1400px) {
-  }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1920px) {
     height: 30%;
   }
+  @media screen and (max-width: 1400px) {
+  }
+  /* @media screen and (max-width: 1200px) {
+    height: 30%;
+  } */
   @media screen and (max-width: 1024px) {
     height: 37%;
   }
@@ -142,11 +145,18 @@ export const ContenedorMateriales = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1.25fr 2fr 1.25fr;
+  @media screen and (max-width: 1920px) {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
   @media screen and (max-width: 1400px) {
     align-content: center;
     grid-template-columns: 1.2fr 3fr 1.2fr;
   }
   @media screen and (max-width: 1200px) {
+    align-content: center;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+  @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr 3fr 1fr;
   }
   @media screen and (max-width: 980px) {
@@ -173,6 +183,9 @@ export const ContIconText = styled.div`
   align-items: center;
   width: 86px;
   cursor: pointer;
+  @media screen and (max-width: 1920px) {
+    width: 86px;
+  }
   @media screen and (max-width: 1400px) {
     width: 72px;
   }
@@ -190,6 +203,9 @@ export const IconoMaterial = styled(motion.img)`
   width: 64px;
   height: auto;
   border-radius: 50%;
+  @media screen and (max-width: 1920px) {
+    width: 48px;
+  }
   @media screen and (max-width: 1400px) {
     width: 48px;
   }
@@ -203,6 +219,9 @@ export const IconoMaterial = styled(motion.img)`
 export const TextoMaterial = styled.p`
   text-align: center;
   color: #fff;
+  @media screen and (max-width: 1920px) {
+    font-size: 14px;
+  }
   @media screen and (max-width: 1400px) {
     font-size: 12px;
   }

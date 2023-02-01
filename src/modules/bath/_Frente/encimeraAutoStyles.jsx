@@ -42,7 +42,6 @@ export const Heading = styled.p`
   color: #fff;
   //grid-column: 4 / span 8;
   @media screen and (max-width: 1920px) {
-    margin-right: 30%;
   }
   @media screen and (max-width: 1400px) {
     margin-right: 0;
@@ -61,11 +60,11 @@ export const Subtitle = styled.p`
   font-size: 40px;
   font-weight: 100;
   color: #fff;
-  grid-column: 3 / 6;
+  grid-column: 2 / 5;
   @media screen and (max-width: 1400px) {
     padding-right: 0;
     margin-left: 0;
-    grid-column: 2 / 6;
+    grid-column: 1 / 5;
   }
   @media screen and (max-width: 980px) {
     grid-column: 1 / 6;
@@ -102,7 +101,7 @@ export const GeneralContainer = styled.div`
   ); */
   background-color: rgb(85, 113, 119);
   /* height: auto; */
-  grid-column: 6/-1;
+  grid-column: 5/-1;
   @media screen and (max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {

@@ -45,6 +45,8 @@ export const Heading = styled.p`
   }
   @media screen and (max-width: 1400px) {
     margin-right: 0;
+    margin-bottom: 30px;
+    font-size: 60px;
   }
   @media screen and (max-width: 980px) {
     margin-bottom: 30px;
