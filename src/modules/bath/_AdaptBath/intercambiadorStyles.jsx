@@ -138,6 +138,9 @@ export const MenuMateriales = styled(motion.div)`
   @media screen and (max-width: 480px) {
     height: 27%;
   }
+  @media screen and (max-width: 380px) {
+    height: 35%;
+  }
 `;
 export const ContenedorMateriales = styled.div`
   background-color: #303030;
@@ -163,7 +166,10 @@ export const ContenedorMateriales = styled.div`
     grid-template-columns: 1fr 2fr 1fr;
   }
   @media screen and (max-width: 480px) {
-    grid-template-columns: 0.75fr 3fr 0.75fr;
+    grid-template-columns: 60px 280px 60px;
+  }
+  @media screen and (max-width: 380px) {
+    grid-template-columns: 0.3fr 3fr 0.10fr;
   }
 `;
 export const CajaMaterial = styled.div`

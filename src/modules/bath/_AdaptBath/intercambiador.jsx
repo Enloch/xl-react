@@ -107,7 +107,7 @@ const Intercambiador = ({ base }) => {
                 duration: 0.6,
                 ease: "easeIn",
               },
-              height: "12%",
+              height: "18%",
             }}
           >
             <MenuIntrucciones>
@@ -125,19 +125,7 @@ const Intercambiador = ({ base }) => {
         )}
         {materialesVisible && (
           <MenuMateriales>
-            <ContenedorMateriales
-              id='menu material'
-              initial={{
-                height: "0%",
-              }}
-              animate={{
-                transition: {
-                  duration: 1,
-                  ease: "easeIn",
-                },
-                height: "12%",
-              }}
-            >
+            <ContenedorMateriales>
               <CajaMaterial>
                 <ContIconText
                   onClick={() => {

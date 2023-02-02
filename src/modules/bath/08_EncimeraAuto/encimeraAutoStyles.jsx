@@ -39,14 +39,13 @@ export const TextWrapper = styled.div`
 `;
 
 export const Heading = styled.p`
-  margin-right: 10%;
   font-size: 100px;
   line-height: 0.9;
   justify-content: center;
   color: #fff;
   //grid-column: 4 / span 8;
   @media screen and (max-width: 1920px) {
-    margin-right: 30%;
+    margin-right: 10%;
   }
   @media screen and (max-width: 1400px) {
     font-size: 75px;
@@ -98,15 +97,7 @@ export const ImgWrap = styled.div`
 `;
 
 export const GeneralContainer = styled.div`
-  /* background: linear-gradient(
-    to bottom,
-    rgba(211, 206, 201) 0%,
-    rgba(211, 206, 201) 50%,
-    rgba(85, 113, 119) 50%,
-    rgba(85, 113, 119) 100%
-  ); */
-  /* height: auto; */
-  grid-column: 6/-1;
+  grid-column: 6/12;
   @media screen and (max-width: 1400px) {
     grid-row: 2;
   }
@@ -118,7 +109,7 @@ export const GeneralContainer = styled.div`
   }
 `;
 export const SliderWrapper = styled.div`
-  width: 1200px;
+  width: 1000px;
   @media screen and (max-width: 1400px) {
     width: 100%;
     height: 100%;
