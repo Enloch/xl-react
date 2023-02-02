@@ -1,6 +1,6 @@
 export const formatoObj = {
   id: 'formato',
-  headLine: 'espesores y formatos //',
+  headLine: 'Espesores y formatos //',
   description:
     'XL se fabrica en piezas desde 1600 x 3200  hasta 1620 x 3240 mm en espesores de 12 y 20 mm.',
   img: require('../../assets/images/espesores.webp'),
