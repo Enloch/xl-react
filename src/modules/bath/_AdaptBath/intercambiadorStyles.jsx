@@ -149,7 +149,7 @@ export const ContenedorMateriales = styled.div`
   display: grid;
   grid-template-columns: 1.25fr 2fr 1.25fr;
   @media screen and (max-width: 1920px) {
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 0.8fr;
   }
   @media screen and (max-width: 1400px) {
     align-content: center;
@@ -169,7 +169,7 @@ export const ContenedorMateriales = styled.div`
     grid-template-columns: 60px 280px 60px;
   }
   @media screen and (max-width: 380px) {
-    grid-template-columns: 0.3fr 3fr 0.10fr;
+    grid-template-columns: 0.3fr 3fr 0.1fr;
   }
 `;
 export const CajaMaterial = styled.div`
@@ -190,7 +190,7 @@ export const ContIconText = styled.div`
   width: 86px;
   cursor: pointer;
   @media screen and (max-width: 1920px) {
-    width: 86px;
+    width: 80px;
   }
   @media screen and (max-width: 1400px) {
     width: 72px;
