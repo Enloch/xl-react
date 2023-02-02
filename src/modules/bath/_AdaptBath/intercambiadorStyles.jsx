@@ -128,8 +128,6 @@ export const ContenedorIconos = styled(motion.div)`
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
-    height: 92%;
-    width: 94%;
   }
 `;
 export const Icono1 = styled.img`
@@ -190,17 +188,17 @@ export const ContenedorMateriales = styled.div`
   }
   @media screen and (max-width: 1400px) {
     align-content: center;
-    grid-template-columns: 1.2fr 3fr 1.2fr;
+    grid-template-columns: 1fr 600px 1fr;
   }
   @media screen and (max-width: 1200px) {
     align-content: center;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 600px 1fr;
   }
   @media screen and (max-width: 1024px) {
     grid-template-columns: 1fr 3fr 1fr;
   }
   @media screen and (max-width: 980px) {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 400px 1fr;
   }
   @media screen and (max-width: 480px) {
     grid-template-columns: 60px 280px 60px;
