@@ -33,7 +33,7 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   max-width: 500px;
   font-size: 100px;
   line-height: 0.9;
@@ -58,7 +58,7 @@ export const Heading = styled.p`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(motion.p)`
   font-size: 40px;
   line-height: 1.1;
   font-weight: 100;

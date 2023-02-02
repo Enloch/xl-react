@@ -60,8 +60,33 @@ const EncimeraTop = ({
     <>
       <InfoContainer id='encimerabath'>
         <TextWrapper>
-          <Heading> {headLine}</Heading>
-          <Subtitle>
+          <Heading
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {" "}
+            {headLine}
+          </Heading>
+          <Subtitle
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
             {description}
             <br />
             <br />
@@ -139,7 +164,18 @@ function bloque(
   return (
     <>
       <BloqueTitulo>
-        <WrapperTitulo>
+        <WrapperTitulo
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.8,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <strong>{titulo}</strong>
           <ImagenTitulo src={icono}></ImagenTitulo>
         </WrapperTitulo>
@@ -151,12 +187,34 @@ function bloque(
         </BloqueDescarga>
       </BloqueTitulo>
 
-      <BloqueSubtitulo>
+      <BloqueSubtitulo
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{
+          transition: {
+            duration: 0.8,
+            ease: "easeIn",
+          },
+          x: 0,
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+      >
         <br />
         {subtitulo}
       </BloqueSubtitulo>
       <ContenedorEncimera>
-        <BloqueEncimeras3>
+        <BloqueEncimeras3
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 1,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <IconoEncimera src={imagenes.img1} />
           <InfoEncimera>
             {texto.text1}
@@ -164,7 +222,18 @@ function bloque(
             {texto.subtext}
           </InfoEncimera>
         </BloqueEncimeras3>
-        <BloqueEncimeras3>
+        <BloqueEncimeras3
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.8,
+              ease: "easeIn",
+            },
+            y: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <IconoEncimera src={imagenes.img2} />
           <InfoEncimera>
             {texto.text2}
@@ -172,7 +241,18 @@ function bloque(
             {texto.subtext}
           </InfoEncimera>
         </BloqueEncimeras3>
-        <BloqueEncimeras3>
+        <BloqueEncimeras3
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 1,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <IconoEncimera src={imagenes.img3} />
           <InfoEncimera>
             {texto.text3}

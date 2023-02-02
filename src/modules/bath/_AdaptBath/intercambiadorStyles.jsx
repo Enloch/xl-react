@@ -65,15 +65,18 @@ export const TextoIntro2 = styled.p`
   color: white;
   position: absolute;
   bottom: 10%;
-  left: 40%;
+  left: 43%;
   font-size: 1rem;
   justify-self: center;
   align-self: center;
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1920px) {
     left: 40%;
   }
   @media screen and (max-width: 1400px) {
-    left: 36%;
+    left: 40%;
+  }
+  @media screen and (max-width: 1024px) {
+    left: 37%;
   }
   @media screen and (max-width: 980px) {
     left: 36%;

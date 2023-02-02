@@ -35,8 +35,32 @@ const AdaptBath = ({
   return (
     <>
       <MainContainer id='forradomuebles'>
-        <Heading>{titulo}</Heading>
-        <Subtitle>
+        <Heading
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
+          {titulo}
+        </Heading>
+        <Subtitle
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           {subtitulo}
           <br />
           {subtitulo2}

@@ -26,10 +26,48 @@ const Frente = ({ id, headLine, description, img, alt }) => {
     <>
       <InfoContainer id='frentes'>
         <TextWrapper>
-          <Heading> {headLine}</Heading>
+          <Heading
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {" "}
+            {headLine}
+          </Heading>
         </TextWrapper>
-        <Subtitle>{description}</Subtitle>
-        <GeneralContainer>
+        <Subtitle
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
+          {description}
+        </Subtitle>
+        <GeneralContainer
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <SliderWrapper>
             <SliderContainer className='slide-container'>
               <Slide arrows={false} indicators={true}>

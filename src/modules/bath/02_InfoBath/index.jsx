@@ -17,7 +17,7 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
       <InfoContainer id={id}>
         <TextWrapper>
           <Heading
-            initial={{ x: -300, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             whileInView={{
               transition: {
                 duration: 0.6,
@@ -32,7 +32,7 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
             {headLine}
           </Heading>
           <Subtitle
-            initial={{ x: 300, opacity: 0 }}
+            initial={{ x: 100, opacity: 0 }}
             whileInView={{
               transition: {
                 duration: 0.6,
@@ -51,7 +51,7 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
       </InfoContainer>
       <ImgGradient>
         <ImgWrap
-          initial={{ x: 400, opacity: 0 }}
+          initial={{ x: 100, opacity: 0 }}
           whileInView={{
             transition: {
               duration: 0.9,

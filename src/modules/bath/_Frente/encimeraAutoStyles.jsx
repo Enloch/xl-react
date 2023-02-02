@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
@@ -34,7 +35,7 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   margin-right: 10%;
   font-size: 100px;
   line-height: 0.9;
@@ -56,7 +57,7 @@ export const Heading = styled.p`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(motion.p)`
   font-size: 40px;
   font-weight: 100;
   color: #fff;
@@ -91,7 +92,7 @@ export const ImgWrap = styled.div`
   }
 `;
 
-export const GeneralContainer = styled.div`
+export const GeneralContainer = styled(motion.div)`
   /* background: linear-gradient(
     to bottom,
     rgba(211, 206, 201) 0%,

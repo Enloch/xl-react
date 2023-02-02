@@ -19,7 +19,20 @@ const AcabadosBath = ({ id, titulo, subtitulo }) => {
     <>
       <ColecContainer id={id}>
         <ContentWrapper>
-          <Heading>{titulo}</Heading>
+          <Heading
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {titulo}
+          </Heading>
           <SubtitleWrapper>
             <Subtitle>{subtitulo[0]}</Subtitle>
             <Subtitle>{subtitulo[1]}</Subtitle>

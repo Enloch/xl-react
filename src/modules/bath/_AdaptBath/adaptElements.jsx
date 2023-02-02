@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
@@ -17,7 +18,7 @@ export const MainContainer = styled.div`
   @media screen and (max-width: 480px) {
   }
 `;
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   //max-width: 500px;
   grid-column: 3 / span 4;
   font-size: 100px;
@@ -40,7 +41,7 @@ export const Heading = styled.p`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(motion.p)`
   grid-column: 4 / span 8;
   font-size: 40px;
   line-height: 1.1;

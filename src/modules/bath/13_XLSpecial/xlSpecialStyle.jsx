@@ -39,7 +39,7 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   margin-right: 10%;
   font-size: 100px;
   line-height: 0.9;
@@ -64,7 +64,7 @@ export const Heading = styled.p`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(motion.p)`
   font-size: 40px;
   font-weight: 100;
   color: #303030;
@@ -76,7 +76,7 @@ export const Subtitle = styled.p`
     font-size: 32px;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 1 / 6;
+    grid-column: 2 / 10;
   }
   @media screen and (max-width: 480px) {
     font-size: 16px;
@@ -164,7 +164,7 @@ export const TextoImagen = styled(motion.p)`
   }
 `;
 export const PanelInferior = styled.div``;
-export const GeneralContainer = styled.div`
+export const GeneralContainer = styled(motion.div)`
   /* background: linear-gradient(
     to bottom,
     rgba(211, 206, 201) 0%,
@@ -179,6 +179,7 @@ export const GeneralContainer = styled.div`
     grid-row: 2;
   }
   @media screen and (max-width: 980px) {
+    grid-row: 3;
     grid-column: 1/-1;
   }
   @media screen and (max-width: 480px) {

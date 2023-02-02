@@ -35,8 +35,35 @@ const ServicioBath = ({ id, headLine, description }) => {
     <>
       <CaraContainer id={id}>
         <TextWrapper>
-          <Heading> {headLine}</Heading>
-          <Subtitle>{description}</Subtitle>
+          <Heading
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {" "}
+            {headLine}
+          </Heading>
+          <Subtitle
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {description}
+          </Subtitle>
         </TextWrapper>
         <ListaUno>
           <Lista variants={container} initial='hidden' whileInView='show'>

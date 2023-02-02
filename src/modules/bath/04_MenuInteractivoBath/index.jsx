@@ -51,11 +51,49 @@ const MenuInteractivo = ({
   return (
     <>
       <MenuIntContainter id={id}>
-        <Heading>{titulo}</Heading>
-        <Subtitle>{subtitulo}</Subtitle>
+        <Heading
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
+          {titulo}
+        </Heading>
+        <Subtitle
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
+          {subtitulo}
+        </Subtitle>
       </MenuIntContainter>
       <ImgWrap>
-        <Img src={imgheader} alt={alt} />
+        <Img
+          src={imgheader}
+          alt={alt}
+          initial={{ opacity: 0.1 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        />
         <IconContainer>
           <LinkSecciones to={config[0].id} smooth={true}>
             <Icono1

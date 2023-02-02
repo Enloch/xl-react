@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 export const MenuIntContainter = styled.div`
   background: rgb(211, 206, 201);
@@ -33,7 +34,7 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   //max-width: 500px;
   grid-column: 3 / span 5;
   font-size: 100px;
@@ -55,7 +56,7 @@ export const Heading = styled.p`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(motion.p)`
   grid-column: 4 / span 10;
   font-size: 40px;
   line-height: 1.1;
@@ -123,7 +124,7 @@ export const Icono1 = styled.img`
   }
 `;
 
-export const Img = styled.img`
+export const Img = styled(motion.img)`
   max-width: 100%;
   height: auto;
   width: 100%;

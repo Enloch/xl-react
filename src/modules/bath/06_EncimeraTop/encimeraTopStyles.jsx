@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
@@ -32,7 +33,7 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   margin-right: 10%;
   font-size: 100px;
   line-height: 0.9;
@@ -58,7 +59,7 @@ export const Heading = styled.p`
   }
 `;
 
-export const Subtitle = styled.p`
+export const Subtitle = styled(motion.p)`
   font-size: 40px;
   line-height: 1.1;
   font-weight: 100;
@@ -138,7 +139,7 @@ export const WrapperAnim = styled.div`
   }
 `;
 
-export const BloqueTitulo = styled.p`
+export const BloqueTitulo = styled(motion.p)`
   height: 72px;
   display: grid;
   grid-template-columns: 70% 30%;
@@ -221,7 +222,7 @@ export const IconoDescarga = styled.img`
     width: 1.2rem;
   }
 `;
-export const BloqueSubtitulo = styled.p`
+export const BloqueSubtitulo = styled(motion.p)`
   font-size: 30px;
   color: #303030;
   @media screen and (max-width: 1400px) {
@@ -242,11 +243,11 @@ export const ContenedorEncimera = styled.div`
   justify-content: space-evenly;
   gap: 2rem;
 `;
-export const BloqueEncimeras3 = styled.div`
+export const BloqueEncimeras3 = styled(motion.div)`
   display: flex;
   flex-direction: column;
   max-width: 27%;
-    @media screen and (max-width: 380px) {
+  @media screen and (max-width: 380px) {
     max-width: 25%;
   }
 `;
@@ -264,7 +265,6 @@ export const IconoEncimera = styled.img`
     width: 116px;
     height: 56px;
   }
-
 `;
 export const DetalleEncimera = styled.img`
   width: auto;

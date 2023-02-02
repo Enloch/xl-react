@@ -28,10 +28,48 @@ const XLSpecialBath = ({ id, headLine, description }) => {
     <>
       <InfoContainer id='xlspecial'>
         <TextWrapper>
-          <Heading>{headLine}</Heading>
+          <Heading
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {headLine}
+          </Heading>
         </TextWrapper>
-        <Subtitle>{description}</Subtitle>
-        <GeneralContainer class='what?'>
+        <Subtitle
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
+          {description}
+        </Subtitle>
+        <GeneralContainer
+          class='what?'
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 1,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <SliderWrapper className='isthis'>
             <SliderContainer className='slide-container'>
               <Slide arrows={false} indicators={true}>

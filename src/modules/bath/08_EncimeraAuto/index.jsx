@@ -24,15 +24,52 @@ const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
     <>
       <InfoContainer id='xlshelf'>
         <TextWrapper>
-          <Heading> {headLine}</Heading>
+          <Heading
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+          >
+            {" "}
+            {headLine}
+          </Heading>
         </TextWrapper>
-        <Subtitle>
+        <Subtitle
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           {description2}
           <br />
           <br />
           {description}
         </Subtitle>
-        <GeneralContainer class='what?'>
+        <GeneralContainer
+          class='what?'
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 1,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <SliderWrapper className='isthis'>
             <SliderContainer className='slide-container'>
               <Slide arrows={false} indicators={true}>

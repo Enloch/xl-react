@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 
@@ -33,7 +34,7 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const Heading = styled.p`
+export const Heading = styled(motion.p)`
   margin-left: 3.8125rem;
   margin-right: 3.9rem;
   grid-column: 2 / span 2;
