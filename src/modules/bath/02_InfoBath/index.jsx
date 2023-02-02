@@ -17,13 +17,13 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
       <InfoContainer id={id}>
         <TextWrapper>
           <Heading
-            initial={{ y: 300, opacity: 0 }}
+            initial={{ x: -300, opacity: 0 }}
             whileInView={{
               transition: {
                 duration: 0.6,
                 ease: "easeIn",
               },
-              y: 0,
+              x: 0,
               opacity: 1,
             }}
             viewport={{ once: true }}
@@ -32,13 +32,13 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
             {headLine}
           </Heading>
           <Subtitle
-            initial={{ y: 300, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             whileInView={{
               transition: {
                 duration: 0.6,
                 ease: "easeIn",
               },
-              y: 0,
+              x: 0,
               opacity: 1,
             }}
             viewport={{ once: true }}

@@ -21,6 +21,8 @@ import {
   TextoMaterial,
   WrapperTexto,
   TxtSubimagen,
+  ContenedorExpansor,
+  TextoIntro2,
 } from "./intercambiadorStyles";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
 import chevron from "../../../assets/icons/botones/arrow-up.png";
@@ -62,40 +64,57 @@ const Intercambiador = ({ base }) => {
   return (
     <>
       <ContenedorIntercambiador>
-        <BotonExpandir
-          onClick={() => {
-            setIsVisible(!isVisible);
-            SetModulos(false);
-            SetFrente(false);
-            SetLateral(false);
-            SetEncimera(false);
-            SetAllure(false);
-            SetBeren(false);
-            SetBlancborg(false);
-            SetBlancinv(false);
-            SetBrazil(false);
-            SetCalacatta(false);
-            SetEme(false);
-            SetKendoc(false);
-            SetKendol(false);
-            SetMoma(false);
-            SetNegro(false);
-            SetNoonG(false);
-            SetNoons(false);
-            SetPaladio(false);
-            SetSyrac(false);
-            setTxtF(txtacabados.acNordik);
-            setTxtM(txtacabados.acNordik);
-            setTxtL(txtacabados.acNordik);
-            setTxtE(txtacabados.acNordik);
+        <ContenedorExpansor
+          id='expansor'
+          initial={{
+            opacity: "0",
+            height: "0%",
+          }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            opacity: "1",
+            height: "10%",
           }}
         >
-          <img
-            src={chevron}
-            alt='chevron'
-            style={{ height: "35%", width: "35%" }}
-          />
-        </BotonExpandir>
+          <BotonExpandir
+            onClick={() => {
+              setIsVisible(!isVisible);
+              SetModulos(false);
+              SetFrente(false);
+              SetLateral(false);
+              SetEncimera(false);
+              SetAllure(false);
+              SetBeren(false);
+              SetBlancborg(false);
+              SetBlancinv(false);
+              SetBrazil(false);
+              SetCalacatta(false);
+              SetEme(false);
+              SetKendoc(false);
+              SetKendol(false);
+              SetMoma(false);
+              SetNegro(false);
+              SetNoonG(false);
+              SetNoons(false);
+              SetPaladio(false);
+              SetSyrac(false);
+              setTxtF(txtacabados.acNordik);
+              setTxtM(txtacabados.acNordik);
+              setTxtL(txtacabados.acNordik);
+              setTxtE(txtacabados.acNordik);
+            }}
+          >
+            <img
+              src={chevron}
+              alt='chevron'
+              style={{ height: "35%", width: "35%", color: "white" }}
+            />
+          </BotonExpandir>
+          <TextoIntro2>Pulsa para acceder al intercambiaor</TextoIntro2>
+        </ContenedorExpansor>
         {isVisible && (
           <ContenedorMenu
             id='menu inferior'
@@ -104,7 +123,7 @@ const Intercambiador = ({ base }) => {
             }}
             whileInView={{
               transition: {
-                duration: 0.6,
+                duration: 0.8,
                 ease: "easeIn",
               },
               height: "18%",

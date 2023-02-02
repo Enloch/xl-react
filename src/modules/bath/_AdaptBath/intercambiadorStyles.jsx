@@ -37,17 +37,51 @@ export const MenuIntrucciones = styled.div`
   height: 100%;
   display: grid;
 `;
+export const ContenedorExpansor = styled(motion.div)`
+  background-color: #30303040;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  @media screen and (max-width: 480px) {
+    background-color: #303030;
+  }
+`;
+
 export const BotonExpandir = styled.button`
   background-color: transparent;
   border: none;
   position: absolute;
   z-index: 1;
-  bottom: 1%;
+  bottom: 15%;
   width: 10%;
   /* height: 10%; */
   left: 45%;
   font-size: 2rem;
   cursor: pointer;
+`;
+export const TextoIntro2 = styled.p`
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  font-size: 1rem;
+  justify-self: center;
+  align-self: center;
+  @media screen and (max-width: 1400px) {
+    left: 40%;
+  }
+  @media screen and (max-width: 1400px) {
+    left: 36%;
+  }
+  @media screen and (max-width: 980px) {
+    left: 36%;
+  }
+  @media screen and (max-width: 480px) {
+    left: 25%;
+    font-size: 12px;
+  }
 `;
 export const BotonContinuar = styled.button`
   background-color: transparent;
@@ -65,6 +99,7 @@ export const BotonContinuar = styled.button`
     font-size: 12px;
   }
 `;
+
 export const TextoIntro = styled.p`
   color: white;
   font-size: 1rem;
@@ -78,7 +113,6 @@ export const TextoIntro = styled.p`
     font-size: 12px;
   }
 `;
-
 export const ContenedorIconos = styled(motion.div)`
   position: absolute;
   top: 0;
