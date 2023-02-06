@@ -1,6 +1,6 @@
 export const encimeraauto = {
   id: "encimeraauto",
-  headLine: "XL shelf y encimeras autoportantes //",
+  headLine: "XL shelf // baldas",
   description:
     "Ofrecemos soluciones a todo tipo de requerimientos en encimeras autoportantes.",
   description2:

@@ -67,16 +67,32 @@ const ServicioBath = ({ id, headLine, description }) => {
             <LinkSecciones to='forradomuebles' smooth={true}>
               <LiEl variants={item}>Forrado de muebles</LiEl>
             </LinkSecciones>
-            <LiEl variants={item}>Forrado de módulos auxiliares</LiEl>
-            <LiEl variants={item}>Revestimiento de cajones y costados</LiEl>
-            <LiEl variants={item}>XL top // encimeras</LiEl>
-            <LiEl variants={item}>XL frente</LiEl>
-            <LiEl variants={item}>XL shelf // baldas </LiEl>
-            <LiEl variants={item}>XL bath specials // lavabos y tótems</LiEl>
-            <LiEl variants={item}>
-              XL light shower tray // platos de ducha medida
-            </LiEl>
-            <LiEl variants={item}>XL panel // paneles a medida</LiEl>
+            <LinkSecciones to='forradomuebles' smooth={true}>
+              <LiEl variants={item}>Forrado de módulos auxiliares</LiEl>
+            </LinkSecciones>
+            <LinkSecciones to='forradomuebles' smooth={true}>
+              <LiEl variants={item}>Revestimiento de cajones y costados</LiEl>
+            </LinkSecciones>
+            <LinkSecciones to='encimerabath' smooth={true}>
+              <LiEl variants={item}>XL top // encimeras</LiEl>
+            </LinkSecciones>
+            <LinkSecciones to='frentes' smooth={true}>
+              <LiEl variants={item}>XL frente</LiEl>
+            </LinkSecciones>
+            <LinkSecciones to='xlshelf' smooth={true}>
+              <LiEl variants={item}>XL shelf // baldas </LiEl>
+            </LinkSecciones>
+            <LinkSecciones to='xlspecial' smooth={true}>
+              <LiEl variants={item}>XL bath specials // lavabos y tótems</LiEl>
+            </LinkSecciones>
+            <LinkSecciones to='' smooth={true}>
+              <LiEl variants={item}>
+                XL light shower tray // platos de ducha medida
+              </LiEl>
+            </LinkSecciones>
+            <LinkSecciones to='' smooth={true}>
+              <LiEl variants={item}>XL panel // paneles a medida</LiEl>
+            </LinkSecciones>
           </Lista>
         </ListaUno>
       </CaraContainer>
