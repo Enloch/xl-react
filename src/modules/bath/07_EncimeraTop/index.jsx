@@ -188,13 +188,13 @@ function bloque(
       </BloqueTitulo>
 
       <BloqueSubtitulo
-        initial={{ x: 100, opacity: 0 }}
+        initial={{ y: 100, opacity: 0 }}
         whileInView={{
           transition: {
             duration: 0.8,
             ease: "easeIn",
           },
-          x: 0,
+          y: 0,
           opacity: 1,
         }}
         viewport={{ once: true }}
@@ -204,13 +204,13 @@ function bloque(
       </BloqueSubtitulo>
       <ContenedorEncimera>
         <BloqueEncimeras3
-          initial={{ x: -100, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{
             transition: {
-              duration: 1,
+              duration: 0.8,
               ease: "easeIn",
             },
-            x: 0,
+            y: 0,
             opacity: 1,
           }}
           viewport={{ once: true }}
@@ -223,7 +223,7 @@ function bloque(
           </InfoEncimera>
         </BloqueEncimeras3>
         <BloqueEncimeras3
-          initial={{ y: 200, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{
             transition: {
               duration: 0.8,
@@ -242,13 +242,13 @@ function bloque(
           </InfoEncimera>
         </BloqueEncimeras3>
         <BloqueEncimeras3
-          initial={{ x: 100, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{
             transition: {
-              duration: 1,
+              duration: 0.8,
               ease: "easeIn",
             },
-            x: 0,
+            y: 0,
             opacity: 1,
           }}
           viewport={{ once: true }}
