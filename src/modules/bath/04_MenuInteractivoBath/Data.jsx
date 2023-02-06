@@ -1,9 +1,8 @@
 export const menuIntObj = {
   id: "menuinteractivo",
-  titulo: "menú interactivo //",
+  titulo: "intercambiador interactivo //",
   subtitulo:
-    "Descubre todas las opciones que XL ofrece, navegando en la imagen inferior.",
-  subtitulo2: "Navega a las diferentes secciones utilizando la imagen inferior",
+    "Descubre todas las opciones que XL ofrece, navegando en el intercambiador inferior.",
   headLine: [
     "encimeras sobremueble sin lavabo//",
     "encimeras sobremueble con lavabo integrado//",

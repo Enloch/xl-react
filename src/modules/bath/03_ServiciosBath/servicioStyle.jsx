@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 export const CaraContainer = styled.div`
   background: rgb(211, 206, 201);
@@ -79,10 +80,10 @@ export const Subtitle = styled(motion.p)`
   //color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 `;
 export const ListaUno = styled(motion.div)`
-  grid-column: 4 / span 4;
+  grid-column: 4 / span 8;
   margin-left: 125px;
   @media screen and (max-width: 1400px) {
-    grid-column: 2 / 7;
+    grid-column: 2 / span 8;
   }
   @media screen and (max-width: 980px) {
     grid-column: 2/-1;
@@ -130,6 +131,7 @@ export const ListaInterna = styled.ul`
 export const LiEl = styled(motion.li)`
   font-size: 30px;
   color: #303030;
+  cursor: pointer;
   @media screen and (max-width: 980px) {
     margin-bottom: 0;
     margin-left: 0;
@@ -170,3 +172,4 @@ export const Img = styled.img`
   margin-right: auto;
   padding-right: 0;
 `;
+export const LinkSecciones = styled(Link)``;

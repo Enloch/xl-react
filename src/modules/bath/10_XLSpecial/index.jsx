@@ -1,6 +1,7 @@
 import { hover } from "@testing-library/user-event/dist/hover";
 import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
+import "./styles.css";
 
 import {
   InfoContainer,

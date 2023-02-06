@@ -19,7 +19,7 @@ const ContactoSection = ({ footerImg, footer }) => {
   }, []);
   return (
     <>
-      <ColecContainer id="contacto">
+      <ColecContainer id='contacto'>
         <ContenedorGrupo>
           <TextContainer>
             <h1 style={{ fontSize: "100px", marginTop: "-20px" }}>contacto</h1>
@@ -39,7 +39,7 @@ const ContactoSection = ({ footerImg, footer }) => {
               <a style={{ fontSize: "24px" }}>teléfono : </a>
               <a
                 style={{ fontSize: "24px", color: "black" }}
-                href="tel:+34673210147"
+                href='tel:+34673210147'
               >
                 +34 673 21 01 47
               </a>
@@ -51,14 +51,14 @@ const ContactoSection = ({ footerImg, footer }) => {
               <a style={{ fontSize: "24px" }}>mail : </a>
               <a
                 style={{ fontSize: "24px", color: "black" }}
-                href="mailto:m.berho@xlporcelanico.com"
+                href='mailto:mikel@xlporcelanico.com'
               >
-                m.berho@xlporcelanico.com
+                mikel@xlporcelanico.com
               </a>
             </span>
           </TextContainer>
           <MapContainer>
-            <a href="https://www.google.com/maps/place/XL+GRAN+FORMATO+PORCEL%C3%81NICO/@43.1264793,-2.4215128,19.5z/data=!4m5!3m4!1s0xd502bed0d19f41f:0xa4b91ac2a271bd57!8m2!3d43.1266255!4d-2.4208597">
+            <a href='https://www.google.com/maps/place/XL+GRAN+FORMATO+PORCEL%C3%81NICO/@43.1264793,-2.4215128,19.5z/data=!4m5!3m4!1s0xd502bed0d19f41f:0xa4b91ac2a271bd57!8m2!3d43.1266255!4d-2.4208597'>
               <MapImg src={ImagenContacto} />
             </a>
           </MapContainer>
@@ -67,7 +67,7 @@ const ContactoSection = ({ footerImg, footer }) => {
       <FooterContainer>
         <FooterWrapper>
           <FooterLogo src={footerImg} />
-          <Link to="/" style={{ textDecoration: "none", alignSelf: "center" }}>
+          <Link to='/' style={{ textDecoration: "none", alignSelf: "center" }}>
             <FooterLink>{footer}</FooterLink>
           </Link>
         </FooterWrapper>

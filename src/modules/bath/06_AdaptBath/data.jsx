@@ -1,6 +1,6 @@
 export const AdaptObj = {
   id: "adapt",
-  titulo: "XL bathroom adapt //",
+  titulo: "forrado de muebles //",
   subtitulo:
     "Gestión de integral para el fabricante de muebles: revestimiento de cajones, costados... cualquier medida, cualquier idea...",
   subtitulo2:

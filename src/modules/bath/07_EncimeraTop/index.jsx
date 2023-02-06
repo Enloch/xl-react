@@ -120,7 +120,7 @@ const EncimeraTop = ({
 
           {bloque(
             titulo3,
-            mm06,
+            mm12,
             sub3,
             imagenes3,
             desc3,
@@ -129,7 +129,7 @@ const EncimeraTop = ({
           )}
           {bloque(
             titulo4,
-            mm12,
+            mm06,
             sub4,
             imagenes4,
             desc4,
