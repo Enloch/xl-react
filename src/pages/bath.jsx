@@ -25,6 +25,7 @@ import {
 } from "../modules/bath/05_AcabadosBath/data";
 import AdaptBath from "../modules/bath/06_AdaptBath";
 import { AdaptObj } from "../modules/bath/06_AdaptBath/data";
+import RotadorWebGl from "../modules/bath/_RotadowWebgl";
 const Bath = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -44,6 +45,7 @@ const Bath = () => {
       <Frente {...frenteObj} />
       <EncimeraAuto {...encimeraauto} />
       <XLSpecial {...xlspecial} />
+      <RotadorWebGl />
     </>
   );
 };

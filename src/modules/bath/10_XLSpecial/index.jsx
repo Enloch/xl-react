@@ -82,7 +82,7 @@ const XLSpecialBath = ({ id, headLine, description }) => {
           </SliderWrapper>
         </GeneralContainer>
       </InfoContainer>
-      <WrapperIframe>
+      {/* <WrapperIframe>
         {isVisible && (
           <ImgWrap onClick={() => setIsVisible(!isVisible)}>
             <WrapperTxtImg
@@ -119,7 +119,7 @@ const XLSpecialBath = ({ id, headLine, description }) => {
           frameborder='0'
           title='Rotador'
         />
-      </WrapperIframe>
+      </WrapperIframe> */}
     </>
   );
 };
