@@ -63,7 +63,12 @@ const ServicioBath = ({ id, headLine, description }) => {
           </Subtitle>
         </TextWrapper>
         <ListaUno>
-          <Lista variants={container} initial='hidden' whileInView='show'>
+          <Lista
+            variants={container}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true }}
+          >
             <LinkSecciones to='forradomuebles' smooth={true}>
               <LiEl variants={item}>Forrado de muebles</LiEl>
             </LinkSecciones>
@@ -90,7 +95,7 @@ const ServicioBath = ({ id, headLine, description }) => {
                 XL light shower tray // platos de ducha medida
               </LiEl>
             </LinkSecciones>
-            <LinkSecciones to='' smooth={true}>
+            <LinkSecciones to='forradomuebles' smooth={true}>
               <LiEl variants={item}>XL panel // paneles a medida</LiEl>
             </LinkSecciones>
           </Lista>
