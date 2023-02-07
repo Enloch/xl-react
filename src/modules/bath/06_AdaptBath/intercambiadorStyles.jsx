@@ -146,6 +146,7 @@ export const Icono1 = styled.img`
     transform: rotate(-45deg);
   }
 `;
+
 export const MenuMateriales = styled(motion.div)`
   display: flex;
   flex-direction: column;

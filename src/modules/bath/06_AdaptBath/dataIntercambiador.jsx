@@ -70,8 +70,27 @@ export const IntercambiadorObj = {
   paladioIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Paladio Marron Natural_1_icono.png"),
   syracIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Syrac_1_icono.png"),
 
-  //--------------- MUEBLES ---------------
-  // naturalMueble: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_NATURAL.webp"),
+  //--------------- TOPS ---------------
+  allureTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_ALLURE TOP.webp"),
+  berenTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_BEREN TOP.webp"),
+  blancborgTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_BLANC_BORGHINI TOP.webp"),
+  blancinvTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_BLANC_INVISIBLE TOP.webp"),
+  brazilTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_BRAZIL TOP.webp"),
+  calacattaTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_CALACATTA TOP.webp"),
+  emeTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_EME TOP.webp"),
+  kendoCTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_KENDO_CLASSIC TOP.webp"),
+  kendoLTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_KENDO_LIGHT TOP.webp"),
+  momaTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_MOMA TOP.webp"),
+  negroTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_NEGRO TOP.webp"),
+  noonGTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_NOON_GREY TOP.webp"),
+  noonSTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_NOON_SAND TOP.webp"),
+  paladioTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_PALADIO TOP.webp"),
+  syracTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_SYRAC TOP.webp"),
+
+  //---------------  BASE MUEBLE ---------------
+  antracitaMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER BASE/INTERCAMBIADOR XL BATH ANTRACITA_MUEBLE.webp"),
+  blancoMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER BASE/INTERCAMBIADOR XL BATH BLANCO_MUEBLE.webp"),
+  nordikMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER BASE/INTERCAMBIADOR XL BATH NORDIK_MUEBLE.webp"),
 
   //---------------- TEXTOS----------------
   acabadoAllure: "allure anthracite",
@@ -90,6 +109,9 @@ export const IntercambiadorObj = {
   acabadoPaladio: "paladio",
   acabadoSyrac: "syrac",
   acabadoNatural: "natural",
+  acabadoAntracita: "antracita",
+  acabadoBlanco: "blanco",
+  acabadoNordik: "nordik",
 };
 
 const alluref = IntercambiadorObj.allureFRONTAL;
@@ -252,6 +274,9 @@ const acNoonS = IntercambiadorObj.acabadoNoonS;
 const acPaladio = IntercambiadorObj.acabadoPaladio;
 const acSyrac = IntercambiadorObj.acabadoSyrac;
 const acNatural = IntercambiadorObj.acabadoNatural;
+const acAntracite = IntercambiadorObj.acabadoAntracite;
+const acBlanco = IntercambiadorObj.acabadoBlanco;
+const acNordik = IntercambiadorObj.acabadoNordik;
 
 export const txtacabados = {
   acAllure,
@@ -270,4 +295,41 @@ export const txtacabados = {
   acPaladio,
   acSyrac,
   acNatural,
+  acAntracite,
+  acBlanco,
+  acNordik,
+};
+
+const topAllure = IntercambiadorObj.allureTOP;
+const topBeren = IntercambiadorObj.berenTOP;
+const topBlancborg = IntercambiadorObj.blancborgTOP;
+const topBlancinv = IntercambiadorObj.blancinvTOP;
+const topBrazil = IntercambiadorObj.brazilTOP;
+const topCalacatta = IntercambiadorObj.calacattaTOP;
+const topEme = IntercambiadorObj.emeTOP;
+const topKendoC = IntercambiadorObj.kendoCTOP;
+const topKendoL = IntercambiadorObj.kendoLTOP;
+const topMoma = IntercambiadorObj.momaTOP;
+const topNegro = IntercambiadorObj.negroTOP;
+const topNoonG = IntercambiadorObj.noonGTOP;
+const topNoonS = IntercambiadorObj.noonSTOP;
+const topPaladio = IntercambiadorObj.paladioTOP;
+const topSyrac = IntercambiadorObj.syracTOP;
+
+export const tops = {
+  topAllure,
+  topBeren,
+  topBlancborg,
+  topBlancinv,
+  topBrazil,
+  topCalacatta,
+  topEme,
+  topKendoC,
+  topKendoL,
+  topMoma,
+  topNegro,
+  topNoonG,
+  topNoonS,
+  topPaladio,
+  topSyrac,
 };
