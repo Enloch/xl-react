@@ -70,6 +70,9 @@ export const IntercambiadorObj = {
   paladioIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Paladio Marron Natural_1_icono.png"),
   syracIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Syrac_1_icono.png"),
 
+  //--------------- MUEBLES ---------------
+  // naturalMueble: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_NATURAL.webp"),
+
   //---------------- TEXTOS----------------
   acabadoAllure: "allure anthracite",
   acabadoBeren: "beren light grey",
@@ -86,7 +89,7 @@ export const IntercambiadorObj = {
   acabadoNoonS: "noon sand",
   acabadoPaladio: "paladio",
   acabadoSyrac: "syrac",
-  acabadoNordik: "nordik",
+  acabadoNatural: "natural",
 };
 
 const alluref = IntercambiadorObj.allureFRONTAL;
@@ -248,7 +251,7 @@ const acNoonG = IntercambiadorObj.acabadoNoonG;
 const acNoonS = IntercambiadorObj.acabadoNoonS;
 const acPaladio = IntercambiadorObj.acabadoPaladio;
 const acSyrac = IntercambiadorObj.acabadoSyrac;
-const acNordik = IntercambiadorObj.acabadoNordik;
+const acNatural = IntercambiadorObj.acabadoNatural;
 
 export const txtacabados = {
   acAllure,
@@ -266,5 +269,5 @@ export const txtacabados = {
   acNoonS,
   acPaladio,
   acSyrac,
-  acNordik,
+  acNatural,
 };

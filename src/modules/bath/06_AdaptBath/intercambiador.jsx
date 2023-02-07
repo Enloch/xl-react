@@ -55,11 +55,13 @@ const Intercambiador = ({ base }) => {
   const [modulosSelected, SetModulos] = useState(false);
   const [lateralSelected, SetLateral] = useState(false);
   const [encimeraSelected, SetEncimera] = useState(false);
+  //Acabados Mueble
+  const [txtMadera, SetTxtMadera] = useState(txtacabados.acNatural);
   //acabados
-  const [txtfrente, setTxtF] = useState(txtacabados.acNordik);
-  const [txtmodulo, setTxtM] = useState(txtacabados.acNordik);
-  const [txtlateral, setTxtL] = useState(txtacabados.acNordik);
-  const [txtencimera, setTxtE] = useState(txtacabados.acNordik);
+  const [txtfrente, setTxtF] = useState(txtacabados.acNatural);
+  const [txtmodulo, setTxtM] = useState(txtacabados.acNatural);
+  const [txtlateral, setTxtL] = useState(txtacabados.acNatural);
+  const [txtencimera, setTxtE] = useState(txtacabados.acNatural);
 
   return (
     <>
@@ -101,10 +103,10 @@ const Intercambiador = ({ base }) => {
               SetNoons(false);
               SetPaladio(false);
               SetSyrac(false);
-              setTxtF(txtacabados.acNordik);
-              setTxtM(txtacabados.acNordik);
-              setTxtL(txtacabados.acNordik);
-              setTxtE(txtacabados.acNordik);
+              setTxtF(txtacabados.acNatural);
+              setTxtM(txtacabados.acNatural);
+              setTxtL(txtacabados.acNatural);
+              setTxtE(txtacabados.acNatural);
             }}
           >
             <img
@@ -769,7 +771,7 @@ const Intercambiador = ({ base }) => {
         )}
         {encimeraSelected && paladioVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.paladiol} alt='modencimeraulo' />
+            <Imagen src={laterales.paladiol} alt='encimera' />
           </ContenedorImagen>
         )}
         {encimeraSelected && syracVisible && (

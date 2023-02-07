@@ -45,7 +45,7 @@ const Bath = () => {
       <Frente {...frenteObj} />
       <EncimeraAuto {...encimeraauto} />
       <XLSpecial {...xlspecial} />
-      <RotadorWebGl />
+      {/* <RotadorWebGl /> */}
     </>
   );
 };

@@ -252,8 +252,8 @@ export const BloqueEncimeras3 = styled(motion.div)`
   }
 `;
 export const IconoEncimera = styled.img`
-  height: 180px;
-  max-width: 100%;
+  height: 150px;
+  width: 380px;
   @media screen and (max-width: 1400px) {
     height: 112px;
     width: 355.9px;

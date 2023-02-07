@@ -97,7 +97,7 @@ const EncimeraTop = ({
             titulo1,
             mm12,
             sub1,
-            imagenes2,
+            imagenes1,
             desc1,
             iconodescarga,
             descarga1
