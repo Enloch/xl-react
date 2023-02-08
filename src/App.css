@@ -4,6 +4,13 @@
   padding: 0%;
   font-family: "Roboto", sans-serif;
 }
+html,
 body {
+  /* https://stackoverflow.com/questions/68911663/framer-motion-animation-causes-website-to-expand */
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
 }

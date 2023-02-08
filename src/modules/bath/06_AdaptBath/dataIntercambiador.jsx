@@ -69,6 +69,10 @@ export const IntercambiadorObj = {
   noonSIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Noon Sand_1_icono.png"),
   paladioIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Paladio Marron Natural_1_icono.png"),
   syracIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Syrac_1_icono.png"),
+  naturalIcon: require("../../../assets/images/bath/intercambiador/ICONOS/MADERA NATURAL.webp"),
+  antracitaIcon: require("../../../assets/images/bath/intercambiador/ICONOS/LACADO ANTRACITA.webp"),
+  blancoIcon: require("../../../assets/images/bath/intercambiador/ICONOS/LACADO BLANCO.webp"),
+  nordikIcon: require("../../../assets/images/bath/intercambiador/ICONOS/MADERA NORDIK.webp"),
 
   //--------------- TOPS ---------------
   allureTOP: require("../../../assets/images/bath/intercambiador/CAPAS/RENDER TOP/INTERCAMBIADOR XL BATH_ALLURE TOP.webp"),
@@ -108,10 +112,10 @@ export const IntercambiadorObj = {
   acabadoNoonS: "noon sand",
   acabadoPaladio: "paladio",
   acabadoSyrac: "syrac",
-  acabadoNatural: "natural",
-  acabadoAntracita: "antracita",
-  acabadoBlanco: "blanco",
-  acabadoNordik: "nordik",
+  acabadoNatural: "madera natural",
+  acabadoAntracita: "lacado antracita",
+  acabadoBlanco: "lacado blanco",
+  acabadoNordik: "madera nordik",
 };
 
 const alluref = IntercambiadorObj.allureFRONTAL;
@@ -240,6 +244,10 @@ const noonGIco = IntercambiadorObj.noonGIcon;
 const noonSIco = IntercambiadorObj.noonSIcon;
 const paladioIco = IntercambiadorObj.paladioIcon;
 const syracIco = IntercambiadorObj.syracIcon;
+const naturalIco = IntercambiadorObj.naturalIcon;
+const antracitaIco = IntercambiadorObj.antracitaIcon;
+const blancoIco = IntercambiadorObj.blancoIcon;
+const nordikIco = IntercambiadorObj.nordikIcon;
 export const iconos = {
   allureIco,
   berenIco,
@@ -256,6 +264,10 @@ export const iconos = {
   noonSIco,
   paladioIco,
   syracIco,
+  naturalIco,
+  antracitaIco,
+  blancoIco,
+  nordikIco,
 };
 
 const acAllure = IntercambiadorObj.acabadoAllure;
@@ -274,7 +286,7 @@ const acNoonS = IntercambiadorObj.acabadoNoonS;
 const acPaladio = IntercambiadorObj.acabadoPaladio;
 const acSyrac = IntercambiadorObj.acabadoSyrac;
 const acNatural = IntercambiadorObj.acabadoNatural;
-const acAntracite = IntercambiadorObj.acabadoAntracite;
+const acAntracite = IntercambiadorObj.acabadoAntracita;
 const acBlanco = IntercambiadorObj.acabadoBlanco;
 const acNordik = IntercambiadorObj.acabadoNordik;
 
@@ -332,4 +344,14 @@ export const tops = {
   topNoonS,
   topPaladio,
   topSyrac,
+};
+
+const MuebleAntracite = IntercambiadorObj.antracitaMUEBLE;
+const MuebleBlanco = IntercambiadorObj.blancoMUEBLE;
+const MuebleNordik = IntercambiadorObj.nordikMUEBLE;
+
+export const acabadosMueble = {
+  MuebleAntracite,
+  MuebleBlanco,
+  MuebleNordik,
 };

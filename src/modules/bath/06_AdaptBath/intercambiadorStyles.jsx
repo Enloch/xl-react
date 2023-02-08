@@ -32,7 +32,7 @@ export const ContenedorMenu = styled(motion.div)`
   height: 10%;
 `;
 export const MenuIntrucciones = styled.div`
-  background-color: #303030;
+  background-color: #30303040;
   width: 100%;
   height: 100%;
   display: grid;
@@ -179,7 +179,7 @@ export const MenuMateriales = styled(motion.div)`
   }
 `;
 export const ContenedorMateriales = styled.div`
-  background-color: #303030;
+  background-color: #30303040;
   width: 100%;
   height: 100%;
   display: grid;

@@ -247,24 +247,25 @@ export const BloqueEncimeras3 = styled(motion.div)`
   display: flex;
   flex-direction: column;
   max-width: 27%;
+  height: auto;
   @media screen and (max-width: 380px) {
     max-width: 25%;
   }
 `;
 export const IconoEncimera = styled.img`
-  height: 150px;
+  /* height: 150px;
   width: 380px;
   @media screen and (max-width: 1400px) {
     height: 112px;
     width: 355.9px;
   }
   @media screen and (max-width: 980px) {
-    height: 110px;
+    height: 112px;
   }
   @media screen and (max-width: 480px) {
     width: 116px;
     height: 56px;
-  }
+  } */
 `;
 export const DetalleEncimera = styled.img`
   width: auto;

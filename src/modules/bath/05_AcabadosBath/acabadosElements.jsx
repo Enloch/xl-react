@@ -102,7 +102,7 @@ export const ImageBoxWrapper = styled.div`
     grid-column: 2 / 11;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 2 / 9;
+    grid-column: 2 / 10;
   }
   @media screen and (max-width: 480px) {
     grid-column: 2 / 9;
@@ -140,9 +140,9 @@ export const LinkBox = styled.div`
     margin: 0;
   }
   @media screen and (max-width: 980px) {
-    margin-top: 1rem;
+
     margin-left: 0;
-    grid-column: 9/ 12;
+    grid-column: 10/ -1;
   }
   @media screen and (max-width: 480px) {
     margin: 1rem 0;

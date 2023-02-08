@@ -33,9 +33,12 @@ import {
   iconos,
   txtacabados,
   tops,
+  acabadosMueble,
 } from "./dataIntercambiador";
 const Intercambiador = ({ base }) => {
+  const [inicio, setInicio] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const [muebleVisible, setMuebleVisible] = useState(false);
   const [materialesVisible, SetMateriales] = useState(false);
   const [allureVisible, SetAllure] = useState(false);
   const [berenVisible, SetBeren] = useState(false);
@@ -57,22 +60,36 @@ const Intercambiador = ({ base }) => {
   const [lateralSelected, SetLateral] = useState(false);
   const [encimeraSelected, SetEncimera] = useState(false);
   //Acabados Mueble
-  const [txtNatural, SetTxtNatural] = useState(txtacabados.acNatural);
-  const [txtAnthracita, SetTxtAnthracita] = useState(txtacabados.acAntracite);
-  const [txtBlanco, SetTxtBlanco] = useState(txtacabados.acBlanco);
-  const [txtNordik, SetTxtNordik] = useState(txtacabados.acNordik);
+  const [Natural, SetNatural] = useState(false);
+  const [Anthracita, SetAnthracita] = useState(false);
+  const [Blanco, SetBlanco] = useState(false);
+  const [Nordik, SetNordik] = useState(false);
   //acabados
   const [txtfrente, setTxtF] = useState(txtacabados.acNatural);
   const [txtmodulo, setTxtM] = useState(txtacabados.acNatural);
   const [txtlateral, setTxtL] = useState(txtacabados.acNatural);
   const [txtencimera, setTxtE] = useState(txtacabados.acNatural);
+  const [txtmueble, setTxtMu] = useState(txtacabados.acNatural);
 
   const menuMats = (
-    <MenuMateriales>
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      whileInView={{
+        transition: {
+          duration: 0.8,
+          ease: "easeIn",
+        },
+        height: "30%",
+      }}
+    >
       <ContenedorMateriales>
         <CajaMaterial>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetAllure(!allureVisible);
               if (frenteSelected && !allureVisible) {
@@ -94,6 +111,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetBeren(!berenVisible);
               if (frenteSelected && !berenVisible) {
@@ -115,6 +133,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetBlancborg(!blancborgVisible);
               if (frenteSelected && !blancborgVisible) {
@@ -136,6 +155,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetBlancinv(!blancinvVisible);
               if (frenteSelected && !blancinvVisible) {
@@ -157,6 +177,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetBrazil(!brazilVisible);
               if (frenteSelected && !brazilVisible) {
@@ -178,6 +199,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetCalacatta(!calacattaVisible);
               if (frenteSelected && !calacattaVisible) {
@@ -199,6 +221,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetEme(!emeVisible);
               if (frenteSelected && !emeVisible) {
@@ -220,6 +243,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetKendoc(!kendocVisible);
               if (frenteSelected && !kendocVisible) {
@@ -241,6 +265,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetKendol(!kendolVisible);
               if (frenteSelected && !kendolVisible) {
@@ -262,6 +287,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetMoma(!momaVisible);
               if (frenteSelected && !momaVisible) {
@@ -283,6 +309,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetNegro(!negroVisible);
               if (frenteSelected && !negroVisible) {
@@ -304,6 +331,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetNoonG(!noonGVisible);
               if (frenteSelected && !noonGVisible) {
@@ -325,6 +353,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetNoons(!noonsVisible);
               if (frenteSelected && !noonsVisible) {
@@ -346,6 +375,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetPaladio(!paladioVisible);
               if (frenteSelected && !paladioVisible) {
@@ -367,6 +397,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
+              setInicio(true);
               SetMateriales(!materialesVisible);
               SetSyrac(!syracVisible);
               if (frenteSelected && !syracVisible) {
@@ -443,57 +474,65 @@ const Intercambiador = ({ base }) => {
   return (
     <>
       <ContenedorIntercambiador>
-        <ContenedorExpansor
-          id='expansor'
-          initial={{
-            opacity: "0",
-            height: "0%",
-          }}
-          whileInView={{
-            transition: {
-              duration: 0.6,
-              ease: "easeIn",
-            },
-            opacity: "1",
-            height: "10%",
-          }}
-        >
-          <BotonExpandir
-            onClick={() => {
-              setIsVisible(!isVisible);
-              SetModulos(false);
-              SetFrente(false);
-              SetLateral(false);
-              SetEncimera(false);
-              SetAllure(false);
-              SetBeren(false);
-              SetBlancborg(false);
-              SetBlancinv(false);
-              SetBrazil(false);
-              SetCalacatta(false);
-              SetEme(false);
-              SetKendoc(false);
-              SetKendol(false);
-              SetMoma(false);
-              SetNegro(false);
-              SetNoonG(false);
-              SetNoons(false);
-              SetPaladio(false);
-              SetSyrac(false);
-              setTxtF(txtacabados.acNatural);
-              setTxtM(txtacabados.acNatural);
-              setTxtL(txtacabados.acNatural);
-              setTxtE(txtacabados.acNatural);
+        {inicio && (
+          <ContenedorExpansor
+            id='expansor'
+            initial={{
+              opacity: "0",
+              height: "0%",
+            }}
+            whileInView={{
+              transition: {
+                duration: 0.6,
+                ease: "easeIn",
+              },
+              opacity: "1",
+              height: "10%",
             }}
           >
-            <img
-              src={chevron}
-              alt='chevron'
-              style={{ height: "35%", width: "35%", color: "white" }}
-            />
-          </BotonExpandir>
-          <TextoIntro2>Pulsa para acceder al intercambiaor</TextoIntro2>
-        </ContenedorExpansor>
+            <BotonExpandir
+              onClick={() => {
+                setInicio(false);
+                setMuebleVisible(!muebleVisible);
+                SetModulos(false);
+                SetFrente(false);
+                SetLateral(false);
+                SetEncimera(false);
+                SetAllure(false);
+                SetBeren(false);
+                SetBlancborg(false);
+                SetBlancinv(false);
+                SetBrazil(false);
+                SetCalacatta(false);
+                SetEme(false);
+                SetKendoc(false);
+                SetKendol(false);
+                SetMoma(false);
+                SetNegro(false);
+                SetNoonG(false);
+                SetNoons(false);
+                SetPaladio(false);
+                SetSyrac(false);
+                SetNatural(false);
+                SetAnthracita(false);
+                SetBlanco(false);
+                SetNordik(false);
+                setTxtMu(txtacabados.acNatural);
+                setTxtF(txtacabados.acNatural);
+                setTxtM(txtacabados.acNatural);
+                setTxtL(txtacabados.acNatural);
+                setTxtE(txtacabados.acNatural);
+              }}
+            >
+              <img
+                src={chevron}
+                alt='chevron'
+                style={{ height: "35%", width: "35%", color: "white" }}
+              />
+            </BotonExpandir>
+            <TextoIntro2>Pulsa para acceder al intercambiaor</TextoIntro2>
+          </ContenedorExpansor>
+        )}
         {isVisible && (
           <ContenedorMenu
             id='menu inferior'
@@ -521,6 +560,88 @@ const Intercambiador = ({ base }) => {
             </MenuIntrucciones>
           </ContenedorMenu>
         )}
+
+        {muebleVisible && (
+          <MenuMateriales
+            id='menu inferior'
+            initial={{
+              height: "0%",
+            }}
+            whileInView={{
+              transition: {
+                duration: 0.8,
+                ease: "easeIn",
+              },
+              height: "18%",
+            }}
+          >
+            <ContenedorMateriales>
+              <TextoIntro>Selecciona el acabado del mueble</TextoIntro>
+              <CajaMaterial>
+                <ContIconText
+                  onClick={() => {
+                    setIsVisible(!isVisible);
+                    setMuebleVisible(!muebleVisible);
+                    SetNatural(!Natural);
+                    setTxtMu(txtacabados.acNatural);
+                    setTxtF(txtacabados.acNatural);
+                    setTxtM(txtacabados.acNatural);
+                    setTxtL(txtacabados.acNatural);
+                    setTxtE(txtacabados.acNatural);
+                  }}
+                >
+                  <IconoMaterial src={iconos.naturalIco}></IconoMaterial>
+                  <TextoMaterial>Natural</TextoMaterial>
+                </ContIconText>
+                <ContIconText
+                  onClick={() => {
+                    SetAnthracita(!Anthracita);
+                    setIsVisible(!isVisible);
+                    setMuebleVisible(!muebleVisible);
+                    setTxtMu(txtacabados.acAntracite);
+                    setTxtF(txtacabados.acAntracite);
+                    setTxtM(txtacabados.acAntracite);
+                    setTxtL(txtacabados.acAntracite);
+                    setTxtE(txtacabados.acAntracite);
+                  }}
+                >
+                  <IconoMaterial src={iconos.antracitaIco}></IconoMaterial>
+                  <TextoMaterial>Anthracite</TextoMaterial>
+                </ContIconText>
+                <ContIconText
+                  onClick={() => {
+                    setIsVisible(!isVisible);
+                    setMuebleVisible(!muebleVisible);
+                    SetBlanco(!Blanco);
+                    setTxtMu(txtacabados.acBlanco);
+                    setTxtF(txtacabados.acBlanco);
+                    setTxtM(txtacabados.acBlanco);
+                    setTxtL(txtacabados.acBlanco);
+                    setTxtE(txtacabados.acBlanco);
+                  }}
+                >
+                  <IconoMaterial src={iconos.blancoIco}></IconoMaterial>
+                  <TextoMaterial>Blanco</TextoMaterial>
+                </ContIconText>
+                <ContIconText
+                  onClick={() => {
+                    setIsVisible(!isVisible);
+                    setMuebleVisible(!muebleVisible);
+                    SetNordik(!Nordik);
+                    setTxtMu(txtacabados.acNordik);
+                    setTxtF(txtacabados.acNordik);
+                    setTxtM(txtacabados.acNordik);
+                    setTxtL(txtacabados.acNordik);
+                    setTxtE(txtacabados.acNordik);
+                  }}
+                >
+                  <IconoMaterial src={iconos.nordikIco}></IconoMaterial>
+                  <TextoMaterial>Nordik</TextoMaterial>
+                </ContIconText>
+              </CajaMaterial>
+            </ContenedorMateriales>
+          </MenuMateriales>
+        )}
         {materialesVisible && menuMats}
 
         {isVisible && iconosSeleccion}
@@ -530,6 +651,23 @@ const Intercambiador = ({ base }) => {
         >
           <Imagen src={base} alt='fondo' />
         </ContenedorImagenBase>
+        {/* ------------------BASE MUEBLES------------------ */}
+        {Anthracita && (
+          <ContenedorImagen>
+            <Imagen src={acabadosMueble.MuebleAntracite} alt='mueble' />
+          </ContenedorImagen>
+        )}
+        {Blanco && (
+          <ContenedorImagen>
+            <Imagen src={acabadosMueble.MuebleBlanco} alt='mueble' />
+          </ContenedorImagen>
+        )}
+        {Nordik && (
+          <ContenedorImagen>
+            <Imagen src={acabadosMueble.MuebleNordik} alt='mueble' />
+          </ContenedorImagen>
+        )}
+        {/* ------------------Rojo------------------ */}
         {frenteSelected && (
           <ContenedorImagen id='pon-alluref' sitio='frontal'>
             <Imagen
@@ -558,7 +696,6 @@ const Intercambiador = ({ base }) => {
             <Imagen src={laterales.rojot} alt='tapa' style={{ opacity: 0.3 }} />
           </ContenedorImagen>
         )}
-        {/* ------------------BASE MUEBLES------------------ */}
 
         {/* ------------------FRONTALES------------------ */}
         {frenteSelected && allureVisible && (
@@ -791,80 +928,79 @@ const Intercambiador = ({ base }) => {
         )}
         {/* ------------------tops------------------ */}
 
-        {/* ------------------TODO Poner aqui los laterales de los muebles o simplemente poner la textura de mueble arriba------------------ */}
-        {encimeraSelected && allureVisible && (
+        {encimeraSelected && !lateralSelected && allureVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.allurel} alt='encimera' />
+            <Imagen src={tops.topAllure} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && berenVisible && (
+        {encimeraSelected && !lateralSelected && berenVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.berenl} alt='encimera' />
+            <Imagen src={tops.topBeren} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && blancborgVisible && (
+        {encimeraSelected && !lateralSelected && blancborgVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.blancborgl} alt='encimera' />
+            <Imagen src={tops.topBlancborg} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && blancinvVisible && (
+        {encimeraSelected && !lateralSelected && blancinvVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.blancinvl} alt='encimera' />
+            <Imagen src={tops.topBlancinv} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && brazilVisible && (
+        {encimeraSelected && !lateralSelected && brazilVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.brazill} alt='encimera' />
+            <Imagen src={tops.topBrazil} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && calacattaVisible && (
+        {encimeraSelected && !lateralSelected && calacattaVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.calacattal} alt='encimera' />
+            <Imagen src={tops.topCalacatta} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && emeVisible && (
+        {encimeraSelected && !lateralSelected && emeVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.emel} alt='encimera' />
+            <Imagen src={tops.topEme} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && kendocVisible && (
+        {encimeraSelected && !lateralSelected && kendocVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.kendoCl} alt='encimera' />
+            <Imagen src={tops.topKendoC} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && kendolVisible && (
+        {encimeraSelected && !lateralSelected && kendolVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.kendoLl} alt='encimera' />
+            <Imagen src={tops.topKendoL} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && momaVisible && (
+        {encimeraSelected && !lateralSelected && momaVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.momal} alt='encimera' />
+            <Imagen src={tops.topMoma} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && negroVisible && (
+        {encimeraSelected && !lateralSelected && negroVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.negrol} alt='encimera' />
+            <Imagen src={tops.topNegro} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && noonGVisible && (
+        {encimeraSelected && !lateralSelected && noonGVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.noonGl} alt='encimera' />
+            <Imagen src={tops.topNoonG} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && noonsVisible && (
+        {encimeraSelected && !lateralSelected && noonsVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.noonSl} alt='encimera' />
+            <Imagen src={tops.topNoonS} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && paladioVisible && (
+        {encimeraSelected && !lateralSelected && paladioVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.paladiol} alt='encimera' />
+            <Imagen src={tops.topPaladio} alt='encimera' />
           </ContenedorImagen>
         )}
-        {encimeraSelected && syracVisible && (
+        {encimeraSelected && !lateralSelected && syracVisible && (
           <ContenedorImagen>
-            <Imagen src={laterales.syracl} alt='encimera' />
+            <Imagen src={tops.topSyrac} alt='encimera' />
           </ContenedorImagen>
         )}
         {/* ------------------TODO Revisar------------------ */}
@@ -875,6 +1011,10 @@ const Intercambiador = ({ base }) => {
         )} */}
       </ContenedorIntercambiador>
       <WrapperTexto>
+        <TxtSubimagen>
+          acabado del mueble: <strong>{txtmueble}</strong>
+          //&nbsp;
+        </TxtSubimagen>
         <TxtSubimagen>
           mueble basyk frente: <strong>{txtfrente}</strong> //&nbsp;{" "}
         </TxtSubimagen>
