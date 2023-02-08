@@ -29,6 +29,7 @@ const AcabadosBath = ({ id, titulo, subtitulo }) => {
               x: 0,
               opacity: 1,
             }}
+            overflow='hidden'
             viewport={{ once: true }}
           >
             {titulo}

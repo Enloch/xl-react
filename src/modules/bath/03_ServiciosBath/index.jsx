@@ -42,6 +42,7 @@ const ServicioBath = ({ id, headLine, description }) => {
               x: 0,
               opacity: 1,
             }}
+            overflow='hidden'
             viewport={{ once: true }}
           >
             {" "}

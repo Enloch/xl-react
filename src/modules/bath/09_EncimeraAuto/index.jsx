@@ -35,6 +35,7 @@ const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
               x: 0,
               opacity: 1,
             }}
+            overflow='hidden'
             viewport={{ once: true }}
           >
             {" "}
@@ -51,6 +52,7 @@ const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           {description2}
@@ -69,6 +71,7 @@ const EncimeraTop = ({ id, headLine, description, description2, img, alt }) => {
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           <SliderWrapper className='isthis'>

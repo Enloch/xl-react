@@ -61,6 +61,7 @@ const MenuInteractivo = ({
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           {titulo}
@@ -75,6 +76,7 @@ const MenuInteractivo = ({
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           {subtitulo}
@@ -92,6 +94,7 @@ const MenuInteractivo = ({
             },
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         />
         <IconContainer>

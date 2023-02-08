@@ -39,6 +39,7 @@ const XLSpecialBath = ({ id, headLine, description }) => {
               x: 0,
               opacity: 1,
             }}
+            overflow='hidden'
             viewport={{ once: true }}
           >
             {headLine}
@@ -54,6 +55,7 @@ const XLSpecialBath = ({ id, headLine, description }) => {
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           {description}
@@ -69,6 +71,7 @@ const XLSpecialBath = ({ id, headLine, description }) => {
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           <SliderWrapper className='isthis'>

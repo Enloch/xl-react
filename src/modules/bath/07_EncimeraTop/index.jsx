@@ -70,6 +70,7 @@ const EncimeraTop = ({
               x: 0,
               opacity: 1,
             }}
+            overflow='hidden'
             viewport={{ once: true }}
           >
             {" "}
@@ -85,6 +86,7 @@ const EncimeraTop = ({
               x: 0,
               opacity: 1,
             }}
+            overflow='hidden'
             viewport={{ once: true }}
           >
             {description}
@@ -174,6 +176,7 @@ function bloque(
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           <strong>{titulo}</strong>
@@ -197,6 +200,7 @@ function bloque(
           y: 0,
           opacity: 1,
         }}
+        overflow='hidden'
         viewport={{ once: true }}
       >
         <br />
@@ -213,6 +217,7 @@ function bloque(
             y: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           <IconoEncimera src={imagenes.img1} />
@@ -232,6 +237,7 @@ function bloque(
             y: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           <IconoEncimera src={imagenes.img2} />
@@ -251,6 +257,7 @@ function bloque(
             y: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           <IconoEncimera src={imagenes.img3} />

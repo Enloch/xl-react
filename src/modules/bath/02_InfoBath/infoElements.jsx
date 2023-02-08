@@ -75,7 +75,6 @@ export const Subtitle = styled(motion.p)`
   font-weight: 100;
   margin-bottom: 35px;
   color: #fff;
-  text-align: justify;
   @media screen and(max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {
@@ -93,7 +92,6 @@ export const Subtitle2 = styled(motion.p)`
   max-width: 1120px;
   margin-bottom: 35px;
   color: #fff;
-  text-align: justify;
   @media screen and(max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {

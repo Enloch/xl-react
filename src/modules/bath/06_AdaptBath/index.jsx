@@ -45,6 +45,7 @@ const AdaptBath = ({
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           {titulo}
@@ -59,6 +60,7 @@ const AdaptBath = ({
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           {subtitulo}

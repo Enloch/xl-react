@@ -37,6 +37,7 @@ const Frente = ({ id, headLine, description, img, alt }) => {
               x: 0,
               opacity: 1,
             }}
+            overflow='hidden'
             viewport={{ once: true }}
           >
             {" "}
@@ -53,6 +54,7 @@ const Frente = ({ id, headLine, description, img, alt }) => {
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           {description}
@@ -67,6 +69,7 @@ const Frente = ({ id, headLine, description, img, alt }) => {
             x: 0,
             opacity: 1,
           }}
+          overflow='hidden'
           viewport={{ once: true }}
         >
           <SliderWrapper>

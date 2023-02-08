@@ -58,7 +58,6 @@ export const Heading = styled(motion.p)`
 `;
 export const SubtitleWrapper = styled.div`
   grid-column: 2/5;
-  text-align: center;
   align-content: center;
   display: flex;
   margin: 5rem 0;
@@ -140,7 +139,6 @@ export const LinkBox = styled.div`
     margin: 0;
   }
   @media screen and (max-width: 980px) {
-
     margin-left: 0;
     grid-column: 10/ -1;
   }
