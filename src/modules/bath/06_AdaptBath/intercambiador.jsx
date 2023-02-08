@@ -23,6 +23,7 @@ import {
   TxtSubimagen,
   ContenedorExpansor,
   TextoIntro2,
+  ContIconText2,
 } from "./intercambiadorStyles";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
 import chevron from "../../../assets/icons/botones/arrow-up.png";
@@ -37,6 +38,7 @@ import {
 } from "./dataIntercambiador";
 const Intercambiador = ({ base }) => {
   const [inicio, setInicio] = useState(true);
+  const [inicio2, setInicio2] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [muebleVisible, setMuebleVisible] = useState(false);
   const [materialesVisible, SetMateriales] = useState(false);
@@ -79,17 +81,17 @@ const Intercambiador = ({ base }) => {
       }}
       whileInView={{
         transition: {
-          duration: 0.8,
+          duration: 0.2,
           ease: "easeIn",
         },
-        height: "30%",
+        height: "auto",
       }}
     >
       <ContenedorMateriales>
         <CajaMaterial>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetAllure(!allureVisible);
               if (frenteSelected && !allureVisible) {
@@ -111,7 +113,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetBeren(!berenVisible);
               if (frenteSelected && !berenVisible) {
@@ -133,7 +135,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetBlancborg(!blancborgVisible);
               if (frenteSelected && !blancborgVisible) {
@@ -155,7 +157,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetBlancinv(!blancinvVisible);
               if (frenteSelected && !blancinvVisible) {
@@ -177,7 +179,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetBrazil(!brazilVisible);
               if (frenteSelected && !brazilVisible) {
@@ -199,7 +201,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetCalacatta(!calacattaVisible);
               if (frenteSelected && !calacattaVisible) {
@@ -221,7 +223,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetEme(!emeVisible);
               if (frenteSelected && !emeVisible) {
@@ -243,7 +245,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetKendoc(!kendocVisible);
               if (frenteSelected && !kendocVisible) {
@@ -265,7 +267,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetKendol(!kendolVisible);
               if (frenteSelected && !kendolVisible) {
@@ -287,7 +289,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetMoma(!momaVisible);
               if (frenteSelected && !momaVisible) {
@@ -309,7 +311,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetNegro(!negroVisible);
               if (frenteSelected && !negroVisible) {
@@ -331,7 +333,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetNoonG(!noonGVisible);
               if (frenteSelected && !noonGVisible) {
@@ -353,7 +355,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetNoons(!noonsVisible);
               if (frenteSelected && !noonsVisible) {
@@ -375,7 +377,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetPaladio(!paladioVisible);
               if (frenteSelected && !paladioVisible) {
@@ -397,7 +399,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio(true);
+              setInicio2(true);
               SetMateriales(!materialesVisible);
               SetSyrac(!syracVisible);
               if (frenteSelected && !syracVisible) {
@@ -478,59 +480,82 @@ const Intercambiador = ({ base }) => {
           <ContenedorExpansor
             id='expansor'
             initial={{
-              opacity: "0",
               height: "0%",
             }}
             whileInView={{
               transition: {
-                duration: 0.6,
+                duration: 0.3,
                 ease: "easeIn",
               },
-              opacity: "1",
-              height: "10%",
+              height: "100%",
+            }}
+            onClick={() => {
+              setInicio(false);
+              setMuebleVisible(!muebleVisible);
             }}
           >
-            <BotonExpandir
-              onClick={() => {
-                setInicio(false);
-                setMuebleVisible(!muebleVisible);
-                SetModulos(false);
-                SetFrente(false);
-                SetLateral(false);
-                SetEncimera(false);
-                SetAllure(false);
-                SetBeren(false);
-                SetBlancborg(false);
-                SetBlancinv(false);
-                SetBrazil(false);
-                SetCalacatta(false);
-                SetEme(false);
-                SetKendoc(false);
-                SetKendol(false);
-                SetMoma(false);
-                SetNegro(false);
-                SetNoonG(false);
-                SetNoons(false);
-                SetPaladio(false);
-                SetSyrac(false);
-                SetNatural(false);
-                SetAnthracita(false);
-                SetBlanco(false);
-                SetNordik(false);
-                setTxtMu(txtacabados.acNatural);
-                setTxtF(txtacabados.acNatural);
-                setTxtM(txtacabados.acNatural);
-                setTxtL(txtacabados.acNatural);
-                setTxtE(txtacabados.acNatural);
+            <TextoIntro2>Pulsa para acceder al configurador</TextoIntro2>
+          </ContenedorExpansor>
+        )}
+        {inicio2 && (
+          <ContenedorExpansor
+            id='expansor'
+            initial={{
+              height: "0%",
+            }}
+            whileInView={{
+              transition: {
+                duration: 0.3,
+                ease: "easeIn",
+              },
+              height: "15%",
+            }}
+            onClick={() => {
+              setInicio(false);
+              setInicio2(false);
+              setMuebleVisible(!muebleVisible);
+              SetModulos(false);
+              SetFrente(false);
+              SetLateral(false);
+              SetEncimera(false);
+              SetAllure(false);
+              SetBeren(false);
+              SetBlancborg(false);
+              SetBlancinv(false);
+              SetBrazil(false);
+              SetCalacatta(false);
+              SetEme(false);
+              SetKendoc(false);
+              SetKendol(false);
+              SetMoma(false);
+              SetNegro(false);
+              SetNoonG(false);
+              SetNoons(false);
+              SetPaladio(false);
+              SetSyrac(false);
+              SetNatural(false);
+              SetAnthracita(false);
+              SetBlanco(false);
+              SetNordik(false);
+              setTxtMu(txtacabados.acNatural);
+              setTxtF(txtacabados.acNatural);
+              setTxtM(txtacabados.acNatural);
+              setTxtL(txtacabados.acNatural);
+              setTxtE(txtacabados.acNatural);
+            }}
+          >
+            {/* <img
+              src={chevron}
+              alt='chevron'
+              style={{
+                scale: "0.5",
+                // height: "35%",
+                // width: "20%",
+                color: "#fff",
+                filter: "invert(100%)",
               }}
-            >
-              <img
-                src={chevron}
-                alt='chevron'
-                style={{ height: "35%", width: "35%", color: "white" }}
-              />
-            </BotonExpandir>
-            <TextoIntro2>Pulsa para acceder al intercambiaor</TextoIntro2>
+            /> */}
+            <TextoIntro2>Pulsa para acceder al configurador</TextoIntro2>
           </ContenedorExpansor>
         )}
         {isVisible && (
@@ -541,10 +566,10 @@ const Intercambiador = ({ base }) => {
             }}
             whileInView={{
               transition: {
-                duration: 0.8,
+                duration: 0.2,
                 ease: "easeIn",
               },
-              height: "18%",
+              height: "auto",
             }}
           >
             <MenuIntrucciones>
@@ -569,16 +594,15 @@ const Intercambiador = ({ base }) => {
             }}
             whileInView={{
               transition: {
-                duration: 0.8,
+                duration: 0.2,
                 ease: "easeIn",
               },
-              height: "18%",
+              height: "auto",
             }}
           >
             <ContenedorMateriales>
-              <TextoIntro>Selecciona el acabado del mueble</TextoIntro>
               <CajaMaterial>
-                <ContIconText
+                <ContIconText2
                   onClick={() => {
                     setIsVisible(!isVisible);
                     setMuebleVisible(!muebleVisible);
@@ -592,8 +616,8 @@ const Intercambiador = ({ base }) => {
                 >
                   <IconoMaterial src={iconos.naturalIco}></IconoMaterial>
                   <TextoMaterial>Natural</TextoMaterial>
-                </ContIconText>
-                <ContIconText
+                </ContIconText2>
+                <ContIconText2
                   onClick={() => {
                     SetAnthracita(!Anthracita);
                     setIsVisible(!isVisible);
@@ -607,8 +631,8 @@ const Intercambiador = ({ base }) => {
                 >
                   <IconoMaterial src={iconos.antracitaIco}></IconoMaterial>
                   <TextoMaterial>Anthracite</TextoMaterial>
-                </ContIconText>
-                <ContIconText
+                </ContIconText2>
+                <ContIconText2
                   onClick={() => {
                     setIsVisible(!isVisible);
                     setMuebleVisible(!muebleVisible);
@@ -622,8 +646,8 @@ const Intercambiador = ({ base }) => {
                 >
                   <IconoMaterial src={iconos.blancoIco}></IconoMaterial>
                   <TextoMaterial>Blanco</TextoMaterial>
-                </ContIconText>
-                <ContIconText
+                </ContIconText2>
+                <ContIconText2
                   onClick={() => {
                     setIsVisible(!isVisible);
                     setMuebleVisible(!muebleVisible);
@@ -637,7 +661,7 @@ const Intercambiador = ({ base }) => {
                 >
                   <IconoMaterial src={iconos.nordikIco}></IconoMaterial>
                   <TextoMaterial>Nordik</TextoMaterial>
-                </ContIconText>
+                </ContIconText2>
               </CajaMaterial>
             </ContenedorMateriales>
           </MenuMateriales>

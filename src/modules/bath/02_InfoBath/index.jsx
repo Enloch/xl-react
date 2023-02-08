@@ -1,16 +1,14 @@
 import React from "react";
 import {
   InfoContainer,
-  InfoWrapper,
-  InfoRow,
   TextWrapper,
   Heading,
   Subtitle,
   ImgGradient,
   ImgWrap,
   Img,
+  Subtitle2,
 } from "./infoElements";
-import config from "../04_MenuInteractivoBath/indicadores";
 const InfoBath = ({ id, headLine, description, img, alt }) => {
   return (
     <>
@@ -47,6 +45,9 @@ const InfoBath = ({ id, headLine, description, img, alt }) => {
             <br />
             {description[1]}
           </Subtitle>
+          <br/>
+          <br/>
+          <Subtitle2>{description[2]}</Subtitle2>
         </TextWrapper>
       </InfoContainer>
       <ImgGradient>

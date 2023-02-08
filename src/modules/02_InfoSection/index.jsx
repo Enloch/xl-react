@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react";
 import {
   InfoContainer,
-  InfoWrapper,
-  InfoRow,
   TextWrapper,
   Heading,
   Subtitle,
   ImgGradient,
   ImgWrap,
   Img,
-} from './InfoElements'
+} from "./InfoElements";
 const InfoSection = ({ headLine, description, img, alt }) => {
   return (
     <>
-      <InfoContainer id="about">
+      <InfoContainer id='about'>
         <TextWrapper>
           <Heading> {headLine}</Heading>
           <Subtitle>{description}</Subtitle>
@@ -21,11 +19,11 @@ const InfoSection = ({ headLine, description, img, alt }) => {
       </InfoContainer>
       <ImgGradient>
         <ImgWrap>
-          <Img src={img} alt={'test'} />
+          <Img src={img} alt={"test"} />
         </ImgWrap>
       </ImgGradient>
     </>
-  )
-}
+  );
+};
 
-export default InfoSection
+export default InfoSection;

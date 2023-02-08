@@ -75,6 +75,7 @@ export const Subtitle = styled(motion.p)`
   font-weight: 100;
   margin-bottom: 35px;
   color: #fff;
+  text-align: justify;
   @media screen and(max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {
@@ -84,6 +85,25 @@ export const Subtitle = styled(motion.p)`
   @media screen and (max-width: 480px) {
     margin-bottom: 0;
     font-size: 16px;
+  }
+`;
+export const Subtitle2 = styled(motion.p)`
+  font-size: 32px;
+  //max-width: 440px;
+  max-width: 1120px;
+  margin-bottom: 35px;
+  color: #fff;
+  text-align: justify;
+  @media screen and(max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
   }
 `;
 export const ImgGradient = styled.div`

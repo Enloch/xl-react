@@ -48,6 +48,7 @@ export const Subtitle = styled(motion.p)`
   font-weight: 100;
   margin-bottom: 35px;
   color: #ffffff;
+  text-align: justify;
   @media screen and (max-width: 1400px) {
     margin-right: 75px;
   }

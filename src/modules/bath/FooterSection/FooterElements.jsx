@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS, DISTANCES } from "../../global/GlobalStyles";
+import { COLORS, DISTANCES } from "../../../global/GlobalStyles";
 
 export const ColecContainer = styled.div`
   background: #d3cec9;

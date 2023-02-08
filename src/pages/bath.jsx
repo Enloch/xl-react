@@ -25,6 +25,8 @@ import {
 } from "../modules/bath/05_AcabadosBath/data";
 import AdaptBath from "../modules/bath/06_AdaptBath";
 import { AdaptObj } from "../modules/bath/06_AdaptBath/data";
+import FooterSection from "../modules/bath/FooterSection";
+import { LandingFooter } from "../modules/bath/FooterSection/data";
 import RotadorWebGl from "../modules/bath/_RotadowWebgl";
 const Bath = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,6 +47,7 @@ const Bath = () => {
       <Frente {...frenteObj} />
       <EncimeraAuto {...encimeraauto} />
       <XLSpecial {...xlspecial} />
+      <FooterSection {...LandingFooter} />
       {/* <RotadorWebGl /> */}
     </>
   );

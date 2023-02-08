@@ -32,57 +32,49 @@ export const ContenedorMenu = styled(motion.div)`
   height: 10%;
 `;
 export const MenuIntrucciones = styled.div`
-  background-color: #30303040;
+  background-color: #303030c8;
   width: 100%;
   height: 100%;
   display: grid;
 `;
 export const ContenedorExpansor = styled(motion.div)`
-  background-color: #30303040;
+  background-color: #3030309b;
   width: 100%;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   position: absolute;
   right: 0;
   bottom: 0;
-  @media screen and (max-width: 480px) {
-    background-color: #303030;
-  }
+  cursor: pointer;
 `;
 
 export const BotonExpandir = styled.button`
   background-color: transparent;
-  border: none;
-  position: absolute;
+  /* border: none; */
+  scale: 0.5;
   z-index: 1;
-  bottom: 15%;
-  width: 10%;
-  /* height: 10%; */
-  left: 45%;
+  justify-self: center;
+  align-self: center;
   font-size: 2rem;
   cursor: pointer;
 `;
 export const TextoIntro2 = styled.p`
   color: white;
-  position: absolute;
-  bottom: 10%;
-  left: 43%;
-  font-size: 1rem;
+  font-size: 2rem;
   justify-self: center;
   align-self: center;
   @media screen and (max-width: 1920px) {
-    left: 40%;
   }
   @media screen and (max-width: 1400px) {
-    left: 40%;
   }
   @media screen and (max-width: 1024px) {
-    left: 37%;
   }
   @media screen and (max-width: 980px) {
-    left: 36%;
   }
   @media screen and (max-width: 480px) {
-    left: 25%;
     font-size: 12px;
   }
 `;
@@ -156,63 +148,30 @@ export const MenuMateriales = styled(motion.div)`
   right: 0;
   bottom: 0;
   height: 27%;
-  @media screen and (max-width: 1920px) {
-    height: 30%;
-  }
+
   @media screen and (max-width: 1400px) {
-  }
-  /* @media screen and (max-width: 1200px) {
-    height: 30%;
-  } */
-  @media screen and (max-width: 1024px) {
-    height: 37%;
   }
 
   @media screen and (max-width: 980px) {
-    height: 35%;
   }
   @media screen and (max-width: 480px) {
-    height: 27%;
-  }
-  @media screen and (max-width: 380px) {
-    height: 35%;
   }
 `;
 export const ContenedorMateriales = styled.div`
-  background-color: #30303040;
+  background-color: #303030c8;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1.25fr 2fr 1.25fr;
-  @media screen and (max-width: 1920px) {
-    grid-template-columns: 1fr 3fr 0.8fr;
-  }
-  @media screen and (max-width: 1400px) {
-    align-content: center;
-    grid-template-columns: 1fr 600px 1fr;
-  }
-  @media screen and (max-width: 1200px) {
-    align-content: center;
-    grid-template-columns: 1fr 600px 1fr;
-  }
-  @media screen and (max-width: 1024px) {
-    grid-template-columns: 1fr 3fr 1fr;
-  }
-  @media screen and (max-width: 980px) {
-    grid-template-columns: 1fr 400px 1fr;
-  }
-  @media screen and (max-width: 480px) {
-    grid-template-columns: 60px 280px 60px;
-  }
-  @media screen and (max-width: 380px) {
-    grid-template-columns: 0.3fr 3fr 0.1fr;
-  }
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: 1.25fr 5fr 1.25fr;
 `;
 export const CajaMaterial = styled.div`
   grid-column: 2;
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
+  justify-content: center;
   row-gap: 0.5rem;
   column-gap: 0.2rem;
   flex-wrap: wrap;
@@ -220,6 +179,29 @@ export const CajaMaterial = styled.div`
   height: 100%;
 `;
 export const ContIconText = styled.div`
+  flex: 1 0 11.1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 86px;
+  cursor: pointer;
+  @media screen and (max-width: 1920px) {
+    width: 80px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 72px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 60px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 45px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 30px;
+  }
+`;
+export const ContIconText2 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,9 +227,7 @@ export const IconoMaterial = styled(motion.img)`
   width: 64px;
   height: auto;
   border-radius: 50%;
-  @media screen and (max-width: 1920px) {
-    width: 48px;
-  }
+  border: 1px solid #707070;
   @media screen and (max-width: 1400px) {
     width: 48px;
   }
@@ -255,11 +235,13 @@ export const IconoMaterial = styled(motion.img)`
     width: 36px;
   }
   @media screen and (max-width: 480px) {
-    width: 24px;
+    width: 30px;
   }
 `;
 export const TextoMaterial = styled.p`
   text-align: center;
+  text-shadow: 0px 0px 2px #000;
+
   color: #fff;
   @media screen and (max-width: 1920px) {
     font-size: 14px;
@@ -271,7 +253,8 @@ export const TextoMaterial = styled.p`
     font-size: 10px;
   }
   @media screen and (max-width: 480px) {
-    font-size: 0;
+    text-shadow: 0px 0px 0.5px #000;
+    font-size: 8px;
   }
 `;
 export const WrapperTexto = styled.div`

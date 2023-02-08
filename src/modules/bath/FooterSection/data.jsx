@@ -3,5 +3,5 @@ export const LandingFooter = {
   footer: "Privacidad // ",
   footer2: "Legal // ",
   footer3: "Contacto //",
-  footerImg: require("../../assets/icons/introduccion/logo.png"),
+  footerImg: require("../../../assets/icons/introduccion/logo.png"),
 };
