@@ -15,9 +15,9 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 10;
 
-  @media screen and(max-width: 980px) {
+  /* @media screen and(max-width: 980px) {
     transition: 0.8s all ease;
-  }
+  } */
 `;
 export const NavbarContainer = styled.div`
   display: flex;

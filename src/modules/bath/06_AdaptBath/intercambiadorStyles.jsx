@@ -36,6 +36,7 @@ export const MenuIntrucciones = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 `;
 export const ContenedorExpansor = styled(motion.div)`
   background-color: #3030309b;
@@ -83,13 +84,16 @@ export const BotonContinuar = styled.button`
   border: none;
   color: white;
   height: 100%;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
   align-self: center;
   @media screen and (max-width: 1400px) {
+    font-size: 1.5rem;
   }
   @media screen and (max-width: 980px) {
+    font-size: 1rem;
   }
+
   @media screen and (max-width: 480px) {
     font-size: 12px;
   }
@@ -97,12 +101,16 @@ export const BotonContinuar = styled.button`
 
 export const TextoIntro = styled.p`
   color: white;
-  font-size: 1rem;
+  font-size: 2rem;
   justify-self: center;
   align-self: center;
+  text-align: center;
+
   @media screen and (max-width: 1400px) {
+    font-size: 1.5rem;
   }
   @media screen and (max-width: 980px) {
+    font-size: 1rem;
   }
   @media screen and (max-width: 480px) {
     font-size: 12px;

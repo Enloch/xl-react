@@ -3,17 +3,17 @@ import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
 export const Nav = styled.nav`
+  position: sticky;
   background: transparent;
   height: auto;
-  //margin-top: -80px;
-  //height:80px;
+  /* margin-top: -80px;
+  height: 80px; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 9000;
 
   @media screen and(max-width: 980px) {
     transition: 0.8s all ease;

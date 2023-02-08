@@ -15,14 +15,13 @@ export const SidebarContainer = styled.aside`
   top: 0;
   left: 0;
   transition: 1.5s ease-in-out;
-  //transition: 1s;
-  //opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   @media screen and (max-width: 980px) {
     grid-template-columns: repeat(12, 1fr);
     /* This is better for small screens, once min() is better supported */
     /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
-    gap: 1rem;
+    gap: 0.5rem;
   }
   @media screen and (max-width: 480px) {
     grid-template-columns: repeat(12, 1fr);
@@ -91,7 +90,7 @@ export const SidebarMenu = styled.ul`
   grid-template-rows: repeat(9, 60px);
   text-align: left;
   @media screen and (max-width: 1400px) {
-    grid-template-rows: repeat(9, 60px);
+    grid-template-rows: repeat(9, 45px);
   }
   @media screen and (max-width: 980px) {
     grid-template-rows: repeat(9, 40px);
@@ -128,8 +127,11 @@ export const SidebarLink = styled(LinkScroll)`
     transform: translateX(20px);
     transition: 0.2s ease-in-out;
   }
+  @media screen and (max-width: 1400px) {
+    font-size: 1rem;
+  }
   @media screen and (max-width: 980px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   @media screen and (max-width: 480px) {
   }

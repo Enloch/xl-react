@@ -439,6 +439,7 @@ const Intercambiador = ({ base }) => {
       <Icono1
         onClick={() => {
           SetEncimera(!encimeraSelected);
+          SetLateral(false);
         }}
         src={icono_b}
         alt='encimera'
@@ -569,10 +570,22 @@ const Intercambiador = ({ base }) => {
                 duration: 0.2,
                 ease: "easeIn",
               },
-              height: "auto",
+              height: "20%",
             }}
           >
             <MenuIntrucciones>
+              <BotonContinuar
+                onClick={() => {
+                  setIsVisible(!isVisible);
+                  setMuebleVisible(!muebleVisible);
+                  SetLateral(false);
+                  SetEncimera(false);
+                  SetModulos(false);
+                  SetFrente(false);
+                }}
+              >
+                <strong>Atras</strong>
+              </BotonContinuar>
               <TextoIntro>Selecciona que partes quieres forrar</TextoIntro>
               <BotonContinuar
                 onClick={() => {
@@ -597,7 +610,7 @@ const Intercambiador = ({ base }) => {
                 duration: 0.2,
                 ease: "easeIn",
               },
-              height: "auto",
+              height: "20%",
             }}
           >
             <ContenedorMateriales>
@@ -606,6 +619,9 @@ const Intercambiador = ({ base }) => {
                   onClick={() => {
                     setIsVisible(!isVisible);
                     setMuebleVisible(!muebleVisible);
+                    SetAnthracita(false);
+                    SetBlanco(false);
+                    SetNordik(false);
                     SetNatural(!Natural);
                     setTxtMu(txtacabados.acNatural);
                     setTxtF(txtacabados.acNatural);
@@ -622,6 +638,9 @@ const Intercambiador = ({ base }) => {
                     SetAnthracita(!Anthracita);
                     setIsVisible(!isVisible);
                     setMuebleVisible(!muebleVisible);
+                    SetNordik(false);
+                    SetNatural(false);
+                    SetBlanco(false);
                     setTxtMu(txtacabados.acAntracite);
                     setTxtF(txtacabados.acAntracite);
                     setTxtM(txtacabados.acAntracite);
@@ -637,6 +656,9 @@ const Intercambiador = ({ base }) => {
                     setIsVisible(!isVisible);
                     setMuebleVisible(!muebleVisible);
                     SetBlanco(!Blanco);
+                    SetNordik(false);
+                    SetNatural(false);
+                    SetAnthracita(false);
                     setTxtMu(txtacabados.acBlanco);
                     setTxtF(txtacabados.acBlanco);
                     setTxtM(txtacabados.acBlanco);
@@ -652,6 +674,9 @@ const Intercambiador = ({ base }) => {
                     setIsVisible(!isVisible);
                     setMuebleVisible(!muebleVisible);
                     SetNordik(!Nordik);
+                    SetAnthracita(false);
+                    SetBlanco(false);
+                    SetNatural(false);
                     setTxtMu(txtacabados.acNordik);
                     setTxtF(txtacabados.acNordik);
                     setTxtM(txtacabados.acNordik);
