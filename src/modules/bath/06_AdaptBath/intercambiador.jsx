@@ -584,16 +584,18 @@ const Intercambiador = ({ base }) => {
                   SetFrente(false);
                 }}
               >
-                <strong>Atras</strong>
+                <strong>{"<"} atras</strong>
               </BotonContinuar>
-              <TextoIntro>Selecciona que partes quieres forrar</TextoIntro>
+              <TextoIntro>
+                <bold>Selecciona que partes quieres forrar</bold>
+              </TextoIntro>
               <BotonContinuar
                 onClick={() => {
                   SetMateriales(!materialesVisible);
                   setIsVisible(!isVisible);
                 }}
               >
-                <strong>Continuar</strong>
+                <strong>continuar {">"}</strong>
               </BotonContinuar>
             </MenuIntrucciones>
           </ContenedorMenu>
@@ -614,6 +616,9 @@ const Intercambiador = ({ base }) => {
             }}
           >
             <ContenedorMateriales>
+              <TextoIntro>
+                <bold>elige el color del mueble {">"}</bold>
+              </TextoIntro>
               <CajaMaterial>
                 <ContIconText2
                   onClick={() => {

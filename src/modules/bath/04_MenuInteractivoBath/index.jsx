@@ -26,6 +26,8 @@ import {
   Subtitle3,
   Subtitle4,
   ImgSelector2,
+  TextoPrevio,
+  TextoIntro2,
 } from "./menuIntStyle";
 import icono from "../../../assets/icons/botones/boton.png";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
@@ -97,7 +99,25 @@ const MenuInteractivo = ({
           overflow='hidden'
           viewport={{ once: true }}
         />
-        <IconContainer>
+        <TextoPrevio
+          id='expansor'
+          initial={{
+            height: "0%",
+          }}
+          whileInView={{
+            transition: {
+              duration: 0.3,
+              ease: "easeIn",
+            },
+            height: "100%",
+          }}
+        >
+          <TextoIntro2>
+            Próximamente: <br />
+            Intercambiador baño completo
+          </TextoIntro2>
+        </TextoPrevio>
+        {/* <IconContainer>
           <LinkSecciones to={config[0].id} smooth={true}>
             <Icono1
               id={config[0].tooltip}
@@ -221,105 +241,9 @@ const MenuInteractivo = ({
               anchorId={config[10].tooltip}
               content={config[10].tooltip}
             />
-          </LinkSecciones> */}
-        </IconContainer>
+          </LinkSecciones>
+        </IconContainer>  */}
       </ImgWrap>
-      {/* <CaraContainer id={id}>
-        <TextWrapper>
-          <Heading> {headLine[0]}</Heading>
-          <Subtitle>{description[0]}</Subtitle>
-        </TextWrapper>
-      </CaraContainer>
-      <ImgGradient>
-        <ImgGradWrap>
-          <Img src={seleccionada1} alt={alt} />
-        </ImgGradWrap>
-      </ImgGradient>
-      <CaraContainer2>
-        <TextWrapper2>
-          <Caracteristics>
-            Descripción: <b>{caracteristica1}</b>
-          </Caracteristics>
-          <Subtitle2>{description2}</Subtitle2>
-        </TextWrapper2>
-        <TextWrapper3>
-          <Subtitle3
-            onClick={() => {
-              setSeleccionada(img[0]);
-              setCaracteristica(caracteristicas[0]);
-            }}
-            alt={alt}
-          >
-            {caracteristicas[0]} /
-          </Subtitle3>
-          <Subtitle3
-            onClick={() => {
-              setSeleccionada(img[1]);
-              setCaracteristica(caracteristicas[1]);
-            }}
-            alt={alt}
-          >
-            {caracteristicas[1]} /
-          </Subtitle3>
-          <Subtitle3
-            onClick={() => {
-              setSeleccionada(img[2]);
-              setCaracteristica(caracteristicas[2]);
-            }}
-            alt={alt}
-          >
-            {caracteristicas[2]} /
-          </Subtitle3>
-          <Subtitle3
-            onClick={() => {
-              setSeleccionada(img[3]);
-              setCaracteristica(caracteristicas[3]);
-            }}
-            alt={alt}
-          >
-            {caracteristicas[3]}
-          </Subtitle3>
-        </TextWrapper3>
-      </CaraContainer2>
-      <CaraContainer3>
-        <TextWrapper4>
-          <Heading2> {headLine[1]}</Heading2>
-          <Subtitle4>{description[1]}</Subtitle4>
-        </TextWrapper4>
-      </CaraContainer3>
-      <ImgSelector2>
-        <ImgWrap2>
-          <Img src={seleccionada2} alt={alt} />
-        </ImgWrap2>
-      </ImgSelector2>
-      <CaraContainer2>
-        <TextWrapper5>
-          <Caracteristics2>
-            Descripción: <b>{caracteristica2}</b>
-          </Caracteristics2>
-          <Subtitle2>{description2}</Subtitle2>
-        </TextWrapper5>
-        <TextWrapper6>
-          <Subtitle3
-            onClick={() => {
-              setSeleccionada2(img[4]);
-              setCaracteristica2(caracteristicas[4]);
-            }}
-            alt={alt}
-          >
-            {caracteristicas[4]} /
-          </Subtitle3>
-          <Subtitle3
-            onClick={() => {
-              setSeleccionada2(img[5]);
-              setCaracteristica2(caracteristicas[5]);
-            }}
-            alt={alt}
-          >
-            {caracteristicas[5]}
-          </Subtitle3>
-        </TextWrapper6>
-      </CaraContainer2> */}
     </>
   );
 };

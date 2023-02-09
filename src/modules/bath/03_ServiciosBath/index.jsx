@@ -91,12 +91,12 @@ const ServicioBath = ({ id, headLine, description }) => {
             <LinkSecciones to='xlspecial' smooth={true}>
               <LiEl variants={item}>XL bath specials // lavabos y tótems</LiEl>
             </LinkSecciones>
-            <LinkSecciones to='' smooth={true}>
+            <LinkSecciones to='PlatosDuchas' smooth={true}>
               <LiEl variants={item}>
-                XL light shower tray // platos de ducha medida
+                XL light shower tray // platos de ducha a medida
               </LiEl>
             </LinkSecciones>
-            <LinkSecciones to='forradomuebles' smooth={true}>
+            <LinkSecciones to='xlpanel' smooth={true}>
               <LiEl variants={item}>XL panel // paneles a medida</LiEl>
             </LinkSecciones>
           </Lista>

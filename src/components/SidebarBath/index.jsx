@@ -55,6 +55,12 @@ export const SidebarBath = ({ isOpen, toggle }) => {
           <SidebarLink to='xlspecial' smooth={true} onClick={toggle}>
             XL Bath specials
           </SidebarLink>
+          <SidebarLink to='xlspecial' smooth={true} onClick={toggle}>
+            XL light shower tray
+          </SidebarLink>
+          <SidebarLink to='xlpanel' smooth={true} onClick={toggle}>
+            XL panel
+          </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

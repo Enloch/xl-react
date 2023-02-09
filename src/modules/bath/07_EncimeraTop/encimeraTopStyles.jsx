@@ -18,7 +18,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  grid-column: 4 / span 8;
+  grid-column: 5 / span 8;
   @media screen and(max-width: 1920px) {
     //grid-column: 1/span 8;
   }
@@ -63,8 +63,8 @@ export const Subtitle = styled(motion.p)`
   font-size: 40px;
   line-height: 1.1;
   font-weight: 100;
-  margin-left: 100px;
   color: #303030;
+  grid-column: 4 / span 8;
   @media screen and (max-width: 1400px) {
     margin-left: 0;
     font-size: 36px;

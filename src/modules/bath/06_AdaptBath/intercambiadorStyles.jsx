@@ -84,7 +84,7 @@ export const BotonContinuar = styled.button`
   border: none;
   color: white;
   height: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   align-self: center;
   @media screen and (max-width: 1400px) {
@@ -101,7 +101,7 @@ export const BotonContinuar = styled.button`
 
 export const TextoIntro = styled.p`
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   justify-self: center;
   align-self: center;
   text-align: center;
@@ -172,7 +172,7 @@ export const ContenedorMateriales = styled.div`
   display: grid;
   justify-items: center;
   align-content: center;
-  grid-template-columns: 1.25fr 5fr 1.25fr;
+  grid-template-columns: 3fr 5fr 3fr;
 `;
 export const CajaMaterial = styled.div`
   grid-column: 2;
@@ -249,7 +249,7 @@ export const IconoMaterial = styled(motion.img)`
 export const TextoMaterial = styled.p`
   text-align: center;
   text-shadow: 0px 0px 2px #000;
-
+  margin-top: 8px;
   color: #fff;
   @media screen and (max-width: 1920px) {
     font-size: 14px;

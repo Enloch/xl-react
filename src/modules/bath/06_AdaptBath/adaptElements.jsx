@@ -180,6 +180,8 @@ export const GeneralContainer = styled.section`
   );
   height: auto;
   padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   @media screen and (max-width: 1400px) {
     padding: calc(8px + 1.5625vw);
   }
@@ -191,6 +193,7 @@ export const GeneralContainer = styled.section`
 export const SliderWrapper = styled.div`
   width: 1200px;
   margin: 0px auto;
+  grid-column: 5/ 11;
   @media screen and (max-width: 1400px) {
     width: 100%;
     height: 100%;

@@ -27,7 +27,12 @@ import AdaptBath from "../modules/bath/06_AdaptBath";
 import { AdaptObj } from "../modules/bath/06_AdaptBath/data";
 import FooterSection from "../modules/bath/FooterSection";
 import { LandingFooter } from "../modules/bath/FooterSection/data";
+import PlatosDucha from "../modules/bath/11_PlatosDucha";
+import { platoObj } from "../modules/bath/11_PlatosDucha/Data";
+import XLPanel from "../modules/bath/12_XLPanel";
+import { xlpanelObj } from "../modules/bath/12_XLPanel/Data";
 import RotadorWebGl from "../modules/bath/_RotadowWebgl";
+
 const Bath = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -47,8 +52,10 @@ const Bath = () => {
       <Frente {...frenteObj} />
       <EncimeraAuto {...encimeraauto} />
       <XLSpecial {...xlspecial} />
-      <FooterSection {...LandingFooter} />
+      <PlatosDucha {...platoObj} />
+      <XLPanel {...xlpanelObj} />
       {/* <RotadorWebGl /> */}
+      <FooterSection {...LandingFooter} />
     </>
   );
 };

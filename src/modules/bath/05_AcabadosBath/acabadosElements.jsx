@@ -37,6 +37,7 @@ export const ContentWrapper = styled.div`
 export const Heading = styled(motion.p)`
   margin-left: 3.8125rem;
   margin-right: 3.9rem;
+  line-height: 0.9;
   grid-column: 2 / span 2;
   font-size: 100px;
   color: #303030;

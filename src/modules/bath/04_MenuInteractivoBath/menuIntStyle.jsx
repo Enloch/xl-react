@@ -17,7 +17,36 @@ export const MenuIntContainter = styled.div`
   @media screen and (max-width: 480px) {
   }
 `;
-
+export const TextoPrevio = styled(motion.div)`
+  background-color: #3030309b;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+`;
+export const TextoIntro2 = styled.p`
+  color: white;
+  font-size: 2rem;
+  justify-self: center;
+  align-self: center;
+  @media screen and (max-width: 1920px) {
+  }
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 1024px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+`;
 export const TextWrapper = styled.div`
   display: grid;
   height: auto;

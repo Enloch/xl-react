@@ -76,24 +76,24 @@ const EncimeraTop = ({
             {" "}
             {headLine}
           </Heading>
-          <Subtitle
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{
-              transition: {
-                duration: 0.6,
-                ease: "easeIn",
-              },
-              x: 0,
-              opacity: 1,
-            }}
-            overflow='hidden'
-            viewport={{ once: true }}
-          >
-            {description}
-            <br />
-            <br />
-          </Subtitle>
         </TextWrapper>
+        <Subtitle
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{
+            transition: {
+              duration: 0.6,
+              ease: "easeIn",
+            },
+            x: 0,
+            opacity: 1,
+          }}
+          overflow='hidden'
+          viewport={{ once: true }}
+        >
+          {description}
+          <br />
+          <br />
+        </Subtitle>
         <Wrapper id='envoltorio'>
           {bloque(
             titulo1,

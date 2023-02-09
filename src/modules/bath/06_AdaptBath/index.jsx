@@ -1,6 +1,7 @@
 import React from "react";
 import Intercambiador from "./intercambiador";
 import { Slide } from "react-slideshow-image";
+// import "react-slideshow-image/dist/styles.css";
 import "./styles.css";
 import {
   Heading,

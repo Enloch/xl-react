@@ -85,19 +85,23 @@ const XLSpecialBath = ({ id, headLine, description }) => {
           </SliderWrapper>
         </GeneralContainer>
       </InfoContainer>
-      {/* <WrapperIframe>
+      <WrapperIframe>
         {isVisible && (
           <ImgWrap onClick={() => setIsVisible(!isVisible)}>
+            <Img
+              src={require("../../../assets/images/bath/XL BATH web detalle lavabo_ok.webp")}
+            />
             <WrapperTxtImg
-              id='textoTop'
-              initial={{ y: 200, opacity: 0 }}
+              id='expansor'
+              initial={{
+                height: "0%",
+              }}
               whileInView={{
                 transition: {
-                  duration: 1,
+                  duration: 0.3,
                   ease: "easeIn",
                 },
-                y: 0,
-                opacity: 1,
+                height: "100%",
               }}
             >
               <TextoImagen
@@ -109,20 +113,17 @@ const XLSpecialBath = ({ id, headLine, description }) => {
                 Pulsa en la imagen para acceder al rotador de lavabos
               </TextoImagen>
             </WrapperTxtImg>
-            <Img
-              src={require("../../../assets/images/bath/XL BATH web detalle lavabo_ok.webp")}
-            />
           </ImgWrap>
         )}
         <iframe
-          src='https://itch.io/embed-upload/7267108?color=333333'
+          src='https://itch.io/embed-upload/7320646?color=333333'
           allowfullscreen=''
           height={"100%"}
           width={"100%"}
           frameborder='0'
           title='Rotador'
         />
-      </WrapperIframe> */}
+      </WrapperIframe>
     </>
   );
 };
