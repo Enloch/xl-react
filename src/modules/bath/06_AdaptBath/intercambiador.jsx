@@ -73,6 +73,57 @@ const Intercambiador = ({ base }) => {
   const [txtencimera, setTxtE] = useState(txtacabados.acNatural);
   const [txtmueble, setTxtMu] = useState(txtacabados.acNatural);
 
+  const handleClick = (acabado, setFunc, visible) => {
+    setInicio2(true);
+    SetMateriales(!materialesVisible);
+    setFunc(!visible);
+    if (frenteSelected && !visible) {
+      setTxtF(txtacabados[`ac${acabado}`]);
+    }
+    if (lateralSelected && !visible) {
+      setTxtL(txtacabados[`ac${acabado}`]);
+    }
+    if (encimeraSelected && !visible) {
+      setTxtE(txtacabados[`ac${acabado}`]);
+    }
+    if (modulosSelected && !visible) {
+      setTxtM(txtacabados[`ac${acabado}`]);
+    }
+  };
+  const frontalesArray = [
+    { name: "alluref", isVisible: allureVisible },
+    { name: "berenf", isVisible: berenVisible },
+    { name: "blancborgf", isVisible: blancborgVisible },
+    { name: "blancinvf", isVisible: blancinvVisible },
+    { name: "brazilf", isVisible: brazilVisible },
+    { name: "calacattaf", isVisible: calacattaVisible },
+    { name: "emef", isVisible: emeVisible },
+    { name: "kendoCf", isVisible: kendocVisible },
+    { name: "kendoLf", isVisible: kendolVisible },
+    { name: "momaf", isVisible: momaVisible },
+    { name: "negrof", isVisible: negroVisible },
+    { name: "noonGf", isVisible: noonGVisible },
+    { name: "noonSf", isVisible: noonsVisible },
+    { name: "paladiof", isVisible: paladioVisible },
+    { name: "syracf", isVisible: syracVisible },
+  ];
+  const modulosArray = [
+    { name: "allurem", isVisible: allureVisible },
+    { name: "berenm", isVisible: berenVisible },
+    { name: "blancborgm", isVisible: blancborgVisible },
+    { name: "blancinvm", isVisible: blancinvVisible },
+    { name: "brazilm", isVisible: brazilVisible },
+    { name: "calacattam", isVisible: calacattaVisible },
+    { name: "emem", isVisible: emeVisible },
+    { name: "kendoCm", isVisible: kendocVisible },
+    { name: "kendoLm", isVisible: kendolVisible },
+    { name: "momam", isVisible: momaVisible },
+    { name: "negrom", isVisible: negroVisible },
+    { name: "noonGm", isVisible: noonGVisible },
+    { name: "noonSm", isVisible: noonsVisible },
+    { name: "paladiom", isVisible: paladioVisible },
+    { name: "syracm", isVisible: syracVisible },
+  ];
   const menuMats = (
     <MenuMateriales
       id='menu inferior'
@@ -91,21 +142,7 @@ const Intercambiador = ({ base }) => {
         <CajaMaterial>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetAllure(!allureVisible);
-              if (frenteSelected && !allureVisible) {
-                setTxtF(txtacabados.acAllure);
-              }
-              if (lateralSelected && !allureVisible) {
-                setTxtL(txtacabados.acAllure);
-              }
-              if (encimeraSelected && !allureVisible) {
-                setTxtE(txtacabados.acAllure);
-              }
-              if (modulosSelected && !allureVisible) {
-                setTxtM(txtacabados.acAllure);
-              }
+              handleClick("Allure", SetAllure, allureVisible);
             }}
           >
             <IconoMaterial src={iconos.allureIco}></IconoMaterial>
@@ -113,21 +150,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetBeren(!berenVisible);
-              if (frenteSelected && !berenVisible) {
-                setTxtF(txtacabados.acBeren);
-              }
-              if (lateralSelected && !berenVisible) {
-                setTxtL(txtacabados.acBeren);
-              }
-              if (encimeraSelected && !berenVisible) {
-                setTxtE(txtacabados.acBeren);
-              }
-              if (modulosSelected && !berenVisible) {
-                setTxtM(txtacabados.acBeren);
-              }
+              handleClick("Beren", SetBeren, berenVisible);
             }}
           >
             <IconoMaterial src={iconos.berenIco}></IconoMaterial>
@@ -135,21 +158,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetBlancborg(!blancborgVisible);
-              if (frenteSelected && !blancborgVisible) {
-                setTxtF(txtacabados.acBlancB);
-              }
-              if (lateralSelected && !blancborgVisible) {
-                setTxtL(txtacabados.acBlancB);
-              }
-              if (encimeraSelected && !blancborgVisible) {
-                setTxtE(txtacabados.acBlancB);
-              }
-              if (modulosSelected && !blancborgVisible) {
-                setTxtM(txtacabados.acBlancB);
-              }
+              handleClick("Blancborg", SetBlancborg, blancborgVisible);
             }}
           >
             <IconoMaterial src={iconos.blancborgIco}></IconoMaterial>
@@ -157,21 +166,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetBlancinv(!blancinvVisible);
-              if (frenteSelected && !blancinvVisible) {
-                setTxtF(txtacabados.acBlancinv);
-              }
-              if (lateralSelected && !blancinvVisible) {
-                setTxtL(txtacabados.acBlancinv);
-              }
-              if (encimeraSelected && !blancinvVisible) {
-                setTxtE(txtacabados.acBlancinv);
-              }
-              if (modulosSelected && !blancinvVisible) {
-                setTxtM(txtacabados.acBlancinv);
-              }
+              handleClick("Blancinv", SetBlancinv, blancinvVisible);
             }}
           >
             <IconoMaterial src={iconos.blancinvIco}></IconoMaterial>
@@ -179,21 +174,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetBrazil(!brazilVisible);
-              if (frenteSelected && !brazilVisible) {
-                setTxtF(txtacabados.acBrazil);
-              }
-              if (lateralSelected && !brazilVisible) {
-                setTxtL(txtacabados.acBrazil);
-              }
-              if (encimeraSelected && !brazilVisible) {
-                setTxtE(txtacabados.acBrazil);
-              }
-              if (modulosSelected && !brazilVisible) {
-                setTxtM(txtacabados.acBrazil);
-              }
+              handleClick("Brazil", SetBrazil, brazilVisible);
             }}
           >
             <IconoMaterial src={iconos.brazilIco}></IconoMaterial>
@@ -201,21 +182,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetCalacatta(!calacattaVisible);
-              if (frenteSelected && !calacattaVisible) {
-                setTxtF(txtacabados.acCalacatta);
-              }
-              if (lateralSelected && !calacattaVisible) {
-                setTxtL(txtacabados.acCalacatta);
-              }
-              if (encimeraSelected && !calacattaVisible) {
-                setTxtE(txtacabados.acCalacatta);
-              }
-              if (modulosSelected && !calacattaVisible) {
-                setTxtM(txtacabados.acCalacatta);
-              }
+              handleClick("Calacatta", SetCalacatta, calacattaVisible);
             }}
           >
             <IconoMaterial src={iconos.calacattaIco}></IconoMaterial>
@@ -223,21 +190,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetEme(!emeVisible);
-              if (frenteSelected && !emeVisible) {
-                setTxtF(txtacabados.acEme);
-              }
-              if (lateralSelected && !emeVisible) {
-                setTxtL(txtacabados.acEme);
-              }
-              if (encimeraSelected && !emeVisible) {
-                setTxtE(txtacabados.acEme);
-              }
-              if (modulosSelected && !emeVisible) {
-                setTxtM(txtacabados.acEme);
-              }
+              handleClick("Eme", SetEme, emeVisible);
             }}
           >
             <IconoMaterial src={iconos.emeIco}></IconoMaterial>
@@ -245,21 +198,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetKendoc(!kendocVisible);
-              if (frenteSelected && !kendocVisible) {
-                setTxtF(txtacabados.acKendoC);
-              }
-              if (lateralSelected && !kendocVisible) {
-                setTxtL(txtacabados.acKendoC);
-              }
-              if (encimeraSelected && !kendocVisible) {
-                setTxtE(txtacabados.acKendoC);
-              }
-              if (modulosSelected && !kendocVisible) {
-                setTxtM(txtacabados.acKendoC);
-              }
+              handleClick("KendoC", SetKendoc, kendocVisible);
             }}
           >
             <IconoMaterial src={iconos.kendoCIco}></IconoMaterial>
@@ -267,21 +206,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetKendol(!kendolVisible);
-              if (frenteSelected && !kendolVisible) {
-                setTxtF(txtacabados.acKendoL);
-              }
-              if (lateralSelected && !kendolVisible) {
-                setTxtL(txtacabados.acKendoL);
-              }
-              if (encimeraSelected && !kendolVisible) {
-                setTxtE(txtacabados.acKendoL);
-              }
-              if (modulosSelected && !kendolVisible) {
-                setTxtM(txtacabados.acKendoL);
-              }
+              handleClick("KendoL", SetKendol, kendolVisible);
             }}
           >
             <IconoMaterial src={iconos.kendoLIco}></IconoMaterial>
@@ -289,21 +214,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetMoma(!momaVisible);
-              if (frenteSelected && !momaVisible) {
-                setTxtF(txtacabados.acMoma);
-              }
-              if (lateralSelected && !momaVisible) {
-                setTxtL(txtacabados.acMoma);
-              }
-              if (encimeraSelected && !momaVisible) {
-                setTxtE(txtacabados.acMoma);
-              }
-              if (modulosSelected && !momaVisible) {
-                setTxtM(txtacabados.acMoma);
-              }
+              handleClick("Moma", SetMoma, momaVisible);
             }}
           >
             <IconoMaterial src={iconos.momaIco}></IconoMaterial>
@@ -311,21 +222,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetNegro(!negroVisible);
-              if (frenteSelected && !negroVisible) {
-                setTxtF(txtacabados.acNegro);
-              }
-              if (lateralSelected && !negroVisible) {
-                setTxtL(txtacabados.acNegro);
-              }
-              if (encimeraSelected && !negroVisible) {
-                setTxtE(txtacabados.acNegro);
-              }
-              if (modulosSelected && !negroVisible) {
-                setTxtM(txtacabados.acNegro);
-              }
+              handleClick("Negro", SetNegro, negroVisible);
             }}
           >
             <IconoMaterial src={iconos.negroIco}></IconoMaterial>
@@ -333,21 +230,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetNoonG(!noonGVisible);
-              if (frenteSelected && !noonGVisible) {
-                setTxtF(txtacabados.acNoonG);
-              }
-              if (lateralSelected && !noonGVisible) {
-                setTxtL(txtacabados.acNoonG);
-              }
-              if (encimeraSelected && !noonGVisible) {
-                setTxtE(txtacabados.acNoonG);
-              }
-              if (modulosSelected && !noonGVisible) {
-                setTxtM(txtacabados.acNoonG);
-              }
+              handleClick("NoonG", SetNoonG, noonGVisible);
             }}
           >
             <IconoMaterial src={iconos.noonGIco}></IconoMaterial>
@@ -355,21 +238,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetNoons(!noonsVisible);
-              if (frenteSelected && !noonsVisible) {
-                setTxtF(txtacabados.acNoonS);
-              }
-              if (lateralSelected && !noonsVisible) {
-                setTxtL(txtacabados.acNoonS);
-              }
-              if (encimeraSelected && !noonsVisible) {
-                setTxtE(txtacabados.acNoonS);
-              }
-              if (modulosSelected && !noonsVisible) {
-                setTxtM(txtacabados.acNoonS);
-              }
+              handleClick("NoonS", SetNoons, noonsVisible);
             }}
           >
             <IconoMaterial src={iconos.noonSIco}></IconoMaterial>
@@ -377,21 +246,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetPaladio(!paladioVisible);
-              if (frenteSelected && !paladioVisible) {
-                setTxtF(txtacabados.acPaladio);
-              }
-              if (lateralSelected && !paladioVisible) {
-                setTxtL(txtacabados.acPaladio);
-              }
-              if (encimeraSelected && !paladioVisible) {
-                setTxtE(txtacabados.acPaladio);
-              }
-              if (modulosSelected && !paladioVisible) {
-                setTxtM(txtacabados.acPaladio);
-              }
+              handleClick("Paladio", SetPaladio, paladioVisible);
             }}
           >
             <IconoMaterial src={iconos.paladioIco}></IconoMaterial>
@@ -399,21 +254,7 @@ const Intercambiador = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              setInicio2(true);
-              SetMateriales(!materialesVisible);
-              SetSyrac(!syracVisible);
-              if (frenteSelected && !syracVisible) {
-                setTxtF(txtacabados.acSyrac);
-              }
-              if (lateralSelected && !syracVisible) {
-                setTxtL(txtacabados.acSyrac);
-              }
-              if (encimeraSelected && !syracVisible) {
-                setTxtE(txtacabados.acSyrac);
-              }
-              if (modulosSelected && !syracVisible) {
-                setTxtM(txtacabados.acSyrac);
-              }
+              handleClick("Syrac", SetSyrac, syracVisible);
             }}
           >
             <IconoMaterial src={iconos.syracIco}></IconoMaterial>
@@ -752,82 +593,29 @@ const Intercambiador = ({ base }) => {
         )}
 
         {/* ------------------FRONTALES------------------ */}
-        {frenteSelected && allureVisible && (
-          <ContenedorImagen id='pon-alluref' sitio='frontal'>
-            <Imagen src={frontales.alluref} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && berenVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.berenf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && blancborgVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.blancborgf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && blancinvVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.blancinvf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && brazilVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.brazilf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && calacattaVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.calacattaf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && emeVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.emef} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && kendocVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.kendoCf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && kendolVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.kendoLf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && momaVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.momaf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && negroVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.negrof} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && noonGVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.noonGf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && noonsVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.noonSf} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && paladioVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.paladiof} alt='frontal' />
-          </ContenedorImagen>
-        )}
-        {frenteSelected && syracVisible && (
-          <ContenedorImagen>
-            <Imagen src={frontales.syracf} alt='frontal' />
-          </ContenedorImagen>
-        )}
+        {frenteSelected &&
+          frontalesArray.map((frontal) => {
+            if (frontal.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={frontales[frontal.name]} alt='frontal' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
         {/* ------------------MODULOS------------------ */}
+        {modulosSelected &&
+          modulosArray.map((modulo) => {
+            if (modulo.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={modulos[modulo.name]} alt='frontal' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
         {modulosSelected && allureVisible && (
           <ContenedorImagen>
             <Imagen src={modulos.allurem} alt='modulo' />
