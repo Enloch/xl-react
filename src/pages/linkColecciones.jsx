@@ -47,10 +47,13 @@ const PaginasColeccion = () => {
         <Route path='/en/colecciones/*' element={<ColeccionesEN />} />
         <Route path='/bath' element={<Bath />} />
         <Route path='bath/login' element={<Login />} />
-        <Route
-          path='bath/descargas'
-          element={<DescargasBath {...descargasbathObj} />}
-        />
+        <Route element={<PrivateRoute />}>
+          <Route
+            path='bath/descargas'
+            element={<DescargasBath {...descargasbathObj} />}
+          />
+        </Route>
+
         <Route path='/privacidad' element={<PrivSection {...privObj} />} />
         <Route path='/legal' element={<LegalSection {...legalObj} />} />
         <Route

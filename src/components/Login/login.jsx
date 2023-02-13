@@ -1,4 +1,12 @@
 import React, { useState } from "react";
+import {
+  Fondo,
+  Formulario,
+  Entradas,
+  Error,
+  BottonLogin,
+  Cerrar,
+} from "./styles";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -29,22 +37,25 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type='text'
-        value={username}
-        onChange={(event) => setUsername(event.target.value)}
-        placeholder='Nombre de usuario'
-      />
-      <input
-        type='password'
-        value={password}
-        onChange={(event) => setPassword(event.target.value)}
-        placeholder='Contraseña'
-      />
-      <button type='submit'>Iniciar sesión</button>
-      {error && <div style={{ color: "red" }}>{error}</div>}
-    </form>
+    <Fondo>
+      <Cerrar to='/bath'> X </Cerrar>
+      <Formulario onSubmit={handleSubmit}>
+        <Entradas
+          type='text'
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
+          placeholder='Nombre de usuario'
+        />
+        <Entradas
+          type='password'
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          placeholder='Contraseña'
+        />
+        <BottonLogin type='submit'>Iniciar sesión</BottonLogin>
+        {error && <Error style={{ color: "red" }}>{error}</Error>}
+      </Formulario>
+    </Fondo>
   );
 };
 
