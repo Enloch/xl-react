@@ -6,10 +6,11 @@ import { TextureLoader } from "three/src/loaders/TextureLoader";
 export const Scene = ({ currentTexture }) => {
   // const [colorMap] = useTexture(currentTexture);
 
+  const texture = useTexture("/texturas_rotador/Allure Anthracite_1.png");
   return (
     <Stage intensity={1} contactShadow>
       <Environment preset='studio' blur={100} background={false} />
-      <Regruesada40 />
+      <Regruesada40 map={texture} />
     </Stage>
   );
 };

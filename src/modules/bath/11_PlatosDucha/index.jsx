@@ -18,6 +18,7 @@ import {
   SliderContainer,
   WrapperAnim,
   ImgWrapper,
+  WrapperIframe,
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
@@ -113,6 +114,16 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           60/80.
         </TituloAnimacion2>
         <ImgWrapper></ImgWrapper>
+        <WrapperIframe>
+          <iframe
+            src='https://itch.io/embed-upload/7341966?color=333333'
+            allowFullscreen=''
+            height={"100%"}
+            width={"100%"}
+            frameborder='0'
+            title='Rotador'
+          />
+        </WrapperIframe>
       </InfoContainer>
     </>
   );

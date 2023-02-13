@@ -38,7 +38,14 @@ const RotadorWebGl = () => {
         <Suspense fallback={null}>
           <Scene />
         </Suspense>
-        <OrbitControls autoRotate enableZoom={false} enablePan={true} />
+        <OrbitControls
+          autoRotate
+          maxPolarAngle={1.45}
+          minDistance={1}
+          maxDistance={2}
+          enableZoom={false}
+          enablePan={true}
+        />
       </Canvas>
     </div>
   );

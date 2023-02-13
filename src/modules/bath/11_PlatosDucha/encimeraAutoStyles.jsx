@@ -195,3 +195,30 @@ export const ImgWrapper = styled.div`
     grid-column: 1/-1;
   }
 `;
+
+export const WrapperIframe = styled.div`
+  grid-column: 2 / 12;
+  grid-row: 6;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  @media screen and (max-width: 1400px) {
+    height: 75vh;
+    grid-column: 3 / -3;
+  }
+  @media screen and (max-width: 1200px) {
+    height: 82vh;
+    grid-column: 3 / -3;
+  }
+  @media screen and (max-width: 1024px) {
+    height: 50vh;
+    grid-column: 3 / -3;
+  }
+  @media screen and (max-width: 980px) {
+    height: 41vh;
+    grid-column: 1 / -1;
+  }
+  @media screen and (max-width: 480px) {
+    height: 30vh;
+  }
+`;
