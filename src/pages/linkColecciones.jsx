@@ -33,6 +33,8 @@ import Intercambiador from "./intercambiador";
 import Rotador from "./rotador";
 import ContactoSectionEN from "../modules/en/Contacto";
 import { contactoObjEN } from "../modules/en/Contacto/data";
+import DescargasBath from "../modules/bath/_Descargas/index";
+import { descargasbathObj } from "../modules/bath/_Descargas/Data";
 const PaginasColeccion = () => {
   return (
     <Router>
@@ -42,6 +44,10 @@ const PaginasColeccion = () => {
         <Route path='/colecciones/*' element={<Colecciones />} />
         <Route path='/en/colecciones/*' element={<ColeccionesEN />} />
         <Route path='/bath' element={<Bath />} />
+        <Route
+          path='bath/descargas'
+          element={<DescargasBath {...descargasbathObj} />}
+        />
         <Route path='/privacidad' element={<PrivSection {...privObj} />} />
         <Route path='/legal' element={<LegalSection {...legalObj} />} />
         <Route

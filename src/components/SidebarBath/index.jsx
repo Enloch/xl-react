@@ -61,6 +61,9 @@ export const SidebarBath = ({ isOpen, toggle }) => {
           <SidebarLink to='xlpanel' smooth={true} onClick={toggle}>
             XL panel
           </SidebarLink>
+          <SidebarRouter to='descargas' smooth={true} onClick={toggle}>
+            Descargas
+          </SidebarRouter>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

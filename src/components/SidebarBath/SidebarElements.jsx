@@ -87,16 +87,16 @@ export const SidebarWrapper2 = styled.div`
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 60px);
+  grid-template-rows: repeat(12, 60px);
   text-align: left;
   @media screen and (max-width: 1400px) {
-    grid-template-rows: repeat(9, 45px);
+    grid-template-rows: repeat(12, 40px);
   }
   @media screen and (max-width: 980px) {
-    grid-template-rows: repeat(9, 40px);
+    grid-template-rows: repeat(12, 38px);
   }
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(9, 60px);
+    grid-template-rows: repeat(12, 40px);
   }
 `;
 
@@ -157,21 +157,39 @@ export const SideBtnWrap = styled.div`
 `;
 
 export const SidebarRouter = styled(LinkRouter)`
-  border-radius: 50px;
-  background: rgba(85, 113, 119);
-  white-space: nowrap;
-  padding: 16px 64px;
+  ::before {
+    content: counter(counter, decimal-leading-zero);
+    counter-increment: counter;
+
+    position: absolute;
+    right: calc(100% + 20px);
+
+    border-top: 1px solid transparent; // para que tenga el mismo tamaño que el a de StyledElementoLista
+    padding: 0.625rem 0;
+
+    color: #fff;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5rem;
+  transition: 0.4s ease-in-out;
   color: #fff;
-  font-size: 16px;
-  outline: none;
-  border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  border-top: 1px solid #fff;
   text-decoration: none;
 
   :hover {
-    transition: all 0.2s ease-in-out;
-    background-color: #000;
-    color: #fff;
+    color: rgba(85, 113, 119);
+    transform: translateX(20px);
+    transition: 0.2s ease-in-out;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 480px) {
   }
 `;
