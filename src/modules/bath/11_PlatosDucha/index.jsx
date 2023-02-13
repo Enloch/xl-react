@@ -2,7 +2,12 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 
 import { medidas1, medidas2, medidas3 } from "./animacionesAncho";
-import { TituloAnimacion, Linea, TituloAnimacion2 } from "./animacionesStyles";
+import {
+  TituloAnimacion,
+  Linea,
+  TituloAnimacion2,
+  AnimacionContainer,
+} from "./animacionesStyles";
 import {
   InfoContainer,
   InfoWrapper,
@@ -19,10 +24,14 @@ import {
   WrapperAnim,
   ImgWrapper,
   WrapperIframe,
+  Frase,
+  Tabla,
+  ContTabla,
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
+  require("../../../assets/images/bath/platos/Icono Medidas Plato.png"),
 ];
 
 const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
@@ -113,6 +122,43 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           *Todos nuestros platos incluyen tapa porcelánico y valvula viega
           60/80.
         </TituloAnimacion2>
+        <TituloAnimacion>
+          Colocación del desagüe:
+          <Linea />
+        </TituloAnimacion>
+        <WrapperAnim>
+          <AnimacionContainer>
+            <Img src={fadeImages[2]} />
+          </AnimacionContainer>
+          <AnimacionContainer>
+            <Frase>
+              Nuestros platos de ducha se pueden fabricar en cualquier tamaño.
+              Disponemos de dos opciones para el desagüe, una con el desagüe
+              centrado y otra con el desagüe desplazado. Para esta última opción
+              debemos tener en cuenta las siguientes medidas para colocar el
+              desagüe dentro de cada uno de los diferentes tamaños. Ver tabla
+              adjunta.
+            </Frase>
+          </AnimacionContainer>
+          <AnimacionContainer>
+            <Tabla>
+              <ContTabla>
+                <strong>A</strong>
+              </ContTabla>
+              <ContTabla>
+                <strong>B</strong>
+              </ContTabla>
+              <ContTabla>{"<"} 120 cm</ContTabla>
+              <ContTabla>30 cm</ContTabla>
+              <ContTabla>121-149 cm</ContTabla>
+              <ContTabla>40 cm</ContTabla>
+              <ContTabla>150-190 cm</ContTabla>
+              <ContTabla>50 cm</ContTabla>
+              <ContTabla>{">"} 190 cm</ContTabla>
+              <ContTabla>60 cm</ContTabla>
+            </Tabla>
+          </AnimacionContainer>
+        </WrapperAnim>
         <ImgWrapper></ImgWrapper>
         <WrapperIframe>
           <iframe

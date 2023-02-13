@@ -53,7 +53,7 @@ export const SidebarBath = ({ isOpen, toggle }) => {
             XL Shelf y encimeras autoportantes
           </SidebarLink>
           <SidebarLink to='xlspecial' smooth={true} onClick={toggle}>
-            XL Bath specials
+            XL Bath specialsw
           </SidebarLink>
           <SidebarLink to='xlspecial' smooth={true} onClick={toggle}>
             XL light shower tray
@@ -61,7 +61,7 @@ export const SidebarBath = ({ isOpen, toggle }) => {
           <SidebarLink to='xlpanel' smooth={true} onClick={toggle}>
             XL panel
           </SidebarLink>
-          <SidebarRouter to='descargas' smooth={true} onClick={toggle}>
+          <SidebarRouter to='login' smooth={true} onClick={toggle}>
             Descargas
           </SidebarRouter>
         </SidebarMenu>

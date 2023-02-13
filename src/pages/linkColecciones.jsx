@@ -35,6 +35,8 @@ import ContactoSectionEN from "../modules/en/Contacto";
 import { contactoObjEN } from "../modules/en/Contacto/data";
 import DescargasBath from "../modules/bath/_Descargas/index";
 import { descargasbathObj } from "../modules/bath/_Descargas/Data";
+import Login from "../components/Login/login";
+import PrivateRoute from "../components/PrivateRoute";
 const PaginasColeccion = () => {
   return (
     <Router>
@@ -44,6 +46,7 @@ const PaginasColeccion = () => {
         <Route path='/colecciones/*' element={<Colecciones />} />
         <Route path='/en/colecciones/*' element={<ColeccionesEN />} />
         <Route path='/bath' element={<Bath />} />
+        <Route path='bath/login' element={<Login />} />
         <Route
           path='bath/descargas'
           element={<DescargasBath {...descargasbathObj} />}

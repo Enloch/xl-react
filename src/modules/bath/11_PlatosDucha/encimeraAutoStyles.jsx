@@ -198,7 +198,7 @@ export const ImgWrapper = styled.div`
 
 export const WrapperIframe = styled.div`
   grid-column: 2 / 12;
-  grid-row: 6;
+  grid-row: 8;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -220,5 +220,48 @@ export const WrapperIframe = styled.div`
   }
   @media screen and (max-width: 480px) {
     height: 30vh;
+  }
+`;
+
+export const Frase = styled(motion.p)`
+  font-size: 24px;
+  color: #fff;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 25px;
+
+  //grid-column: 4 / span 8;
+  @media screen and (max-width: 1920px) {
+  }
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+  }
+`;
+
+export const Tabla = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+`;
+
+export const ContTabla = styled(motion.p)`
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid #fff;
+
+  //grid-column: 4 / span 8;
+  @media screen and (max-width: 1920px) {
+  }
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
   }
 `;
