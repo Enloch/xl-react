@@ -16,7 +16,7 @@ export const InterGrandeObj = {
   noonSFRONTAL: require("../../../assets/images/bath/intergrande/FRONTAL/FRONTAL NOON SAND.webp"),
   paladioFRONTAL: require("../../../assets/images/bath/intergrande/FRONTAL/FRONTAL PALADIO MARRON NATURAL.webp"),
   syracFRONTAL: require("../../../assets/images/bath/intergrande/FRONTAL/FRONTAL SYRAC.webp"),
-
+  rojoFRONTAL: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION FRONTAL.png"),
   //----------------MUEBLE----------------
   antracitaMueble: require("../../../assets/images/bath/intergrande/MUEBLE/CUERPO MUEBLE ANTHRACITA.png"),
   blancoMueble: require("../../../assets/images/bath/intergrande/MUEBLE/CUERPO MUEBLE BLANCO.png"),
@@ -37,6 +37,7 @@ export const InterGrandeObj = {
   noonSPAVIMENTO: require("../../../assets/images/bath/intergrande/PAVIMENTO/PAVIMENTO NOON SAND.webp"),
   paladioPAVIMENTO: require("../../../assets/images/bath/intergrande/PAVIMENTO/PAVIMENTO PALADIO MARRON NATURAL.webp"),
   syracPAVIMENTO: require("../../../assets/images/bath/intergrande/PAVIMENTO/PAVIMENTO SYRAC.webp"),
+  rojoPAVIMENTO: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION PAV.png"),
   //----------------PLATOS----------------
   allurePLATOS: require("../../../assets/images/bath/intergrande/PLATOS/PLATO ALLURE ANTHRACITE.webp"),
   berenPLATOS: require("../../../assets/images/bath/intergrande/PLATOS/PLATO BEREN LIGHT GREY.webp"),
@@ -53,6 +54,7 @@ export const InterGrandeObj = {
   noonSPLATOS: require("../../../assets/images/bath/intergrande/PLATOS/PLATO NOON SAND.webp"),
   paladioPLATOS: require("../../../assets/images/bath/intergrande/PLATOS/PLATO PALADIO MARRON NATURAL.webp"),
   syracPLATOS: require("../../../assets/images/bath/intergrande/PLATOS/PLATO SYRAC.webp"),
+  rojoPLATOS: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION PLATO.png"),
 
   //---------------- REVESTIMIENTO----------------
   allureREVESTIMIENTO: require("../../../assets/images/bath/intergrande/REVESTIMIENTO/REVESTIMIENTO ALLURE ANTHRACITE.webp"),
@@ -70,6 +72,7 @@ export const InterGrandeObj = {
   noonSREVESTIMIENTO: require("../../../assets/images/bath/intergrande/REVESTIMIENTO/REVESTIMIENTO NOON SAND.webp"),
   paladioREVESTIMIENTO: require("../../../assets/images/bath/intergrande/REVESTIMIENTO/REVESTIMIENTO PALADIO MARRON NATURAL.webp"),
   syracREVESTIMIENTO: require("../../../assets/images/bath/intergrande/REVESTIMIENTO/REVESTIMIENTO SYRAC.webp"),
+  rojoREVESTIMIENTO: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION REV.png"),
 
   //---------------- XL ENCIMERA----------------
   allureXL: require("../../../assets/images/bath/intergrande/XL ENCIMERA/XL ENCIMERA ALLURE ANTHRACITE.webp"),
@@ -87,6 +90,7 @@ export const InterGrandeObj = {
   noonSXL: require("../../../assets/images/bath/intergrande/XL ENCIMERA/XL ENCIMERA NOON SAND.webp"),
   paladioXL: require("../../../assets/images/bath/intergrande/XL ENCIMERA/XL ENCIMERA PALADIO MARRON NATURAL.webp"),
   syracXL: require("../../../assets/images/bath/intergrande/XL ENCIMERA/XL ENCIMERA SYRAC.webp"),
+  rojoXL: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION ENCIMERA MUEBLE.png"),
 
   //---------------- XL FRONTAL----------------
   allureXLFRONTAL: require("../../../assets/images/bath/intergrande/XL FRONTAL/XL FRONTAL ALLURE ANTHRACITE.webp"),
@@ -104,6 +108,7 @@ export const InterGrandeObj = {
   noonSXLFRONTAL: require("../../../assets/images/bath/intergrande/XL FRONTAL/XL FRONTAL NOON SAND.webp"),
   paladioXLFRONTAL: require("../../../assets/images/bath/intergrande/XL FRONTAL/XL FRONTAL PALADIO MARRON NATURAL.webp"),
   syracXLFRONTAL: require("../../../assets/images/bath/intergrande/XL FRONTAL/XL FRONTAL SYRAC.webp"),
+  rojoXLFRONTAL: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION FRONTAL MUEBLE.png"),
 
   //---------------- XL FRONTAL MODULO----------------
   allureXLFRONTALMODULO: require("../../../assets/images/bath/intergrande/XL FRONTAL MODULO/FRONTAL MODULO ALLURE ANTHRACITE.webp"),
@@ -121,6 +126,7 @@ export const InterGrandeObj = {
   noonSXLFRONTALMODULO: require("../../../assets/images/bath/intergrande/XL FRONTAL MODULO/FRONTAL MODULO NOON SAND.webp"),
   paladioXLFRONTALMODULO: require("../../../assets/images/bath/intergrande/XL FRONTAL MODULO/FRONTAL MODULO PALADIO MARRON NATURAL.webp"),
   syracXLFRONTALMODULO: require("../../../assets/images/bath/intergrande/XL FRONTAL MODULO/FRONTAL MODULO SYRAC.webp"),
+  rojoXLFRONTALMODULO: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION MODULO FRONTAL.png"),
 
   //---------------- XL LATERALES----------------
   allureXLLATERAL: require("../../../assets/images/bath/intergrande/XL LATERALES/XL LATERALES ALLURE ANTHRACITE.webp"),
@@ -138,6 +144,7 @@ export const InterGrandeObj = {
   noonSXLLATERAL: require("../../../assets/images/bath/intergrande/XL LATERALES/XL LATERALES NOON SAND.webp"),
   paladioXLLATERAL: require("../../../assets/images/bath/intergrande/XL LATERALES/XL LATERALES PALADIO MARRON NATURAL.webp"),
   syracXLLATERAL: require("../../../assets/images/bath/intergrande/XL LATERALES/XL LATERALES SYRAC.webp"),
+  rojoXLLATERAL: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION LATERALES MUEBLE.png"),
   //---------------- XL LAVABO----------------
   allureXLLAVABO: require("../../../assets/images/bath/intergrande/XL LAVABO/XL LAVABO ALLURE ANTHRACITE.webp"),
   berenXLLAVABO: require("../../../assets/images/bath/intergrande/XL LAVABO/XL LAVABO BEREN LIGHT GREY.webp"),
@@ -154,6 +161,7 @@ export const InterGrandeObj = {
   noonSXLLAVABO: require("../../../assets/images/bath/intergrande/XL LAVABO/XL LAVABO NOON SAND.webp"),
   paladioXLLAVABO: require("../../../assets/images/bath/intergrande/XL LAVABO/XL LAVABO PALADIO MARRON NATURAL.webp"),
   syracXLLAVABO: require("../../../assets/images/bath/intergrande/XL LAVABO/XL LAVABO SYRAC.webp"),
+  rojoLAVABO: require("../../../assets/images/bath/intergrande/SELECCIONES/XL CONF SELECCION LAVABO.png"),
 
   //---------------- Iconos----------------
   allureIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Allure Anthracite_1_icono.png"),
@@ -182,7 +190,7 @@ export const InterGrandeObj = {
   acabadoBlancBorghini: "blanc borghini",
   acabadoBlancInvisible: "blanc invisible",
   acabadoBrazil: "brazil super white",
-  acabadoCalacatta: "calacatta",
+  acabadoCalacatta: "calacata natural",
   acabadoEme: "eme light grey",
   acabadoKendoC: "kendo classic",
   acabadoKendoL: "kendo light",
@@ -190,7 +198,7 @@ export const InterGrandeObj = {
   acabadoNegroM: "negro marquina",
   acabadoNoonG: "noon grey",
   acabadoNoonS: "noon sand",
-  acabadoPaladio: "paladio",
+  acabadoPaladio: "paladio marrón natural",
   acabadoSyrac: "syrac",
   acabadoNatural: "madera natural",
   acabadoAntracita: "lacado antracita",
@@ -213,6 +221,7 @@ const noonGf = InterGrandeObj.noonGFRONTAL;
 const noonSf = InterGrandeObj.noonSFRONTAL;
 const paladiof = InterGrandeObj.paladioFRONTAL;
 const syracf = InterGrandeObj.syracFRONTAL;
+const rojof = InterGrandeObj.rojoFRONTAL;
 
 export const FRONTALES = {
   alluref,
@@ -230,6 +239,7 @@ export const FRONTALES = {
   noonSf,
   paladiof,
   syracf,
+  rojof,
 };
 
 const anthraciteM = InterGrandeObj.antracitaMueble;
@@ -257,6 +267,7 @@ const noonGPAV = InterGrandeObj.noonGPAVIMENTO;
 const noonSPA = InterGrandeObj.noonSPA;
 const paladioPAV = InterGrandeObj.paladioPAVIMENTO;
 const syracPAV = InterGrandeObj.syracPAVIMENTO;
+const rojoPAV = InterGrandeObj.rojoPAVIMENTO;
 
 export const PAVIMENTOS = {
   allurePAV,
@@ -274,6 +285,7 @@ export const PAVIMENTOS = {
   noonSPA,
   paladioPAV,
   syracPAV,
+  rojoPAV,
 };
 
 const allurePLAT = InterGrandeObj.allurePLATOS;
@@ -291,6 +303,7 @@ const noonGPLAT = InterGrandeObj.noonGPLATOS;
 const noonSPLAT = InterGrandeObj.noonSPLATOS;
 const paladioPLAT = InterGrandeObj.paladioPLATOS;
 const syracPLAT = InterGrandeObj.syracPLATOS;
+const rojoPLAT = InterGrandeObj.rojoPLATOS;
 
 export const PLATOS = {
   allurePLAT,
@@ -308,6 +321,7 @@ export const PLATOS = {
   noonSPLAT,
   paladioPLAT,
   syracPLAT,
+  rojoPLAT,
 };
 
 const allureREV = InterGrandeObj.allureREVESTIMIENTO;
@@ -325,6 +339,7 @@ const noonGREV = InterGrandeObj.noonGREVESTIMIENTO;
 const noonSREV = InterGrandeObj.noonSREVESTIMIENTO;
 const paladioREV = InterGrandeObj.paladioREVESTIMIENTO;
 const syracREV = InterGrandeObj.syracREVESTIMIENTO;
+const rojoREV = InterGrandeObj.rojoREVESTIMIENTO;
 
 export const REVESTIMIENTOS = {
   allureREV,
@@ -342,40 +357,43 @@ export const REVESTIMIENTOS = {
   noonSREV,
   paladioREV,
   syracREV,
+  rojoREV,
 };
 
-const allureXL = InterGrandeObj.allureXL;
-const berenXL = InterGrandeObj.berenXL;
-const blancBorghiniXL = InterGrandeObj.blancBorghiniXL;
-const blancInvisibleXL = InterGrandeObj.blancInvisibleXL;
-const brazilXL = InterGrandeObj.brazilXL;
-const calacattaXL = InterGrandeObj.calacattaXL;
-const emeXL = InterGrandeObj.emeXL;
-const kendoCXL = InterGrandeObj.kendoCXL;
-const kendoLXL = InterGrandeObj.kendoLXL;
-const momaXL = InterGrandeObj.momaXL;
-const negroXL = InterGrandeObj.negroXL;
-const noonGXL = InterGrandeObj.noonGXL;
-const noonSXL = InterGrandeObj.noonSXL;
-const paladioXL = InterGrandeObj.paladioXL;
-const syracXL = InterGrandeObj.syracXL;
+const allureXLE = InterGrandeObj.allureXL;
+const berenXLE = InterGrandeObj.berenXL;
+const blancBorghiniXLE = InterGrandeObj.blancBorghiniXL;
+const blancInvisibleXLE = InterGrandeObj.blancInvisibleXL;
+const brazilXLE = InterGrandeObj.brazilXL;
+const calacattaXLE = InterGrandeObj.calacattaXL;
+const emeXLE = InterGrandeObj.emeXL;
+const kendoCXLE = InterGrandeObj.kendoCXL;
+const kendoLXLE = InterGrandeObj.kendoLXL;
+const momaXLE = InterGrandeObj.momaXL;
+const negroXLE = InterGrandeObj.negroXL;
+const noonGXLE = InterGrandeObj.noonGXL;
+const noonSXLE = InterGrandeObj.noonSXL;
+const paladioXLE = InterGrandeObj.paladioXL;
+const syracXLE = InterGrandeObj.syracXL;
+const rojoXLE = InterGrandeObj.rojoXL;
 
 export const ENCIMERAXL = {
-  allureXL,
-  berenXL,
-  blancBorghiniXL,
-  blancInvisibleXL,
-  brazilXL,
-  calacattaXL,
-  emeXL,
-  kendoCXL,
-  kendoLXL,
-  momaXL,
-  negroXL,
-  noonGXL,
-  noonSXL,
-  paladioXL,
-  syracXL,
+  allureXLE,
+  berenXLE,
+  blancBorghiniXLE,
+  blancInvisibleXLE,
+  brazilXLE,
+  calacattaXLE,
+  emeXLE,
+  kendoCXLE,
+  kendoLXLE,
+  momaXLE,
+  negroXLE,
+  noonGXLE,
+  noonSXLE,
+  paladioXLE,
+  syracXLE,
+  rojoXLE,
 };
 
 const allureXLF = InterGrandeObj.allureXLFRONTAL;
@@ -393,6 +411,7 @@ const noonGXLF = InterGrandeObj.noonGXLFRONTAL;
 const noonSXLF = InterGrandeObj.noonSXLFRONTAL;
 const paladioXLF = InterGrandeObj.paladioXLFRONTAL;
 const syracXLF = InterGrandeObj.syracXLFRONTAL;
+const rojoXLF = InterGrandeObj.rojoXLFRONTAL;
 
 export const XLFRONTALCAJON = {
   allureXLF,
@@ -410,6 +429,7 @@ export const XLFRONTALCAJON = {
   noonSXLF,
   paladioXLF,
   syracXLF,
+  rojoXLF,
 };
 
 const allureXlM = InterGrandeObj.allureXLFRONTALMODULO;
@@ -427,6 +447,7 @@ const noonGXlM = InterGrandeObj.noonGXLFRONTALMODULO;
 const noonSXlM = InterGrandeObj.noonSXLFRONTALMODULO;
 const paladioXlM = InterGrandeObj.paladioXLFRONTALMODULO;
 const syracXlM = InterGrandeObj.syracXLFRONTALMODULO;
+const rojoXlM = InterGrandeObj.rojoXLFRONTALMODULO;
 
 export const FRENTESXLMODULO = {
   allureXlM,
@@ -444,6 +465,7 @@ export const FRENTESXLMODULO = {
   noonSXlM,
   paladioXlM,
   syracXlM,
+  rojoXlM,
 };
 
 const allureXLL = InterGrandeObj.allureXLLATERAL;
@@ -461,6 +483,7 @@ const noonGXLL = InterGrandeObj.noonGXLLATERAL;
 const noonSXLL = InterGrandeObj.noonSXLLATERAL;
 const paladioXLL = InterGrandeObj.paladioXLLATERAL;
 const syracXLL = InterGrandeObj.syracXLLATERAL;
+const rojoXLL = InterGrandeObj.rojoXLLATERAL;
 
 export const XLLATERAL = {
   allureXLL,
@@ -478,6 +501,7 @@ export const XLLATERAL = {
   noonSXLL,
   paladioXLL,
   syracXLL,
+  rojoXLL,
 };
 
 const allureXLLAV = InterGrandeObj.allureXLLAVABO;
@@ -495,6 +519,7 @@ const noonGXLLAV = InterGrandeObj.noonGXLLAVABO;
 const noonSXLLAV = InterGrandeObj.noonSXLLAVABO;
 const paladioXLLAV = InterGrandeObj.paladioXLLAVABO;
 const syracXLLAV = InterGrandeObj.syracXLLAVABO;
+const rojoXLLAV = InterGrandeObj.rojoXLLAVABO;
 
 export const XLLAVABO = {
   allureXLLAV,
@@ -512,6 +537,7 @@ export const XLLAVABO = {
   noonSXLLAV,
   paladioXLLAV,
   syracXLLAV,
+  rojoXLLAV,
 };
 
 const allureIco = InterGrandeObj.allureIcon;
@@ -572,7 +598,7 @@ const acNoonS = InterGrandeObj.acabadoNoonS;
 const acPaladio = InterGrandeObj.acabadoPaladio;
 const acSyrac = InterGrandeObj.acabadoSyrac;
 const acNatural = InterGrandeObj.acabadoNatural;
-const acAntracite = InterGrandeObj.acabadoAntracita;
+const acAntracita = InterGrandeObj.acabadoAntracita;
 const acBlanco = InterGrandeObj.acabadoBlanco;
 const acNordik = InterGrandeObj.acabadoNordik;
 
@@ -593,7 +619,7 @@ export const txtacabados = {
   acPaladio,
   acSyrac,
   acNatural,
-  acAntracite,
+  acAntracita,
   acBlanco,
   acNordik,
 };
