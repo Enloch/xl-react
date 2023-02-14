@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ContenedorIntercambiador = styled.div`
+  background-color: #d3cec9;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -266,6 +267,7 @@ export const TextoMaterial = styled.p`
   }
 `;
 export const WrapperTexto = styled.div`
+  background-color: #d3cec9;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -275,7 +277,7 @@ export const WrapperTexto = styled.div`
 export const TxtSubimagen = styled.p`
   font-size: 16px;
   /* max-width: auto; */
-  color: #fff;
+  color: #000000;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
   /* cursor: pointer; */
 

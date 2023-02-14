@@ -53,7 +53,7 @@ export const IntercambiadorObj = {
   rojoTAPA: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH__LATERALES_SELECCION.png"),
   rojoMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH__TAPA_SELECCION.png"),
   maderaMUEBLE: require("../../../assets/images/bath/intercambiador/CAPAS/MUEBLE/INTERCAMBIADOR XL BATH_MUEBLE_LATERALES_MADERA.webp"),
-  //mueble especial
+  //Iconos
   allureIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Allure Anthracite_1_icono.png"),
   berenIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Beren Light Grey_1_icono.png"),
   blancborgIcon: require("../../../assets/images/bath/intercambiador/ICONOS/Blanc Borghini_2_icono.png"),
@@ -286,7 +286,7 @@ const acNoonS = IntercambiadorObj.acabadoNoonS;
 const acPaladio = IntercambiadorObj.acabadoPaladio;
 const acSyrac = IntercambiadorObj.acabadoSyrac;
 const acNatural = IntercambiadorObj.acabadoNatural;
-const acAntracite = IntercambiadorObj.acabadoAntracita;
+const acAntracita = IntercambiadorObj.acabadoAntracita;
 const acBlanco = IntercambiadorObj.acabadoBlanco;
 const acNordik = IntercambiadorObj.acabadoNordik;
 
@@ -307,7 +307,7 @@ export const txtacabados = {
   acPaladio,
   acSyrac,
   acNatural,
-  acAntracite,
+  acAntracita,
   acBlanco,
   acNordik,
 };

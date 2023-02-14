@@ -63,7 +63,7 @@ const Intercambiador = ({ base }) => {
   const [encimeraSelected, SetEncimera] = useState(false);
   //Acabados Mueble
   const [Natural, SetNatural] = useState(false);
-  const [Anthracita, SetAnthracita] = useState(false);
+  const [Antracita, SetAntracita] = useState(false);
   const [Blanco, SetBlanco] = useState(false);
   const [Nordik, SetNordik] = useState(false);
   //acabados
@@ -89,6 +89,20 @@ const Intercambiador = ({ base }) => {
     if (modulosSelected && !visible) {
       setTxtM(txtacabados[`ac${acabado}`]);
     }
+  };
+
+  const clickAcabado = (finish) => {
+    setIsVisible(!isVisible);
+    setMuebleVisible(!muebleVisible);
+    SetNatural(finish === "Natural");
+    SetAntracita(finish === "Antracita");
+    SetBlanco(finish === "Blanco");
+    SetNordik(finish === "Nordik");
+    setTxtMu(txtacabados[`ac${finish}`]);
+    setTxtF(txtacabados[`ac${finish}`]);
+    setTxtM(txtacabados[`ac${finish}`]);
+    setTxtL(txtacabados[`ac${finish}`]);
+    setTxtE(txtacabados[`ac${finish}`]);
   };
   const frontalesArray = [
     { name: "alluref", isVisible: allureVisible },
@@ -124,6 +138,41 @@ const Intercambiador = ({ base }) => {
     { name: "paladiom", isVisible: paladioVisible },
     { name: "syracm", isVisible: syracVisible },
   ];
+  const lateralesArray = [
+    { name: "allurel", isVisible: allureVisible },
+    { name: "berenl", isVisible: berenVisible },
+    { name: "blancborgl", isVisible: blancborgVisible },
+    { name: "blancinvl", isVisible: blancinvVisible },
+    { name: "brazill", isVisible: brazilVisible },
+    { name: "calacattal", isVisible: calacattaVisible },
+    { name: "emel", isVisible: emeVisible },
+    { name: "kendoCl", isVisible: kendocVisible },
+    { name: "kendoLl", isVisible: kendolVisible },
+    { name: "momal", isVisible: momaVisible },
+    { name: "negrol", isVisible: negroVisible },
+    { name: "noonGl", isVisible: noonGVisible },
+    { name: "noonSl", isVisible: noonsVisible },
+    { name: "paladiol", isVisible: paladioVisible },
+    { name: "syracm", isVisible: syracVisible },
+  ];
+  const encimerasArray = [
+    { name: "topAllure", isVisible: allureVisible },
+    { name: "topBeren", isVisible: berenVisible },
+    { name: "topBlancborg", isVisible: blancborgVisible },
+    { name: "topBlancinv", isVisible: blancinvVisible },
+    { name: "topBrazil", isVisible: brazilVisible },
+    { name: "topCalacatta", isVisible: calacattaVisible },
+    { name: "topEme", isVisible: emeVisible },
+    { name: "topKendoC", isVisible: kendocVisible },
+    { name: "topKendoL", isVisible: kendolVisible },
+    { name: "topMoma", isVisible: momaVisible },
+    { name: "topNegro", isVisible: negroVisible },
+    { name: "topNoonG", isVisible: noonGVisible },
+    { name: "topNoonS", isVisible: noonsVisible },
+    { name: "topPaladio", isVisible: paladioVisible },
+    { name: "topSyrac", isVisible: syracVisible },
+  ];
+
   const menuMats = (
     <MenuMateriales
       id='menu inferior'
@@ -376,7 +425,7 @@ const Intercambiador = ({ base }) => {
               SetPaladio(false);
               SetSyrac(false);
               SetNatural(false);
-              SetAnthracita(false);
+              SetAntracita(false);
               SetBlanco(false);
               SetNordik(false);
               setTxtMu(txtacabados.acNatural);
@@ -461,76 +510,20 @@ const Intercambiador = ({ base }) => {
                 <bold>elige el color del mueble {">"}</bold>
               </TextoIntro>
               <CajaMaterial>
-                <ContIconText2
-                  onClick={() => {
-                    setIsVisible(!isVisible);
-                    setMuebleVisible(!muebleVisible);
-                    SetAnthracita(false);
-                    SetBlanco(false);
-                    SetNordik(false);
-                    SetNatural(!Natural);
-                    setTxtMu(txtacabados.acNatural);
-                    setTxtF(txtacabados.acNatural);
-                    setTxtM(txtacabados.acNatural);
-                    setTxtL(txtacabados.acNatural);
-                    setTxtE(txtacabados.acNatural);
-                  }}
-                >
-                  <IconoMaterial src={iconos.naturalIco}></IconoMaterial>
+                <ContIconText2 onClick={() => clickAcabado("Natural")}>
+                  <IconoMaterial src={iconos.naturalIco} />
                   <TextoMaterial>Natural</TextoMaterial>
                 </ContIconText2>
-                <ContIconText2
-                  onClick={() => {
-                    SetAnthracita(!Anthracita);
-                    setIsVisible(!isVisible);
-                    setMuebleVisible(!muebleVisible);
-                    SetNordik(false);
-                    SetNatural(false);
-                    SetBlanco(false);
-                    setTxtMu(txtacabados.acAntracite);
-                    setTxtF(txtacabados.acAntracite);
-                    setTxtM(txtacabados.acAntracite);
-                    setTxtL(txtacabados.acAntracite);
-                    setTxtE(txtacabados.acAntracite);
-                  }}
-                >
-                  <IconoMaterial src={iconos.antracitaIco}></IconoMaterial>
-                  <TextoMaterial>Anthracite</TextoMaterial>
+                <ContIconText2 onClick={() => clickAcabado("Antracita")}>
+                  <IconoMaterial src={iconos.antracitaIco} />
+                  <TextoMaterial>Antracita</TextoMaterial>
                 </ContIconText2>
-                <ContIconText2
-                  onClick={() => {
-                    setIsVisible(!isVisible);
-                    setMuebleVisible(!muebleVisible);
-                    SetBlanco(!Blanco);
-                    SetNordik(false);
-                    SetNatural(false);
-                    SetAnthracita(false);
-                    setTxtMu(txtacabados.acBlanco);
-                    setTxtF(txtacabados.acBlanco);
-                    setTxtM(txtacabados.acBlanco);
-                    setTxtL(txtacabados.acBlanco);
-                    setTxtE(txtacabados.acBlanco);
-                  }}
-                >
-                  <IconoMaterial src={iconos.blancoIco}></IconoMaterial>
+                <ContIconText2 onClick={() => clickAcabado("Blanco")}>
+                  <IconoMaterial src={iconos.blancoIco} />
                   <TextoMaterial>Blanco</TextoMaterial>
                 </ContIconText2>
-                <ContIconText2
-                  onClick={() => {
-                    setIsVisible(!isVisible);
-                    setMuebleVisible(!muebleVisible);
-                    SetNordik(!Nordik);
-                    SetAnthracita(false);
-                    SetBlanco(false);
-                    SetNatural(false);
-                    setTxtMu(txtacabados.acNordik);
-                    setTxtF(txtacabados.acNordik);
-                    setTxtM(txtacabados.acNordik);
-                    setTxtL(txtacabados.acNordik);
-                    setTxtE(txtacabados.acNordik);
-                  }}
-                >
-                  <IconoMaterial src={iconos.nordikIco}></IconoMaterial>
+                <ContIconText2 onClick={() => clickAcabado("Nordik")}>
+                  <IconoMaterial src={iconos.nordikIco} />
                   <TextoMaterial>Nordik</TextoMaterial>
                 </ContIconText2>
               </CajaMaterial>
@@ -547,7 +540,7 @@ const Intercambiador = ({ base }) => {
           <Imagen src={base} alt='fondo' />
         </ContenedorImagenBase>
         {/* ------------------BASE MUEBLES------------------ */}
-        {Anthracita && (
+        {Antracita && (
           <ContenedorImagen>
             <Imagen src={acabadosMueble.MuebleAntracite} alt='mueble' />
           </ContenedorImagen>
@@ -564,7 +557,7 @@ const Intercambiador = ({ base }) => {
         )}
         {/* ------------------Rojo------------------ */}
         {frenteSelected && (
-          <ContenedorImagen id='pon-alluref' sitio='frontal'>
+          <ContenedorImagen>
             <Imagen
               src={frontales.rojof}
               alt='frontal'
@@ -573,12 +566,12 @@ const Intercambiador = ({ base }) => {
           </ContenedorImagen>
         )}
         {modulosSelected && (
-          <ContenedorImagen id='pon-alluref' sitio='modulo'>
+          <ContenedorImagen>
             <Imagen src={modulos.rojom} alt='modulo' style={{ opacity: 0.3 }} />
           </ContenedorImagen>
         )}
         {encimeraSelected && (
-          <ContenedorImagen id='pon-alluref' sitio='lateral'>
+          <ContenedorImagen>
             <Imagen
               src={laterales.rojol}
               alt='lateral'
@@ -587,7 +580,7 @@ const Intercambiador = ({ base }) => {
           </ContenedorImagen>
         )}
         {lateralSelected && (
-          <ContenedorImagen id='pon-alluref' sitio='tapa'>
+          <ContenedorImagen>
             <Imagen src={laterales.rojot} alt='tapa' style={{ opacity: 0.3 }} />
           </ContenedorImagen>
         )}
@@ -610,241 +603,41 @@ const Intercambiador = ({ base }) => {
             if (modulo.isVisible) {
               return (
                 <ContenedorImagen>
-                  <Imagen src={modulos[modulo.name]} alt='frontal' />
+                  <Imagen src={modulos[modulo.name]} alt='modulo' />
                 </ContenedorImagen>
               );
             }
             return null;
           })}
-        {modulosSelected && allureVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.allurem} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && berenVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.berenm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && blancborgVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.blancborgm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && blancinvVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.blancinvm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && brazilVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.brazilm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && calacattaVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.calacattam} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && emeVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.emem} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && kendocVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.kendoCm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && kendolVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.kendoLm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && momaVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.momam} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && negroVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.negrom} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && noonGVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.noonGm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && noonsVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.noonSm} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && paladioVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.paladiom} alt='modulo' />
-          </ContenedorImagen>
-        )}
-        {modulosSelected && syracVisible && (
-          <ContenedorImagen>
-            <Imagen src={modulos.syracm} alt='modulo' />
-          </ContenedorImagen>
-        )}
 
         {/* ------------------encimera + lateral------------------ */}
-        {encimeraSelected && lateralSelected && allureVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.allurel} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && berenVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.berenl} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && blancborgVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.blancborgl} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && blancinvVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.blancinvl} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && brazilVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.brazill} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && calacattaVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.calacattal} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && emeVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.emel} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && kendocVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.kendoCl} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && kendolVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.kendoLl} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && momaVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.momal} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && negroVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.negrol} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && noonGVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.noonGl} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && noonsVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.noonSl} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && paladioVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.paladiol} alt='combo' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && lateralSelected && syracVisible && (
-          <ContenedorImagen>
-            <Imagen src={laterales.syracl} alt='combo' />
-          </ContenedorImagen>
-        )}
+
+        {encimeraSelected &&
+          lateralSelected &&
+          lateralesArray.map((lateral) => {
+            if (lateral.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={laterales[lateral.name]} alt='combo' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
         {/* ------------------tops------------------ */}
 
-        {encimeraSelected && !lateralSelected && allureVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topAllure} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && berenVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topBeren} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && blancborgVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topBlancborg} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && blancinvVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topBlancinv} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && brazilVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topBrazil} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && calacattaVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topCalacatta} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && emeVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topEme} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && kendocVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topKendoC} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && kendolVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topKendoL} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && momaVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topMoma} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && negroVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topNegro} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && noonGVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topNoonG} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && noonsVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topNoonS} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && paladioVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topPaladio} alt='encimera' />
-          </ContenedorImagen>
-        )}
-        {encimeraSelected && !lateralSelected && syracVisible && (
-          <ContenedorImagen>
-            <Imagen src={tops.topSyrac} alt='encimera' />
-          </ContenedorImagen>
-        )}
+        {encimeraSelected &&
+          !lateralSelected &&
+          encimerasArray.map((top) => {
+            if (top.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={tops[top.name]} alt='encimera' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
         {/* ------------------TODO Revisar------------------ */}
         {/* {!lateralSelected && encimeraSelected && (
           <ContenedorImagen>
@@ -874,5 +667,4 @@ const Intercambiador = ({ base }) => {
     </>
   );
 };
-
 export default Intercambiador;
