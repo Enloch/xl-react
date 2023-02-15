@@ -184,6 +184,38 @@ export const InterGrandeObj = {
   blancoIcon: require("../../../assets/images/bath/intercambiador/ICONOS/LACADO BLANCO.webp"),
   nordikIcon: require("../../../assets/images/bath/intercambiador/ICONOS/MADERA NORDIK.webp"),
 
+  //---------------- TOP INTEGRITY----------------
+  allureTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY ALLURE ANTHRACITE.webp"),
+  berenTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY BEREN LIGHT GREY.webp"),
+  blancBorghiniTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY BLANC BORGHINI.webp"),
+  blancInvisibleTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY BLANC INVISIBLE.webp"),
+  brazilTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY BRAZIL SUPER WHITE.webp"),
+  calacattaTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY CALACATA NATURAL.webp"),
+  emeTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY EME LIGHT GREY.webp"),
+  kendoCTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY KENDO CLASSIC.webp"),
+  kendoLTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY KENDO LIGHT.webp"),
+  momaTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY MOMA GRIS.webp"),
+  negroTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY NEGRO MARQUINA.webp"),
+  noonGTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY NOON GREY.webp"),
+  noonSTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY NOON SAND.webp"),
+  paladioTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY PALADIO MARRON NATURAL.webp"),
+  syracTI: require("../../../assets/images/bath/intergrande/TOP INTEGRITY/TOP INTEGRITY SYRAC.webp"),
+  //---------------- TOP INTEGRITY PLUS----------------
+  allureTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY ALLURE ANTHRACITE.webp"),
+  berenTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY BEREN LIGHT GREY.webp"),
+  blancBorghiniTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY BLANC BORGHINI.webp"),
+  blancInvisibleTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY BLANC INVISIBLE.webp"),
+  brazilTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY BRAZIL SUPER WHITE.webp"),
+  calacattaTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY CALACATA NATURAL.webp"),
+  emeTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY EME LIGHT GREY.webp"),
+  kendoCTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY KENDO CLASSIC.webp"),
+  kendoLTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY KENDO LIGHT.webp"),
+  momaTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY MOMA GRIS.webp"),
+  negroTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY NEGRO MARQUINA.webp"),
+  noonGTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY NOON GREY.webp"),
+  noonSTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY NOON SAND.webp"),
+  paladioTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY PALADIO MARRON NATURAL.webp"),
+  syracTIP: require("../../../assets/images/bath/intergrande/TOP PLUS INTEGRITY/TOP PLUS INTEGRITY SYRAC.webp"),
   //---------------- TEXTOS----------------
   acabadoAllure: "allure anthracite",
   acabadoBeren: "beren light grey",
@@ -204,7 +236,8 @@ export const InterGrandeObj = {
   acabadoAntracita: "lacado antracita",
   acabadoBlanco: "lacado blanco",
   acabadoNordik: "madera nordik",
-  acabadoFrenteVacio: "sin frente "
+  acabadoFrenteVacio: "sin frente ",
+  acabadoLavaboVacio: "sin lavabo"
 };
 
 const alluref = InterGrandeObj.allureFRONTAL;
@@ -471,8 +504,8 @@ export const FRENTESXLMODULO = {
 
 const allureXLL = InterGrandeObj.allureXLLATERAL;
 const berenXLL = InterGrandeObj.berenXLLATERAL;
-const blancBorghiniXLL = InterGrandeObj.blancBorghiniXLLATERAL;
-const blancInvisibleXLL = InterGrandeObj.blancInvisibleXLLATERAL;
+const blancborgXLL = InterGrandeObj.blancBorghiniXLLATERAL;
+const blancinvXLL = InterGrandeObj.blancInvisibleXLLATERAL;
 const brazilXLL = InterGrandeObj.brazilXLLATERAL;
 const calacattaXLL = InterGrandeObj.calacattaXLLATER;
 const emeXLL = InterGrandeObj.emeXLLATERAL;
@@ -489,8 +522,8 @@ const rojoXLL = InterGrandeObj.rojoXLLATERAL;
 export const XLLATERAL = {
   allureXLL,
   berenXLL,
-  blancBorghiniXLL,
-  blancInvisibleXLL,
+  blancborgXLL,
+  blancinvXLL,
   brazilXLL,
   calacattaXLL,
   emeXLL,
@@ -603,6 +636,7 @@ const acAntracita = InterGrandeObj.acabadoAntracita;
 const acBlanco = InterGrandeObj.acabadoBlanco;
 const acNordik = InterGrandeObj.acabadoNordik;
 const acSinFrente = InterGrandeObj.acabadoFrenteVacio;
+const acSinLavabo = InterGrandeObj.acabadoLavaboVacio;
 
 
 export const txtacabados = {
@@ -626,4 +660,73 @@ export const txtacabados = {
   acBlanco,
   acNordik,
   acSinFrente,
+  acSinLavabo,
+};
+
+const allureTI = InterGrandeObj.allureTI;
+const berenTI = InterGrandeObj.berenTI;
+const blancborgTI = InterGrandeObj.blancBorghiniTI;
+const blancinvTI = InterGrandeObj.blancInvisibleTI;
+const brazilTI = InterGrandeObj.brazilTI;
+const calacattaTI = InterGrandeObj.calacattaTI;
+const emeTI = InterGrandeObj.emeTI;
+const kendoCTI = InterGrandeObj.kendoCTI;
+const kendoLTI = InterGrandeObj.kendoLTI;
+const momaTI = InterGrandeObj.momaTI;
+const negroTI = InterGrandeObj.negroTI;
+const noonGTI = InterGrandeObj.noonGTI;
+const noonSTI = InterGrandeObj.noonSTI;
+const paladioTI = InterGrandeObj.paladioTI;
+const syracTI = InterGrandeObj.syracTI;
+
+export const EncimeraTopInt = {
+  allureTI,
+  berenTI,
+  blancborgTI,
+  blancinvTI,
+  brazilTI,
+  calacattaTI,
+  emeTI,
+  kendoCTI,
+  kendoLTI,
+  momaTI,
+  negroTI,
+  noonGTI,
+  noonSTI,
+  paladioTI,
+  syracTI,
+};
+
+const allureTIP = InterGrandeObj.allureTIP;
+const berenTIP = InterGrandeObj.berenTIP;
+const blancborgTIP = InterGrandeObj.blancBorghiniTIP;
+const blancinvTIP = InterGrandeObj.blancInvisibleTIP;
+const brazilTIP = InterGrandeObj.brazilTIP;
+const calacattaTIP = InterGrandeObj.calacattaTIP;
+const emeTIP = InterGrandeObj.emeTIP;
+const kendoCTIP = InterGrandeObj.kendoCTIP;
+const kendoLTIP = InterGrandeObj.kendoLTIP;
+const momaTIP = InterGrandeObj.momaTIP;
+const negroTIP = InterGrandeObj.negroTIP;
+const noonGTIP = InterGrandeObj.noonGTIP;
+const noonSTIP = InterGrandeObj.noonSTIP;
+const paladioTIP = InterGrandeObj.paladioTIP;
+const syracTIP = InterGrandeObj.syracTIP;
+
+export const EncimeraTopIntPlus = {
+  allureTIP,
+  berenTIP,
+  blancborgTIP,
+  blancinvTIP,
+  brazilTIP,
+  calacattaTIP,
+  emeTIP,
+  kendoCTIP,
+  kendoLTIP,
+  momaTIP,
+  negroTIP,
+  noonGTIP,
+  noonSTIP,
+  paladioTIP,
+  syracTIP,
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
 
 import { medidas1, medidas2, medidas3 } from "./animacionesAncho";
@@ -27,14 +27,18 @@ import {
   Frase,
   Tabla,
   ContTabla,
+  TextoImagen,
+  WrapperTxtImg,
+  ImgWrap2,
+  Img2
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
   require("../../../assets/images/bath/platos/Icono Medidas Plato.png"),
 ];
-
 const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
+  const [isVisible, setIsVisible] = useState(true);
   return (
     <>
       <InfoContainer id='PlatosDuchas'>
@@ -161,6 +165,35 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
         </WrapperAnim>
         <ImgWrapper></ImgWrapper>
         <WrapperIframe>
+          {isVisible && (
+            <ImgWrap2 onClick={() => setIsVisible(!isVisible)}>
+              <Img2
+                src={fadeImages[0]}
+              />
+              <WrapperTxtImg
+                id='expansor'
+                initial={{
+                  height: "0%",
+                }}
+                whileInView={{
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeIn",
+                  },
+                  height: "100%",
+                }}
+              >
+                <TextoImagen
+                  whileHover={{
+                    scale: 1.1,
+                    textShadow: "0px 0px 4px black",
+                  }}
+                >
+                  Pulsa en la imagen para acceder al rotador de lavabos
+                </TextoImagen>
+              </WrapperTxtImg>
+            </ImgWrap2>
+          )}
           <iframe
             src='https://itch.io/embed-upload/7341966?color=333333'
             allowFullscreen=''

@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState } from "react";
-
+import topL from "../../../assets/images/bath/encimerastop/top-lisa-blanco.png";
+import topIn from "../../../assets/images/bath/encimerastop/top-int-blanco.png";
+import topInPlus from "../../../assets/images/bath/encimerastop/top-intplus-blanco.png";
 import {
   ContenedorIntercambiador,
   ContenedorImagenBase,
@@ -24,6 +26,9 @@ import {
   ContenedorExpansor,
   TextoIntro2,
   ContIconText2,
+  IconoEncimera,
+  ContenedorEncimera,
+  CajaMaterial2,
 } from "./InterGrandeElementos";
 
 import {
@@ -39,9 +44,12 @@ import {
   XLLAVABO,
   ICONOS,
   txtacabados,
+  EncimeraTopInt,
+  EncimeraTopIntPlus,
 } from "./dataInterGrande";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
 import icono from "../../../assets/icons/botones/boton.png";
+import icono_retroceso from "../../../assets/icons/botones/undo-svgrepo-com.svg";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 const InterGrande = ({ base }) => {
@@ -187,23 +195,6 @@ const InterGrande = ({ base }) => {
   const [noonsLavabo, SetNoonsLav] = useState(false);
   const [paladioLavabo, SetPaladioLav] = useState(false);
   const [syracLavabo, SetSyracLav] = useState(false);
-
-  //materiales
-  const [allureVisible, SetAllure] = useState(false);
-  const [berenVisible, SetBeren] = useState(false);
-  const [blancborgVisible, SetBlancborg] = useState(false);
-  const [blancinvVisible, SetBlancinv] = useState(false);
-  const [brazilVisible, SetBrazil] = useState(false);
-  const [calacattaVisible, SetCalacatta] = useState(false);
-  const [emeVisible, SetEme] = useState(false);
-  const [kendocVisible, SetKendoc] = useState(false);
-  const [kendolVisible, SetKendol] = useState(false);
-  const [momaVisible, SetMoma] = useState(false);
-  const [negroVisible, SetNegro] = useState(false);
-  const [noonGVisible, SetNoonG] = useState(false);
-  const [noonsVisible, SetNoons] = useState(false);
-  const [paladioVisible, SetPaladio] = useState(false);
-  const [syracVisible, SetSyrac] = useState(false);
   //partes mueble
   const [frenteSelected, SetFrente] = useState(false);
   const [modulosSelected, SetModulos] = useState(false);
@@ -220,35 +211,31 @@ const InterGrande = ({ base }) => {
   const [Antracita, SetAntracita] = useState(false);
   const [Blanco, SetBlanco] = useState(false);
   const [Nordik, SetNordik] = useState(false);
-  // tipoi de encimera
+  // tipo de encimera
+  const [menuTop, SetMenuTop] = useState(false);
   const [toplisa, SetTopLisa] = useState(false);
   const [topInt, SetTopInt] = useState(false);
   const [topIntPlus, SetTopIntPlus] = useState(false);
+  const [lavaboON, SetLavaboON] = useState(true);
   //acabados
-  const [txtfrente, setTxtF] = useState(txtacabados.acNatural);
-  const [txtmodulo, setTxtM] = useState(txtacabados.acNatural);
-  const [txtlateral, setTxtL] = useState(txtacabados.acNatural);
-  const [txtencimera, setTxtE] = useState(txtacabados.acNatural);
-  const [txtmueble, setTxtMu] = useState(txtacabados.acNatural);
+  const [txtfrente, setTxtF] = useState(txtacabados.acNordik);
+  const [txtmodulo, setTxtM] = useState(txtacabados.acNordik);
+  const [txtlateral, setTxtL] = useState(txtacabados.acNordik);
+  const [txtencimera, setTxtE] = useState(txtacabados.acNordik);
+  const [txtmueble, setTxtMu] = useState(txtacabados.acNordik);
+  const [txtcajon, setTxtC] = useState(txtacabados.acNordik);
   const [txtpavimento, setTxtP] = useState(txtacabados.acMoma);
   const [txtrevestimiento, setTxtR] = useState(txtacabados.acMoma);
   const [txtplato, setTxtPlato] = useState(txtacabados.acMoma);
   const [txtfrontal, setTxtFrontal] = useState(txtacabados.acSinFrente);
+  const [txtlavabo, setTxtLavabo] = useState(txtacabados.acSinLavabo);
 
   const handleClick = (acabado, setFunc, mat, setFunc2, visible2) => {
-    console.log(acabado);
-
-    console.log(
-      modulosSelected,
-      encimeraSelected,
-      pavimentoSelected,
-      revestimientoSelected
-    );
     setIconos(true);
     setFunc2(!visible2);
     setFunc(!mat);
     if (visible2 === MatCajon && !mat) {
-      setTxtF(txtacabados[`ac${acabado}`]);
+      setTxtC(txtacabados[`ac${acabado}`]);
     }
     if (visible2 === MatEncimera && lateralSelected && !mat) {
       setTxtL(txtacabados[`ac${acabado}`]);
@@ -270,6 +257,9 @@ const InterGrande = ({ base }) => {
     }
     if (visible2 === MatPlato && !mat) {
       setTxtPlato(txtacabados[`ac${acabado}`]);
+    }
+    if (visible2 === MatLavabo && !mat) {
+      setTxtLavabo(txtacabados[`ac${acabado}`]);
     }
   };
 
@@ -341,7 +331,40 @@ const InterGrande = ({ base }) => {
     { name: "paladioXLE", isVisible: paladioEncimera },
     { name: "syracXLE", isVisible: syracEncimera },
   ];
-
+  const encimerasTopArray = [
+    { name: "allureTI", isVisible: allureEncimera },
+    { name: "berenTI", isVisible: berenEncimera },
+    { name: "blancborgTI", isVisible: blancborgEncimera },
+    { name: "blancinvTI", isVisible: blancinvEncimera },
+    { name: "brazilTI", isVisible: brazilEncimera },
+    { name: "calacattaTI", isVisible: calacattaEncimera },
+    { name: "emeTI", isVisible: emeEncimera },
+    { name: "kendoCTI", isVisible: kendocEncimera },
+    { name: "kendoLTI", isVisible: kendolEncimera },
+    { name: "momaTI", isVisible: momaEncimera },
+    { name: "negroTI", isVisible: negroEncimera },
+    { name: "noonGTI", isVisible: noonGEncimera },
+    { name: "noonSTI", isVisible: noonsEncimera },
+    { name: "paladioTI", isVisible: paladioEncimera },
+    { name: "syracTI", isVisible: syracEncimera },
+  ];
+  const encimerasTopPlusArray = [
+    { name: "allureTIP", isVisible: allureEncimera },
+    { name: "berenTIP", isVisible: berenEncimera },
+    { name: "blancborgTIP", isVisible: blancborgEncimera },
+    { name: "blancinvTIP", isVisible: blancinvEncimera },
+    { name: "brazilTIP", isVisible: brazilEncimera },
+    { name: "calacattaTIP", isVisible: calacattaEncimera },
+    { name: "emeTIP", isVisible: emeEncimera },
+    { name: "kendoCTIP", isVisible: kendocEncimera },
+    { name: "kendoLTIP", isVisible: kendolEncimera },
+    { name: "momaTIP", isVisible: momaEncimera },
+    { name: "negroTIP", isVisible: negroEncimera },
+    { name: "noonGTIP", isVisible: noonGEncimera },
+    { name: "noonSTIP", isVisible: noonsEncimera },
+    { name: "paladioTIP", isVisible: paladioEncimera },
+    { name: "syracTIP", isVisible: syracEncimera },
+  ];
   const modulosArray = [
     { name: "allureXlM", isVisible: allureModulo },
     { name: "berenXlM", isVisible: berenModulo },
@@ -360,21 +383,21 @@ const InterGrande = ({ base }) => {
     { name: "syracXlM", isVisible: syracModulo },
   ];
   const lateralesArray = [
-    { name: "allureXLL", isVisible: allureVisible },
-    { name: "berenXLL", isVisible: berenVisible },
-    { name: "blancborgXLL", isVisible: blancborgVisible },
-    { name: "blancinvXLL", isVisible: blancinvVisible },
-    { name: "brazilXLL", isVisible: brazilVisible },
-    { name: "calacattaXLL", isVisible: calacattaVisible },
-    { name: "emeXLL", isVisible: emeVisible },
-    { name: "kendoCXLL", isVisible: kendocVisible },
-    { name: "kendoLXLL", isVisible: kendolVisible },
-    { name: "momaXLL", isVisible: momaVisible },
-    { name: "negroXLL", isVisible: negroVisible },
-    { name: "noonGXLL", isVisible: noonGVisible },
-    { name: "noonSXLL", isVisible: noonsVisible },
-    { name: "paladioXLL", isVisible: paladioVisible },
-    { name: "syracXLL", isVisible: syracVisible },
+    { name: "allureXLL", isVisible: allureEncimera },
+    { name: "berenXLL", isVisible: berenEncimera },
+    { name: "blancborgXLL", isVisible: blancborgEncimera },
+    { name: "blancinvXLL", isVisible: blancinvEncimera },
+    { name: "brazilXLL", isVisible: brazilEncimera },
+    { name: "calacattaXLL", isVisible: calacattaEncimera },
+    { name: "emeXLL", isVisible: emeEncimera },
+    { name: "kendoCXLL", isVisible: kendocEncimera },
+    { name: "kendoLXLL", isVisible: kendolEncimera },
+    { name: "momaXLL", isVisible: momaEncimera },
+    { name: "negroXLL", isVisible: negroEncimera },
+    { name: "noonGXLL", isVisible: noonGEncimera },
+    { name: "noonSXLL", isVisible: noonsEncimera },
+    { name: "paladioXLL", isVisible: paladioEncimera },
+    { name: "syracXLL", isVisible: syracEncimera },
   ];
   const cajonesArray = [
     { name: "allureXLF", isVisible: allureCajon },
@@ -478,146 +501,6 @@ const InterGrande = ({ base }) => {
     { name: "paladioXLLAV", isVisible: paladioLavabo },
     { name: "syracXLLAV", isVisible: syracLavabo },
   ];
-  // const menuMats = (
-  //   <MenuMateriales
-  //     id='menu inferior'
-  //     initial={{
-  //       height: "0%",
-  //     }}
-  //     whileInView={{
-  //       transition: {
-  //         duration: 0.2,
-  //         ease: "easeIn",
-  //       },
-  //       height: "auto",
-  //     }}
-  //   >
-  //     <ContenedorMateriales>
-  //       <CajaMaterial>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Allure", SetAllure, allureVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-  //           <TextoMaterial>Allure</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Beren", SetBeren, berenVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
-  //           <TextoMaterial>Beren</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancborg", SetBlancborg, blancborgVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Borghini</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancinv", SetBlancinv, blancinvVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Invisible</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Brazil", SetBrazil, brazilVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
-  //           <TextoMaterial>Brazil Super White</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Calacatta", SetCalacatta, calacattaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
-  //           <TextoMaterial>Calacatta</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Eme", SetEme, emeVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
-  //           <TextoMaterial>Eme Light Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoC", SetKendoc, kendocVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Classic</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoL", SetKendol, kendolVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Light</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Moma", SetMoma, momaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
-  //           <TextoMaterial>Moma Gris</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Negro", SetNegro, negroVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
-  //           <TextoMaterial>Negro Marquina</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonG", SetNoonG, noonGVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonS", SetNoons, noonsVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Sand</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Paladio", SetPaladio, paladioVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
-  //           <TextoMaterial>Paladio</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Syrac", SetSyrac, syracVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
-  //           <TextoMaterial>Syrac</TextoMaterial>
-  //         </ContIconText>
-  //       </CajaMaterial>
-  //     </ContenedorMateriales>
-  //   </MenuMateriales>
-  // );
   const menuModulo = (
     <MenuMateriales
       id='menu inferior'
@@ -2234,7 +2117,7 @@ const InterGrande = ({ base }) => {
       initial={{
         height: "0%",
       }}
-      animation={{
+      animate={{
         transition: {
           duration: 0.2,
           ease: "easeIn",
@@ -2473,22 +2356,53 @@ const InterGrande = ({ base }) => {
       }}
     >
       <ContenedorMateriales>
-        <CajaMaterial>
-          <ContIconText
+        <CajaMaterial2>
+          <ContenedorEncimera
             onClick={() => {
-              handleClick(
-                "Allure",
-                SetAllureLav,
-                allureLavabo,
-                SetMaterialesLavabo,
-                MatLavabo
-              );
+              SetEncimera(true); //IMPORTANTE
+              SetTopLisa(true);
+              SetTopInt(false);
+              SetTopIntPlus(false);
+              SetMenuTop(!menuTop);
+              SetLavabo(true);
+              SetMaterialesEncimera(!MatEncimera);
+              SetLavaboON(true);
             }}
           >
-            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-            <TextoMaterial>Allure</TextoMaterial>
-          </ContIconText>
-        </CajaMaterial>
+            <IconoEncimera src={topL} />
+            <TextoMaterial>XL top lisa</TextoMaterial>
+          </ContenedorEncimera>
+          <ContenedorEncimera
+            onClick={() => {
+              SetEncimera(true); //IMPORTANTE
+              SetTopLisa(false);
+              SetTopInt(true);
+              SetTopIntPlus(false);
+              SetMenuTop(!menuTop);
+              SetLavabo(false);
+              SetMaterialesEncimera(!MatEncimera);
+              SetLavaboON(false);
+            }}
+          >
+            <IconoEncimera src={topIn} />
+            <TextoMaterial>XL top integrity</TextoMaterial>
+          </ContenedorEncimera>
+          <ContenedorEncimera
+            onClick={() => {
+              SetEncimera(true); //IMPORTANTE
+              SetTopLisa(false);
+              SetTopInt(false);
+              SetTopIntPlus(true);
+              SetMenuTop(!menuTop);
+              SetLavabo(false);
+              SetMaterialesEncimera(!MatEncimera);
+              SetLavaboON(false);
+            }}
+          >
+            <IconoEncimera src={topInPlus} />
+            <TextoMaterial>XL top integrity plus</TextoMaterial>
+          </ContenedorEncimera>
+        </CajaMaterial2>
       </ContenedorMateriales>
     </MenuMateriales>
   );
@@ -2505,6 +2419,7 @@ const InterGrande = ({ base }) => {
       <Tooltip anchorId={"plato de ducha"} content={"plato de ducha"} />
       <Tooltip anchorId={"pavimento"} content={"pavimento"} />
       <Tooltip anchorId={"lavabo"} content={"lavabo"} />
+      <Tooltip anchorId={"reiniciar"} content={"reiniciar"} />
       {/*--------------botones--------------*/}
       <Icono1 id='modulo'
         onClick={() => {
@@ -2538,8 +2453,7 @@ const InterGrande = ({ base }) => {
       <Icono1 id='encimera'
         onClick={() => {
           setIconos(!iconos);
-          SetEncimera(true); //IMPORTANTE
-          SetMaterialesEncimera(!MatEncimera);
+          SetMenuTop(!menuTop);
           SetLateral(false);
           SetAllureEn(false);
           SetBerenEn(false);
@@ -2568,8 +2482,9 @@ const InterGrande = ({ base }) => {
       {encimeraSelected && (
         <Icono1 id='lateralm'
           onClick={() => {
-            setIconos(!iconos);
             SetLateral(!lateralSelected);
+            if (lateralSelected === true) { setTxtL(txtmueble) }
+            else { setTxtL(txtencimera) }
           }}
           src={icono}
           alt='lateralm'
@@ -2734,12 +2649,29 @@ const InterGrande = ({ base }) => {
           left: "45%",
         }}
       />
-      {encimeraSelected && toplisa && (
+      {lavaboON && (
         <Icono1 id='lavabo'
           onClick={() => {
             setIconos(!iconos);
+            SetLavabo(true);
+            SetMaterialesLavabo(!MatLavabo);
+            SetAllureLav(false);
+            SetBerenLav(false);
+            SetBlancborgLav(false);
+            SetBlancinvLav(false);
+            SetBrazilLav(false);
+            SetCalacattaLav(false);
+            SetEmeLav(false);
+            SetKendocLav(false);
+            SetKendolLav(false);
+            SetMomaLav(false);
+            SetNegroLav(false);
+            SetNoonGLav(false);
+            SetNoonsLav(false);
+            SetPaladioLav(false);
+            SetSyracLav(false);
           }}
-          src={icono_b}
+          src={icono}
           alt='lavabo'
 
           style={{
@@ -2750,9 +2682,40 @@ const InterGrande = ({ base }) => {
       )}
       <Icono1 id='reiniciar'
         onClick={() => {
-          setIconos(!iconos);
+          SetLateral(false);
+          SetEncimera(false);
+          SetLavabo(false);
+          SetPavimento(false);
+          SetPlato(false);
+          SetRevestimiento(false);
+          SetModulos(false);
+          SetFrente(false);
+          SetFrontal(false);
+          SetTopLisa(false);
+          SetTopInt(false);
+          SetTopIntPlus(false);
+          SetLavaboON(true);
+          SetNatural(false);
+          SetAntracita(false);
+          SetNordik(false);
+          SetBlanco(false);
+          setTxtF(txtacabados.acNordik);
+          setTxtM(txtacabados.acNordik);
+          setTxtL(txtacabados.acNordik);
+          setTxtE(txtacabados.acNordik);
+          setTxtMu(txtacabados.acNordik);
+          setTxtC(txtacabados.acNordik);
+          setTxtP(txtacabados.acMoma);
+          setTxtR(txtacabados.acMoma);
+          setTxtPlato(txtacabados.acMoma);
+          setTxtFrontal(txtacabados.acSinFrente);
+          setTxtLavabo(txtacabados.acSinLavabo);
+
+
+          //------------
+
         }}
-        src={icono_b}
+        src={icono_retroceso}
         alt='reiniciar'
 
         style={{
@@ -2835,7 +2798,7 @@ const InterGrande = ({ base }) => {
             initial={{
               height: "0%",
             }}
-            whileInView={{
+            animate={{
               transition: {
                 duration: 0.2,
                 ease: "easeIn",
@@ -2875,6 +2838,9 @@ const InterGrande = ({ base }) => {
         {MatFrente && menuFrente}
         {MatRevestimiento && menuRevestimiento}
         {MatPlato && menuPlato}
+        {menuTop && seleccionEncimera}
+        {MatLavabo && menuLavabo}
+
 
         {iconos && iconosSeleccion}
         <ContenedorImagenBase
@@ -3022,19 +2988,18 @@ const InterGrande = ({ base }) => {
           })}
         {/* ------------------Frentes------------------ */}
         {frontalSelected &&
-          frenteArray.map((frentes) => {
-            if (frentes.isVisible) {
+          frenteArray.map((frontal) => {
+            if (frontal.isVisible) {
               return (
                 <ContenedorImagen>
-                  <Imagen src={FRONTALES[frentes.name]} alt='frontal pared' />
+                  <Imagen src={FRONTALES[frontal.name]} alt='frontal pared' />
                 </ContenedorImagen>
               );
             }
             return null;
           })}
         {/* ------------------tops------------------ */}
-        {encimeraSelected &&
-          !lateralSelected &&
+        {toplisa &&
           encimerasArray.map((top) => {
             if (top.isVisible) {
               return (
@@ -3045,38 +3010,86 @@ const InterGrande = ({ base }) => {
             }
             return null;
           })}
-        {/* ------------------FRONTALES------------------ */}
-        {frenteSelected &&
-          cajonesArray.map((frontal) => {
-            if (frontal.isVisible) {
+        {topInt &&
+          encimerasTopArray.map((top) => {
+            if (top.isVisible) {
               return (
                 <ContenedorImagen>
-                  <Imagen src={XLFRONTALCAJON[frontal.name]} alt='cajon' />
+                  <Imagen src={EncimeraTopInt[top.name]} alt='encimera' />
                 </ContenedorImagen>
               );
             }
             return null;
           })}
-        <WrapperTexto>
-          <TxtSubimagen>
-            acabado del mueble: <strong>{txtmueble}</strong> //&nbsp;
-            <br />
-            cajon: <strong>{txtfrente}</strong> //&nbsp; <br />
-            encimera: <strong>{txtencimera}</strong> //&nbsp; <br />
-            lateral: <strong>{txtlateral}</strong> //&nbsp;
-            <br />
-            frente módulo: <strong>{txtmodulo}</strong> //&nbsp;
-            <br />
-            frente: <strong>{txtfrontal}</strong> //&nbsp;
-            <br />
-            plato de ducha: <strong>{txtplato}</strong> //&nbsp;
-            <br />
-            pavimento: <strong>{txtpavimento}</strong> //&nbsp;
-            <br />
-            revestimiento: <strong>{txtrevestimiento}</strong> //&nbsp;
-          </TxtSubimagen>
-        </WrapperTexto>
+        {topIntPlus &&
+          encimerasTopPlusArray.map((top) => {
+            if (top.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={EncimeraTopIntPlus[top.name]} alt='encimera' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
+        {/* ------------------FRONTALES------------------ */}
+        {frenteSelected &&
+          cajonesArray.map((cajon) => {
+            if (cajon.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={XLFRONTALCAJON[cajon.name]} alt='cajon' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
+        {/* ------------------LAVABO------------------ */}
+        {lavaboSelected &&
+          lavabos.map((lavabo) => {
+            if (lavabo.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={XLLAVABO[lavabo.name]} alt='lavabo' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
+        {/* ------------------lateral------------------ */}
+        {lateralSelected &&
+          lateralesArray.map((lat) => {
+            if (lat.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={XLLATERAL[lat.name]} alt='laterales' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
       </ContenedorIntercambiador>
+      <WrapperTexto>
+        <TxtSubimagen>
+          acabado del mueble: <strong>{txtmueble}</strong> //&nbsp;
+          <br />
+          cajon: <strong>{txtcajon}</strong> //&nbsp; <br />
+          encimera: <strong>{txtencimera}</strong> //&nbsp; <br />
+          lateral: <strong>{txtlateral}</strong> //&nbsp;
+          <br />
+          lavabo: <strong>{txtlavabo}</strong> //&nbsp;
+          <br />
+          frente módulo: <strong>{txtmodulo}</strong> //&nbsp;
+          <br />
+          frente: <strong>{txtfrontal}</strong> //&nbsp;
+          <br />
+          plato de ducha: <strong>{txtplato}</strong> //&nbsp;
+          <br />
+          pavimento: <strong>{txtpavimento}</strong> //&nbsp;
+          <br />
+          revestimiento: <strong>{txtrevestimiento}</strong> //&nbsp;
+        </TxtSubimagen>
+      </WrapperTexto>
     </>
   );
 };

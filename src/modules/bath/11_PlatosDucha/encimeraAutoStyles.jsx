@@ -111,7 +111,57 @@ export const ImgWrap = styled.div`
   @media screen and (max-width: 480px) {
   }
 `;
-
+export const ImgWrap2 = styled.div`
+  max-width: 100%;
+  cursor: pointer;
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+  }
+`;
+export const WrapperTxtImg = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  @media screen and (max-width: 1400px) {
+    height: 40px;
+  }
+  @media screen and (max-width: 980px) {
+    height: 30px;
+  }
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 20px;
+  }
+`;
+export const TextoImagen = styled(motion.p)`
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  align-self: center;
+  grid-column: 2;
+  top: 50%;
+  @media screen and (max-width: 1400px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 10px;
+  }
+`;
+export const Img2 = styled.img`
+  width: 100%;
+  max-height: 100%;
+  position: absolute;
+`;
 export const GeneralContainer = styled(motion.div)`
   /* background: linear-gradient(
     to bottom,
