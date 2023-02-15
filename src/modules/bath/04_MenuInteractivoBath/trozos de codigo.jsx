@@ -1,3 +1,48 @@
+const handleClickMod = (acabado, setFunc, mat, setFunc2, visible2) => {
+  // setInicio2(true);
+  setIconos(true);
+  //setmaterialVisible(!materialVisible);
+  setFunc2(!visible2);
+  //setAcabadomaterialVisible(!acabadomaterialVisible);
+  setFunc(!mat);
+  if (modulosSelected && !mat) {
+    setTxtM(txtacabados[`ac${acabado}`]);
+  }
+};
+const handleClickEn = (acabado, setFunc, mat, setFunc2, visible2) => {
+  setIconos(true);
+  //setmaterialVisible(!materialVisible);
+  setFunc2(!visible2);
+  //setAcabadomaterialVisible(!acabadomaterialVisible);
+  setFunc(!mat);
+
+  if (encimeraSelected && !mat) {
+    setTxtE(txtacabados[`ac${acabado}`]);
+  }
+  if (lateralSelected && !mat) {
+    setTxtL(txtacabados[`ac${acabado}`]);
+  }
+};
+const handleClickPav = (acabado, setFunc, mat, setFunc2, visible2) => {
+  // setInicio2(true);
+  setIconos(true);
+  console.log("que hay aqui ?", acabado);
+  console.log("Estado de mod seleccionado?", pavimentoSelected);
+  console.log("Que hay aqui?", mat);
+  setFunc2(!visible2);
+  setFunc(!mat);
+  if (pavimentoSelected && !mat) {
+    setTxtP(txtpavimento[`ac${acabado}`]);
+  }
+};
+const handleClickRev = (acabado, setFunc, mat, setFunc2, visible2) => {
+  setIconos(true);
+  setFunc2(!visible2);
+  setFunc(!mat);
+  if (revestimientoSelected && !mat) {
+    setTxtR(txtrevestimiento[`ac${acabado}`]);
+  }
+};
 {
   /* <IconContainer>
           <LinkSecciones to={config[0].id} smooth={true}>

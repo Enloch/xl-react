@@ -267,18 +267,20 @@ export const TextoMaterial = styled.p`
   }
 `;
 export const WrapperTexto = styled.div`
-  background-color: #d3cec9;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position:absolute;
+  bottom:2%;
+  left:1%;
 `;
 
 export const TxtSubimagen = styled.p`
   font-size: 16px;
   /* max-width: auto; */
-  color: #000000;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   /* cursor: pointer; */
 
   /* :hover {

@@ -220,69 +220,60 @@ const InterGrande = ({ base }) => {
   const [Antracita, SetAntracita] = useState(false);
   const [Blanco, SetBlanco] = useState(false);
   const [Nordik, SetNordik] = useState(false);
+  // tipoi de encimera
+  const [toplisa, SetTopLisa] = useState(false);
+  const [topInt, SetTopInt] = useState(false);
+  const [topIntPlus, SetTopIntPlus] = useState(false);
   //acabados
   const [txtfrente, setTxtF] = useState(txtacabados.acNatural);
   const [txtmodulo, setTxtM] = useState(txtacabados.acNatural);
   const [txtlateral, setTxtL] = useState(txtacabados.acNatural);
   const [txtencimera, setTxtE] = useState(txtacabados.acNatural);
   const [txtmueble, setTxtMu] = useState(txtacabados.acNatural);
-  const [txtpavimento, setTxtP] = useState(txtacabados.acBeren);
+  const [txtpavimento, setTxtP] = useState(txtacabados.acMoma);
+  const [txtrevestimiento, setTxtR] = useState(txtacabados.acMoma);
+  const [txtplato, setTxtPlato] = useState(txtacabados.acMoma);
+  const [txtfrontal, setTxtFrontal] = useState(txtacabados.acSinFrente);
 
-  const handleClickMod = (acabado, setFunc, mat, setFunc2, visible2) => {
-    // setInicio2(true);
+  const handleClick = (acabado, setFunc, mat, setFunc2, visible2) => {
+    console.log(acabado);
+
+    console.log(
+      modulosSelected,
+      encimeraSelected,
+      pavimentoSelected,
+      revestimientoSelected
+    );
     setIconos(true);
-
-    //setmaterialVisible(!materialVisible);
     setFunc2(!visible2);
-    //setAcabadomaterialVisible(!acabadomaterialVisible);
     setFunc(!mat);
-    if (modulosSelected && !mat) {
-      setTxtM(txtacabados[`ac${acabado}`]);
+    if (visible2 === MatCajon && !mat) {
+      setTxtF(txtacabados[`ac${acabado}`]);
     }
-  };
-  const handleClickEn = (acabado, setFunc, mat, setFunc2, visible2) => {
-    setIconos(true);
-    console.log("que hay aqui ?", acabado);
-    console.log("Estado de mod seleccionado?", encimeraSelected);
-    //setmaterialVisible(!materialVisible);
-    setFunc2(!visible2);
-    //setAcabadomaterialVisible(!acabadomaterialVisible);
-    setFunc(!mat);
-
-    if (encimeraSelected && !mat) {
-      setTxtE(txtacabados[`ac${acabado}`]);
-    }
-    if (lateralSelected && !mat) {
+    if (visible2 === MatEncimera && lateralSelected && !mat) {
       setTxtL(txtacabados[`ac${acabado}`]);
     }
+    if (visible2 === MatEncimera && !mat) {
+      setTxtE(txtacabados[`ac${acabado}`]);
+    }
+    if (visible2 === MatModulo && !mat) {
+      setTxtM(txtacabados[`ac${acabado}`]);
+    }
+    if (visible2 === MatPavimento && !mat) {
+      setTxtP(txtacabados[`ac${acabado}`]);
+    }
+    if (visible2 === MatRevestimiento && !mat) {
+      setTxtR(txtacabados[`ac${acabado}`]);
+    }
+    if (visible2 === MatFrente && !mat) {
+      setTxtFrontal(txtacabados[`ac${acabado}`]);
+    }
+    if (visible2 === MatPlato && !mat) {
+      setTxtPlato(txtacabados[`ac${acabado}`]);
+    }
   };
 
-  // const handleClick = (acabado, setFunc, visible, setFunc2, visible2) => {
-  //   setIconos(true);
-  //   //setmaterialVisible(!materialVisible);
-  //   setFunc2(!visible2);
-  //   //setAcabadomaterialVisible(!acabadomaterialVisible);
-  //   setFunc(!visible);
-  //   if (frenteSelected && !visible) {
-  //     setTxtF(txtacabados[`ac${acabado}`]);
-  //     setFunc2(!visible2);
-  //   }
-  //   if (lateralSelected && !visible) {
-  //     setTxtL(txtacabados[`ac${acabado}`]);
-  //     setFunc2(!visible2);
-  //   }
-  //   if (encimeraSelected && !visible) {
-  //     setTxtE(txtacabados[`ac${acabado}`]);
-  //     setFunc2(!visible2);
-  //   }
-  //   if (modulosSelected && !visible) {
-  //     setTxtM(txtacabados[`ac${acabado}`]);
-  //     setFunc2(!visible2);
-  //   }
-  // };
-
   const clickAcabado = (finish) => {
-    // setIsVisible(!isVisible);
     setIconos(true);
     setMuebleVisible(!muebleVisible);
     SetNatural(finish === "Natural");
@@ -290,17 +281,6 @@ const InterGrande = ({ base }) => {
     SetBlanco(finish === "Blanco");
     SetNordik(finish === "Nordik");
 
-    //si el estado del yexto es diferente de natural, nordik, antracita o blanco, se deja el estado del texto como estaba
-    // if (
-    //   txtfrente !== txtacabados.acNatural ||
-    //   txtfrente !== txtacabados.acNordik ||
-    //   txtfrente !== txtacabados.acAntracita ||
-    //   txtfrente !== txtacabados.acBlanco
-    // ) {
-    //   setTxtF(txtfrente);
-    // } else {
-    //   setTxtF(txtacabados[`ac${finish}`]);
-    // }
     if (
       txtmodulo === txtacabados.acNatural ||
       txtmodulo === txtacabados.acNordik ||
@@ -321,14 +301,27 @@ const InterGrande = ({ base }) => {
     } else {
       setTxtE(txtencimera);
     }
-    console.log("Texto de frente: ", txtfrente);
-    console.log("Texto de modulo:", txtmodulo);
-    console.log("Texto de lateral: ", txtlateral);
-    console.log("Texto de encimera: ", txtencimera);
-    console.log("Texto de mueble: ", txtmueble);
+    if (
+      txtlateral === txtacabados.acNatural ||
+      txtlateral === txtacabados.acNordik ||
+      txtlateral === txtacabados.acAntracita ||
+      txtlateral === txtacabados.acBlanco
+    ) {
+      setTxtL(txtacabados[`ac${finish}`]);
+    } else {
+      setTxtL(txtlateral);
+    }
+    if (
+      txtfrente === txtacabados.acNatural ||
+      txtfrente === txtacabados.acNordik ||
+      txtfrente === txtacabados.acAntracita ||
+      txtfrente === txtacabados.acBlanco
+    ) {
+      setTxtF(txtacabados[`ac${finish}`]);
+    } else {
+      setTxtF(txtfrente);
+    }
     setTxtMu(txtacabados[`ac${finish}`]);
-    setTxtL(txtacabados[`ac${finish}`]);
-    setTxtF(txtacabados[`ac${finish}`]);
   };
 
   const encimerasArray = [
@@ -384,106 +377,106 @@ const InterGrande = ({ base }) => {
     { name: "syracXLL", isVisible: syracVisible },
   ];
   const cajonesArray = [
-    { name: "allureXLF", isVisible: allureVisible },
-    { name: "berenXLF", isVisible: berenVisible },
-    { name: "blancborgXLF", isVisible: blancborgVisible },
-    { name: "blancinvXLF", isVisible: blancinvVisible },
-    { name: "brazilXLF", isVisible: brazilVisible },
-    { name: "calacattaXLF", isVisible: calacattaVisible },
-    { name: "emeXLF", isVisible: emeVisible },
-    { name: "kendoCXLF", isVisible: kendocVisible },
-    { name: "kendoLXLF", isVisible: kendolVisible },
-    { name: "momaXLF", isVisible: momaVisible },
-    { name: "negroXLF", isVisible: negroVisible },
-    { name: "noonGXLF", isVisible: noonGVisible },
-    { name: "noonSXLF", isVisible: noonsVisible },
-    { name: "paladioXLF", isVisible: paladioVisible },
-    { name: "syracXLF", isVisible: syracVisible },
+    { name: "allureXLF", isVisible: allureCajon },
+    { name: "berenXLF", isVisible: berenCajon },
+    { name: "blancborgXLF", isVisible: blancborgCajon },
+    { name: "blancinvXLF", isVisible: blancinvCajon },
+    { name: "brazilXLF", isVisible: brazilCajon },
+    { name: "calacattaXLF", isVisible: calacattaCajon },
+    { name: "emeXLF", isVisible: emeCajon },
+    { name: "kendoCXLF", isVisible: kendocCajon },
+    { name: "kendoLXLF", isVisible: kendolCajon },
+    { name: "momaXLF", isVisible: momaCajon },
+    { name: "negroXLF", isVisible: negroCajon },
+    { name: "noonGXLF", isVisible: noonGCajon },
+    { name: "noonSXLF", isVisible: noonsCajon },
+    { name: "paladioXLF", isVisible: paladioCajon },
+    { name: "syracXLF", isVisible: syracCajon },
   ];
   const frenteArray = [
-    { name: "alluref", isVisible: allureVisible },
-    { name: "berenf", isVisible: berenVisible },
-    { name: "blancborgf", isVisible: blancborgVisible },
-    { name: "blancinvf", isVisible: blancinvVisible },
-    { name: "brazilf", isVisible: brazilVisible },
-    { name: "calacattaf", isVisible: calacattaVisible },
-    { name: "emef", isVisible: emeVisible },
-    { name: "kendoCf", isVisible: kendocVisible },
-    { name: "kendoLf", isVisible: kendolVisible },
-    { name: "momaf", isVisible: momaVisible },
-    { name: "negrof", isVisible: negroVisible },
-    { name: "noonGf", isVisible: noonGVisible },
-    { name: "noonSf", isVisible: noonsVisible },
-    { name: "paladiof", isVisible: paladioVisible },
-    { name: "syracf", isVisible: syracVisible },
+    { name: "alluref", isVisible: allureFrente },
+    { name: "berenf", isVisible: berenFrente },
+    { name: "blancborgf", isVisible: blancborgFrente },
+    { name: "blancinvf", isVisible: blancinvFrente },
+    { name: "brazilf", isVisible: brazilFrente },
+    { name: "calacattaf", isVisible: calacattaFrente },
+    { name: "emef", isVisible: emeFrente },
+    { name: "kendoCf", isVisible: kendocFrente },
+    { name: "kendoLf", isVisible: kendolFrente },
+    { name: "momaf", isVisible: momaFrente },
+    { name: "negrof", isVisible: negroFrente },
+    { name: "noonGf", isVisible: noonGFrente },
+    { name: "noonSf", isVisible: noonsFrente },
+    { name: "paladiof", isVisible: paladioFrente },
+    { name: "syracf", isVisible: syracFrente },
   ];
   const pavimentos = [
-    { name: "allurePAV", isVisible: allureVisible },
-    { name: "berenPAV", isVisible: berenVisible },
-    { name: "blancborgPAV", isVisible: blancborgVisible },
-    { name: "blancinvPAV", isVisible: blancinvVisible },
-    { name: "brazilPAV", isVisible: brazilVisible },
-    { name: "calacattaPAV", isVisible: calacattaVisible },
-    { name: "emePAV", isVisible: emeVisible },
-    { name: "kendoCPAV", isVisible: kendocVisible },
-    { name: "kendoLPAV", isVisible: kendolVisible },
-    { name: "momaPAV", isVisible: momaVisible },
-    { name: "negroPAV", isVisible: negroVisible },
-    { name: "noonGPAV", isVisible: noonGVisible },
-    { name: "noonSPAV", isVisible: noonsVisible },
-    { name: "paladioPAV", isVisible: paladioVisible },
-    { name: "syracPAV", isVisible: syracVisible },
+    { name: "allurePAV", isVisible: allurePavimento },
+    { name: "berenPAV", isVisible: berenPavimento },
+    { name: "blancborgPAV", isVisible: blancborgPavimento },
+    { name: "blancinvPAV", isVisible: blancinvPavimento },
+    { name: "brazilPAV", isVisible: brazilPavimento },
+    { name: "calacattaPAV", isVisible: calacattaPavimento },
+    { name: "emePAV", isVisible: emePavimento },
+    { name: "kendoCPAV", isVisible: kendocPavimento },
+    { name: "kendoLPAV", isVisible: kendolPavimento },
+    { name: "momaPAV", isVisible: momaPavimento },
+    { name: "negroPAV", isVisible: negroPavimento },
+    { name: "noonGPAV", isVisible: noonGPavimento },
+    { name: "noonSPAV", isVisible: noonsPavimento },
+    { name: "paladioPAV", isVisible: paladioPavimento },
+    { name: "syracPAV", isVisible: syracPavimento },
   ];
   const revestimientos = [
-    { name: "allureREV", isVisible: allureVisible },
-    { name: "berenREV", isVisible: berenVisible },
-    { name: "blancborgREV", isVisible: blancborgVisible },
-    { name: "blancinvREV", isVisible: blancinvVisible },
-    { name: "brazilREV", isVisible: brazilVisible },
-    { name: "calacattaREV", isVisible: calacattaVisible },
-    { name: "emeREV", isVisible: emeVisible },
-    { name: "kendoCREV", isVisible: kendocVisible },
-    { name: "kendoLREV", isVisible: kendolVisible },
-    { name: "momaREV", isVisible: momaVisible },
-    { name: "negroREV", isVisible: negroVisible },
-    { name: "noonGREV", isVisible: noonGVisible },
-    { name: "noonSREV", isVisible: noonsVisible },
-    { name: "paladioREV", isVisible: paladioVisible },
-    { name: "syracREV", isVisible: syracVisible },
+    { name: "allureREV", isVisible: allureRevestimiento },
+    { name: "berenREV", isVisible: berenRevestimiento },
+    { name: "blancborgREV", isVisible: blancborgRevestimiento },
+    { name: "blancinvREV", isVisible: blancinvRevestimiento },
+    { name: "brazilREV", isVisible: brazilRevestimiento },
+    { name: "calacattaREV", isVisible: calacattaRevestimiento },
+    { name: "emeREV", isVisible: emeRevestimiento },
+    { name: "kendoCREV", isVisible: kendocRevestimiento },
+    { name: "kendoLREV", isVisible: kendolRevestimiento },
+    { name: "momaREV", isVisible: momaRevestimiento },
+    { name: "negroREV", isVisible: negroRevestimiento },
+    { name: "noonGREV", isVisible: noonGRevestimiento },
+    { name: "noonSREV", isVisible: noonsRevestimiento },
+    { name: "paladioREV", isVisible: paladioRevestimiento },
+    { name: "syracREV", isVisible: syracRevestimiento },
   ];
   const platos = [
-    { name: "allurePLAT", isVisible: allureVisible },
-    { name: "berenPLAT", isVisible: berenVisible },
-    { name: "blancborgPLAT", isVisible: blancborgVisible },
-    { name: "blancinvPLAT", isVisible: blancinvVisible },
-    { name: "brazilPLAT", isVisible: brazilVisible },
-    { name: "calacattaPLAT", isVisible: calacattaVisible },
-    { name: "emePLAT", isVisible: emeVisible },
-    { name: "kendoCPLAT", isVisible: kendocVisible },
-    { name: "kendoLPLAT", isVisible: kendolVisible },
-    { name: "momaPLAT", isVisible: momaVisible },
-    { name: "negroPLAT", isVisible: negroVisible },
-    { name: "noonGPLAT", isVisible: noonGVisible },
-    { name: "noonSPLAT", isVisible: noonsVisible },
-    { name: "paladioPLAT", isVisible: paladioVisible },
-    { name: "syracPLAT", isVisible: syracVisible },
+    { name: "allurePLAT", isVisible: allurePlato },
+    { name: "berenPLAT", isVisible: berenPlato },
+    { name: "blancborgPLAT", isVisible: blancborgPlato },
+    { name: "blancinvPLAT", isVisible: blancinvPlato },
+    { name: "brazilPLAT", isVisible: brazilPlato },
+    { name: "calacattaPLAT", isVisible: calacattaPlato },
+    { name: "emePLAT", isVisible: emePlato },
+    { name: "kendoCPLAT", isVisible: kendocPlato },
+    { name: "kendoLPLAT", isVisible: kendolPlato },
+    { name: "momaPLAT", isVisible: momaPlato },
+    { name: "negroPLAT", isVisible: negroPlato },
+    { name: "noonGPLAT", isVisible: noonGPlato },
+    { name: "noonSPLAT", isVisible: noonsPlato },
+    { name: "paladioPLAT", isVisible: paladioPlato },
+    { name: "syracPLAT", isVisible: syracPlato },
   ];
   const lavabos = [
-    { name: "allureXLLAV", isVisible: allureVisible },
-    { name: "berenXLLAV", isVisible: berenVisible },
-    { name: "blancborgXLLAV", isVisible: blancborgVisible },
-    { name: "blancinvXLLAV", isVisible: blancinvVisible },
-    { name: "brazilXLLAV", isVisible: brazilVisible },
-    { name: "calacattaXLLAV", isVisible: calacattaVisible },
-    { name: "emeXLLAV", isVisible: emeVisible },
-    { name: "kendoCXLLAV", isVisible: kendocVisible },
-    { name: "kendoLXLLAV", isVisible: kendolVisible },
-    { name: "momaXLLAV", isVisible: momaVisible },
-    { name: "negroXLLAV", isVisible: negroVisible },
-    { name: "noonGXLLAV", isVisible: noonGVisible },
-    { name: "noonSXLLAV", isVisible: noonsVisible },
-    { name: "paladioXLLAV", isVisible: paladioVisible },
-    { name: "syracXLLAV", isVisible: syracVisible },
+    { name: "allureXLLAV", isVisible: allureLavabo },
+    { name: "berenXLLAV", isVisible: berenLavabo },
+    { name: "blancborgXLLAV", isVisible: blancborgLavabo },
+    { name: "blancinvXLLAV", isVisible: blancinvLavabo },
+    { name: "brazilXLLAV", isVisible: brazilLavabo },
+    { name: "calacattaXLLAV", isVisible: calacattaLavabo },
+    { name: "emeXLLAV", isVisible: emeLavabo },
+    { name: "kendoCXLLAV", isVisible: kendocLavabo },
+    { name: "kendoLXLLAV", isVisible: kendolLavabo },
+    { name: "momaXLLAV", isVisible: momaLavabo },
+    { name: "negroXLLAV", isVisible: negroLavabo },
+    { name: "noonGXLLAV", isVisible: noonGLavabo },
+    { name: "noonSXLLAV", isVisible: noonsLavabo },
+    { name: "paladioXLLAV", isVisible: paladioLavabo },
+    { name: "syracXLLAV", isVisible: syracLavabo },
   ];
   // const menuMats = (
   //   <MenuMateriales
@@ -631,7 +624,7 @@ const InterGrande = ({ base }) => {
       initial={{
         height: "0%",
       }}
-      whileInView={{
+      animate={{
         transition: {
           duration: 0.2,
           ease: "easeIn",
@@ -643,7 +636,7 @@ const InterGrande = ({ base }) => {
         <CajaMaterial>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Allure",
                 SetAllureM,
                 allureModulo,
@@ -657,7 +650,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Beren",
                 SetBerenM,
                 berenModulo,
@@ -671,7 +664,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Blancborg",
                 SetBlancborgM,
                 blancborgModulo,
@@ -685,7 +678,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Blancinv",
                 SetBlancinvM,
                 blancinvModulo,
@@ -699,7 +692,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Brazil",
                 SetBrazilM,
                 brazilModulo,
@@ -713,7 +706,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Calacatta",
                 SetCalacattaM,
                 calacattaModulo,
@@ -727,7 +720,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Eme",
                 SetEmeM,
                 emeModulo,
@@ -741,7 +734,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "KendoC",
                 SetKendocM,
                 kendocModulo,
@@ -755,7 +748,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "KendoL",
                 SetKendolM,
                 kendolModulo,
@@ -769,7 +762,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Moma",
                 SetMomaM,
                 momaModulo,
@@ -783,7 +776,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Negro",
                 SetNegroM,
                 negroModulo,
@@ -797,7 +790,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "NoonG",
                 SetNoonGM,
                 noonGModulo,
@@ -811,7 +804,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "NoonS",
                 SetNoonsM,
                 noonsModulo,
@@ -825,7 +818,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Paladio",
                 SetPaladioM,
                 paladioModulo,
@@ -839,7 +832,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickMod(
+              handleClick(
                 "Syrac",
                 SetSyracM,
                 syracModulo,
@@ -855,14 +848,13 @@ const InterGrande = ({ base }) => {
       </ContenedorMateriales>
     </MenuMateriales>
   );
-
   const menuEncimera = (
     <MenuMateriales
       id='menu inferior'
       initial={{
         height: "0%",
       }}
-      whileInView={{
+      animate={{
         transition: {
           duration: 0.2,
           ease: "easeIn",
@@ -874,7 +866,7 @@ const InterGrande = ({ base }) => {
         <CajaMaterial>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Allure",
                 SetAllureEn,
                 allureEncimera,
@@ -888,7 +880,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Beren",
                 SetBerenEn,
                 berenEncimera,
@@ -902,7 +894,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Blancborg",
                 SetBlancborgEn,
                 blancborgEncimera,
@@ -916,7 +908,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Blancinv",
                 SetBlancinvEn,
                 blancinvEncimera,
@@ -930,7 +922,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Brazil",
                 SetBrazilEn,
                 brazilEncimera,
@@ -944,7 +936,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Calacatta",
                 SetCalacattaEn,
                 calacattaEncimera,
@@ -958,7 +950,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Eme",
                 SetEmeEn,
                 emeEncimera,
@@ -972,7 +964,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "KendoC",
                 SetKendocEn,
                 kendocEncimera,
@@ -986,7 +978,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "KendoL",
                 SetKendolEn,
                 kendolEncimera,
@@ -1000,7 +992,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Moma",
                 SetMomaEn,
                 momaEncimera,
@@ -1014,7 +1006,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Negro",
                 SetNegroEn,
                 negroEncimera,
@@ -1028,7 +1020,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "NoonG",
                 SetNoonGEn,
                 noonGEncimera,
@@ -1042,7 +1034,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "NoonS",
                 SetNoonsEn,
                 noonsEncimera,
@@ -1056,7 +1048,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Paladio",
                 SetPaladioEn,
                 paladioEncimera,
@@ -1070,7 +1062,7 @@ const InterGrande = ({ base }) => {
           </ContIconText>
           <ContIconText
             onClick={() => {
-              handleClickEn(
+              handleClick(
                 "Syrac",
                 SetSyracEn,
                 syracEncimera,
@@ -1086,847 +1078,1420 @@ const InterGrande = ({ base }) => {
       </ContenedorMateriales>
     </MenuMateriales>
   );
-
-  // const menuCajon = (
-  //   <MenuMateriales
-  //     id='menu inferior'
-  //     initial={{
-  //       height: "0%",
-  //     }}
-  //     whileInView={{
-  //       transition: {
-  //         duration: 0.2,
-  //         ease: "easeIn",
-  //       },
-  //       height: "auto",
-  //     }}
-  //   >
-  //     <ContenedorMateriales>
-  //       <CajaMaterial>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Allure", SetAllure, allureVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-  //           <TextoMaterial>Allure</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Beren", SetBeren, berenVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
-  //           <TextoMaterial>Beren</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancborg", SetBlancborg, blancborgVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Borghini</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancinv", SetBlancinv, blancinvVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Invisible</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Brazil", SetBrazil, brazilVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
-  //           <TextoMaterial>Brazil Super White</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Calacatta", SetCalacatta, calacattaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
-  //           <TextoMaterial>Calacatta</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Eme", SetEme, emeVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
-  //           <TextoMaterial>Eme Light Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoC", SetKendoc, kendocVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Classic</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoL", SetKendol, kendolVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Light</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Moma", SetMoma, momaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
-  //           <TextoMaterial>Moma Gris</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Negro", SetNegro, negroVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
-  //           <TextoMaterial>Negro Marquina</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonG", SetNoonG, noonGVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonS", SetNoons, noonsVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Sand</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Paladio", SetPaladio, paladioVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
-  //           <TextoMaterial>Paladio</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Syrac", SetSyrac, syracVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
-  //           <TextoMaterial>Syrac</TextoMaterial>
-  //         </ContIconText>
-  //       </CajaMaterial>
-  //     </ContenedorMateriales>
-  //   </MenuMateriales>
-  // );
-  // const menuFrente = (
-  //   <MenuMateriales
-  //     id='menu inferior'
-  //     initial={{
-  //       height: "0%",
-  //     }}
-  //     whileInView={{
-  //       transition: {
-  //         duration: 0.2,
-  //         ease: "easeIn",
-  //       },
-  //       height: "auto",
-  //     }}
-  //   >
-  //     <ContenedorMateriales>
-  //       <CajaMaterial>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Allure", SetAllure, allureVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-  //           <TextoMaterial>Allure</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Beren", SetBeren, berenVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
-  //           <TextoMaterial>Beren</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancborg", SetBlancborg, blancborgVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Borghini</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancinv", SetBlancinv, blancinvVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Invisible</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Brazil", SetBrazil, brazilVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
-  //           <TextoMaterial>Brazil Super White</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Calacatta", SetCalacatta, calacattaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
-  //           <TextoMaterial>Calacatta</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Eme", SetEme, emeVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
-  //           <TextoMaterial>Eme Light Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoC", SetKendoc, kendocVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Classic</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoL", SetKendol, kendolVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Light</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Moma", SetMoma, momaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
-  //           <TextoMaterial>Moma Gris</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Negro", SetNegro, negroVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
-  //           <TextoMaterial>Negro Marquina</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonG", SetNoonG, noonGVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonS", SetNoons, noonsVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Sand</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Paladio", SetPaladio, paladioVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
-  //           <TextoMaterial>Paladio</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Syrac", SetSyrac, syracVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
-  //           <TextoMaterial>Syrac</TextoMaterial>
-  //         </ContIconText>
-  //       </CajaMaterial>
-  //     </ContenedorMateriales>
-  //   </MenuMateriales>
-  // );
-  // const menuPavimento = (
-  //   <MenuMateriales
-  //     id='menu inferior'
-  //     initial={{
-  //       height: "0%",
-  //     }}
-  //     whileInView={{
-  //       transition: {
-  //         duration: 0.2,
-  //         ease: "easeIn",
-  //       },
-  //       height: "auto",
-  //     }}
-  //   >
-  //     <ContenedorMateriales>
-  //       <CajaMaterial>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Allure", SetAllure, allureVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-  //           <TextoMaterial>Allure</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Beren", SetBeren, berenVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
-  //           <TextoMaterial>Beren</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancborg", SetBlancborg, blancborgVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Borghini</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancinv", SetBlancinv, blancinvVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Invisible</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Brazil", SetBrazil, brazilVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
-  //           <TextoMaterial>Brazil Super White</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Calacatta", SetCalacatta, calacattaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
-  //           <TextoMaterial>Calacatta</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Eme", SetEme, emeVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
-  //           <TextoMaterial>Eme Light Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoC", SetKendoc, kendocVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Classic</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoL", SetKendol, kendolVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Light</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Moma", SetMoma, momaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
-  //           <TextoMaterial>Moma Gris</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Negro", SetNegro, negroVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
-  //           <TextoMaterial>Negro Marquina</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonG", SetNoonG, noonGVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonS", SetNoons, noonsVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Sand</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Paladio", SetPaladio, paladioVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
-  //           <TextoMaterial>Paladio</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Syrac", SetSyrac, syracVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
-  //           <TextoMaterial>Syrac</TextoMaterial>
-  //         </ContIconText>
-  //       </CajaMaterial>
-  //     </ContenedorMateriales>
-  //   </MenuMateriales>
-  // );
-  // const menuRevestimiento = (
-  //   <MenuMateriales
-  //     id='menu inferior'
-  //     initial={{
-  //       height: "0%",
-  //     }}
-  //     whileInView={{
-  //       transition: {
-  //         duration: 0.2,
-  //         ease: "easeIn",
-  //       },
-  //       height: "auto",
-  //     }}
-  //   >
-  //     <ContenedorMateriales>
-  //       <CajaMaterial>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Allure", SetAllure, allureVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-  //           <TextoMaterial>Allure</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Beren", SetBeren, berenVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
-  //           <TextoMaterial>Beren</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancborg", SetBlancborg, blancborgVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Borghini</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancinv", SetBlancinv, blancinvVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Invisible</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Brazil", SetBrazil, brazilVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
-  //           <TextoMaterial>Brazil Super White</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Calacatta", SetCalacatta, calacattaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
-  //           <TextoMaterial>Calacatta</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Eme", SetEme, emeVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
-  //           <TextoMaterial>Eme Light Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoC", SetKendoc, kendocVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Classic</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoL", SetKendol, kendolVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Light</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Moma", SetMoma, momaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
-  //           <TextoMaterial>Moma Gris</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Negro", SetNegro, negroVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
-  //           <TextoMaterial>Negro Marquina</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonG", SetNoonG, noonGVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonS", SetNoons, noonsVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Sand</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Paladio", SetPaladio, paladioVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
-  //           <TextoMaterial>Paladio</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Syrac", SetSyrac, syracVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
-  //           <TextoMaterial>Syrac</TextoMaterial>
-  //         </ContIconText>
-  //       </CajaMaterial>
-  //     </ContenedorMateriales>
-  //   </MenuMateriales>
-  // );
-  // const menuPlato = (
-  //   <MenuMateriales
-  //     id='menu inferior'
-  //     initial={{
-  //       height: "0%",
-  //     }}
-  //     whileInView={{
-  //       transition: {
-  //         duration: 0.2,
-  //         ease: "easeIn",
-  //       },
-  //       height: "auto",
-  //     }}
-  //   >
-  //     <ContenedorMateriales>
-  //       <CajaMaterial>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Allure", SetAllure, allureVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-  //           <TextoMaterial>Allure</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Beren", SetBeren, berenVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
-  //           <TextoMaterial>Beren</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancborg", SetBlancborg, blancborgVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Borghini</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancinv", SetBlancinv, blancinvVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Invisible</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Brazil", SetBrazil, brazilVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
-  //           <TextoMaterial>Brazil Super White</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Calacatta", SetCalacatta, calacattaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
-  //           <TextoMaterial>Calacatta</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Eme", SetEme, emeVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
-  //           <TextoMaterial>Eme Light Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoC", SetKendoc, kendocVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Classic</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoL", SetKendol, kendolVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Light</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Moma", SetMoma, momaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
-  //           <TextoMaterial>Moma Gris</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Negro", SetNegro, negroVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
-  //           <TextoMaterial>Negro Marquina</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonG", SetNoonG, noonGVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonS", SetNoons, noonsVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Sand</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Paladio", SetPaladio, paladioVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
-  //           <TextoMaterial>Paladio</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Syrac", SetSyrac, syracVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
-  //           <TextoMaterial>Syrac</TextoMaterial>
-  //         </ContIconText>
-  //       </CajaMaterial>
-  //     </ContenedorMateriales>
-  //   </MenuMateriales>
-  // );
-  // const menuLavabo = (
-  //   <MenuMateriales
-  //     id='menu inferior'
-  //     initial={{
-  //       height: "0%",
-  //     }}
-  //     whileInView={{
-  //       transition: {
-  //         duration: 0.2,
-  //         ease: "easeIn",
-  //       },
-  //       height: "auto",
-  //     }}
-  //   >
-  //     <ContenedorMateriales>
-  //       <CajaMaterial>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Allure", SetAllure, allureVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
-  //           <TextoMaterial>Allure</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Beren", SetBeren, berenVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
-  //           <TextoMaterial>Beren</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancborg", SetBlancborg, blancborgVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Borghini</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Blancinv", SetBlancinv, blancinvVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
-  //           <TextoMaterial>Blanc Invisible</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Brazil", SetBrazil, brazilVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
-  //           <TextoMaterial>Brazil Super White</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Calacatta", SetCalacatta, calacattaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
-  //           <TextoMaterial>Calacatta</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Eme", SetEme, emeVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
-  //           <TextoMaterial>Eme Light Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoC", SetKendoc, kendocVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Classic</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("KendoL", SetKendol, kendolVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
-  //           <TextoMaterial>Kendo Light</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Moma", SetMoma, momaVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
-  //           <TextoMaterial>Moma Gris</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Negro", SetNegro, negroVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
-  //           <TextoMaterial>Negro Marquina</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonG", SetNoonG, noonGVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Grey</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("NoonS", SetNoons, noonsVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
-  //           <TextoMaterial>Noon Sand</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Paladio", SetPaladio, paladioVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
-  //           <TextoMaterial>Paladio</TextoMaterial>
-  //         </ContIconText>
-  //         <ContIconText
-  //           onClick={() => {
-  //             handleClick("Syrac", SetSyrac, syracVisible);
-  //           }}
-  //         >
-  //           <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
-  //           <TextoMaterial>Syrac</TextoMaterial>
-  //         </ContIconText>
-  //       </CajaMaterial>
-  //     </ContenedorMateriales>
-  //   </MenuMateriales>
-  // );
+  const menuPavimmento = (
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      animate={{
+        transition: {
+          duration: 0.2,
+          ease: "easeIn",
+        },
+        height: "auto",
+      }}
+    >
+      <ContenedorMateriales>
+        <CajaMaterial>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Allure",
+                SetAllurePav,
+                allurePavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
+            <TextoMaterial>Allure</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Beren",
+                SetBerenPav,
+                berenPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
+            <TextoMaterial>Beren</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancborg",
+                SetBlancborgPav,
+                blancborgPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
+            <TextoMaterial>Blanc Borghini</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancinv",
+                SetBlancinvPav,
+                blancinvPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
+            <TextoMaterial>Blanc Invisible</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Brazil",
+                SetBrazilPav,
+                brazilPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
+            <TextoMaterial>Brazil Super White</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Calacatta",
+                SetCalacattaPav,
+                calacattaPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
+            <TextoMaterial>Calacata</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Eme",
+                SetEmePav,
+                emePavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
+            <TextoMaterial>Eme Light Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoC",
+                SetKendocPav,
+                kendocPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
+            <TextoMaterial>Kendo Classic</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoL",
+                SetKendolPav,
+                kendolPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
+            <TextoMaterial>Kendo Light</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Moma",
+                SetMomaPav,
+                momaPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
+            <TextoMaterial>Moma Gris</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Negro",
+                SetNegroPav,
+                negroPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
+            <TextoMaterial>Negro Marquina</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonG",
+                SetNoonGPav,
+                noonGPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
+            <TextoMaterial>Noon Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonS",
+                SetNoonsPav,
+                noonsPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
+            <TextoMaterial>Noon Sand</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Paladio",
+                SetPaladioPav,
+                paladioPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
+            <TextoMaterial>Paladio</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Syrac",
+                SetSyracPav,
+                syracPavimento,
+                SetMaterialesPavimento,
+                MatPavimento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
+            <TextoMaterial>Syrac</TextoMaterial>
+          </ContIconText>
+        </CajaMaterial>
+      </ContenedorMateriales>
+    </MenuMateriales>
+  );
+  const menuRevestimiento = (
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      animate={{
+        transition: {
+          duration: 0.2,
+          ease: "easeIn",
+        },
+        height: "auto",
+      }}
+    >
+      <ContenedorMateriales>
+        <CajaMaterial>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Allure",
+                SetAllureRev,
+                allureRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
+            <TextoMaterial>Allure</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Beren",
+                SetBerenRev,
+                berenRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
+            <TextoMaterial>Beren</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancborg",
+                SetBlancborgRev,
+                blancborgRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
+            <TextoMaterial>Blanc Borghini</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancinv",
+                SetBlancinvRev,
+                blancinvRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
+            <TextoMaterial>Blanc Invisible</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Brazil",
+                SetBrazilRev,
+                brazilRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
+            <TextoMaterial>Brazil Super White</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Calacatta",
+                SetCalacattaRev,
+                calacattaRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
+            <TextoMaterial>Calacata</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Eme",
+                SetEmeRev,
+                emeRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
+            <TextoMaterial>Eme Light Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoC",
+                SetKendocRev,
+                kendocRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
+            <TextoMaterial>Kendo Classic</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoL",
+                SetKendolRev,
+                kendolRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
+            <TextoMaterial>Kendo Light</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Moma",
+                SetMomaRev,
+                momaRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
+            <TextoMaterial>Moma Gris</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Negro",
+                SetNegroRev,
+                negroRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
+            <TextoMaterial>Negro Marquina</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonG",
+                SetNoonGRev,
+                noonGRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
+            <TextoMaterial>Noon Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonS",
+                SetNoonsRev,
+                noonsRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
+            <TextoMaterial>Noon Sand</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Paladio",
+                SetPaladioRev,
+                paladioRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
+            <TextoMaterial>Paladio</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Syrac",
+                SetSyracRev,
+                syracRevestimiento,
+                SetMaterialesRevestimiento,
+                MatRevestimiento
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
+            <TextoMaterial>Syrac</TextoMaterial>
+          </ContIconText>
+        </CajaMaterial>
+      </ContenedorMateriales>
+    </MenuMateriales>
+  );
+  const menuCajon = (
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      animate={{
+        transition: {
+          duration: 0.2,
+          ease: "easeIn",
+        },
+        height: "auto",
+      }}
+    >
+      <ContenedorMateriales>
+        <CajaMaterial>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Allure",
+                SetAllureCaj,
+                allureCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
+            <TextoMaterial>Allure</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Beren",
+                SetBerenCaj,
+                berenCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
+            <TextoMaterial>Beren</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancborg",
+                SetBlancborgCaj,
+                blancborgCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
+            <TextoMaterial>Blanc Borghini</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancinv",
+                SetBlancinvCaj,
+                blancinvCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
+            <TextoMaterial>Blanc Invisible</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Brazil",
+                SetBrazilCaj,
+                brazilCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
+            <TextoMaterial>Brazil Super White</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Calacatta",
+                SetCalacattaCaj,
+                calacattaCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
+            <TextoMaterial>Calacatta</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Eme",
+                SetEmeCaj,
+                emeCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
+            <TextoMaterial>Eme Light Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoC",
+                SetKendocCaj,
+                kendocCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
+            <TextoMaterial>Kendo Classic</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoL",
+                SetKendolCaj,
+                kendolCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
+            <TextoMaterial>Kendo Light</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Moma",
+                SetMomaCaj,
+                momaCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
+            <TextoMaterial>Moma Gris</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Negro",
+                SetNegroCaj,
+                negroCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
+            <TextoMaterial>Negro Marquina</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonG",
+                SetNoonGCaj,
+                noonGCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
+            <TextoMaterial>Noon Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonS",
+                SetNoonsCaj,
+                noonsCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
+            <TextoMaterial>Noon Sand</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Paladio",
+                SetPaladioCaj,
+                paladioCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
+            <TextoMaterial>Paladio</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Syrac",
+                SetSyracCaj,
+                syracCajon,
+                SetMaterialesCajon,
+                MatCajon
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
+            <TextoMaterial>Syrac</TextoMaterial>
+          </ContIconText>
+        </CajaMaterial>
+      </ContenedorMateriales>
+    </MenuMateriales>
+  );
+  const menuFrente = (
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      animate={{
+        transition: {
+          duration: 0.2,
+          ease: "easeIn",
+        },
+        height: "auto",
+      }}
+    >
+      <ContenedorMateriales>
+        <CajaMaterial>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Allure",
+                SetAllureFre,
+                allureFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
+            <TextoMaterial>Allure</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Beren",
+                SetBerenFre,
+                berenFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
+            <TextoMaterial>Beren</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancborg",
+                SetBlancborgFre,
+                blancborgFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
+            <TextoMaterial>Blanc Borghini</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancinv",
+                SetBlancinvFre,
+                blancinvFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
+            <TextoMaterial>Blanc Invisible</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Brazil",
+                SetBrazilFre,
+                brazilFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
+            <TextoMaterial>Brazil Super White</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Calacatta",
+                SetCalacattaFre,
+                calacattaFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
+            <TextoMaterial>Calacatta</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Eme",
+                SetEmeFre,
+                emeFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
+            <TextoMaterial>Eme Light Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoC",
+                SetKendocFre,
+                kendocFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
+            <TextoMaterial>Kendo Classic</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoL",
+                SetKendolFre,
+                kendolFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
+            <TextoMaterial>Kendo Light</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Moma",
+                SetMomaFre,
+                momaFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
+            <TextoMaterial>Moma Gris</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Negro",
+                SetNegroFre,
+                negroFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
+            <TextoMaterial>Negro Marquina</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonG",
+                SetNoonGFre,
+                noonGFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
+            <TextoMaterial>Noon Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonS",
+                SetNoonsFre,
+                noonsFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
+            <TextoMaterial>Noon Sand</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Paladio",
+                SetPaladioFre,
+                paladioFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
+            <TextoMaterial>Paladio</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Syrac",
+                SetSyracFre,
+                syracFrente,
+                SetMaterialesFrente,
+                MatFrente
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
+            <TextoMaterial>Syrac</TextoMaterial>
+          </ContIconText>
+        </CajaMaterial>
+      </ContenedorMateriales>
+    </MenuMateriales>
+  );
+  const menuPlato = (
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      animate={{
+        transition: {
+          duration: 0.2,
+          ease: "easeIn",
+        },
+        height: "auto",
+      }}
+    >
+      <ContenedorMateriales>
+        <CajaMaterial>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Allure",
+                SetAllurePla,
+                allurePlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
+            <TextoMaterial>Allure</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Beren",
+                SetBerenPla,
+                berenPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
+            <TextoMaterial>Beren</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancborg",
+                SetBlancborgPla,
+                blancborgPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
+            <TextoMaterial>Blanc Borghini</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancinv",
+                SetBlancinvPla,
+                blancinvPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
+            <TextoMaterial>Blanc Invisible</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Brazil",
+                SetBrazilPla,
+                brazilPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
+            <TextoMaterial>Brazil Super White</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Calacatta",
+                SetCalacattaPla,
+                calacattaPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
+            <TextoMaterial>Calacatta</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Eme",
+                SetEmePla,
+                emePlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
+            <TextoMaterial>Eme Light Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoC",
+                SetKendocPla,
+                kendocPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
+            <TextoMaterial>Kendo Classic</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoL",
+                SetKendolPla,
+                kendolPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
+            <TextoMaterial>Kendo Light</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Moma",
+                SetMomaPla,
+                momaPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
+            <TextoMaterial>Moma Gris</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Negro",
+                SetNegroPla,
+                negroPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
+            <TextoMaterial>Negro Marquina</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonG",
+                SetNoonGPla,
+                noonGPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
+            <TextoMaterial>Noon Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonS",
+                SetNoonsPla,
+                noonsPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
+            <TextoMaterial>Noon Sand</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Paladio",
+                SetPaladioPla,
+                paladioPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
+            <TextoMaterial>Paladio</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Syrac",
+                SetSyracPla,
+                syracPlato,
+                SetMaterialesPlato,
+                MatPlato
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
+            <TextoMaterial>Syrac</TextoMaterial>
+          </ContIconText>
+        </CajaMaterial>
+      </ContenedorMateriales>
+    </MenuMateriales>
+  );
+  const menuLavabo = (
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      animation={{
+        transition: {
+          duration: 0.2,
+          ease: "easeIn",
+        },
+        height: "auto",
+      }}
+    >
+      <ContenedorMateriales>
+        <CajaMaterial>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Allure",
+                SetAllureLav,
+                allureLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
+            <TextoMaterial>Allure</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Beren",
+                SetBerenLav,
+                berenLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.berenIco}></IconoMaterial>
+            <TextoMaterial>Beren</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancborg",
+                SetBlancborgLav,
+                blancborgLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancborgIco}></IconoMaterial>
+            <TextoMaterial>Blanc Borghini</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Blancinv",
+                SetBlancinvLav,
+                blancinvLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.blancinvIco}></IconoMaterial>
+            <TextoMaterial>Blanc Invisible</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Brazil",
+                SetBrazilLav,
+                brazilLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.brazilIco}></IconoMaterial>
+            <TextoMaterial>Brazil Super White</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Calacatta",
+                SetCalacattaLav,
+                calacattaLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.calacattaIco}></IconoMaterial>
+            <TextoMaterial>Calacatta</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Eme",
+                SetEmeLav,
+                emeLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.emeIco}></IconoMaterial>
+            <TextoMaterial>Eme Light Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoC",
+                SetKendocLav,
+                kendocLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoCIco}></IconoMaterial>
+            <TextoMaterial>Kendo Classic</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "KendoL",
+                SetKendolLav,
+                kendolLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.kendoLIco}></IconoMaterial>
+            <TextoMaterial>Kendo Light</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Moma",
+                SetMomaLav,
+                momaLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.momaIco}></IconoMaterial>
+            <TextoMaterial>Moma Gris</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Negro",
+                SetNegroLav,
+                negroLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.negroIco}></IconoMaterial>
+            <TextoMaterial>Negro Marquina</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonG",
+                SetNoonGLav,
+                noonGLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonGIco}></IconoMaterial>
+            <TextoMaterial>Noon Grey</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "NoonS",
+                SetNoonsLav,
+                noonsLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.noonSIco}></IconoMaterial>
+            <TextoMaterial>Noon Sand</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Paladio",
+                SetPaladioLav,
+                paladioLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.paladioIco}></IconoMaterial>
+            <TextoMaterial>Paladio</TextoMaterial>
+          </ContIconText>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Syrac",
+                SetSyracLav,
+                syracLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.syracIco}></IconoMaterial>
+            <TextoMaterial>Syrac</TextoMaterial>
+          </ContIconText>
+        </CajaMaterial>
+      </ContenedorMateriales>
+    </MenuMateriales>
+  );
+  const seleccionEncimera = (
+    <MenuMateriales
+      id='menu inferior'
+      initial={{
+        height: "0%",
+      }}
+      animate={{
+        transition: {
+          duration: 0.2,
+          ease: "easeIn",
+        },
+        height: "auto",
+      }}
+    >
+      <ContenedorMateriales>
+        <CajaMaterial>
+          <ContIconText
+            onClick={() => {
+              handleClick(
+                "Allure",
+                SetAllureLav,
+                allureLavabo,
+                SetMaterialesLavabo,
+                MatLavabo
+              );
+            }}
+          >
+            <IconoMaterial src={ICONOS.allureIco}></IconoMaterial>
+            <TextoMaterial>Allure</TextoMaterial>
+          </ContIconText>
+        </CajaMaterial>
+      </ContenedorMateriales>
+    </MenuMateriales>
+  );
   const iconosSeleccion = (
     <ContenedorIconos>
       <Tooltip anchorId={"modulo"} content={"frontal módulo"} />
@@ -1940,11 +2505,12 @@ const InterGrande = ({ base }) => {
       <Tooltip anchorId={"plato de ducha"} content={"plato de ducha"} />
       <Tooltip anchorId={"pavimento"} content={"pavimento"} />
       <Tooltip anchorId={"lavabo"} content={"lavabo"} />
-      <Icono1
+      {/*--------------botones--------------*/}
+      <Icono1 id='modulo'
         onClick={() => {
           setIconos(!iconos);
-          SetMaterialesModulo(!MatModulo);
           SetModulos(true); //IMPORTANTE
+          SetMaterialesModulo(!MatModulo);
           SetAllureM(false);
           SetBerenM(false);
           SetBlancborgM(false);
@@ -1963,17 +2529,17 @@ const InterGrande = ({ base }) => {
         }}
         src={icono_b}
         alt='modulo'
-        id='modulo'
+
         style={{
           top: "38%",
           left: "11%",
         }}
       />
-      <Icono1
+      <Icono1 id='encimera'
         onClick={() => {
           setIconos(!iconos);
-          SetMaterialesEncimera(!MatEncimera);
           SetEncimera(true); //IMPORTANTE
+          SetMaterialesEncimera(!MatEncimera);
           SetLateral(false);
           SetAllureEn(false);
           SetBerenEn(false);
@@ -1993,123 +2559,202 @@ const InterGrande = ({ base }) => {
         }}
         src={icono}
         alt='encimera'
-        id='encimera'
+
         style={{
           top: "58%",
           left: "27%",
         }}
       />
       {encimeraSelected && (
-        <Icono1
+        <Icono1 id='lateralm'
           onClick={() => {
             setIconos(!iconos);
             SetLateral(!lateralSelected);
           }}
           src={icono}
           alt='lateralm'
-          id='lateralm'
           style={{
             top: "70%",
             left: "23%",
           }}
         />
       )}
-      <Icono1
+      <Icono1 id='frentemueble'
         onClick={() => {
-          setIconos(false);
+          setIconos(!iconos);
           SetFrente(true);
-          SetMateriales(!materialesVisible);
+          SetMaterialesCajon(!MatCajon);
+          SetAllureCaj(false);
+          SetBerenCaj(false);
+          SetBlancborgCaj(false);
+          SetBlancinvCaj(false);
+          SetBrazilCaj(false);
+          SetCalacattaCaj(false);
+          SetEmeCaj(false);
+          SetKendocCaj(false);
+          SetKendolCaj(false);
+          SetMomaCaj(false);
+          SetNegroCaj(false);
+          SetNoonGCaj(false);
+          SetNoonsCaj(false);
+          SetPaladioCaj(false);
+          SetSyracCaj(false);
         }}
         src={icono_b}
         alt='frentemueble'
-        id='frentemueble'
         style={{
           top: "70%",
           left: "40%",
         }}
       />
-      <Icono1
+      <Icono1 id='frente'
         onClick={() => {
           setIconos(!iconos);
-          SetModulos(!modulosSelected);
+          SetFrontal(true);
+          SetMaterialesFrente(!MatFrente);
+          SetAllureFre(false);
+          SetBerenFre(false);
+          SetBlancborgFre(false);
+          SetBlancinvFre(false);
+          SetBrazilFre(false);
+          SetCalacattaFre(false);
+          SetEmeFre(false);
+          SetKendocFre(false);
+          SetKendolFre(false);
+          SetMomaFre(false);
+          SetNegroFre(false);
+          SetNoonGFre(false);
+          SetNoonsFre(false);
+          SetPaladioFre(false);
+          SetSyracFre(false);
         }}
         src={icono_b}
         alt='frente'
-        id='frente'
         style={{
           top: "50%",
           left: "23%",
         }}
       />
-      <Icono1
+      <Icono1 id='revestimiento'
         onClick={() => {
           setIconos(!iconos);
-          SetRevestimiento(!revestimientoSelected);
+          SetRevestimiento(true);
+          SetMaterialesRevestimiento(!MatRevestimiento);
+          SetAllureRev(false);
+          SetBerenRev(false);
+          SetBlancborgRev(false);
+          SetBlancinvRev(false);
+          SetBrazilRev(false);
+          SetCalacattaRev(false);
+          SetEmeRev(false);
+          SetKendocRev(false);
+          SetKendolRev(false);
+          SetMomaRev(false);
+          SetNegroRev(false);
+          SetNoonGRev(false);
+          SetNoonsRev(false);
+          SetPaladioRev(false);
+          SetSyracRev(false);
         }}
         src={icono_b}
         alt='revestimiento'
-        id='revestimiento'
         style={{
           top: "52%",
           left: "70%",
         }}
       />
-      <Icono1
+      <Icono1 id='plato de ducha'
         onClick={() => {
           setIconos(!iconos);
+          SetPlato(true);
+          SetMaterialesPlato(!MatPlato);
+          SetAllurePla(false);
+          SetBerenPla(false);
+          SetBlancborgPla(false);
+          SetBlancinvPla(false);
+          SetBrazilPla(false);
+          SetCalacattaPla(false);
+          SetEmePla(false);
+          SetKendocPla(false);
+          SetKendolPla(false);
+          SetMomaPla(false);
+          SetNegroPla(false);
+          SetNoonGPla(false);
+          SetNoonsPla(false);
+          SetPaladioPla(false);
+          SetSyracPla(false);
         }}
         src={icono_b}
         alt='plato de ducha'
-        id='plato de ducha'
+
         style={{
           top: "90% ",
           left: "70%",
         }}
       />
-      <Icono1
+      <Icono1 id='pavimento'
         onClick={() => {
           setIconos(!iconos);
+          SetPavimento(true);
+          SetMaterialesPavimento(!MatPavimento);
+          SetAllurePav(false);
+          SetBerenPav(false);
+          SetBlancborgPav(false);
+          SetBlancinvPav(false);
+          SetBrazilPav(false);
+          SetCalacattaPav(false);
+          SetEmePav(false);
+          SetKendocPav(false);
+          SetKendolPav(false);
+          SetMomaPav(false);
+          SetNegroPav(false);
+          SetNoonGPav(false);
+          SetNoonsPav(false);
+          SetPaladioPav(false);
+          SetSyracPav(false);
         }}
         src={icono_b}
         alt='pavimento'
-        id='pavimento'
+
         style={{
           top: "92.5% ",
           left: "42.5%",
         }}
       />
-      <Icono1
+      <Icono1 id='mueble'
         onClick={() => {
           setIconos(!iconos);
           setMuebleVisible(!muebleVisible);
         }}
         src={icono_b}
         alt='mueble'
-        id='mueble'
+
         style={{
           top: "59%",
           left: "45%",
         }}
       />
-      <Icono1
-        onClick={() => {
-          setIconos(!iconos);
-        }}
-        src={icono_b}
-        alt='lavabo'
-        id='lavabo'
-        style={{
-          top: "53%",
-          left: "38%",
-        }}
-      />
-      <Icono1
+      {encimeraSelected && toplisa && (
+        <Icono1 id='lavabo'
+          onClick={() => {
+            setIconos(!iconos);
+          }}
+          src={icono_b}
+          alt='lavabo'
+
+          style={{
+            top: "53%",
+            left: "38%",
+          }}
+        />
+      )}
+      <Icono1 id='reiniciar'
         onClick={() => {
           setIconos(!iconos);
         }}
         src={icono_b}
         alt='reiniciar'
-        id='reiniciar'
+
         style={{
           top: "92%",
           left: "95%",
@@ -2223,9 +2868,14 @@ const InterGrande = ({ base }) => {
             </ContenedorMateriales>
           </MenuMateriales>
         )}
-        {/* {materialesVisible && menuMats} */}
         {MatModulo && menuModulo}
         {MatEncimera && menuEncimera}
+        {MatCajon && menuCajon}
+        {MatPavimento && menuPavimmento}
+        {MatFrente && menuFrente}
+        {MatRevestimiento && menuRevestimiento}
+        {MatPlato && menuPlato}
+
         {iconos && iconosSeleccion}
         <ContenedorImagenBase
           id='fondo'
@@ -2250,6 +2900,15 @@ const InterGrande = ({ base }) => {
           </ContenedorImagen>
         )}
         {/* ------------------Rojo------------------ */}
+        {frontalSelected && (
+          <ContenedorImagen>
+            <Imagen
+              src={FRONTALES.rojof}
+              alt='pavimento'
+              style={{ opacity: 0.3 }}
+            />
+          </ContenedorImagen>
+        )}
         {frenteSelected && (
           <ContenedorImagen>
             <Imagen
@@ -2286,6 +2945,69 @@ const InterGrande = ({ base }) => {
             />
           </ContenedorImagen>
         )}
+        {pavimentoSelected && (
+          <ContenedorImagen>
+            <Imagen
+              src={PAVIMENTOS.rojoPAV}
+              alt='pavimento'
+              style={{ opacity: 0.3 }}
+            />
+          </ContenedorImagen>
+        )}
+        {revestimientoSelected && (
+          <ContenedorImagen>
+            <Imagen
+              src={REVESTIMIENTOS.rojoREV}
+              alt='pavimento'
+              style={{ opacity: 0.3 }}
+            />
+          </ContenedorImagen>
+        )}
+        {platoSelected && (
+          <ContenedorImagen>
+            <Imagen
+              src={PLATOS.rojoPLAT}
+              alt='pavimento'
+              style={{ opacity: 0.3 }}
+            />
+          </ContenedorImagen>
+        )}
+        {/* ------------------PAVIMENTOS------------------ */}
+        {pavimentoSelected &&
+          pavimentos.map((mod) => {
+            if (mod.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={PAVIMENTOS[mod.name]} alt='pavimento' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
+        {/* ------------------REVESTIMIENTOS------------------ */}
+        {revestimientoSelected &&
+          revestimientos.map((mod) => {
+            if (mod.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={REVESTIMIENTOS[mod.name]} alt='revestimiento' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
+        {/* ------------------PLATOS------------------ */}
+        {platoSelected &&
+          platos.map((mod) => {
+            if (mod.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={PLATOS[mod.name]} alt='Platos' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
         {/* ------------------MODULOS------------------ */}
         {modulosSelected &&
           modulosArray.map((mod) => {
@@ -2293,6 +3015,18 @@ const InterGrande = ({ base }) => {
               return (
                 <ContenedorImagen>
                   <Imagen src={FRENTESXLMODULO[mod.name]} alt='modulo' />
+                </ContenedorImagen>
+              );
+            }
+            return null;
+          })}
+        {/* ------------------Frentes------------------ */}
+        {frontalSelected &&
+          frenteArray.map((frentes) => {
+            if (frentes.isVisible) {
+              return (
+                <ContenedorImagen>
+                  <Imagen src={FRONTALES[frentes.name]} alt='frontal pared' />
                 </ContenedorImagen>
               );
             }
@@ -2317,30 +3051,32 @@ const InterGrande = ({ base }) => {
             if (frontal.isVisible) {
               return (
                 <ContenedorImagen>
-                  <Imagen src={XLFRONTALCAJON[frontal.name]} alt='frontal' />
+                  <Imagen src={XLFRONTALCAJON[frontal.name]} alt='cajon' />
                 </ContenedorImagen>
               );
             }
             return null;
           })}
+        <WrapperTexto>
+          <TxtSubimagen>
+            acabado del mueble: <strong>{txtmueble}</strong> //&nbsp;
+            <br />
+            cajon: <strong>{txtfrente}</strong> //&nbsp; <br />
+            encimera: <strong>{txtencimera}</strong> //&nbsp; <br />
+            lateral: <strong>{txtlateral}</strong> //&nbsp;
+            <br />
+            frente módulo: <strong>{txtmodulo}</strong> //&nbsp;
+            <br />
+            frente: <strong>{txtfrontal}</strong> //&nbsp;
+            <br />
+            plato de ducha: <strong>{txtplato}</strong> //&nbsp;
+            <br />
+            pavimento: <strong>{txtpavimento}</strong> //&nbsp;
+            <br />
+            revestimiento: <strong>{txtrevestimiento}</strong> //&nbsp;
+          </TxtSubimagen>
+        </WrapperTexto>
       </ContenedorIntercambiador>
-      <WrapperTexto>
-        <TxtSubimagen>
-          acabado del mueble: <strong>{txtmueble}</strong> //&nbsp;
-        </TxtSubimagen>
-        <TxtSubimagen>
-          mueble basyk frente: <strong>{txtfrente}</strong> //&nbsp;{" "}
-        </TxtSubimagen>
-        <TxtSubimagen>
-          mueble basyk encimera: <strong>{txtencimera}</strong> //&nbsp;{" "}
-        </TxtSubimagen>
-        <TxtSubimagen>
-          mueble basyk lateral: <strong>{txtlateral}</strong> //&nbsp;
-        </TxtSubimagen>
-        <TxtSubimagen>
-          modulo basyk frente: <strong>{txtmodulo}</strong> //&nbsp;
-        </TxtSubimagen>
-      </WrapperTexto>
     </>
   );
 };

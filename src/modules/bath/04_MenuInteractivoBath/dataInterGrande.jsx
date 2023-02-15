@@ -204,12 +204,13 @@ export const InterGrandeObj = {
   acabadoAntracita: "lacado antracita",
   acabadoBlanco: "lacado blanco",
   acabadoNordik: "madera nordik",
+  acabadoFrenteVacio: "sin frente "
 };
 
 const alluref = InterGrandeObj.allureFRONTAL;
 const berenf = InterGrandeObj.berenFRONTAL;
-const blancBorghinif = InterGrandeObj.blancBorghiniFRONTAL;
-const blancInvisiblef = InterGrandeObj.blancInvisibleFRONTAL;
+const blancborgf = InterGrandeObj.blancBorghiniFRONTAL;
+const blancinvf = InterGrandeObj.blancInvisibleFRONTAL;
 const brazilf = InterGrandeObj.brazilFRONTAL;
 const calacattaf = InterGrandeObj.calacattaFRONTAL;
 const emef = InterGrandeObj.emeFRONTAL;
@@ -226,8 +227,8 @@ const rojof = InterGrandeObj.rojoFRONTAL;
 export const FRONTALES = {
   alluref,
   berenf,
-  blancBorghinif,
-  blancInvisiblef,
+  blancborgf,
+  blancinvf,
   brazilf,
   calacattaf,
   emef,
@@ -254,8 +255,8 @@ export const ACABADOMUEBLE = {
 
 const allurePAV = InterGrandeObj.allurePAVIMENTO;
 const berenPAV = InterGrandeObj.berenPAVIMENTO;
-const blancBorghiniPAV = InterGrandeObj.blancBorghiniPAVIMENTO;
-const blancInvisiblePAV = InterGrandeObj.blancInvisiblePAVIMENTO;
+const blancborgPAV = InterGrandeObj.blancBorghiniPAVIMENTO;
+const blancinvPAV = InterGrandeObj.blancInvisiblePAVIMENTO;
 const brazilPAV = InterGrandeObj.brazilPAVIMENTO;
 const calacattaPAV = InterGrandeObj.calacattaPAVIMENTO;
 const emePAV = InterGrandeObj.emePAVIMENTO;
@@ -264,7 +265,7 @@ const kendoLPAV = InterGrandeObj.kendoLPAVIMENTO;
 const momaPAV = InterGrandeObj.momaPAVIMENTO;
 const negroPAV = InterGrandeObj.negroPAVIMENTO;
 const noonGPAV = InterGrandeObj.noonGPAVIMENTO;
-const noonSPA = InterGrandeObj.noonSPA;
+const noonSPAV = InterGrandeObj.noonSPAVIMENTO;
 const paladioPAV = InterGrandeObj.paladioPAVIMENTO;
 const syracPAV = InterGrandeObj.syracPAVIMENTO;
 const rojoPAV = InterGrandeObj.rojoPAVIMENTO;
@@ -272,8 +273,8 @@ const rojoPAV = InterGrandeObj.rojoPAVIMENTO;
 export const PAVIMENTOS = {
   allurePAV,
   berenPAV,
-  blancBorghiniPAV,
-  blancInvisiblePAV,
+  blancborgPAV,
+  blancinvPAV,
   brazilPAV,
   calacattaPAV,
   emePAV,
@@ -282,7 +283,7 @@ export const PAVIMENTOS = {
   momaPAV,
   negroPAV,
   noonGPAV,
-  noonSPA,
+  noonSPAV,
   paladioPAV,
   syracPAV,
   rojoPAV,
@@ -290,8 +291,8 @@ export const PAVIMENTOS = {
 
 const allurePLAT = InterGrandeObj.allurePLATOS;
 const berenPLAT = InterGrandeObj.berenPLATOS;
-const blancBorghiniPLAT = InterGrandeObj.blancBorghiniPLATOS;
-const blancInvisiblePLAT = InterGrandeObj.blancInvisiblePLATOS;
+const blancborgPLAT = InterGrandeObj.blancBorghiniPLATOS;
+const blancinvPLAT = InterGrandeObj.blancInvisiblePLATOS;
 const brazilPLAT = InterGrandeObj.brazilPLATOS;
 const calacattaPLAT = InterGrandeObj.calacattaPLATOS;
 const emePLAT = InterGrandeObj.emePLATOS;
@@ -308,8 +309,8 @@ const rojoPLAT = InterGrandeObj.rojoPLATOS;
 export const PLATOS = {
   allurePLAT,
   berenPLAT,
-  blancBorghiniPLAT,
-  blancInvisiblePLAT,
+  blancborgPLAT,
+  blancinvPLAT,
   brazilPLAT,
   calacattaPLAT,
   emePLAT,
@@ -326,8 +327,8 @@ export const PLATOS = {
 
 const allureREV = InterGrandeObj.allureREVESTIMIENTO;
 const berenREV = InterGrandeObj.berenREVESTIMIENTO;
-const blancBorghiniREV = InterGrandeObj.blancBorghiniREVESTIMIENTO;
-const blancInvisibleREV = InterGrandeObj.blancInvisibleREVESTIMIENTO;
+const blancborgREV = InterGrandeObj.blancBorghiniREVESTIMIENTO;
+const blancinvREV = InterGrandeObj.blancInvisibleREVESTIMIENTO;
 const brazilREV = InterGrandeObj.brazilREVESTIMIENTO;
 const calacattaREV = InterGrandeObj.calacattaREVESTIMIENTO;
 const emeREV = InterGrandeObj.emeREVESTIMIENTO;
@@ -344,8 +345,8 @@ const rojoREV = InterGrandeObj.rojoREVESTIMIENTO;
 export const REVESTIMIENTOS = {
   allureREV,
   berenREV,
-  blancBorghiniREV,
-  blancInvisibleREV,
+  blancborgREV,
+  blancinvREV,
   brazilREV,
   calacattaREV,
   emeREV,
@@ -362,8 +363,8 @@ export const REVESTIMIENTOS = {
 
 const allureXLE = InterGrandeObj.allureXL;
 const berenXLE = InterGrandeObj.berenXL;
-const blancBorghiniXLE = InterGrandeObj.blancBorghiniXL;
-const blancInvisibleXLE = InterGrandeObj.blancInvisibleXL;
+const blancborgXLE = InterGrandeObj.blancBorghiniXL;
+const blancinvXLE = InterGrandeObj.blancInvisibleXL;
 const brazilXLE = InterGrandeObj.brazilXL;
 const calacattaXLE = InterGrandeObj.calacattaXL;
 const emeXLE = InterGrandeObj.emeXL;
@@ -380,8 +381,8 @@ const rojoXLE = InterGrandeObj.rojoXL;
 export const ENCIMERAXL = {
   allureXLE,
   berenXLE,
-  blancBorghiniXLE,
-  blancInvisibleXLE,
+  blancborgXLE,
+  blancinvXLE,
   brazilXLE,
   calacattaXLE,
   emeXLE,
@@ -398,8 +399,8 @@ export const ENCIMERAXL = {
 
 const allureXLF = InterGrandeObj.allureXLFRONTAL;
 const berenXLF = InterGrandeObj.berenXLFRONTAL;
-const blancBorghiniXLF = InterGrandeObj.blancBorghiniXLFRONTAL;
-const blancInvisibleXLF = InterGrandeObj.blancInvisibleXLFRONTAL;
+const blancborgXLF = InterGrandeObj.blancBorghiniXLFRONTAL;
+const blancinvXLF = InterGrandeObj.blancInvisibleXLFRONTAL;
 const brazilXLF = InterGrandeObj.brazilXLFRONTAL;
 const calacattaXLF = InterGrandeObj.calacattaXLFRONTAL;
 const emeXLF = InterGrandeObj.emeXLFRONTAL;
@@ -416,8 +417,8 @@ const rojoXLF = InterGrandeObj.rojoXLFRONTAL;
 export const XLFRONTALCAJON = {
   allureXLF,
   berenXLF,
-  blancBorghiniXLF,
-  blancInvisibleXLF,
+  blancborgXLF,
+  blancinvXLF,
   brazilXLF,
   calacattaXLF,
   emeXLF,
@@ -506,8 +507,8 @@ export const XLLATERAL = {
 
 const allureXLLAV = InterGrandeObj.allureXLLAVABO;
 const berenXLLAV = InterGrandeObj.berenXLLAVABO;
-const blancBorghiniXLLAV = InterGrandeObj.blancBorghiniXLLAVABO;
-const blancInvisibleXLLAV = InterGrandeObj.blancInvisibleXLLAVABO;
+const blancborgXLLAV = InterGrandeObj.blancBorghiniXLLAVABO;
+const blancinvXLLAV = InterGrandeObj.blancInvisibleXLLAVABO;
 const brazilXLLAV = InterGrandeObj.brazilXLLAVABO;
 const calacattaXLLAV = InterGrandeObj.calacattaXLLAVABO;
 const emeXLLAV = InterGrandeObj.emeXLLAVABO;
@@ -524,8 +525,8 @@ const rojoXLLAV = InterGrandeObj.rojoXLLAVABO;
 export const XLLAVABO = {
   allureXLLAV,
   berenXLLAV,
-  blancBorghiniXLLAV,
-  blancInvisibleXLLAV,
+  blancborgXLLAV,
+  blancinvXLLAV,
   brazilXLLAV,
   calacattaXLLAV,
   emeXLLAV,
@@ -601,6 +602,8 @@ const acNatural = InterGrandeObj.acabadoNatural;
 const acAntracita = InterGrandeObj.acabadoAntracita;
 const acBlanco = InterGrandeObj.acabadoBlanco;
 const acNordik = InterGrandeObj.acabadoNordik;
+const acSinFrente = InterGrandeObj.acabadoFrenteVacio;
+
 
 export const txtacabados = {
   acAllure,
@@ -622,4 +625,5 @@ export const txtacabados = {
   acAntracita,
   acBlanco,
   acNordik,
+  acSinFrente,
 };
