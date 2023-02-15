@@ -207,6 +207,16 @@ export const ImgGradWrap = styled.div`
 `;
 export const Img = styled.img`
   background-size: cover;
+  height: auto;
+  width: 100%;
+  //margin-left: auto;
+  //margin-right: auto;
+  /* width: 100vw;
+  height: 100vh; */
+  //min-width: 100%;
+`;
+export const Img3 = styled.img`
+  background-size: cover;
   height: 100%;
   width: 100%;
   //margin-left: auto;

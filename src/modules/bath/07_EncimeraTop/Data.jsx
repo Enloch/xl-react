@@ -64,6 +64,6 @@ export const encimeratop = {
   },
   descarga1: "/downloads/Hoja de especificaciones - XL Encimera.pdf",
   descarga2: "/downloads/Hoja de especificaciones - XL Encimera.pdf",
-  descarga3: "/downloads/Hoja de especificaciones - XL Encimera.pdf",
-  descarga4: "/downloads/Hoja de especificaciones - XL Encimera.pdf",
+  descarga3: "/downloads/XL top integrity.zip",
+  descarga4: "/downloads/XL top integrity plus.zip",
 };
