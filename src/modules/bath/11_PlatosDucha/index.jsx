@@ -189,13 +189,13 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
                     textShadow: "0px 0px 4px black",
                   }}
                 >
-                  Pulsa en la imagen para acceder al rotador de lavabos
+                  Pulsa en la imagen para acceder al rotador de platos de ducha
                 </TextoImagen>
               </WrapperTxtImg>
             </ImgWrap2>
           )}
           <iframe
-            src='https://itch.io/embed-upload/7341966?color=333333'
+            src='https://itch.io/embed-upload/7360387?color=333333'
             allowFullscreen=''
             height={"100%"}
             width={"100%"}

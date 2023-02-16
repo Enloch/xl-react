@@ -258,7 +258,7 @@ export const ImgWrapper = styled.div`
 
 export const WrapperIframe = styled.div`
   grid-column: 2 / 12;
-  grid-row: 8;
+  grid-row:9;
   height: 100vh;
   width: 100%;
   position: relative;

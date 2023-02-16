@@ -2836,7 +2836,7 @@ const InterGrande = ({ base }) => {
         {MatCajon && menuCajon}
         {MatPavimento && menuPavimmento}
         {MatFrente && menuFrente}
-        {MatRevestimiento && menuRevestimiento}
+        {MatRevestimiento && menuRevestimiento} 
         {MatPlato && menuPlato}
         {menuTop && seleccionEncimera}
         {MatLavabo && menuLavabo}

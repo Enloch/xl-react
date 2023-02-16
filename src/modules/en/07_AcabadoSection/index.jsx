@@ -65,7 +65,7 @@ const AcabadoSection = ({
             }}
             alt={alt}
           >
-            / Pulido
+            / Polished
           </Subtitle3>
         </TextWrapper2>
         <TextWrapper2>
@@ -94,7 +94,7 @@ const AcabadoSection = ({
             }}
             alt={alt}
           >
-            / Pulido S/R
+            / Polished S/R
           </Subtitle3>
         </TextWrapper2>
         <TextWrapper3>
@@ -105,7 +105,7 @@ const AcabadoSection = ({
             }}
             alt={alt}
           >
-            / Mate
+            / Matte
           </Subtitle3>
           <Subtitle3
             onClick={() => {
@@ -114,7 +114,7 @@ const AcabadoSection = ({
             }}
             alt={alt}
           >
-            / Mate S/R
+            / Matte S/R
           </Subtitle3>
           <Subtitle3
             onClick={() => {

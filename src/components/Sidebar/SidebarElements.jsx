@@ -5,7 +5,7 @@ import { BsX } from "react-icons/bs";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
-  z-index: 50;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background: #000;
@@ -61,7 +61,7 @@ export const SidebarWrapper = styled.div`
   @media screen and (max-width: 980px) {
     margin-left: 40px;
     margin-right: 40px;
-    grid-column: 3 / span 8;
+    grid-column: 3 /  -3;
   }
   @media screen and (max-width: 480px) {
     margin-left: 40px;
@@ -70,7 +70,7 @@ export const SidebarWrapper = styled.div`
   }
 `;
 export const SidebarWrapper2 = styled.div`
-  grid-column: 7/10;
+  grid-column: 6/7;
   display: flex;
   justify-content: end;
   color: #fff;
