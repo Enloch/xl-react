@@ -327,7 +327,7 @@ const InterGrande = ({ base }) => {
     { name: "momaXLE", isVisible: momaEncimera },
     { name: "negroXLE", isVisible: negroEncimera },
     { name: "noonGXLE", isVisible: noonGEncimera },
-    { name: "noonsXLE", isVisible: noonsEncimera },
+    { name: "noonSXLE", isVisible: noonsEncimera },
     { name: "paladioXLE", isVisible: paladioEncimera },
     { name: "syracXLE", isVisible: syracEncimera },
   ];
@@ -2836,7 +2836,7 @@ const InterGrande = ({ base }) => {
         {MatCajon && menuCajon}
         {MatPavimento && menuPavimmento}
         {MatFrente && menuFrente}
-        {MatRevestimiento && menuRevestimiento} 
+        {MatRevestimiento && menuRevestimiento}
         {MatPlato && menuPlato}
         {menuTop && seleccionEncimera}
         {MatLavabo && menuLavabo}

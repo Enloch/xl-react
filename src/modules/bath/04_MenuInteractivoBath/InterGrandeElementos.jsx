@@ -183,12 +183,12 @@ export const CajaMaterial2 = styled.div`
   justify-content: center;
   row-gap: 0.5rem;
   column-gap: 1.5rem;
-  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 `;
 export const CajaMaterial = styled.div`
   grid-column: 2;
+
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
@@ -200,126 +200,134 @@ export const CajaMaterial = styled.div`
   height: 100%;
 `;
 export const ContenedorEncimera = styled.div`
+  /* flex: 1 0 30%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 `;
 export const IconoEncimera = styled.img`
-  width: auto;
+
   height: 100px;
   cursor: pointer;
+  @media screen and (max-width: 1400px) {
+    height: 80px;
+  }
+  @media screen and (max-width: 980px) {
+    height: 70px;
+  }
+  @media screen and (max-width: 480px) {
+    height: 50px;
+  }
 `;
 export const ContIconText = styled.div`
-flex: 1 0 11.1%;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 86px;
-cursor: pointer;
-@media screen and(max-width: 1920px) {
-  width: 80px;
-}
-@media screen and(max-width: 1400px) {
-  width: 72px;
-}
-@media screen and(max-width: 1024px) {
-  width: 60px;
-}
-@media screen and(max-width: 980px) {
-  width: 45px;
-}
-@media screen and(max-width: 480px) {
-  width: 30px;
-}
+  flex: 1 0 11.1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 86px;
+  cursor: pointer;
+  @media screen and (max-width: 1920px) {
+    width: 80px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 72px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 60px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 45px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 30px;
+  }
 `;
 export const ContIconText2 = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 86px;
-cursor: pointer;
-@media screen and(max-width: 1920px) {
-  width: 80px;
-}
-@media screen and(max-width: 1400px) {
-  width: 72px;
-}
-@media screen and(max-width: 1024px) {
-  width: 60px;
-}
-@media screen and(max-width: 980px) {
-  width: 45px;
-}
-@media screen and(max-width: 480px) {
-  width: 30px;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 86px;
+  cursor: pointer;
+  @media screen and (max-width: 1920px) {
+    width: 80px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 72px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 60px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 45px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 30px;
+  }
 `;
-export const IconoMaterial = styled(motion.img)`
-width: 64px;
-height: auto;
-border-radius: 50%;
-border: 1px solid #707070;
-@media screen and(max-width: 1400px) {
-  width: 48px;
-}
-@media screen and(max-width: 980px) {
-  width: 36px;
-}
-@media screen and(max-width: 480px) {
-  width: 30px;
-}
+export const IconoMaterial = styled.img`
+  width: 64px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid #707070;
+  @media screen and (max-width: 1400px) {
+    width: 48px;
+  }
+  @media screen and (max-width: 980px) {
+    width: 36px;
+  }
+  @media screen and (max-width: 480px) {
+    width: 30px;
+  }
 `;
 export const TextoMaterial = styled.p`
-text-align: center;
-text-shadow: 0px 0px 2px #000;
-margin-top: 8px;
-color: #fff;
-@media screen and(max-width: 1920px) {
-  font-size: 14px;
-}
-@media screen and(max-width: 1400px) {
-  font-size: 12px;
-}
-@media screen and(max-width: 980px) {
-  font-size: 10px;
-}
-@media screen and(max-width: 480px) {
-  text-shadow: 0px 0px 0.5px #000;
-  font-size: 8px;
-}
+  text-align: center;
+  text-shadow: 0px 0px 2px #000;
+  margin-top: 8px;
+  color: #fff;
+  @media screen and (max-width: 1920px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 480px) {
+    text-shadow: 0px 0px 0.5px #000;
+    font-size: 8px;
+  }
 `;
-export const ContenedorAcabados = styled.div`
-
-`;
+export const ContenedorAcabados = styled.div``;
 export const WrapperTexto = styled.div`
-background-color: #d3cec9;
-padding-left: 3rem;
-padding-top: 1rem;
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
+  background-color: #d3cec9;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 `;
 
 export const TxtSubimagen = styled.p`
-font-size: 16px;
-/* max-width: auto; */
-color: #000000;
-text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-/* cursor: pointer; */
+  font-size: 16px;
+  /* max-width: auto; */
+  color: #000000;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  /* cursor: pointer; */
 
-/* :hover {
+  /* :hover {
   color: rgba(85, 113, 119);
   //transform: translateX(20px);
   transition: 0.2s ease-in-out;
 } */
 
-@media screen and(max-width: 980px) {
-  max-width: auto;
-  font-size: 14px;
-}
-@media screen and(max-width: 480px) {
-  max-width: auto;
-  font-size: 12px;
-}
+  @media screen and (max-width: 980px) {
+    max-width: auto;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 480px) {
+    max-width: auto;
+    font-size: 12px;
+  }
 `;
