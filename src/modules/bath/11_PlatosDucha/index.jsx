@@ -195,7 +195,7 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
             </ImgWrap2>
           )}
           <iframe
-            src='https://itch.io/embed-upload/7360387?color=333333'
+            src='https://itch.io/embed-upload/7428901?color=333333'
             allowFullscreen=''
             height={"100%"}
             width={"100%"}

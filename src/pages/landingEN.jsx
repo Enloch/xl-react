@@ -19,8 +19,10 @@ import { ventajasObj } from "../modules/en/05_VentajasSection/Data";
 import { formatoObj } from "../modules/en/06_FormatoSection/Data";
 import { acabadoObj } from "../modules/en/07_AcabadoSection/Data";
 import { colecObj } from "../modules/en/08_ColecSection/Data";
+import XLBathSection from "../modules/en/09_XLBath";
 import { LandingFooter } from "../modules/FooterSection/data";
 import ScrollToTop from "../components/GoTopBttn/ScrollToTop";
+import { XlbathObj } from "../modules/en/09_XLBath/Data";
 const HomeEN = () => {
   const indiceRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +43,8 @@ const HomeEN = () => {
       <FormatoSection {...formatoObj} />
       <AcabadoSection {...acabadoObj} />
       <ColecSection {...colecObj} />
+      <XLBathSection {...XlbathObj} />
+
       {/* <FooterSection {...LandingFooter} /> */}
 
     </>

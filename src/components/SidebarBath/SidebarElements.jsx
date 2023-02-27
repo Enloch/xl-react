@@ -87,16 +87,16 @@ export const SidebarWrapper2 = styled.div`
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(12, 60px);
+  grid-template-rows: repeat(13, 60px);
   text-align: left;
   @media screen and (max-width: 1400px) {
-    grid-template-rows: repeat(12, 40px);
+    grid-template-rows: repeat(13, 40px);
   }
   @media screen and (max-width: 980px) {
-    grid-template-rows: repeat(12, 38px);
+    grid-template-rows: repeat(13, 38px);
   }
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(12, 40px);
+    grid-template-rows: repeat(13, 40px);
   }
 `;
 

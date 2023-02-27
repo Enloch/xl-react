@@ -51,6 +51,9 @@ export const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="coleccion" smooth={true} onClick={toggle}>
             Nuestras Colecciones
           </SidebarLink>
+          <SidebarLink to="bath" smooth={true} onClick={toggle}>
+            XL Bath
+          </SidebarLink>
           <SidebarLink3 to="contacto" onClick={null}>
             Contacto
           </SidebarLink3>

@@ -64,6 +64,9 @@ export const SidebarBath = ({ isOpen, toggle }) => {
           <SidebarRouter to='login' smooth={true} onClick={toggle}>
             Descargas
           </SidebarRouter>
+          <SidebarRouter to='/' smooth={true} onClick={toggle}>
+            XL Porcelánico
+          </SidebarRouter>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

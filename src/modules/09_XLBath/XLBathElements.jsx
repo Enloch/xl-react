@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ColecContainer = styled.div`
-  background: rgb(85, 113, 119);
+  background: rgb(211, 206, 201);
   height: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -43,7 +43,7 @@ export const Heading = styled.p`
   max-width: 630px;
   line-height: 0.9;
   margin-bottom: 77px;
-  color: #fff;
+  color: #000;
   @media screen and (max-width: 980px) {
     margin-bottom: 30px;
     vertical-align: center;
@@ -59,10 +59,9 @@ export const Subtitle = styled.p`
   font-size: 40px;
   line-height: 1.1;
   font-weight: 100;
-  max-width: 1100px;
   margin-left: -100px;
   margin-bottom: 9rem;
-  color: #fff;
+  color: #000;
   @media screen and (max-width: 980px) {
     margin-left: 0;
     margin-bottom: 6rem;
@@ -79,11 +78,11 @@ export const Subtitle = styled.p`
 
 export const Subtitle2 = styled.p`
   font-size: 40px;
-  max-width: 480px;
+  max-width: 285px;
   line-height: 1.1;
   font-weight: 100;
   margin-bottom: 2.25rem;
-  color: #fff;
+  color: #000;
   border-bottom: 2px solid;
   cursor: pointer;
   :hover {

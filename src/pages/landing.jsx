@@ -23,6 +23,8 @@ import { colecObj } from "../modules/08_ColecSection/Data";
 import { LandingFooter } from "../modules/FooterSection/data";
 import { descargasObj } from "../modules/09_Descargas/Data";
 import ScrollToTop from "../components/GoTopBttn/ScrollToTop";
+import XLBathSection from "../modules/09_XLBath";
+import { XlbathObj } from "../modules/09_XLBath/Data";
 const Home = () => {
   const indiceRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +45,7 @@ const Home = () => {
       <FormatoSection {...formatoObj} />
       <AcabadoSection {...acabadoObj} />
       <ColecSection {...colecObj} />
+      <XLBathSection {...XlbathObj} />
       {/* <DescargasSection {...descargasObj} /> */}
       <FooterSection {...LandingFooter} />
     </>
