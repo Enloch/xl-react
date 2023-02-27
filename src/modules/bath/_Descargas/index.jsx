@@ -20,6 +20,7 @@ const DescargasBath = ({
   descargaAcabadosHD,
   descargasAmbHD,
   descargasXLBathHD,
+  descargasModelos,
 }) => {
   return (
     <Contenedor id='DescargasBath'>
@@ -119,6 +120,9 @@ const DescargasBath = ({
             </Apartado>
             <Apartado href={descargasXLBathHD} download=''>
               <TextoApartado>XL bath specials</TextoApartado>
+            </Apartado>
+            <Apartado href={descargasModelos} download=''>
+              <TextoApartado>modelos 3D</TextoApartado>
             </Apartado>
           </ContApartados>
         </AreaListado>
