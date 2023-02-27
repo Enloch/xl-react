@@ -147,6 +147,7 @@ export const SidebarLink2 = styled(Link)`
 
   :hover {
     color: rgba(85, 113, 119);
+    transform: translateX(1rem);
     transition: 0.2s ease-in-out;
   }
 `;

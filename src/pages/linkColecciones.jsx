@@ -5,6 +5,7 @@ import HomeEN from "./landingEN";
 import Colecciones from "./colecciones";
 import ColeccionesEN from "./coleccionesEN";
 import Bath from "./bath";
+import BathEN from "./bathEN";
 /*------------------------------------Castellano----------------------------------------*/
 import * as cemento from "../modules/colecciones/02_cemento/modulosCemento";
 import * as color from "../modules/colecciones/03_color/coloresConsolidados";
@@ -37,6 +38,7 @@ import DescargasBath from "../modules/bath/_Descargas/index";
 import { descargasbathObj } from "../modules/bath/_Descargas/Data";
 import Login from "../components/Login/login";
 import PrivateRoute from "../components/PrivateRoute";
+
 const PaginasColeccion = () => {
   return (
     <Router>
@@ -46,6 +48,7 @@ const PaginasColeccion = () => {
         <Route path='/colecciones/*' element={<Colecciones />} />
         <Route path='/en/colecciones/*' element={<ColeccionesEN />} />
         <Route path='/bath' element={<Bath />} />
+        <Route path='/en/bath' element={<BathEN />} />
         <Route path='bath/login' element={<Login />} />
         <Route element={<PrivateRoute />}>
           <Route

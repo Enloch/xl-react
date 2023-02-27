@@ -12,7 +12,7 @@ import {
   SidebarRouter,
 } from "./SidebarElements";
 
-export const SidebarBath = ({ isOpen, toggle }) => {
+export const SidebarBathEN = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -29,16 +29,16 @@ export const SidebarBath = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink to='infobath' smooth={true} onClick={toggle}>
-            Qué es XL Bath
+            What's XL Bath
           </SidebarLink>
           <SidebarLink to='serviciosbath' smooth={true} onClick={toggle}>
-            Nuestros Servicios
+            Our Services
           </SidebarLink>
           <SidebarLink to='Acabados_InfoGeneral' smooth={true} onClick={toggle}>
-            Nuestros Acabados
+            Our Finishes
           </SidebarLink>
           <SidebarLink to='menuinteractivo' smooth={true} onClick={toggle}>
-            Menú Interactivo
+            Interactive configurator
           </SidebarLink>
           <SidebarLink to='forradomuebles' smooth={true} onClick={toggle}>
             XL Bathroom Adapt
@@ -50,7 +50,7 @@ export const SidebarBath = ({ isOpen, toggle }) => {
             XL Frente
           </SidebarLink>
           <SidebarLink to='xlshelf' smooth={true} onClick={toggle}>
-            XL Shelf y encimeras autoportantes
+            XL Shelf and self-supporting countertops
           </SidebarLink>
           <SidebarLink to='xlspecial' smooth={true} onClick={toggle}>
             XL Bath specials
@@ -61,10 +61,10 @@ export const SidebarBath = ({ isOpen, toggle }) => {
           <SidebarLink to='xlpanel' smooth={true} onClick={toggle}>
             XL panel
           </SidebarLink>
-          <SidebarRouter to='login' smooth={true} onClick={toggle}>
-            Descargas
+          <SidebarRouter to='/bath/login' smooth={true} onClick={toggle}>
+            Downloads
           </SidebarRouter>
-          <SidebarRouter to='/' smooth={true} onClick={toggle}>
+          <SidebarRouter to='/en' smooth={true} onClick={toggle}>
             XL Porcelánico
           </SidebarRouter>
         </SidebarMenu>
@@ -73,4 +73,4 @@ export const SidebarBath = ({ isOpen, toggle }) => {
   );
 };
 
-export default SidebarBath;
+export default SidebarBathEN;

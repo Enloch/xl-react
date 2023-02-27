@@ -15,7 +15,7 @@ const XLBathSection = ({ headLine, description, description2, alt }) => {
         <TextWrapper>
           <Heading> {headLine}</Heading>
           <Subtitle>{description}</Subtitle>
-          <Link to="/bath" style={{ textDecoration: "none" }}>
+          <Link to="/en/bath" style={{ textDecoration: "none" }}>
             <Subtitle2 onClick={null}>{description2}</Subtitle2>
           </Link>
         </TextWrapper>

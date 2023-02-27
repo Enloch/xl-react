@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* img {
+  max-width: 100%;
+} */
+
+/*Hasta aquÃ­ estilos pÃ¡gina Ã­ndice*/
+
+.titulete {
+  font-size: 24px;
+  padding: 50px 0px 20px 0px;
+}
+
+/*CSS MEDIDAS*/
+
+.medTer {
+  width: 33%;
+  float: left;
+}
+
+.rayita {
+  background: #000;
+  width: 80%;
+  height: 1px;
+  margin-bottom: 30px;
+}
+
+.barra {
+  background: #000;
+  color: #fff;
+  height: 40px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 50px;
+  padding-left: 10px;
+  width: 0;
+  transition: width 0.6s;
+}
+
+.in-view#w36 {
+  width: 72px;
+}
+.in-view#w48 {
+  width: 96px;
+}
+.in-view#w60 {
+  width: 120px;
+}
+.in-view#w72 {
+  width: 144px;
+}
+.in-view#w96 {
+  width: 192px;
+}
+.in-view#w120 {
+  width: 240px;
+}
+.in-view#w144 {
+  width: 288px;
+}
+.in-view#w192 {
+  width: 384px;
+}
+
+.medTer img {
+  width: 90%;
+}
