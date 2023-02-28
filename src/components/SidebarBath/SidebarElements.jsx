@@ -51,7 +51,7 @@ export const Icon = styled.div`
 export const SidebarWrapper = styled.div`
   counter-reset: counter -1;
   grid-column: 4/ 6;
-  grid-row-start: 1;
+  grid-row-start: 2;
   color: #fff;
   @media screen and (max-width: 1400px) {
     grid-column: 3/7;
@@ -64,7 +64,7 @@ export const SidebarWrapper = styled.div`
   @media screen and (max-width: 480px) {
     margin-left: 40px;
     margin-right: 40px;
-    grid-column: 1/-1;
+    grid-column: 1/-2;
   }
 `;
 export const SidebarWrapper2 = styled.div`
@@ -77,11 +77,13 @@ export const SidebarWrapper2 = styled.div`
     margin-left: 40px;
     margin-right: 40px;
     grid-column: 1 / span 3;
+    grid-row-start: 2;
   }
   @media screen and (max-width: 480px) {
     margin-left: 40px;
     margin-right: 40px;
-    grid-column-start: 1;
+    grid-column-start:-5;
+    grid-row-start: 1;
   }
 `;
 export const SidebarMenu = styled.ul`
@@ -147,6 +149,7 @@ export const SidebarLink2 = styled(Link)`
 
   :hover {
     color: rgba(85, 113, 119);
+    transform: translateX(1rem);
     transition: 0.2s ease-in-out;
   }
 `;
