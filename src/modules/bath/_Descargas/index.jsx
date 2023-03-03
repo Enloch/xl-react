@@ -63,7 +63,7 @@ const DescargasBath = ({
         <br />
         <br />
         <br />
-        <AreaListado>
+        {/* <AreaListado>
           <TituloListado>tarifas</TituloListado>
           <ContApartados>
             <Apartado href={descargaTarifas} download=''>
@@ -106,7 +106,7 @@ const DescargasBath = ({
               <TextoApartado>XL panel corte + 4 orificios</TextoApartado>
             </Apartado>
           </ContApartados>
-        </AreaListado>
+        </AreaListado> */}
       </ContenedorC2>
       <ContenedorC3>
         <AreaListado>

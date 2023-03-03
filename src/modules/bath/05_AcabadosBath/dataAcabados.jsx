@@ -25,8 +25,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/syrac",
     urlsiguiente: "/bath/beren-light-grey",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "Ficha-Técnica-ALLURE ANTHRACITE",
+    pdfLink: "/downloads/Ficha-Técnica-ALLURE ANTHRACITE.pdf",
   },
   {
     id: "beren_light_grey",
@@ -49,8 +49,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/allure-anthracite",
     urlsiguiente: "/bath/blanc-borghini",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "Ficha-Técnica-BEREN LIGHT GREY",
+    pdfLink: "/downloads/Ficha-Técnica-BEREN LIGHT GREY.pdf",
   },
   {
     id: "blanc_borghini",
@@ -74,8 +74,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/beren-light-grey",
     urlsiguiente: "/bath/blanc-invisible",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "Ficha-Técnica-BLANC BORGHINI",
+    pdfLink: "/downloads/Ficha-Técnica-BLANC BORGHINI.pdf",
   },
   {
     id: "blanc_invisible",
@@ -97,8 +97,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/blanc-borghini",
     urlsiguiente: "/bath/brazil-super-white",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "Ficha-Técnica-BLANC INVISIBLE",
+    pdfLink: "/downloads/Ficha-Técnica-BLANC INVISIBLE.pdf",
   },
   {
     id: "brazil_super_white",
@@ -174,6 +174,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/calacatta",
     urlsiguiente: "/bath/kendo-classic",
+    pdfNombre: "Ficha-Técnica-EME LIGHT GREY",
+    pdfLink: "/downloads/Ficha-Técnica-EME LIGHT GREY.pdf",
   },
   {
     id: "kendo_classic",
@@ -196,8 +198,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/eme-light-grey",
     urlsiguiente: "/bath/kendo-light",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "Ficha-Técnica-KENDO CLASSIC",
+    pdfLink: "/downloads/Ficha-Técnica-KENDO CLASSIC.pdf",
   },
   {
     id: "kendo_light",
@@ -221,7 +223,7 @@ export const PaginasAcabado = [
     urlanterior: "/bath/kendo-classic",
     urlsiguiente: "/bath/moma-gris",
     pdfNombre: "",
-    pdfLink: "",
+    pdfLink: "/downloads/Ficha-Técnica-KENDO LIGHT.pdf",
   },
   {
     id: "moma_gris",
@@ -242,8 +244,6 @@ export const PaginasAcabado = [
     urlsiguiente: "/bath/negro-marquina",
     pdfNombre: "Ficha-Técnica-MomaGris",
     pdfLink: "/downloads/Ficha-Técnica-MomaGris.pdf",
-    pdfNombre: "",
-    pdfLink: "",
   },
   {
     id: "negro_marquina",
@@ -289,8 +289,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/negro-marquina",
     urlsiguiente: "/bath/noon-sand",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "Ficha-Técnica-NOON GREY",
+    pdfLink: "/downloads/Ficha-Técnica-NOON GREY.pdf",
   },
   {
     id: "noon_sand",
@@ -313,8 +313,8 @@ export const PaginasAcabado = [
     altVid: "video",
     urlanterior: "/bath/noon-grey",
     urlsiguiente: "/bath/paladio",
-    pdfNombre: "",
-    pdfLink: "",
+    pdfNombre: "Ficha-Técnica-NOON SAND",
+    pdfLink: "/downloads/Ficha-Técnica-NOON SAND.pdf",
   },
 
   {
