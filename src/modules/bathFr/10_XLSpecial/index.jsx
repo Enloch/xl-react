@@ -116,7 +116,7 @@ const XLSpecialBath = ({ id, headLine, description }) => {
           </ImgWrap>
         )}
         <iframe
-          src='https://itch.io/embed-upload/7480832?color=333333'
+          src='https://itch.io/embed-upload/7430083?color=333333'
           allowFullscreen=''
           height={"100%"}
           width={"100%"}
