@@ -62,8 +62,8 @@ export const encimeratop = {
     text2: "XL top integrity with left or right offset sink",
     text3: "XL top integrity with two sinks",
   },
-  descarga1: "/downloads/Hoja de especificaciones - XL Encimera.pdf",
-  descarga2: "/downloads/Hoja de especificaciones - XL Encimera.pdf",
+  descarga1: "/downloads/XL Top lisa.pdf",
+  descarga2: "/downloads/XL Top plus.pdf",
   descarga3: "/downloads/XL top integrity.zip",
   descarga4: "/downloads/XL top integrity plus.zip",
 };

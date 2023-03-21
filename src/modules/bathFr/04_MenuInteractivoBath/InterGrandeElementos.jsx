@@ -207,7 +207,6 @@ export const ContenedorEncimera = styled.div`
   cursor: pointer;
 `;
 export const IconoEncimera = styled.img`
-
   height: 100px;
   cursor: pointer;
   @media screen and (max-width: 1400px) {
@@ -313,7 +312,7 @@ export const TxtSubimagen = styled.p`
   font-size: 16px;
   /* max-width: auto; */
   color: #000000;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
   /* cursor: pointer; */
 
   /* :hover {

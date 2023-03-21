@@ -18,9 +18,13 @@ const Login = () => {
 
     // Aquí es donde se verifican las credenciales
     const users = [
-      { username: "user1", password: "pass1" },
-      { username: "user2", password: "pass2" },
-      { username: "A20163275", password: "112174XL" },
+      {
+        username: "user1",
+        password: "pass1",
+        permisos: "ver_tarifas",
+      },
+      { username: "user2", password: "pass2", permisos: "ver_tarifas" },
+      { username: "A20163275", password: "112174XL", permisos: "ver_tarifas" },
     ];
 
     const user = users.find(

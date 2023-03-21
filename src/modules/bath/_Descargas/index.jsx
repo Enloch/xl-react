@@ -22,6 +22,8 @@ const DescargasBath = ({
   descargasXLBathHD,
   descargasModelos,
 }) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const puedeVerTarifas = user && user.permisos.includes("ver_tarifas");
   return (
     <Contenedor id='DescargasBath'>
       <Cerrar to='/bath'> X </Cerrar>
@@ -63,50 +65,16 @@ const DescargasBath = ({
         <br />
         <br />
         <br />
-        {/* <AreaListado>
-          <TituloListado>tarifas</TituloListado>
-          <ContApartados>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>acabados</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL top lisa</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL top plus</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL top integrity</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL top integrity plus</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL drawer panel</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL copetes</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL frente</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL bath specials</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL light shower tray </TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL panel </TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL panel corte</TextoApartado>
-            </Apartado>
-            <Apartado href={descargaTarifas} download=''>
-              <TextoApartado>XL panel corte + 4 orificios</TextoApartado>
-            </Apartado>
-          </ContApartados>
-        </AreaListado> */}
+        {puedeVerTarifas && (
+          <AreaListado>
+            <TituloListado>tarifas</TituloListado>
+            <ContApartados>
+              <Apartado href={descargaTarifas} download=''>
+                <TextoApartado>tarifas 2023</TextoApartado>
+              </Apartado>
+            </ContApartados>
+          </AreaListado>
+        )}
       </ContenedorC2>
       <ContenedorC3>
         <AreaListado>

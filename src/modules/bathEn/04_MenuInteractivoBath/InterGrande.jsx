@@ -2421,7 +2421,8 @@ const InterGrande = ({ base }) => {
       <Tooltip anchorId={"lavabo"} content={"sink"} />
       <Tooltip anchorId={"reiniciar"} content={"reset"} />
       {/*--------------botones--------------*/}
-      <Icono1 id='modulo'
+      <Icono1
+        id='modulo'
         onClick={() => {
           setIconos(!iconos);
           SetModulos(true); //IMPORTANTE
@@ -2444,13 +2445,13 @@ const InterGrande = ({ base }) => {
         }}
         src={icono_b}
         alt='modulo'
-
         style={{
           top: "38%",
           left: "11%",
         }}
       />
-      <Icono1 id='encimera'
+      <Icono1
+        id='encimera'
         onClick={() => {
           setIconos(!iconos);
           SetMenuTop(!menuTop);
@@ -2473,18 +2474,21 @@ const InterGrande = ({ base }) => {
         }}
         src={icono}
         alt='encimera'
-
         style={{
           top: "58%",
           left: "27%",
         }}
       />
       {encimeraSelected && (
-        <Icono1 id='lateralm'
+        <Icono1
+          id='lateralm'
           onClick={() => {
             SetLateral(!lateralSelected);
-            if (lateralSelected === true) { setTxtL(txtmueble) }
-            else { setTxtL(txtencimera) }
+            if (lateralSelected === true) {
+              setTxtL(txtmueble);
+            } else {
+              setTxtL(txtencimera);
+            }
           }}
           src={icono}
           alt='lateralm'
@@ -2494,7 +2498,8 @@ const InterGrande = ({ base }) => {
           }}
         />
       )}
-      <Icono1 id='frentemueble'
+      <Icono1
+        id='frentemueble'
         onClick={() => {
           setIconos(!iconos);
           SetFrente(true);
@@ -2522,7 +2527,8 @@ const InterGrande = ({ base }) => {
           left: "40%",
         }}
       />
-      <Icono1 id='frente'
+      <Icono1
+        id='frente'
         onClick={() => {
           setIconos(!iconos);
           SetFrontal(true);
@@ -2550,7 +2556,8 @@ const InterGrande = ({ base }) => {
           left: "23%",
         }}
       />
-      <Icono1 id='revestimiento'
+      <Icono1
+        id='revestimiento'
         onClick={() => {
           setIconos(!iconos);
           SetRevestimiento(true);
@@ -2578,7 +2585,8 @@ const InterGrande = ({ base }) => {
           left: "70%",
         }}
       />
-      <Icono1 id='plato de ducha'
+      <Icono1
+        id='plato de ducha'
         onClick={() => {
           setIconos(!iconos);
           SetPlato(true);
@@ -2601,13 +2609,13 @@ const InterGrande = ({ base }) => {
         }}
         src={icono_b}
         alt='plato de ducha'
-
         style={{
           top: "90% ",
           left: "70%",
         }}
       />
-      <Icono1 id='pavimento'
+      <Icono1
+        id='pavimento'
         onClick={() => {
           setIconos(!iconos);
           SetPavimento(true);
@@ -2630,27 +2638,27 @@ const InterGrande = ({ base }) => {
         }}
         src={icono_b}
         alt='pavimento'
-
         style={{
           top: "92.5% ",
           left: "42.5%",
         }}
       />
-      <Icono1 id='mueble'
+      <Icono1
+        id='mueble'
         onClick={() => {
           setIconos(!iconos);
           setMuebleVisible(!muebleVisible);
         }}
         src={icono_b}
         alt='mueble'
-
         style={{
           top: "59%",
           left: "45%",
         }}
       />
       {lavaboON && (
-        <Icono1 id='lavabo'
+        <Icono1
+          id='lavabo'
           onClick={() => {
             setIconos(!iconos);
             SetLavabo(true);
@@ -2673,14 +2681,14 @@ const InterGrande = ({ base }) => {
           }}
           src={icono}
           alt='lavabo'
-
           style={{
             top: "53%",
             left: "38%",
           }}
         />
       )}
-      <Icono1 id='reiniciar'
+      <Icono1
+        id='reiniciar'
         onClick={() => {
           SetLateral(false);
           SetEncimera(false);
@@ -2711,13 +2719,10 @@ const InterGrande = ({ base }) => {
           setTxtFrontal(txtacabados.acSinFrente);
           setTxtLavabo(txtacabados.acSinLavabo);
 
-
           //------------
-
         }}
         src={icono_retroceso}
         alt='reiniciar'
-
         style={{
           top: "92%",
           left: "95%",
@@ -2840,7 +2845,6 @@ const InterGrande = ({ base }) => {
         {MatPlato && menuPlato}
         {menuTop && seleccionEncimera}
         {MatLavabo && menuLavabo}
-
 
         {iconos && iconosSeleccion}
         <ContenedorImagenBase
