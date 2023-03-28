@@ -51,9 +51,9 @@ const ContactoSection = ({ footerImg, footer }) => {
               <a style={{ fontSize: "24px" }}>mail : </a>
               <a
                 style={{ fontSize: "24px", color: "black" }}
-                href='mailto:mikel@xlporcelanico.com'
+                href='mailto:xlporcelanico@xlporcelanico.com'
               >
-                mikel@xlporcelanico.com
+                xlporcelanico@xlporcelanico.com
               </a>
             </span>
           </TextContainer>

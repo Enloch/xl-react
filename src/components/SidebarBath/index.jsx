@@ -19,11 +19,14 @@ export const SidebarBath = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarWrapper2>
-        <SidebarLink2 to="/bath" onClick={toggle}>
+        <SidebarLink2 to='/bath' onClick={toggle}>
           ES
         </SidebarLink2>
-        <SidebarLink2 to="/en/bath" onClick={toggle}>
+        <SidebarLink2 to='/en/bath' onClick={toggle}>
           EN
+        </SidebarLink2>
+        <SidebarLink2 to='/fr/bath' onClick={toggle}>
+          FR
         </SidebarLink2>
       </SidebarWrapper2>
       <SidebarWrapper>

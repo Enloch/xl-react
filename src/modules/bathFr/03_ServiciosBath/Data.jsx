@@ -1,8 +1,8 @@
 export const serviciosbath = {
   id: "serviciosbath",
-  headLine: "Our Services //",
+  headLine: "Nos services //",
   description:
-    "Under the name XL Bath Adapt, XL offers the following services for the bathroom furniture sector:",
+    "Sous la dénomination XL Bath Adapt, XL offre les services suivants au secteur de meubles de salles de bains:",
   img: require("../../../assets/images/foto _iconos.webp"),
   img2: require("../../../assets/images/iconos.webp"),
   alt: "imagenes servicio bath",

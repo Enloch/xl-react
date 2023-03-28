@@ -82,7 +82,7 @@ export const SidebarWrapper2 = styled.div`
   @media screen and (max-width: 480px) {
     margin-left: 40px;
     margin-right: 40px;
-    grid-column-start:-5;
+    grid-column-start: -5;
     grid-row-start: 1;
   }
 `;
@@ -149,7 +149,7 @@ export const SidebarLink2 = styled(Link)`
 
   :hover {
     color: rgba(85, 113, 119);
-    transform: translateX(1rem);
+    /* transform: translateX(1rem); */
     transition: 0.2s ease-in-out;
   }
 `;

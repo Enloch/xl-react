@@ -1,10 +1,10 @@
 export const infoBath = {
   id: "infobath",
-  headLine: "What's XL bath //",
+  headLine: "C'est quoi XL bath? //",
   description: [
-    "XL bath is an innovative project within the bathroom sector focused on panels, shower trays, countertops and bathroom furniture.",
-    "Using our large-format porcelain slabs and small thicknesses (6 and 12 mm), we offer manufacturers in the sector a cutting service at our facilities, using the latest technology that allows them to offer a wide variety of designs and finishes for their products without forgetting a very high standard of product quality.",
-    "* All images and tones on this website are shown for guidance only. In addition, the grains of the products may vary from those shown in the images.",
+    "XL bath est un projet innovateur dans le secteur du bain axé sur les panneaux, bacs à douche, plan de toilette et muebles de salle de bains.",
+    "En utilisant nos plaques de grand format en céramique et petites épaisseurs ( 6 et 12mm ), nos offrons aux fabricants du secteur le service de découpe dans nos installations, en utlisant les toutes dernières technologies qui vous permettra de proposer une grande variété de conceptions et finitions pour vos produits sans oublier le très haut niveau de qualité des produits.",
+    "* Toutes les images et teintes du site sont afichées à titre indicatif. Et en plus les veines des produits  peuvent varier par rapport aux images présentées.",
   ],
   img: require("../../../assets/images/bath/XL BATH detalle pieza canto_OK.webp"),
   alt: "imagenbath1",

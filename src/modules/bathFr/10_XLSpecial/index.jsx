@@ -110,14 +110,14 @@ const XLSpecialBath = ({ id, headLine, description }) => {
                   textShadow: "0px 0px 4px black",
                 }}
               >
-                Click on the image to access the sink rotator
+                Cliquez sur l'image pour accéder au rotateur des vasques.
               </TextoImagen>
             </WrapperTxtImg>
           </ImgWrap>
         )}
         <iframe
-          src='https://itch.io/embed-upload/7430083?color=333333'
-          allowFullscreen=''
+          src='https://itch.io/embed-upload/7480832?color=333333'
+          allowFullScreen=''
           height={"100%"}
           width={"100%"}
           frameborder='0'

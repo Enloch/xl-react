@@ -112,10 +112,10 @@ export const IntercambiadorObj = {
   acabadoNoonS: "noon sand",
   acabadoPaladio: "natural brown palladium",
   acabadoSyrac: "syrac",
-  acabadoNatural: "natural wood",
-  acabadoAntracita: "anthracite laquered",
-  acabadoBlanco: "white laquered",
-  acabadoNordik: "nordik wood",
+  acabadoNatural: "bois naturel",
+  acabadoAntracita: "laqué anthracite",
+  acabadoBlanco: "laqué blanc",
+  acabadoNordik: "bois nordik",
 };
 
 const alluref = IntercambiadorObj.allureFRONTAL;

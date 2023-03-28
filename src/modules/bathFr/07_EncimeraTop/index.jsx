@@ -140,7 +140,7 @@ const EncimeraTop = ({
           )}
         </Wrapper>
         <TituloAnimacion>
-          all countertops in the following measurements
+          Tous les plan de toilette dans les mesures suivantes
           <Linea />
         </TituloAnimacion>
         <WrapperAnim>
@@ -183,7 +183,7 @@ function bloque(
           <ImagenTitulo src={icono}></ImagenTitulo>
         </WrapperTitulo>
         <BloqueDescarga>
-          <TextoDescarga>Technical sheet</TextoDescarga>
+          <TextoDescarga>Fiche technique</TextoDescarga>
           <LinkDescarga href={descarga} download=''>
             <IconoDescarga src={iconodownload} />
           </LinkDescarga>

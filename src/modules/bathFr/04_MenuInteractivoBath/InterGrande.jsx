@@ -2408,20 +2408,21 @@ const InterGrande = ({ base }) => {
   );
   const iconosSeleccion = (
     <ContenedorIconos>
-      <Tooltip anchorId={"modulo"} content={"module front"} />
-      <Tooltip anchorId={"encimera"} content={"countertop"} />
-      <Tooltip anchorId={"lateralm"} content={"countertop side"} />
-      <Tooltip anchorId={"frentemueble"} content={"drawer front"} />
-      <Tooltip anchorId={"frente"} content={"front"} />
-      <Tooltip anchorId={"revestimiento"} content={"wall covering"} />
-      <Tooltip anchorId={"plato de ducha"} content={"shower tray"} />
-      <Tooltip anchorId={"mueble"} content={"cabinet"} />
-      <Tooltip anchorId={"plato de ducha"} content={"shower tray"} />
-      <Tooltip anchorId={"pavimento"} content={"pavement"} />
-      <Tooltip anchorId={"lavabo"} content={"sink"} />
-      <Tooltip anchorId={"reiniciar"} content={"reset"} />
+      <Tooltip anchorId={"modulo"} content={"façade module"} />
+      <Tooltip anchorId={"encimera"} content={"plan de toilette"} />
+      <Tooltip anchorId={"lateralm"} content={"côté"} />
+      <Tooltip anchorId={"frentemueble"} content={"tiroir"} />
+      <Tooltip anchorId={"frente"} content={"façade"} />
+      <Tooltip anchorId={"revestimiento"} content={"revêtement"} />
+      <Tooltip anchorId={"plato de ducha"} content={"bac à douche"} />
+      <Tooltip anchorId={"mueble"} content={"meuble"} />
+      {/* <Tooltip anchorId={"plato de ducha"} content={"shower tray"} /> */}
+      <Tooltip anchorId={"pavimento"} content={"sol"} />
+      <Tooltip anchorId={"lavabo"} content={"vasque"} />
+      <Tooltip anchorId={"reiniciar"} content={"redémarrer"} />
       {/*--------------botones--------------*/}
-      <Icono1 id='modulo'
+      <Icono1
+        id='modulo'
         onClick={() => {
           setIconos(!iconos);
           SetModulos(true); //IMPORTANTE
@@ -2444,13 +2445,13 @@ const InterGrande = ({ base }) => {
         }}
         src={icono_b}
         alt='modulo'
-
         style={{
           top: "38%",
           left: "11%",
         }}
       />
-      <Icono1 id='encimera'
+      <Icono1
+        id='encimera'
         onClick={() => {
           setIconos(!iconos);
           SetMenuTop(!menuTop);
@@ -2473,18 +2474,21 @@ const InterGrande = ({ base }) => {
         }}
         src={icono}
         alt='encimera'
-
         style={{
           top: "58%",
           left: "27%",
         }}
       />
       {encimeraSelected && (
-        <Icono1 id='lateralm'
+        <Icono1
+          id='lateralm'
           onClick={() => {
             SetLateral(!lateralSelected);
-            if (lateralSelected === true) { setTxtL(txtmueble) }
-            else { setTxtL(txtencimera) }
+            if (lateralSelected === true) {
+              setTxtL(txtmueble);
+            } else {
+              setTxtL(txtencimera);
+            }
           }}
           src={icono}
           alt='lateralm'
@@ -2494,7 +2498,8 @@ const InterGrande = ({ base }) => {
           }}
         />
       )}
-      <Icono1 id='frentemueble'
+      <Icono1
+        id='frentemueble'
         onClick={() => {
           setIconos(!iconos);
           SetFrente(true);
@@ -2522,7 +2527,8 @@ const InterGrande = ({ base }) => {
           left: "40%",
         }}
       />
-      <Icono1 id='frente'
+      <Icono1
+        id='frente'
         onClick={() => {
           setIconos(!iconos);
           SetFrontal(true);
@@ -2550,7 +2556,8 @@ const InterGrande = ({ base }) => {
           left: "23%",
         }}
       />
-      <Icono1 id='revestimiento'
+      <Icono1
+        id='revestimiento'
         onClick={() => {
           setIconos(!iconos);
           SetRevestimiento(true);
@@ -2578,7 +2585,8 @@ const InterGrande = ({ base }) => {
           left: "70%",
         }}
       />
-      <Icono1 id='plato de ducha'
+      <Icono1
+        id='plato de ducha'
         onClick={() => {
           setIconos(!iconos);
           SetPlato(true);
@@ -2601,13 +2609,13 @@ const InterGrande = ({ base }) => {
         }}
         src={icono_b}
         alt='plato de ducha'
-
         style={{
           top: "90% ",
           left: "70%",
         }}
       />
-      <Icono1 id='pavimento'
+      <Icono1
+        id='pavimento'
         onClick={() => {
           setIconos(!iconos);
           SetPavimento(true);
@@ -2630,27 +2638,27 @@ const InterGrande = ({ base }) => {
         }}
         src={icono_b}
         alt='pavimento'
-
         style={{
           top: "92.5% ",
           left: "42.5%",
         }}
       />
-      <Icono1 id='mueble'
+      <Icono1
+        id='mueble'
         onClick={() => {
           setIconos(!iconos);
           setMuebleVisible(!muebleVisible);
         }}
         src={icono_b}
         alt='mueble'
-
         style={{
           top: "59%",
           left: "45%",
         }}
       />
       {lavaboON && (
-        <Icono1 id='lavabo'
+        <Icono1
+          id='lavabo'
           onClick={() => {
             setIconos(!iconos);
             SetLavabo(true);
@@ -2673,14 +2681,14 @@ const InterGrande = ({ base }) => {
           }}
           src={icono}
           alt='lavabo'
-
           style={{
             top: "53%",
             left: "38%",
           }}
         />
       )}
-      <Icono1 id='reiniciar'
+      <Icono1
+        id='reiniciar'
         onClick={() => {
           SetLateral(false);
           SetEncimera(false);
@@ -2711,13 +2719,10 @@ const InterGrande = ({ base }) => {
           setTxtFrontal(txtacabados.acSinFrente);
           setTxtLavabo(txtacabados.acSinLavabo);
 
-
           //------------
-
         }}
         src={icono_retroceso}
         alt='reiniciar'
-
         style={{
           top: "92%",
           left: "95%",
@@ -2748,7 +2753,7 @@ const InterGrande = ({ base }) => {
               // setIsVisible(!isVisible);
             }}
           >
-            <TextoIntro2>Click to access the configurator</TextoIntro2>
+            <TextoIntro2>Cliquez pour accéder au configurateur</TextoIntro2>
           </ContenedorExpansor>
         )}
         {isVisible && (
@@ -2808,12 +2813,12 @@ const InterGrande = ({ base }) => {
           >
             <ContenedorMateriales>
               <TextoIntro>
-                <bold>choose the color of the furniture {">"}</bold>
+                <bold>choisissez la couleur du meuble {">"}</bold>
               </TextoIntro>
               <CajaMaterial>
                 <ContIconText2 onClick={() => clickAcabado("Natural")}>
                   <IconoMaterial src={ICONOS.naturalIco} />
-                  <TextoMaterial>Natural</TextoMaterial>
+                  <TextoMaterial>Naturel</TextoMaterial>
                 </ContIconText2>
                 <ContIconText2 onClick={() => clickAcabado("Antracita")}>
                   <IconoMaterial src={ICONOS.antracitaIco} />
@@ -2821,7 +2826,7 @@ const InterGrande = ({ base }) => {
                 </ContIconText2>
                 <ContIconText2 onClick={() => clickAcabado("Blanco")}>
                   <IconoMaterial src={ICONOS.blancoIco} />
-                  <TextoMaterial>White</TextoMaterial>
+                  <TextoMaterial>Blanc</TextoMaterial>
                 </ContIconText2>
                 <ContIconText2 onClick={() => clickAcabado("Nordik")}>
                   <IconoMaterial src={ICONOS.nordikIco} />
@@ -2840,7 +2845,6 @@ const InterGrande = ({ base }) => {
         {MatPlato && menuPlato}
         {menuTop && seleccionEncimera}
         {MatLavabo && menuLavabo}
-
 
         {iconos && iconosSeleccion}
         <ContenedorImagenBase
@@ -3071,23 +3075,23 @@ const InterGrande = ({ base }) => {
       </ContenedorIntercambiador>
       <WrapperTexto>
         <TxtSubimagen>
-          furniture finish: <strong>{txtmueble}</strong> //&nbsp;
+          finition du meuble: <strong>{txtmueble}</strong> //&nbsp;
           <br />
-          drawer: <strong>{txtcajon}</strong> //&nbsp; <br />
-          countertop: <strong>{txtencimera}</strong> //&nbsp; <br />
-          countertop side: <strong>{txtlateral}</strong> //&nbsp;
+          tiroir: <strong>{txtcajon}</strong> //&nbsp; <br />
+          plan de toilette: <strong>{txtencimera}</strong> //&nbsp; <br />
+          côté: <strong>{txtlateral}</strong> //&nbsp;
           <br />
-          sink: <strong>{txtlavabo}</strong> //&nbsp;
+          vasque: <strong>{txtlavabo}</strong> //&nbsp;
           <br />
-          module front: <strong>{txtmodulo}</strong> //&nbsp;
+          façade module: <strong>{txtmodulo}</strong> //&nbsp;
           <br />
-          front: <strong>{txtfrontal}</strong> //&nbsp;
+          façade: <strong>{txtfrontal}</strong> //&nbsp;
           <br />
-          shower tray: <strong>{txtplato}</strong> //&nbsp;
+          bac à douche: <strong>{txtplato}</strong> //&nbsp;
           <br />
-          pavement: <strong>{txtpavimento}</strong> //&nbsp;
+          sol: <strong>{txtpavimento}</strong> //&nbsp;
           <br />
-          wall covering: <strong>{txtrevestimiento}</strong> //&nbsp;
+          revêtement: <strong>{txtrevestimiento}</strong> //&nbsp;
         </TxtSubimagen>
       </WrapperTexto>
     </>

@@ -236,8 +236,8 @@ export const InterGrandeObj = {
   acabadoAntracita: "anthracite lacquered",
   acabadoBlanco: "white lacquered",
   acabadoNordik: "nordik wood",
-  acabadoFrenteVacio: "without front",
-  acabadoLavaboVacio: "without sink"
+  acabadoFrenteVacio: "sans façade",
+  acabadoLavaboVacio: "sans vasques",
 };
 
 const alluref = InterGrandeObj.allureFRONTAL;
@@ -637,7 +637,6 @@ const acBlanco = InterGrandeObj.acabadoBlanco;
 const acNordik = InterGrandeObj.acabadoNordik;
 const acSinFrente = InterGrandeObj.acabadoFrenteVacio;
 const acSinLavabo = InterGrandeObj.acabadoLavaboVacio;
-
 
 export const txtacabados = {
   acAllure,

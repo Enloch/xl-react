@@ -71,33 +71,33 @@ const ServicioBath = ({ id, headLine, description }) => {
             viewport={{ once: true }}
           >
             <LinkSecciones to='forradomuebles' smooth={true}>
-              <LiEl variants={item}>Furniture lining</LiEl>
+              <LiEl variants={item}>Revêtement de meubles</LiEl>
             </LinkSecciones>
             <LinkSecciones to='forradomuebles' smooth={true}>
-              <LiEl variants={item}>Lined auxiliary modules</LiEl>
+              <LiEl variants={item}>Revêtement de modules auxiliaires</LiEl>
             </LinkSecciones>
             <LinkSecciones to='forradomuebles' smooth={true}>
-              <LiEl variants={item}>Drawer and side lining</LiEl>
+              <LiEl variants={item}>Revêtement de tiroirs et côtés</LiEl>
             </LinkSecciones>
             <LinkSecciones to='encimerabath' smooth={true}>
-              <LiEl variants={item}>XL top // countertops</LiEl>
+              <LiEl variants={item}>XL top // plan de toilette</LiEl>
             </LinkSecciones>
             <LinkSecciones to='frentes' smooth={true}>
-              <LiEl variants={item}>XL frente</LiEl>
+              <LiEl variants={item}>XL façade</LiEl>
             </LinkSecciones>
             <LinkSecciones to='xlshelf' smooth={true}>
-              <LiEl variants={item}>XL shelf // shelves </LiEl>
+              <LiEl variants={item}>XL étagères </LiEl>
             </LinkSecciones>
             <LinkSecciones to='xlspecial' smooth={true}>
-              <LiEl variants={item}>XL bath specials // sinks and totems</LiEl>
-            </LinkSecciones>
-            <LinkSecciones to='PlatosDuchas' smooth={true}>
               <LiEl variants={item}>
-                XL light shower tray // custom made shower trays
+                XL bath specials // vasques et vasques totems
               </LiEl>
             </LinkSecciones>
+            <LinkSecciones to='PlatosDuchas' smooth={true}>
+              <LiEl variants={item}>XL bacs à douche sur mesure</LiEl>
+            </LinkSecciones>
             <LinkSecciones to='xlpanel' smooth={true}>
-              <LiEl variants={item}>XL panel // custom made panels</LiEl>
+              <LiEl variants={item}>XL panneau sur mesure</LiEl>
             </LinkSecciones>
           </Lista>
         </ListaUno>

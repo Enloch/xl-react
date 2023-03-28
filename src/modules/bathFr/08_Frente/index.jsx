@@ -82,7 +82,7 @@ const Frente = ({ id, headLine, description, img, alt }) => {
           </SliderWrapper>
         </GeneralContainer>
         <TituloAnimacion>
-          fronts available in the following measures
+          Façades disponibles dans les mesures suivantes
           <Linea />
         </TituloAnimacion>
         <WrapperAnim>

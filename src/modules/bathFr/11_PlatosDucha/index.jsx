@@ -29,7 +29,7 @@ import {
   TextoImagen,
   WrapperTxtImg,
   ImgWrap2,
-  Img2
+  Img2,
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
@@ -100,8 +100,8 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           </SliderWrapper>
         </GeneralContainer>
         <TituloAnimacion>
-          Shower trays with widths from 70 to 100 cm in increments of 5
-          cm in the following lengths:
+          Bacs à douche avec largeur de 70 à 100cm par incréments de 5 cm dans
+          les longueurs suivantes:
           <Linea />
         </TituloAnimacion>
         <WrapperAnim>
@@ -122,10 +122,11 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           overflow='hidden'
           viewport={{ once: true }}
         >
-          *All our shower trays include a porcelain lid and a 60/80 Viega valve.
+          *Tous nos bacs à douche comprennent bonde 60/80 et couvercle en
+          céramique.
         </TituloAnimacion2>
         <TituloAnimacion>
-          Drain placement:
+          Positionnement de la bonde:
           <Linea />
         </TituloAnimacion>
         <WrapperAnim>
@@ -134,12 +135,12 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           </AnimacionContainer>
           <AnimacionContainer>
             <Frase>
-              Our shower trays can be manufactured in any size.
-              We have two options for the drain, one with the drain
-              centered and another with the drain displaced. For this last option
-              We must take into account the following measures to place the
-              drain inside each of the different sizes. See table
-              attached.
+              Nos bacs à douche peuvent être fabriqués de toute taille. Deux
+              options sont disponibles pour la bonde, l' une avec la bonde
+              centrée et l'autre avec la bonde déplacée. Concernant cette
+              dernière option, nous devons prendre en compte lesmesures
+              suivantes pour installer la bonde à l'intérieur de chaque bac à
+              douche aux différentes dimensions. Voir tableau ci-joint.
             </Frase>
           </AnimacionContainer>
           <AnimacionContainer>
@@ -165,9 +166,7 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
         <WrapperIframe>
           {isVisible && (
             <ImgWrap2 onClick={() => setIsVisible(!isVisible)}>
-              <Img2
-                src={fadeImages[0]}
-              />
+              <Img2 src={fadeImages[0]} />
               <WrapperTxtImg
                 id='expansor'
                 initial={{
@@ -187,13 +186,13 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
                     textShadow: "0px 0px 4px black",
                   }}
                 >
-                  Click on the image to access the shower tray rotator
+                  Cliquez sur l'image pour accéder au rotateur des bacs à douche
                 </TextoImagen>
               </WrapperTxtImg>
             </ImgWrap2>
           )}
           <iframe
-            src="https://itch.io/embed-upload/7429989?color=333333"
+            src='https://itch.io/embed-upload/7429989?color=333333'
             allowFullscreen=''
             height={"100%"}
             width={"100%"}

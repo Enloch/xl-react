@@ -1,8 +1,8 @@
 export const AdaptObj = {
   id: "adapt",
-  titulo: "Furniture lining //",
+  titulo: "Revêtement de meubles //",
   subtitulo:
-    "Comprehensive management for the furniture manufacturer: drawer lining, sides... any size, any idea...",
+    "Gestion integrale pour le fabricant de meubles: revêtement de tiroirs, côtés...n'importe quelle mesure, n 'importe quelle idée...",
   subtitulo2:
-    "Explore everything that XL bathroom adapt can offer you when designing your bathroom furniture in the configurator below.",
+    "Explorez tout ce que XL bathroom adapt peut vous offrir lors de la conception des meubles de salle de bains  dans le configurateur inférieur.",
 };

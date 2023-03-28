@@ -6,6 +6,7 @@ import Colecciones from "./colecciones";
 import ColeccionesEN from "./coleccionesEN";
 import Bath from "./bath";
 import BathEN from "./bathEN";
+import BathFr from "./bathFR";
 /*------------------------------------Castellano----------------------------------------*/
 import * as cemento from "../modules/colecciones/02_cemento/modulosCemento";
 import * as color from "../modules/colecciones/03_color/coloresConsolidados";
@@ -49,6 +50,7 @@ const PaginasColeccion = () => {
         <Route path='/en/colecciones/*' element={<ColeccionesEN />} />
         <Route path='/bath' element={<Bath />} />
         <Route path='/en/bath' element={<BathEN />} />
+        <Route path='/fr/bath' element={<BathFr />} />
         <Route path='bath/login' element={<Login />} />
         <Route element={<PrivateRoute />}>
           <Route

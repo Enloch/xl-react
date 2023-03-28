@@ -385,7 +385,7 @@ const Intercambiador = ({ base }) => {
               setMuebleVisible(!muebleVisible);
             }}
           >
-            <TextoIntro2>Click to access the configurator</TextoIntro2>
+            <TextoIntro2>Cliquez pour accéder au configurateur</TextoIntro2>
           </ContenedorExpansor>
         )}
         {inicio2 && (
@@ -446,7 +446,7 @@ const Intercambiador = ({ base }) => {
                 filter: "invert(100%)",
               }}
             /> */}
-            <TextoIntro2>Click to access the configurator</TextoIntro2>
+            <TextoIntro2>Cliquez pour accéder au configurateur </TextoIntro2>
           </ContenedorExpansor>
         )}
         {isVisible && (
@@ -474,10 +474,13 @@ const Intercambiador = ({ base }) => {
                   SetFrente(false);
                 }}
               >
-                <strong>{"<"} back</strong>
+                <strong>{"<"} retour</strong>
               </BotonContinuar>
               <TextoIntro>
-                <bold>Select which parts of the furniture you want to cover</bold>
+                <bold>
+                  Sélectionnez les parties du meuble que vous souhaitez
+                  recouvrir
+                </bold>
               </TextoIntro>
               <BotonContinuar
                 onClick={() => {
@@ -485,7 +488,7 @@ const Intercambiador = ({ base }) => {
                   setIsVisible(!isVisible);
                 }}
               >
-                <strong>continue {">"}</strong>
+                <strong>continuer {">"}</strong>
               </BotonContinuar>
             </MenuIntrucciones>
           </ContenedorMenu>
@@ -507,20 +510,20 @@ const Intercambiador = ({ base }) => {
           >
             <ContenedorMateriales>
               <TextoIntro>
-                <bold>elige el color del mueble {">"}</bold>
+                <bold>choisissez la couleur du meuble {">"}</bold>
               </TextoIntro>
               <CajaMaterial>
                 <ContIconText2 onClick={() => clickAcabado("Natural")}>
                   <IconoMaterial src={iconos.naturalIco} />
-                  <TextoMaterial>Natural</TextoMaterial>
+                  <TextoMaterial>Naturel</TextoMaterial>
                 </ContIconText2>
                 <ContIconText2 onClick={() => clickAcabado("Antracita")}>
                   <IconoMaterial src={iconos.antracitaIco} />
-                  <TextoMaterial>Antracita</TextoMaterial>
+                  <TextoMaterial>Anthracite</TextoMaterial>
                 </ContIconText2>
                 <ContIconText2 onClick={() => clickAcabado("Blanco")}>
                   <IconoMaterial src={iconos.blancoIco} />
-                  <TextoMaterial>Blanco</TextoMaterial>
+                  <TextoMaterial>Blanc</TextoMaterial>
                 </ContIconText2>
                 <ContIconText2 onClick={() => clickAcabado("Nordik")}>
                   <IconoMaterial src={iconos.nordikIco} />
@@ -647,20 +650,20 @@ const Intercambiador = ({ base }) => {
       </ContenedorIntercambiador>
       <WrapperTexto>
         <TxtSubimagen>
-          furniture finish: <strong>{txtmueble}</strong>
+          finition du meuble: <strong>{txtmueble}</strong>
           //&nbsp;
         </TxtSubimagen>
         <TxtSubimagen>
-          furniture basyk front: <strong>{txtfrente}</strong> //&nbsp;{" "}
+          façade: <strong>{txtfrente}</strong> //&nbsp;{" "}
         </TxtSubimagen>
         <TxtSubimagen>
-          furniture basyk countertop: <strong>{txtencimera}</strong> //&nbsp;{" "}
+          plan de toilette: <strong>{txtencimera}</strong> //&nbsp;{" "}
         </TxtSubimagen>
         <TxtSubimagen>
-          furniture basyk side: <strong>{txtlateral}</strong> //&nbsp;
+          côté: <strong>{txtlateral}</strong> //&nbsp;
         </TxtSubimagen>
         <TxtSubimagen>
-          module basyk front: <strong>{txtmodulo}</strong>
+          façade module: <strong>{txtmodulo}</strong>
           //&nbsp;
         </TxtSubimagen>
       </WrapperTexto>

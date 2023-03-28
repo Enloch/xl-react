@@ -1,10 +1,10 @@
 export const platoObj = {
   id: "platosducha",
-  headLine: "XL light shower tray // custom made shower trays",
+  headLine: "XL light shower tray // bacs à douche sur mesure",
   description:
-    "Lightened and non-slip shower trays, covered in porcelain stoneware with the highest performance.",
+    "Bacs à douche allégés et non-glissants, revêtus en céramique aux plus grandes prestations.",
   description2:
-    "Possibility of placement at ground level or elevated, with centered, displaced, central or custom drain.",
+    "Possibilité d'installation au niveau du sol ou surélevé avec bonde centrée, déplacée, centrale ou sur mesure.",
   img: require("../../../assets/images/bath/encimera img.png"),
   alt: "platosducha",
 };

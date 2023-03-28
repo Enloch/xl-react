@@ -32,28 +32,28 @@ export const SidebarBathEN = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink to='infobath' smooth={true} onClick={toggle}>
-            What's XL Bath
+            C'est quoi XL bath?
           </SidebarLink>
           <SidebarLink to='serviciosbath' smooth={true} onClick={toggle}>
-            Our Services
+            Nos services
           </SidebarLink>
           <SidebarLink to='Acabados_InfoGeneral' smooth={true} onClick={toggle}>
-            Our Finishes
+            Nos finitions
           </SidebarLink>
           <SidebarLink to='menuinteractivo' smooth={true} onClick={toggle}>
-            Interactive configurator
+            Échangeur interactif
           </SidebarLink>
           <SidebarLink to='forradomuebles' smooth={true} onClick={toggle}>
-            XL Bathroom Adapt
+            Revêtement de meubles
           </SidebarLink>
           <SidebarLink to='encimerabath' smooth={true} onClick={toggle}>
             XL Top
           </SidebarLink>
           <SidebarLink to='frentes' smooth={true} onClick={toggle}>
-            XL Front
+            XL façade
           </SidebarLink>
           <SidebarLink to='xlshelf' smooth={true} onClick={toggle}>
-            XL Shelf and self-supporting countertops
+            XL shelf // étagères
           </SidebarLink>
           <SidebarLink to='xlspecial' smooth={true} onClick={toggle}>
             XL Bath specials
@@ -62,10 +62,10 @@ export const SidebarBathEN = ({ isOpen, toggle }) => {
             XL light shower tray
           </SidebarLink>
           <SidebarLink to='xlpanel' smooth={true} onClick={toggle}>
-            XL Panel
+            XL panneau
           </SidebarLink>
           <SidebarRouter to='/bath/login' smooth={true} onClick={toggle}>
-            Downloads
+            Téléchargements
           </SidebarRouter>
           <SidebarRouter to='/en' smooth={true} onClick={toggle}>
             XL Porcelánico
