@@ -1,5 +1,5 @@
-export const contactoObj = {
-  id: "legal",
+export const contactoObjFR = {
+  id: "contact",
   footer: "revenir au début //",
-  footerImg: require("../../assets/icons/introduccion/logo.png"),
+  footerImg: require("../../../assets/icons/introduccion/logo.png"),
 };

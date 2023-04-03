@@ -28,11 +28,13 @@ import { Consolidados } from "../modules/bath/05_AcabadosBath/acabadosConsolidad
 import PrivSection from "../modules/PrivacidadSection";
 import PrivSectionFR from "../modules/bathFr/PrivacidadSectionFR";
 import { privObj } from "../modules/PrivacidadSection/data";
-import {privObjFr} from "../modules/bathFr/PrivacidadSectionFR/data";
+import { privObjFr } from "../modules/bathFr/PrivacidadSectionFR/data";
 import LegalSection from "../modules/LegalSection";
 import { legalObj } from "../modules/LegalSection/data";
 import ContactoSection from "../modules/Contacto";
 import { contactoObj } from "../modules/Contacto/data";
+import ContactoSectionFR from "../modules/bathFr/Contacto";
+import { contactoObjFR } from "../modules/bathFr/Contacto/data";
 import Intercambiador from "./intercambiador";
 import Rotador from "./rotador";
 import ContactoSectionEN from "../modules/en/Contacto";
@@ -70,6 +72,10 @@ const PaginasColeccion = () => {
         <Route
           path='/contacto'
           element={<ContactoSection {...contactoObj} />}
+        />
+        <Route
+          path='/fr/contacto'
+          element={<ContactoSectionFR {...contactoObjFR} />}
         />
         <Route
           path='/en/contacto'

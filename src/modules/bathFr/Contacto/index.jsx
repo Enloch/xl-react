@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import ImagenContacto from "../../assets/contacto/GoogleDireccion.png";
+import ImagenContacto from "../../../assets/contacto/GoogleDireccion.png";
 import {
   ColecContainer,
   ContenedorGrupo,
@@ -13,7 +13,7 @@ import {
   FooterLink,
 } from "./ContactoElements";
 
-const ContactoSection = ({ footerImg, footer }) => {
+const ContactoSectionFR = ({ footerImg, footer }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -22,7 +22,7 @@ const ContactoSection = ({ footerImg, footer }) => {
       <ColecContainer id='contacto'>
         <ContenedorGrupo>
           <TextContainer>
-            <h1 style={{ fontSize: "100px", marginTop: "-20px" }}>contacto</h1>
+            <h1 style={{ fontSize: "100px", marginTop: "-20px" }}>contact</h1>
             <br />
             <br />
             <br />
@@ -36,7 +36,7 @@ const ContactoSection = ({ footerImg, footer }) => {
             <br />
             <br />
             <span>
-              <a style={{ fontSize: "24px" }}>teléfono : </a>
+              <a style={{ fontSize: "24px" }}>Téléphone : </a>
               <a
                 style={{ fontSize: "24px", color: "black" }}
                 href='tel:+34673210147'
@@ -48,7 +48,7 @@ const ContactoSection = ({ footerImg, footer }) => {
             <br />
             <br />
             <span>
-              <a style={{ fontSize: "24px" }}>mail : </a>
+              <a style={{ fontSize: "24px" }}>e-mail : </a>
               <a
                 style={{ fontSize: "24px", color: "black" }}
                 href='mailto:xlporcelanico@xlporcelanico.com'
@@ -67,7 +67,10 @@ const ContactoSection = ({ footerImg, footer }) => {
       <FooterContainer>
         <FooterWrapper>
           <FooterLogo src={footerImg} />
-          <Link to='/' style={{ textDecoration: "none", alignSelf: "center" }}>
+          <Link
+            to='/fr/bath'
+            style={{ textDecoration: "none", alignSelf: "center" }}
+          >
             <FooterLink>{footer}</FooterLink>
           </Link>
         </FooterWrapper>
@@ -76,4 +79,4 @@ const ContactoSection = ({ footerImg, footer }) => {
   );
 };
 
-export default ContactoSection;
+export default ContactoSectionFR;

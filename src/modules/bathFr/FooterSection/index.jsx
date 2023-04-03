@@ -27,7 +27,7 @@ const FooterSection = ({ footerImg, footer, footer2, footer3 }) => {
               <FooterLink>{footer2}</FooterLink>
             </Link>
             <Link
-              to='/contact'
+              to='/fr/contacto'
               style={{ textDecoration: "none", alignSelf: "center" }}
             >
               <FooterLink>{footer3}</FooterLink>
