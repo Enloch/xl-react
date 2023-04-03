@@ -15,7 +15,7 @@ const FooterSection = ({ footerImg, footer, footer2, footer3 }) => {
           <FooterLogo src={footerImg} />
           <LinkBox>
             <Link
-              to='/privacidad'
+              to='/fr/privacidad'
               style={{ textDecoration: "none", alignSelf: "center" }}
             >
               <FooterLink>{footer}</FooterLink>
@@ -27,7 +27,7 @@ const FooterSection = ({ footerImg, footer, footer2, footer3 }) => {
               <FooterLink>{footer2}</FooterLink>
             </Link>
             <Link
-              to='/contacto'
+              to='/contact'
               style={{ textDecoration: "none", alignSelf: "center" }}
             >
               <FooterLink>{footer3}</FooterLink>

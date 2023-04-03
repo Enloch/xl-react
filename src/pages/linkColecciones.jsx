@@ -26,7 +26,9 @@ import { Consolidados } from "../modules/bath/05_AcabadosBath/acabadosConsolidad
 /*------------------------------------BATH EN------------------------------------*/
 
 import PrivSection from "../modules/PrivacidadSection";
+import PrivSectionFR from "../modules/bathFr/PrivacidadSectionFR";
 import { privObj } from "../modules/PrivacidadSection/data";
+import {privObjFr} from "../modules/bathFr/PrivacidadSectionFR/data";
 import LegalSection from "../modules/LegalSection";
 import { legalObj } from "../modules/LegalSection/data";
 import ContactoSection from "../modules/Contacto";
@@ -60,6 +62,10 @@ const PaginasColeccion = () => {
         </Route>
 
         <Route path='/privacidad' element={<PrivSection {...privObj} />} />
+        <Route
+          path='/fr/privacidad'
+          element={<PrivSectionFR {...privObjFr} />}
+        />
         <Route path='/legal' element={<LegalSection {...legalObj} />} />
         <Route
           path='/contacto'

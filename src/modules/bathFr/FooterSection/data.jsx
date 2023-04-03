@@ -1,7 +1,7 @@
 export const LandingFooter = {
   id: "generalfooter",
-  footer: "Privacidad // ",
+  footer: "Politique de confidentialité  // ",
   footer2: "Legal // ",
-  footer3: "Contacto //",
+  footer3: "Contact //",
   footerImg: require("../../../assets/icons/introduccion/logo.png"),
 };
