@@ -7,7 +7,7 @@ export const InfoContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
-  padding: 6rem 4rem 4rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   @media screen and (max-width: 980px) {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -52,7 +52,7 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.p`
   max-width: 1066px;
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   margin-bottom: 77px;
   justify-content: center;
@@ -68,7 +68,7 @@ export const Heading = styled.p`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 40px;
+  font-size: 28px;
   //max-width: 440px;
   line-height: 1.1;
   max-width: 1120px;
@@ -77,7 +77,7 @@ export const Subtitle = styled.p`
   color: #fff;
   @media screen and (max-width: 980px) {
     margin-bottom: 0;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     margin-bottom: 0;

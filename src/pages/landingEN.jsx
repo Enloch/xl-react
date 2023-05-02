@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import styled from "styled-components";
 import NavbarEN from "../components/NavbarEN";
 import SidebarEN from "../components/SidebarEN";
 import Introduccion from "../modules/en/00_Intro";
@@ -29,12 +31,20 @@ const HomeEN = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  // Agrega una función que maneje el clic en el botón de scroll hacia arriba
+  const handleScrollUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <SidebarEN toggle={toggle} isOpen={isOpen} />
       <NavbarEN toggle={toggle} />
-      <Introduccion indiceRef={indiceRef} />
+      {/* <Introduccion indiceRef={indiceRef} /> */}
       <ScrollToTop />
+      {/* Agrega el botón de scroll hacia arriba usando el componente estilizado */}
+      <ScrollUpButton onClick={handleScrollUp}>
+        <MdOutlineKeyboardArrowUp />
+      </ScrollUpButton>
       <HeroSection {...heroObj} indiceRef={indiceRef} />
       <InfoSection {...homeObj} />
       <CaraSection {...caraObj} />
@@ -46,9 +56,22 @@ const HomeEN = () => {
       <XLBathSection {...XlbathObj} />
 
       {/* <FooterSection {...LandingFooter} /> */}
-
     </>
   );
 };
 
 export default HomeEN;
+// Define un botón estilizado usando styled-components
+const ScrollUpButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10; /* Asegúrate de que el botón esté siempre por encima del contenido */
+`;

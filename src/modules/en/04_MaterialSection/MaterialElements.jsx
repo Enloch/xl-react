@@ -7,7 +7,7 @@ export const MaterialContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
-  padding: 6rem 4rem 6rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   @media screen and (max-width: 980px) {
     padding-bottom: 2rem;
     row-gap: 1.563rem;
@@ -37,7 +37,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Heading = styled.p`
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   //margin-right: 75px;
   margin-left: 20%;
@@ -57,7 +57,7 @@ export const Heading = styled.p`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 40px;
+  font-size: 28px;
   line-height: 1.1;
   font-weight: 100;
   //margin-left: 100px;
@@ -67,7 +67,7 @@ export const Subtitle = styled.p`
   @media screen and (max-width: 980px) {
     margin-right: 0;
     margin-bottom: 10px;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     margin-right: 0;

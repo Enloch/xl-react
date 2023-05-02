@@ -7,7 +7,7 @@ export const CaraContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
-  padding: 6rem 4rem 6rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   @media screen and (max-width: 980px) {
     padding-top: 2rem;
     padding-bottom: 4rem;
@@ -41,7 +41,7 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.p`
   //max-width: 1066px;
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   //font-weight: 600;
   margin-right: 75px;
@@ -61,7 +61,7 @@ export const Heading = styled.p`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 40px;
+  font-size: 28px;
   line-height: 1.1;
   font-weight: 100;
   margin-left: 100px;
@@ -70,7 +70,7 @@ export const Subtitle = styled.p`
   @media screen and (max-width: 980px) {
     margin-bottom: 0;
     margin-left: 0;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     margin-bottom: 0;

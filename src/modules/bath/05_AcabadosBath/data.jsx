@@ -2,7 +2,7 @@ import { AnimateSharedLayout } from "framer-motion";
 
 export const Acabados_InfoGeneral = {
   id: "Acabados_InfoGeneral",
-  titulo: "nuestros acabados //",
+  titulo: "Nuestros acabados //",
   subtitulo: [
     "cemento y microcemento",
     "color uniformes",

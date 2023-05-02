@@ -7,7 +7,7 @@ export const ColecContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
-  padding: 6rem 4rem 1rem 4rem;
+  padding: 4rem 4rem 1rem 4rem;
   @media screen and (max-width: 980px) {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -39,7 +39,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Heading = styled.p`
-  font-size: 100px;
+  font-size: 70px;
   max-width: 630px;
   line-height: 0.9;
   margin-bottom: 77px;
@@ -56,16 +56,16 @@ export const Heading = styled.p`
 `;
 
 export const Subtitle = styled.p`
-  font-size: 40px;
+  font-size: 28px;
   line-height: 1.1;
   font-weight: 100;
   margin-left: -100px;
-  margin-bottom: 9rem;
+  margin-bottom: 5rem;
   color: #000;
   @media screen and (max-width: 980px) {
     margin-left: 0;
-    margin-bottom: 6rem;
-    font-size: 32px;
+    margin-bottom: 5rem;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     margin-left: 0;
@@ -77,7 +77,7 @@ export const Subtitle = styled.p`
 `;
 
 export const Subtitle2 = styled.p`
-  font-size: 40px;
+  font-size: 28px;
   max-width: 285px;
   line-height: 1.1;
   font-weight: 100;
@@ -92,7 +92,7 @@ export const Subtitle2 = styled.p`
   @media screen and (max-width: 980px) {
     max-width: 390px;
     margin-bottom: 1rem;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     max-width: 200px;

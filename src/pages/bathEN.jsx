@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import styled from "styled-components";
 import NavbarBath from "../components/NavbarBath";
 import SidebarBath from "../components/SidebarBath";
 import HeroBath from "../modules/bathEn/01_HeroBath";
@@ -33,16 +35,26 @@ import XLPanel from "../modules/bathEn/12_XLPanel";
 import { xlpanelObj } from "../modules/bathEn/12_XLPanel/Data";
 import RotadorWebGl from "../modules/bathEn/_RotadowWebgl";
 import SidebarBathEN from "../components/SidebarBathEn";
+import ScrollToTop from "../components/GoTopBttn/ScrollToTop";
 
 const BathEN = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  // Agrega una función que maneje el clic en el botón de scroll hacia arriba
+  const handleScrollUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <SidebarBathEN toggle={toggle} isOpen={isOpen} />
       <NavbarBath toggle={toggle} />
+      {/* Agrega el botón de scroll hacia arriba usando el componente estilizado */}
+      <ScrollUpButton onClick={handleScrollUp}>
+        <MdOutlineKeyboardArrowUp />
+      </ScrollUpButton>
+      <ScrollToTop />
       <HeroBath {...heroBath} />
       <InfoBath {...infoBath} />
       <ServicioBath {...serviciosbath} />
@@ -62,3 +74,17 @@ const BathEN = () => {
 };
 
 export default BathEN;
+// Define un botón estilizado usando styled-components
+const ScrollUpButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10; /* Asegúrate de que el botón esté siempre por encima del contenido */
+`;

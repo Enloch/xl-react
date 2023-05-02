@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../assets/icons/introduccion/logo.png";
-import styled from "styled-components";
+
 import "./styles.css";
 
 const ScrollToTop = () => {
@@ -40,40 +40,35 @@ const ScrollToTop = () => {
   const goToTop = () => {
     if (window.screen.width > 2000) {
       window.scrollTo({
-        top: 0,
+        top: 1400,
         behavior: "smooth",
       });
     }
     if (window.screen.width <= 1930) {
       window.scrollTo({
-        top: 0,
+        top: 1000,
         behavior: "smooth",
       });
     }
     if (window.screen.width <= 480) {
       window.scrollTo({
-        top: 0,
+        top: 860,
         behavior: "smooth",
       });
     }
   };
   return (
-    <div className='top-to-btm'>
-      <Logotipo
-        src={Logo}
-        className='icon-position icon-style'
-        onClick={goToTop}
-        alt={"GoTopBttn"}
-        style={{ mixBlendMode: "difference" }}
-      />
+    <div className="top-to-btm">
+      {" "}
+      {showTopBtn && (
+        <img
+          src={Logo}
+          className="icon-position icon-style"
+          onClick={goToTop}
+          alt={"GoTopBttn"}
+        />
+      )}{" "}
     </div>
   );
 };
 export default ScrollToTop;
-const Logotipo = styled.img`
-  width: 65px;
-  height: auto;
-  @media screen and (max-width: 980px) {
-    width: 40px;
-  }
-`;

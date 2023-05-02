@@ -7,7 +7,7 @@ export const VentajasContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
-  padding: 6rem 4rem 6rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   @media screen and (max-width: 980px) {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -35,7 +35,7 @@ export const VentajasContainer2 = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   row-gap: 3.125rem;
-  padding: 1rem 4rem 2rem 4rem;
+  padding: 1rem 4rem 1rem 4rem;
   @media screen and (max-width: 980px) {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -64,7 +64,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Heading = styled.p`
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   margin-bottom: 77px;
   color: #000;

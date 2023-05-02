@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const AcabadoContainer = styled.div`
-  background: rgba(211, 206, 201);
+  background: rgb(211, 206, 201);
   height: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
   //row-gap: 3.125rem;
-  padding: 6rem 4rem 6rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   @media screen and (max-width: 980px) {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -70,7 +70,7 @@ export const TextWrapper3 = styled.div`
   }
 `;
 export const Heading = styled.p`
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   margin-left: 25%;
   margin-bottom: 77px;
@@ -90,7 +90,7 @@ export const Heading = styled.p`
 
 export const Subtitle = styled.p`
   justify-content: left;
-  font-size: 40px;
+  font-size: 28px;
   line-height: 1.1;
   font-weight: 100;
   margin-bottom: 50px;
@@ -99,7 +99,7 @@ export const Subtitle = styled.p`
   @media screen and (max-width: 980px) {
     margin-left: 0;
     margin-bottom: 10px;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     margin-left: 0;
@@ -145,7 +145,7 @@ export const Caracteristics = styled.p`
 export const Subtitle3 = styled.button`
   background-color: transparent;
   border: 0;
-  font-size: 40px;
+  font-size: 28px;
   max-width: auto;
   line-height: 1.1;
   font-weight: 100;
@@ -160,7 +160,7 @@ export const Subtitle3 = styled.button`
 
   @media screen and (max-width: 980px) {
     max-width: auto;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     max-width: auto;

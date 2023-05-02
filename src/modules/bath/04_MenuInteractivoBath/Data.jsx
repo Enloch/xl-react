@@ -1,6 +1,6 @@
 export const menuIntObj = {
   id: "menuinteractivo",
-  titulo: "intercambiador interactivo //",
+  titulo: "Intercambiador interactivo //",
   subtitulo:
     "Descubre todas las opciones que XL ofrece, navegando en el intercambiador inferior.",
   headLine: [

@@ -41,7 +41,7 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled(motion.p)`
   margin-right: 10%;
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   margin-bottom: 77px;
   justify-content: center;
@@ -65,7 +65,7 @@ export const Heading = styled(motion.p)`
 `;
 
 export const Subtitle = styled(motion.p)`
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 100;
   color: #303030;
   grid-column: 2 / 5;
@@ -73,7 +73,7 @@ export const Subtitle = styled(motion.p)`
     padding-right: 0;
     margin-left: 0;
     grid-column: 1/ 5;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 980px) {
     grid-column: 2 / 10;

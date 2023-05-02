@@ -8,7 +8,7 @@ export const MenuIntContainter = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.563rem;
-  padding: 6rem 4rem 2rem 4rem;
+  padding: 4rem 4rem 1rem 4rem;
   @media screen and (max-width: 1400px) {
     padding: calc(8px + 1.5625vw);
   }
@@ -66,7 +66,7 @@ export const TextWrapper = styled.div`
 export const Heading = styled(motion.p)`
   //max-width: 500px;
   grid-column: 3 / span 5;
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   margin-bottom: 77px;
   color: #303030;
@@ -87,7 +87,7 @@ export const Heading = styled(motion.p)`
 
 export const Subtitle = styled(motion.p)`
   grid-column: 4 / span 10;
-  font-size: 40px;
+  font-size: 28px;
   line-height: 1.1;
   font-weight: 100;
   margin-bottom: 35px;
@@ -99,7 +99,7 @@ export const Subtitle = styled(motion.p)`
     grid-column: 1/-1;
     margin-right: 0;
     margin-bottom: 0;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 480px) {
     font-size: 16px;

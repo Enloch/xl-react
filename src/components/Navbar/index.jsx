@@ -1,6 +1,6 @@
-import React from 'react'
-import { BsList } from 'react-icons/bs'
-import { Nav, MobileIcon, MobileIcon2 } from './NavbarElements'
+import React from "react";
+import { BsList } from "react-icons/bs";
+import { Nav, MobileIcon, MobileIcon2 } from "./NavbarElements";
 const Navbar = ({ toggle }) => {
   return (
     <>
@@ -10,7 +10,7 @@ const Navbar = ({ toggle }) => {
         </MobileIcon>
       </Nav>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

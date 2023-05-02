@@ -9,7 +9,7 @@ export const InfoContainer = styled.div`
   grid-template-rows: auto;
   column-gap: 1.563rem;
   row-gap: 1.563rem;
-  padding: 6rem 4rem 4rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   @media screen and (max-width: 1400px) {
     row-gap: 1rem;
     column-gap: 1rem;
@@ -40,7 +40,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Heading = styled(motion.p)`
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   justify-content: center;
   color: #fff;
@@ -63,7 +63,7 @@ export const Heading = styled(motion.p)`
 `;
 
 export const Subtitle = styled(motion.p)`
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 100;
   color: #fff;
   grid-column: 3 / 6;
@@ -71,7 +71,7 @@ export const Subtitle = styled(motion.p)`
     padding-right: 0;
     margin-left: 0;
     grid-column: 2/ 6;
-    font-size: 32px;
+    font-size: 28px;
   }
   @media screen and (max-width: 980px) {
     grid-column: 1 / 6;

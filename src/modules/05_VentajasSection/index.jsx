@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   VentajasContainer,
   VentajasContainer2,
@@ -8,25 +8,25 @@ import {
   ImgWrap,
   Img,
   Img2,
-} from './VentajasElements'
+} from "./VentajasElements";
 const VentajasSection = ({ headLine, description, img, img2, img3, alt }) => {
   return (
     <>
       <VentajasContainer2>
         <ImgWrap>
-          <Img2 src={img} alt={'test'} />
+          <Img2 src={img} alt={"test"} />
         </ImgWrap>
       </VentajasContainer2>
-      <VentajasContainer id="ventajas">
+      <VentajasContainer id='ventajas'>
         <TextWrapper>
           <Heading> {headLine}</Heading>
         </TextWrapper>
         <ImgWrap>
-          <Img src={img2} alt={'test'} />
+          <Img src={img2} alt={"test"} />
         </ImgWrap>
       </VentajasContainer>
     </>
-  )
-}
+  );
+};
 
-export default VentajasSection
+export default VentajasSection;

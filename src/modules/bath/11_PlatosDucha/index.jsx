@@ -30,7 +30,7 @@ import {
   TextoImagen,
   WrapperTxtImg,
   ImgWrap2,
-  Img2
+  Img2,
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
@@ -167,9 +167,7 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
         <WrapperIframe>
           {isVisible && (
             <ImgWrap2 onClick={() => setIsVisible(!isVisible)}>
-              <Img2
-                src={fadeImages[0]}
-              />
+              <Img2 src={fadeImages[0]} />
               <WrapperTxtImg
                 id='expansor'
                 initial={{

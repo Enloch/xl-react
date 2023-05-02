@@ -8,7 +8,7 @@ export const ColecContainer = styled.div`
   height: 100%;
   width: auto;
   column-gap: ${DISTANCES.small};
-  padding: 7rem 4rem 7rem 4rem;
+  padding: 4rem 4rem 2rem 4rem;
   @media screen and (max-width: 1400px) {
   }
 
@@ -39,7 +39,7 @@ export const Heading = styled(motion.p)`
   margin-right: 3.9rem;
   line-height: 0.9;
   grid-column: 2 / span 2;
-  font-size: 100px;
+  font-size: 70px;
   color: #303030;
   @media screen and (max-width: 1400px) {
     grid-column: 2/10;
@@ -61,7 +61,7 @@ export const SubtitleWrapper = styled.div`
   grid-column: 2/5;
   align-content: center;
   display: flex;
-  margin: 5rem 0;
+  margin: 2rem 0;
 
   gap: 0.5rem 2rem;
   /* padding-bottom:1rem; */
@@ -81,6 +81,7 @@ export const SubtitleWrapper = styled.div`
 `;
 
 export const Subtitle = styled.p`
+  /* font-size: calc(15px + 0.390625vw); */
   font-size: calc(15px + 0.390625vw);
   color: ${COLORS.gray05};
   /* margin-top: 85px;

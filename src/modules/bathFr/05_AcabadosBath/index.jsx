@@ -35,12 +35,12 @@ const AcabadosBath = ({ id, titulo, subtitulo }) => {
             {titulo}
           </Heading>
           <SubtitleWrapper>
-            <Subtitle>{subtitulo[0]}</Subtitle>
+            {/* <Subtitle>{subtitulo[0]}</Subtitle>
             <Subtitle>{subtitulo[1]}</Subtitle>
             <Subtitle>{subtitulo[2]}</Subtitle>
             <Subtitle>{subtitulo[3]}</Subtitle>
             <Subtitle>{subtitulo[4]}</Subtitle>
-            <Subtitle>{subtitulo[5]}</Subtitle>
+            <Subtitle>{subtitulo[5]}</Subtitle> */}
           </SubtitleWrapper>
           <ImageBoxWrapper>{Acabados}</ImageBoxWrapper>
           <LinkBox>

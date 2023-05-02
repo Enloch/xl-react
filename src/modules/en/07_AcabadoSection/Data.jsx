@@ -1,6 +1,6 @@
 export const acabadoObj = {
   id: "acabados",
-  headLine: "finishes //",
+  headLine: "Finishes //",
   description:
     "Finishes that reproduce natural stone, 3d·fit® technology that provides texture in accordance with the graphics, high gloss that provides depth and elegance, natural finish an effect that is more faithful to the original material or surfaces with a silky matte finish, highly resistant.",
   description2: "Click to see the different finishes",
