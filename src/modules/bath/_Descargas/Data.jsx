@@ -7,4 +7,6 @@ export const descargasbathObj = {
   descargasAmbHD: "/downloads/ambientes y detalles HD.zip",
   descargasXLBathHD: "/downloads/xl bath specials.zip",
   descargasModelos: "/downloads/modelos3d.zip",
+  descargaInformeMateriales:
+    "/downloads/informes de laboratorio de materiales estandarizados C3.pdf",
 };

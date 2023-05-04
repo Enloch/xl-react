@@ -21,6 +21,7 @@ const DescargasBath = ({
   descargasAmbHD,
   descargasXLBathHD,
   descargasModelos,
+  descargaInformeMateriales,
 }) => {
   const user = JSON.parse(localStorage.getItem("user"));
   const puedeVerTarifas = user && user.permisos.includes("ver_tarifas");
@@ -34,7 +35,9 @@ const DescargasBath = ({
       </ContenedorC1>
       <ContenedorC2>
         <AreaListado>
-          <TituloListado>especificaciones técnicas</TituloListado>
+          <TituloListado>
+            especificaciones técnicas e <br /> informes de materiales
+          </TituloListado>
           <ContApartados>
             <Apartado href={descargaEspTec} download=''>
               <TextoApartado>acabados</TextoApartado>
@@ -59,6 +62,9 @@ const DescargasBath = ({
             </Apartado>
             <Apartado href={descargaEspTec} download=''>
               <TextoApartado>XL panel </TextoApartado>
+            </Apartado>
+            <Apartado href={descargaInformeMateriales} download=''>
+              <TextoApartado>informes de laboratorio</TextoApartado>
             </Apartado>
           </ContApartados>
         </AreaListado>

@@ -37,7 +37,16 @@ const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
   require("../../../assets/images/bath/platos/Icono Medidas Plato.png"),
 ];
-const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
+const PlatosDucha = ({
+  id,
+  headLine,
+  description,
+  description2,
+  description3,
+  iconodescarga,
+  img,
+  alt,
+}) => {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <>
@@ -77,7 +86,27 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           <br />
           <br />
           {description2}
+          <br />
+          <br />
+          {description3} <br />
+          <br />
+          <br />
+          <p style={{ fontSize: "12px", color: "white" }}>
+            Descarga informes de laboratorio de materiales estandarizados &nbsp;
+            &nbsp;
+            <a
+              href={
+                "/downloads/informes de laboratorio de materiales estandarizados C3.pdf"
+              }
+            >
+              <img
+                style={{ filter: "invert(1)", width: "25px", height: "auto" }}
+                src={iconodescarga}
+              ></img>
+            </a>
+          </p>
         </Subtitle>
+
         <GeneralContainer
           initial={{ x: 100, opacity: 0 }}
           whileInView={{
@@ -193,7 +222,7 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
             </ImgWrap2>
           )}
           <iframe
-            src='https://itch.io/embed-upload/7428901?color=333333'
+            src='https://itch.io/embed-upload/7844723?color=333333'
             allowFullscreen=''
             height={"100%"}
             width={"100%"}
