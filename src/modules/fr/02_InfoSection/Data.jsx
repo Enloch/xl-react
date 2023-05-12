@@ -1,9 +1,9 @@
 export const homeObj = {
   id: "about",
   headLine:
-    "surfaces with the highest expectations in architecture and design.",
+    "Des surfaces répondant aux attentes les plus élevées en matière d'architecture et de design.",
   description:
-    "XL is an innovative product of synthesized mass manufactured with natural raw materials that offers mechanical and aesthetic properties superior to any conventional covering material, which arises to respond to the new needs of professionals in architecture and interior decoration.",
+    "XL est un produit innovant de masse synthétisée fabriqué à partir de matières premières naturelles qui offre des propriétés mécaniques et esthétiques supérieures à tout matériau de revêtement conventionnel, qui naît pour répondre aux nouveaux besoins des professionnels de l'architecture et de la décoration d'intérieur.",
   img: require("../../../assets/images/foto_superficies.webp"),
   alt: "test",
 };

@@ -1,7 +1,7 @@
 export const colecObj = {
   id: "coleccion",
-  headLine: "our collections //",
+  headLine: "Nos collections //",
   description:
-    "Surprising both to the eye and to the touch, they will allow us to build any space in our home. Discover the endless ideas and decorative possibilities of our XL collections.",
+    "Surprenants à l'œil et au toucher, ils nous permettront d'aménager n'importe quel espace dans notre maison. Découvrez les idées et les possibilités décoratives infinies de nos collections XL.",
   description2: "see our collections //",
 };

@@ -21,40 +21,43 @@ export const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarWrapper2>
-        <SidebarLink2 to="/" onClick={toggle}>
+        <SidebarLink2 to='/' onClick={toggle}>
           ES
         </SidebarLink2>
-        <SidebarLink2 to="en" onClick={toggle}>
+        <SidebarLink2 to='en' onClick={toggle}>
           EN
+        </SidebarLink2>
+        <SidebarLink2 to='fr' onClick={toggle}>
+          FR
         </SidebarLink2>
       </SidebarWrapper2>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" smooth={true} onClick={toggle}>
+          <SidebarLink to='about' smooth={true} onClick={toggle}>
             Sobre XL
           </SidebarLink>
-          <SidebarLink to="caracteristica" smooth={true} onClick={toggle}>
+          <SidebarLink to='caracteristica' smooth={true} onClick={toggle}>
             Características
           </SidebarLink>
-          <SidebarLink to="materiales" smooth={true} onClick={toggle}>
+          <SidebarLink to='materiales' smooth={true} onClick={toggle}>
             Materiales
           </SidebarLink>
-          <SidebarLink to="ventajas" smooth={true} onClick={toggle}>
+          <SidebarLink to='ventajas' smooth={true} onClick={toggle}>
             Ventajas
           </SidebarLink>
-          <SidebarLink to="formato" smooth={true} onClick={toggle}>
+          <SidebarLink to='formato' smooth={true} onClick={toggle}>
             Espesores y formatos
           </SidebarLink>
-          <SidebarLink to="acabados" smooth={true} onClick={toggle}>
+          <SidebarLink to='acabados' smooth={true} onClick={toggle}>
             Acabados
           </SidebarLink>
-          <SidebarLink to="coleccion" smooth={true} onClick={toggle}>
+          <SidebarLink to='coleccion' smooth={true} onClick={toggle}>
             Nuestras Colecciones
           </SidebarLink>
-          <SidebarLink to="bath" smooth={true} onClick={toggle}>
+          <SidebarLink to='bath' smooth={true} onClick={toggle}>
             XL Bath
           </SidebarLink>
-          <SidebarLink3 to="contacto" onClick={null}>
+          <SidebarLink3 to='contacto' onClick={null}>
             Contacto
           </SidebarLink3>
         </SidebarMenu>

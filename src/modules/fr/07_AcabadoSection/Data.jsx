@@ -1,9 +1,9 @@
 export const acabadoObj = {
   id: "acabados",
-  headLine: "finishes //",
+  headLine: "Finitions //",
   description:
-    "Finishes that reproduce natural stone, 3d·fit® technology that provides texture in accordance with the graphics, high gloss that provides depth and elegance, natural finish an effect that is more faithful to the original material or surfaces with a silky matte finish, highly resistant.",
-  description2: "Click to see the different finishes",
+    "Des finitions qui reproduisent la pierre naturelle, la technologie 3d-fit® qui apporte une texture conforme au graphisme, la haute brillance qui apporte profondeur et élégance, la finition naturelle un effet plus fidèle au matériau d'origine ou des surfaces à la finition mate et soyeuse, très résistante.",
+  description2: "Cliquez pour voir les différentes finitions",
   description3:
     "Soft / Soft textured / Polished / Natural / Natural S/R / Polished S/R / Matte / Matte S/R / Silk / Hond",
   img_soft: require("../../../assets/images/acabado_soft.webp"),

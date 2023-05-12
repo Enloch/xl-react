@@ -33,25 +33,25 @@ export const SidebarEN = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink to='aboutEN' smooth={true} onClick={toggle}>
-            About XL
+            À propos de XL
           </SidebarLink>
           <SidebarLink to='caracteristicaEN' smooth={true} onClick={toggle}>
-            Characteristics
+            Caractéristiques
           </SidebarLink>
           <SidebarLink to='materialesEN' smooth={true} onClick={toggle}>
-            Materials
+            Matériaux
           </SidebarLink>
           <SidebarLink to='ventajasEN' smooth={true} onClick={toggle}>
-            Advantages
+            Avantages
           </SidebarLink>
           <SidebarLink to='formatoEN' smooth={true} onClick={toggle}>
-            Thickness and formats
+            Épaisseur et formats
           </SidebarLink>
           <SidebarLink to='acabadosEN' smooth={true} onClick={toggle}>
-            Finishes
+            Finitions
           </SidebarLink>
           <SidebarLink to='coleccionEN' smooth={true} onClick={toggle}>
-            Our Collections
+            Nos collections
           </SidebarLink>
           <SidebarLink to='bathEN' smooth={true} onClick={toggle}>
             XL Bath
