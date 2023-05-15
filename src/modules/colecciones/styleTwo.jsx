@@ -34,7 +34,7 @@ export const ContentWrapper = styled.div`
 
 export const Title = styled.p`
   grid-column: 2/6;
-  grid-row:1;
+  grid-row: 1;
   //margin-left: 10rem;
   margin-bottom: 2.25rem;
   font-size: 40px;
@@ -327,9 +327,9 @@ export const DescargaPdfIcon = styled(BsDownload)`
   }
 `;
 export const TextoDescarga = styled.span`
-  width:200px;
-  font-size: 14px
-`
+  width: 200px;
+  font-size: 14px;
+`;
 export const FooterContainer = styled.div`
   background: #000000;
   width: 100%;
@@ -354,7 +354,7 @@ export const FooterLogo = styled.img`
 export const FooterLink = styled.p`
   color: #ffffff;
   align-self: center;
-  width: 300px;
+  width: 325px;
   font-size: 30px;
   padding: 0.625rem 0;
   border-bottom: 2px solid #ffffff;

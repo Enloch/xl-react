@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import styled from "styled-components";
 import NavbarEN from "../components/NavbarEN";
-import SidebarEN from "../components/SidebarEN";
+import SidebarFR from "../components/SidebarFR";
 import Introduccion from "../modules/fr/00_Intro";
 import HeroSection from "../modules/fr/01_HeroSection";
 import InfoSection from "../modules/fr/02_InfoSection";
@@ -37,7 +37,7 @@ const HomeFR = () => {
   };
   return (
     <>
-      <SidebarEN toggle={toggle} isOpen={isOpen} />
+      <SidebarFR toggle={toggle} isOpen={isOpen} />
       <NavbarEN toggle={toggle} />
       {/* <Introduccion indiceRef={indiceRef} /> */}
       <ScrollToTop />

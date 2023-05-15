@@ -13,7 +13,7 @@ import {
   SidebarLink3,
 } from "./SidebarElements";
 
-export const SidebarEN = ({ isOpen, toggle }) => {
+export const SidebarFR = ({ isOpen, toggle }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -65,4 +65,4 @@ export const SidebarEN = ({ isOpen, toggle }) => {
   );
 };
 
-export default SidebarEN;
+export default SidebarFR;

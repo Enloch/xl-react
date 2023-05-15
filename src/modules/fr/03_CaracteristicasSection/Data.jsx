@@ -4,6 +4,6 @@ export const caraObj = {
   description:
     "Ses caractéristiques physico-mécaniques permettent de fabriquer des surfaces avec ce matériau qui ont une infinité d'applications horizontales et décoratives. ",
   img: require("../../../assets/images/foto _iconos.webp"),
-  img2: require("../../../assets/images/caracteristicas EN.png"),
+  img2: require("../../../assets/images/caracteristicas FR.png"),
   alt: "test",
 };

@@ -2,8 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./landing";
 import HomeEN from "./landingEN";
+import HomeFR from "./landingFR";
 import Colecciones from "./colecciones";
 import ColeccionesEN from "./coleccionesEN";
+import ColeccionesFR from "./coleccionesFR";
 import Bath from "./bath";
 import BathEN from "./bathEN";
 import BathFr from "./bathFR";
@@ -21,6 +23,13 @@ import * as marmolEN from "../modules/colecciones/en/04_marmol/modulosMarmol";
 import * as maderaEN from "../modules/colecciones/en/05_madera/maderasConsolidados";
 import * as metalEN from "../modules/colecciones/en/06_metal/metalConsolidados";
 import * as piedraEN from "../modules/colecciones/en/07_piedra/piedrasConsolidados";
+/*------------------------------------Frances----------------------------------------*/
+import * as cementoFR from "../modules/colecciones/fr/02_cemento/modulosCemento";
+import * as colorFR from "../modules/colecciones/fr/03_color/coloresConsolidados";
+import * as marmolFR from "../modules/colecciones/fr/04_marmol/modulosMarmol";
+import * as maderaFR from "../modules/colecciones/fr/05_madera/maderasConsolidados";
+import * as metalFR from "../modules/colecciones/fr/06_metal/metalConsolidados";
+import * as piedraFR from "../modules/colecciones/fr/07_piedra/piedrasConsolidados";
 /*------------------------------------BATH ES------------------------------------*/
 import { Consolidados } from "../modules/bath/05_AcabadosBath/acabadosConsolidados";
 /*------------------------------------BATH EN------------------------------------*/
@@ -50,8 +59,10 @@ const PaginasColeccion = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/en' element={<HomeEN />} />
+        <Route path='/fr' element={<HomeFR />} />
         <Route path='/colecciones/*' element={<Colecciones />} />
         <Route path='/en/colecciones/*' element={<ColeccionesEN />} />
+        <Route path='/fr/colecciones/*' element={<ColeccionesFR />} />
         <Route path='/bath' element={<Bath />} />
         <Route path='/en/bath' element={<BathEN />} />
         <Route path='/fr/bath' element={<BathFr />} />
@@ -590,6 +601,273 @@ const PaginasColeccion = () => {
         <Route path='bath/noon-sand' element={<Consolidados.NoonSandAC />} />
         <Route path='bath/paladio' element={<Consolidados.PaladioAC />} />
         <Route path='bath/syrac' element={<Consolidados.SyracAC />} />
+        {/*---------------------------Frances-------------------------------------------------------------------*/}
+        {/* ---------------------Cementos--------------------- */}
+        <Route
+          path='fr/colecciones/blue-stone-gris'
+          element={<cementoFR.BlueStoneEN />}
+        />
+        <Route
+          path='fr/colecciones/moma-arena'
+          element={<cementoFR.MomaArenaEN />}
+        />
+        <Route
+          path='fr/colecciones/moma-gris'
+          element={<cementoFR.MomaGrisEN />}
+        />
+        <Route
+          path='fr/colecciones/kron-grey'
+          element={<cementoFR.KronGreyEN />}
+        />
+        <Route
+          path='fr/colecciones/titan-antracita'
+          element={<cementoFR.TitanAntEN />}
+        />
+        <Route
+          path='fr/colecciones/titan-cemento'
+          element={<cementoFR.TitanCemEN />}
+        />
+        <Route
+          path='fr/colecciones/mood-anthracite'
+          element={<cementoFR.MoodAntraEN />}
+        />
+        <Route
+          path='fr/colecciones/mood-grey'
+          element={<cementoFR.MoodGreyEN />}
+        />
+        <Route
+          path='fr/colecciones/vulcano'
+          element={<cementoFR.VulcanoEN />}
+        />
+        {/* ---------------------Color--------------------- */}
+        <Route
+          path='fr/colecciones/basic-blanco'
+          element={<colorFR.BasicBlancoEN />}
+        />
+        <Route
+          path='fr/colecciones/basic-negro'
+          element={<colorFR.BasicNegroEN />}
+        />
+        <Route
+          path='fr/colecciones/era-deep-black'
+          element={<colorFR.EraDeepBEN />}
+        />
+        <Route path='fr/colecciones/era-grey' element={<colorFR.EraGreyEN />} />
+        <Route
+          path='fr/colecciones/era-infinity-white'
+          element={<colorFR.EraInfinityWEN />}
+        />
+        <Route
+          path='fr/colecciones/era-white'
+          element={<colorFR.EraWhiteEN />}
+        />
+        <Route
+          path='fr/colecciones/pure-super-white'
+          element={<colorFR.PureWhiteEN />}
+        />
+        <Route
+          path='fr/colecciones/pure-black'
+          element={<colorFR.PureBlackEN />}
+        />
+        {/* ---------------------marmol--------------------- */}
+        <Route
+          path='fr/colecciones/arabescatto-corchia'
+          element={<marmolFR.ArabescattoEN />}
+        />
+        <Route
+          path='fr/colecciones/atlantis'
+          element={<marmolFR.AtlantisEN />}
+        />
+        <Route
+          path='fr/colecciones/blanc-arabescato'
+          element={<marmolFR.BlancArabeEN />}
+        />
+        <Route
+          path='fr/colecciones/blanc-borghini'
+          element={<marmolFR.BlancBorgEN />}
+        />
+        <Route
+          path='fr/colecciones/blanc-calacatta'
+          element={<marmolFR.BlancCalaEN />}
+        />
+        <Route
+          path='fr/colecciones/blanc-calacatta-gold'
+          element={<marmolFR.BlancCalaGoldEN />}
+        />
+        <Route
+          path='fr/colecciones/blanc-invisible'
+          element={<marmolFR.BlancInvEN />}
+        />
+        <Route
+          path='fr/colecciones/blanc-statuario-gold'
+          element={<marmolFR.BlancStatGoldEN />}
+        />
+        <Route
+          path='fr/colecciones/blanc-statuarietto'
+          element={<marmolFR.BlancStatEN />}
+        />
+        <Route
+          path='fr/colecciones/brazil-super-white'
+          element={<marmolFR.BrazilSuperEN />}
+        />
+        <Route
+          path='fr/colecciones/calacatta'
+          element={<marmolFR.CalacattaEN />}
+        />
+        <Route
+          path='fr/colecciones/calacatta-gold'
+          element={<marmolFR.CalacattaGoldEN />}
+        />
+        <Route
+          path='fr/colecciones/calacatta-paonazzo'
+          element={<marmolFR.CalacattaPaoEN />}
+        />
+        <Route path='fr/colecciones/corinto' element={<marmolFR.CorintoEN />} />
+        <Route
+          path='fr/colecciones/cuarzo-reno'
+          element={<marmolFR.CuarzoRenoEN />}
+        />
+        <Route
+          path='fr/colecciones/estatuario'
+          element={<marmolFR.EstatuarioEN />}
+        />
+        <Route
+          path='fr/colecciones/estatuario-bk-a'
+          element={<marmolFR.EstatuarioBKAEN />}
+        />
+        <Route path='fr/colecciones/iceberg' element={<marmolFR.IcebergEN />} />
+        <Route
+          path='fr/colecciones/invisible-grey'
+          element={<marmolFR.InvisibleGreyEN />}
+        />
+        <Route path='fr/colecciones/lilac' element={<marmolFR.LilacEN />} />
+        <Route
+          path='fr/colecciones/negro-marquina'
+          element={<marmolFR.NegroMarqEN />}
+        />
+        <Route
+          path='fr/colecciones/nero-ardi'
+          element={<marmolFR.NeroArdiEN />}
+        />
+        <Route path='fr/colecciones/paladio' element={<marmolFR.PaladioEN />} />
+        <Route
+          path='fr/colecciones/rosa-persia'
+          element={<marmolFR.RosaPersiaEN />}
+        />
+        <Route path='fr/colecciones/syrac' element={<marmolFR.SyracEN />} />
+        <Route path='fr/colecciones/volakas' element={<marmolFR.VolakasEN />} />
+        {/* ---------------------madera--------------------- */}
+        <Route path='fr/colecciones/canada' element={<maderaFR.CanadaEN />} />
+        <Route
+          path='fr/colecciones/irati-abeto'
+          element={<maderaFR.IratiAlbedoEN />}
+        />
+        {/* ---------------------metal--------------------- */}
+        <Route
+          path='fr/colecciones/distrito-aluminio'
+          element={<metalFR.DistritoAluminioEN />}
+        />
+        <Route
+          path='fr/colecciones/distrito-marfil'
+          element={<metalFR.DistritoMarfilEN />}
+        />
+        <Route
+          path='fr/colecciones/lava-iron'
+          element={<metalFR.LavaIronEN />}
+        />
+        {/* ---------------------piedra--------------------- */}
+        <Route
+          path='fr/colecciones/allure-anthracite'
+          element={<piedraFR.AllureAntraEN />}
+        />
+        <Route
+          path='fr/colecciones/allure-light-grey'
+          element={<piedraFR.AllureLightEN />}
+        />
+        <Route
+          path='fr/colecciones/amsterdam-grey'
+          element={<piedraFR.AmsterdamGreyEN />}
+        />
+        <Route
+          path='fr/colecciones/basalt-grey'
+          element={<piedraFR.BasaltGreyEN />}
+        />
+        <Route
+          path='fr/colecciones/basaltina-beige'
+          element={<piedraFR.BasaltinaBeigeEN />}
+        />
+        <Route
+          path='fr/colecciones/bateig-blue'
+          element={<piedraFR.BateigBlueEN />}
+        />
+        <Route
+          path='fr/colecciones/bera-ice'
+          element={<piedraFR.BeraIceEN />}
+        />
+        <Route
+          path='fr/colecciones/beren-black'
+          element={<piedraFR.BerenBlackEN />}
+        />
+        <Route
+          path='fr/colecciones/beren-light-grey'
+          element={<piedraFR.BerenLGEN />}
+        />
+        <Route
+          path='fr/colecciones/camargue-arena'
+          element={<piedraFR.CamargueArenaEN />}
+        />
+        <Route
+          path='fr/colecciones/camargue-blanco'
+          element={<piedraFR.CamargueBlancoEN />}
+        />
+        <Route
+          path='fr/colecciones/edra-grey'
+          element={<piedraFR.EdraGreyEN />}
+        />
+        <Route
+          path='fr/colecciones/edra-light'
+          element={<piedraFR.EdraLightEN />}
+        />
+        <Route
+          path='fr/colecciones/edra-sand'
+          element={<piedraFR.EdraSandEN />}
+        />
+        <Route
+          path='fr/colecciones/eme-light-grey'
+          element={<piedraFR.EmeLGEN />}
+        />
+        <Route
+          path='fr/colecciones/eme-grey'
+          element={<piedraFR.EmeGreyEN />}
+        />
+        <Route
+          path='fr/colecciones/kendo-classic'
+          element={<piedraFR.KendoClassicEN />}
+        />
+        <Route
+          path='fr/colecciones/kendo-light'
+          element={<piedraFR.KendoLightEN />}
+        />
+        <Route
+          path='fr/colecciones/noon-grey'
+          element={<piedraFR.NoonGreyEN />}
+        />
+        <Route
+          path='fr/colecciones/noon-sand'
+          element={<piedraFR.NoonSandEN />}
+        />
+        <Route
+          path='fr/colecciones/porfido-brown'
+          element={<piedraFR.PorfidoBrownEN />}
+        />
+        <Route
+          path='fr/colecciones/porfido-sand'
+          element={<piedraFR.PorfidoSandEN />}
+        />
+        <Route
+          path='fr/colecciones/wega-black'
+          element={<piedraFR.WegaBlackEN />}
+        />
       </Routes>
     </Router>
   );
