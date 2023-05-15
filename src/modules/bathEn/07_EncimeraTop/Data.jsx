@@ -58,7 +58,7 @@ export const encimeratop = {
     text3: "XL top integrity with two sinks",
   },
   desc4: {
-    text1: "XL top integrity con lavabo centrado",
+    text1: "XL top integrity with central sink",
     text2: "XL top integrity with left or right offset sink",
     text3: "XL top integrity with two sinks",
   },
