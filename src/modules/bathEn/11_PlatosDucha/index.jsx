@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
+import logoAntislip from "../../../assets/images/Antislip.svg";
 import { medidas1, medidas2, medidas3 } from "./animacionesAncho";
 import {
   TituloAnimacion,
@@ -21,6 +22,7 @@ import {
   SliderWrapper,
   SliderContainer,
   WrapperAnim,
+  WrapperAnim2,
   ImgWrapper,
   WrapperIframe,
   Frase,
@@ -29,14 +31,24 @@ import {
   TextoImagen,
   WrapperTxtImg,
   ImgWrap2,
-  Img2
+  Img2,
+  LogoAntislip,
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
   require("../../../assets/images/bath/platos/Icono Medidas Plato.png"),
 ];
-const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
+const PlatosDucha = ({
+  id,
+  headLine,
+  description,
+  description2,
+  description3,
+  iconodescarga,
+  img,
+  alt,
+}) => {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <>
@@ -76,6 +88,24 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           <br />
           <br />
           {description2}
+          <br />
+          <br />
+          {description3} <br />
+          <br />
+          <LogoAntislip src={logoAntislip} />
+          <p style={{ fontSize: "12px", color: "white" }}>
+            Download laboratory reports of standardised materials &nbsp; &nbsp;
+            <a
+              href={
+                "/downloads/informes de laboratorio de materiales estandarizados C3.pdf"
+              }
+            >
+              <img
+                style={{ filter: "invert(1)", width: "25px", height: "auto" }}
+                src={iconodescarga}
+              ></img>
+            </a>
+          </p>
         </Subtitle>
         <GeneralContainer
           initial={{ x: 100, opacity: 0 }}
@@ -100,8 +130,8 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           </SliderWrapper>
         </GeneralContainer>
         <TituloAnimacion>
-          Shower trays with widths from 70 to 100 cm in increments of 5
-          cm in the following lengths:
+          Shower trays with widths from 70 to 100 cm in increments of 5 cm in
+          the following lengths:
           <Linea />
         </TituloAnimacion>
         <WrapperAnim>
@@ -134,12 +164,11 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
           </AnimacionContainer>
           <AnimacionContainer>
             <Frase>
-              Our shower trays can be manufactured in any size.
-              We have two options for the drain, one with the drain
-              centered and another with the drain displaced. For this last option
-              We must take into account the following measures to place the
-              drain inside each of the different sizes. See table
-              attached.
+              Our shower trays can be manufactured in any size. We have two
+              options for the drain, one with the drain centered and another
+              with the drain displaced. For this last option We must take into
+              account the following measures to place the drain inside each of
+              the different sizes. See table attached.
             </Frase>
           </AnimacionContainer>
           <AnimacionContainer>
@@ -165,9 +194,7 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
         <WrapperIframe>
           {isVisible && (
             <ImgWrap2 onClick={() => setIsVisible(!isVisible)}>
-              <Img2
-                src={fadeImages[0]}
-              />
+              <Img2 src={fadeImages[0]} />
               <WrapperTxtImg
                 id='expansor'
                 initial={{
@@ -193,7 +220,7 @@ const PlatosDucha = ({ id, headLine, description, description2, img, alt }) => {
             </ImgWrap2>
           )}
           <iframe
-            src="https://itch.io/embed-upload/7429989?color=333333"
+            src='https://itch.io/embed-upload/7429989?color=333333'
             allowFullscreen=''
             height={"100%"}
             width={"100%"}

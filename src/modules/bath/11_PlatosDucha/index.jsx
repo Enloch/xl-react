@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
-
+import logoAntislip from "../../../assets/images/Antislip.svg";
 import { medidas1, medidas2, medidas3 } from "./animacionesAncho";
 import {
   TituloAnimacion,
@@ -22,6 +22,7 @@ import {
   SliderWrapper,
   SliderContainer,
   WrapperAnim,
+  WrapperAnim2,
   ImgWrapper,
   WrapperIframe,
   Frase,
@@ -31,6 +32,7 @@ import {
   WrapperTxtImg,
   ImgWrap2,
   Img2,
+  LogoAntislip,
 } from "./encimeraAutoStyles";
 const fadeImages = [
   require("../../../assets/images/bath/XL light shower tray 01.webp"),
@@ -43,6 +45,7 @@ const PlatosDucha = ({
   description,
   description2,
   description3,
+  description4,
   iconodescarga,
   img,
   alt,
@@ -88,9 +91,9 @@ const PlatosDucha = ({
           {description2}
           <br />
           <br />
-          {description3} <br />
+          {description4} <br />
           <br />
-          <br />
+          <LogoAntislip src={logoAntislip} />
           <p style={{ fontSize: "12px", color: "white" }}>
             Descarga informes de laboratorio de materiales estandarizados &nbsp;
             &nbsp;
@@ -159,7 +162,7 @@ const PlatosDucha = ({
           Colocación del desagüe:
           <Linea />
         </TituloAnimacion>
-        <WrapperAnim>
+        <WrapperAnim2>
           <AnimacionContainer>
             <Img src={fadeImages[2]} />
           </AnimacionContainer>
@@ -191,7 +194,7 @@ const PlatosDucha = ({
               <ContTabla>60 cm</ContTabla>
             </Tabla>
           </AnimacionContainer>
-        </WrapperAnim>
+        </WrapperAnim2>
         <ImgWrapper></ImgWrapper>
         <WrapperIframe>
           {isVisible && (

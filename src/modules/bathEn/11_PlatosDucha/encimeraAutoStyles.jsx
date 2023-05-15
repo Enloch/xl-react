@@ -37,7 +37,7 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled(motion.p)`
   margin-right: 10%;
-  font-size: 100px;
+  font-size: 70px;
   line-height: 0.9;
   justify-content: center;
   color: #fff;
@@ -58,7 +58,7 @@ export const Heading = styled(motion.p)`
 `;
 
 export const Subtitle = styled(motion.p)`
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 100;
   color: #fff;
   grid-column: 2 / 5;
@@ -68,10 +68,6 @@ export const Subtitle = styled(motion.p)`
     grid-column: 1 / 5;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 1 / 6;
-    font-size: 32px;
-  }
-  @media screen and (max-width: 480px) {
     font-size: 16px;
     grid-row: 2;
     grid-column: 1 / -1;
@@ -177,10 +173,10 @@ export const GeneralContainer = styled(motion.div)`
   @media screen and (max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {
-  }
-  @media screen and (max-width: 480px) {
     grid-row: 3;
     grid-column: 1/-1;
+  }
+  @media screen and (max-width: 480px) {
   }
 `;
 export const SliderWrapper = styled.div`
@@ -229,9 +225,34 @@ export const WrapperAnim = styled.div`
   grid-column: 4 / -2;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   /* height: 100%; */
   @media screen and (max-width: 1400px) {
-    grid-column: 2/-2;
+    /* flex-direction: column; */
+
+    grid-column: 2/-1;
+  }
+  @media screen and (max-width: 980px) {
+    grid-column: 1 / -1;
+  }
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    grid-column: 1 / -1;
+  }
+`;
+export const WrapperAnim2 = styled.div`
+  grid-column: 4 / -2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+  /* height: 100%; */
+  @media screen and (max-width: 1400px) {
+    /* flex-direction: column; */
+
+    grid-column: 2/-1;
   }
   @media screen and (max-width: 980px) {
     grid-column: 1 / -1;
@@ -258,7 +279,7 @@ export const ImgWrapper = styled.div`
 
 export const WrapperIframe = styled.div`
   grid-column: 2 / 12;
-  grid-row:9;
+  grid-row: 9;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -323,5 +344,20 @@ export const ContTabla = styled(motion.p)`
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
+  }
+`;
+
+export const LogoAntislip = styled.img`
+  width: 50%;
+  object-fit: cover;
+  //grid-column: 4 / span 8;
+  @media screen and (max-width: 1920px) {
+  }
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 `;

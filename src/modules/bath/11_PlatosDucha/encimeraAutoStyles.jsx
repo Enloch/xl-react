@@ -68,10 +68,6 @@ export const Subtitle = styled(motion.p)`
     grid-column: 1 / 5;
   }
   @media screen and (max-width: 980px) {
-    grid-column: 1 / 6;
-    font-size: 28px;
-  }
-  @media screen and (max-width: 480px) {
     font-size: 16px;
     grid-row: 2;
     grid-column: 1 / -1;
@@ -177,10 +173,10 @@ export const GeneralContainer = styled(motion.div)`
   @media screen and (max-width: 1400px) {
   }
   @media screen and (max-width: 980px) {
-  }
-  @media screen and (max-width: 480px) {
     grid-row: 3;
     grid-column: 1/-1;
+  }
+  @media screen and (max-width: 480px) {
   }
 `;
 export const SliderWrapper = styled.div`
@@ -230,6 +226,28 @@ export const WrapperAnim = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* height: 100%; */
+  @media screen and (max-width: 1400px) {
+    /* flex-direction: column; */
+
+    grid-column: 2/-1;
+  }
+  @media screen and (max-width: 980px) {
+    grid-column: 1 / -1;
+  }
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    grid-column: 1 / -1;
+  }
+`;
+export const WrapperAnim2 = styled.div`
+  grid-column: 4 / -2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
   /* height: 100%; */
   @media screen and (max-width: 1400px) {
     /* flex-direction: column; */
@@ -326,5 +344,20 @@ export const ContTabla = styled(motion.p)`
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
+  }
+`;
+
+export const LogoAntislip = styled.img`
+  width: 50%;
+  object-fit: cover;
+  //grid-column: 4 / span 8;
+  @media screen and (max-width: 1920px) {
+  }
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 `;

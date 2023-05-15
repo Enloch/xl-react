@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const AnimacionContainer = styled.div`
-  width: 33%;
+  width: 50%;
   float: left;
   @media screen and (max-width: 480px) {
     width: 100%;
