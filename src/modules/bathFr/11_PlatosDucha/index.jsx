@@ -160,7 +160,7 @@ const PlatosDucha = ({
           Positionnement de la bonde:
           <Linea />
         </TituloAnimacion>
-        <WrapperAnim>
+        <WrapperAnim2>
           <AnimacionContainer>
             <Img src={fadeImages[2]} />
           </AnimacionContainer>
@@ -192,7 +192,7 @@ const PlatosDucha = ({
               <ContTabla>60 cm</ContTabla>
             </Tabla>
           </AnimacionContainer>
-        </WrapperAnim>
+        </WrapperAnim2>
         <ImgWrapper></ImgWrapper>
         <WrapperIframe>
           {isVisible && (
