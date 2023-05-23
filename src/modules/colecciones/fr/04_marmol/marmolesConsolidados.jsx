@@ -13,7 +13,7 @@ import {
 //   return <>{PagiMarmolesStyle1[0]}</>;
 // };
 
-export const AtlantisEN = () => {
+export const AtlantwisEN = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
