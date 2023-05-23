@@ -23,10 +23,10 @@ export const SidebarFR = ({ isOpen, toggle }) => {
         <SidebarLink2 to='/' onClick={toggle}>
           ES
         </SidebarLink2>
-        <SidebarLink2 to='en' onClick={toggle}>
+        <SidebarLink2 to='/en' onClick={toggle}>
           EN
         </SidebarLink2>
-        <SidebarLink2 to='fr' onClick={toggle}>
+        <SidebarLink2 to='/fr' onClick={toggle}>
           FR
         </SidebarLink2>
       </SidebarWrapper2>

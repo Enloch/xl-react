@@ -139,18 +139,18 @@ export const Colec_Color = [
 ];
 
 export const Colec_Marmol = [
-  {
-    id: "arabescatto_corchia",
-    img: require("../../../../assets/images/colecciones/arabescatto_corchia.webp"),
-    desc: ["arabescatto corchia //", "1600x3200mm", "12mm"],
-    alt: "mini00",
-    url: "arabescatto-corchia",
-  },
+  // {
+  //   id: "arabescatto_corchia",
+  //   img: require("../../../../assets/images/colecciones/arabescatto_corchia.webp"),
+  //   desc: ["arabescatto corchia //", "1600x3200mm", "12mm"],
+  //   alt: "mini00",
+  //   url: "arabescatto-corchia",
+  // },
   {
     id: "atlantis",
     img: require("../../../../assets/images/colecciones/atlantis.webp"),
     desc: ["atlantis gold //", "1600x3200mm", "12mm"],
-    alt: "mini01",
+    alt: "mini00",
     url: "atlantis",
   },
   {
@@ -265,19 +265,26 @@ export const Colec_Marmol = [
     alt: "mini17",
     url: "iceberg",
   },
-  {
-    id: "invisible_grey",
-    img: require("../../../../assets/images/colecciones/invisible_grey.webp"),
-    desc: ["invisible grey //", "1600x3200mm", "12mm"],
-    alt: "mini18",
-    url: "invisible-grey",
-  },
+  // {
+  //   id: "invisible_grey",
+  //   img: require("../../../../assets/images/colecciones/invisible_grey.webp"),
+  //   desc: ["invisible grey //", "1600x3200mm", "12mm"],
+  //   alt: "mini18",
+  //   url: "invisible-grey",
+  // },
   {
     id: "lilac",
     img: require("../../../../assets/images/colecciones/lilac.webp"),
     desc: ["lilac //", "1600x3200mm", "12mm"],
     alt: "mini19",
     url: "lilac",
+  },
+  {
+    id: "melbourne",
+    img: require("../../../../assets/images/colecciones/melbourne.webp"),
+    desc: ["melbourne //", "1600x3200mm", "12mm"],
+    alt: "mini19",
+    url: "melbourne",
   },
   {
     id: "negro_marquina",
@@ -300,12 +307,26 @@ export const Colec_Marmol = [
     alt: "mini22",
     url: "paladio",
   },
+  // {
+  //   id: "rosa_persia",
+  //   img: require("../../../../assets/images/colecciones/rosa_persia.webp"),
+  //   desc: ["rosa persia //", "1600x3200mm", "12mm"],
+  //   alt: "mini23",
+  //   url: "rosa-persia",
+  // },
   {
-    id: "rosa_persia",
-    img: require("../../../../assets/images/colecciones/rosa_persia.webp"),
-    desc: ["rosa persia //", "1600x3200mm", "12mm"],
-    alt: "mini23",
-    url: "rosa-persia",
+    id: "saharanoir",
+    img: require("../../../../assets/images/colecciones/sahara_noir.webp"),
+    desc: ["sahara noir //", "1600x3200mm", "12mm "],
+    alt: "mini24",
+    url: "sahara-noir",
+  },
+  {
+    id: "saintlaurent",
+    img: require("../../../../assets/images/colecciones/saint_laurent.webp"),
+    desc: ["saint laurent //", "1500x3200", "20mm"],
+    alt: "mini24",
+    url: "saint-laurent",
   },
   {
     id: "syrac",
@@ -314,13 +335,13 @@ export const Colec_Marmol = [
     alt: "mini24",
     url: "syrac",
   },
-  {
-    id: "volakas",
-    img: require("../../../../assets/images/colecciones/volakas.webp"),
-    desc: ["volakas //", "1600x3200mm", "12mm"],
-    alt: "mini25",
-    url: "volakas",
-  },
+  // {
+  //   id: "volakas",
+  //   img: require("../../../../assets/images/colecciones/volakas.webp"),
+  //   desc: ["volakas //", "1600x3200mm", "12mm"],
+  //   alt: "mini25",
+  //   url: "volakas",
+  // },
 ];
 
 export const Colec_Madera = [

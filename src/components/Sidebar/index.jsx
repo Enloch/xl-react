@@ -21,13 +21,13 @@ export const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarWrapper2>
-        <SidebarLink2 to='/' onClick={toggle}>
+        <SidebarLink2 to='/' onClick={toggle}></SidebarLink2>
           ES
         </SidebarLink2>
-        <SidebarLink2 to='en' onClick={toggle}>
+        <SidebarLink2 to='/en' onClick={toggle}>
           EN
         </SidebarLink2>
-        <SidebarLink2 to='fr' onClick={toggle}>
+        <SidebarLink2 to='/fr' onClick={toggle}>
           FR
         </SidebarLink2>
       </SidebarWrapper2>

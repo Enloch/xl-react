@@ -38,7 +38,7 @@ export const PaginasCemento = [
     imgVid: require("../../../../assets/videos/kron_grey.mp4"),
     desc: [
       "soft textured 1620x3240 mm/ 63”x127”",
-      "cemento / concrete /béton",
+      "cemento / concrete / béton",
       "2 diseños / 2 designs",
     ],
     verimg:

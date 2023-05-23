@@ -138,10 +138,10 @@ const PaginasColeccion = () => {
         />
         <Route path='/colecciones/pure-black' element={<color.PureBlack />} />
         {/* ---------------------marmol--------------------- */}
-        <Route
+        {/* <Route
           path='/colecciones/arabescatto-corchia'
           element={<marmol.Arabescatto />}
-        />
+        /> */}
         <Route path='/colecciones/atlantis' element={<marmol.Atlantis />} />
         <Route
           path='/colecciones/blanc-arabescato'
@@ -195,23 +195,32 @@ const PaginasColeccion = () => {
           element={<marmol.EstatuarioBKA />}
         />
         <Route path='/colecciones/iceberg' element={<marmol.Iceberg />} />
-        <Route
+        {/* <Route
           path='/colecciones/invisible-grey'
           element={<marmol.InvisibleGrey />}
-        />
+        /> */}
         <Route path='/colecciones/lilac' element={<marmol.Lilac />} />
         <Route
           path='/colecciones/negro-marquina'
           element={<marmol.NegroMarq />}
         />
+        <Route path='/colecciones/melbourne' element={<marmol.Melbourne />} />
         <Route path='/colecciones/nero-ardi' element={<marmol.NeroArdi />} />
         <Route path='/colecciones/paladio' element={<marmol.Paladio />} />
-        <Route
+        {/* <Route
           path='/colecciones/rosa-persia'
           element={<marmol.RosaPersia />}
+        /> */}
+        <Route
+          path='/colecciones/sahara-noir'
+          element={<marmol.SaharaNoir />}
+        />
+        <Route
+          path='/colecciones/saint-laurent'
+          element={<marmol.SaintLauren />}
         />
         <Route path='/colecciones/syrac' element={<marmol.Syrac />} />
-        <Route path='/colecciones/volakas' element={<marmol.Volakas />} />
+        {/* <Route path='/colecciones/volakas' element={<marmol.Volakas />} /> */}
         {/* ---------------------madera--------------------- */}
         <Route path='/colecciones/canada' element={<madera.Canada />} />
         <Route
@@ -363,10 +372,10 @@ const PaginasColeccion = () => {
           element={<colorEN.PureBlackEN />}
         />
         {/* ---------------------marmol--------------------- */}
-        <Route
+        {/* <Route
           path='en/colecciones/arabescatto-corchia'
           element={<marmolEN.ArabescattoEN />}
-        />
+        /> */}
         <Route
           path='en/colecciones/atlantis'
           element={<marmolEN.AtlantisEN />}
@@ -429,11 +438,15 @@ const PaginasColeccion = () => {
           element={<marmolEN.EstatuarioBKAEN />}
         />
         <Route path='en/colecciones/iceberg' element={<marmolEN.IcebergEN />} />
-        <Route
+        {/* <Route
           path='en/colecciones/invisible-grey'
           element={<marmolEN.InvisibleGreyEN />}
-        />
+        /> */}
         <Route path='en/colecciones/lilac' element={<marmolEN.LilacEN />} />
+        <Route
+          path='en/colecciones/melbourne'
+          element={<marmolEN.MelbourneEN />}
+        />
         <Route
           path='en/colecciones/negro-marquina'
           element={<marmolEN.NegroMarqEN />}
@@ -443,12 +456,20 @@ const PaginasColeccion = () => {
           element={<marmolEN.NeroArdiEN />}
         />
         <Route path='en/colecciones/paladio' element={<marmolEN.PaladioEN />} />
-        <Route
+        {/* <Route
           path='en/colecciones/rosa-persia'
           element={<marmolEN.RosaPersiaEN />}
+        /> */}
+        <Route
+          path='en/colecciones/sahara-noir'
+          element={<marmolEN.SaharaNoirEN />}
+        />
+        <Route
+          path='en/colecciones/saint-laurent'
+          element={<marmolEN.SaintLaurenEN />}
         />
         <Route path='en/colecciones/syrac' element={<marmolEN.SyracEN />} />
-        <Route path='en/colecciones/volakas' element={<marmolEN.VolakasEN />} />
+        {/* <Route path='en/colecciones/volakas' element={<marmolEN.VolakasEN />} /> */}
         {/* ---------------------madera--------------------- */}
         <Route path='en/colecciones/canada' element={<maderaEN.CanadaEN />} />
         <Route
@@ -670,10 +691,10 @@ const PaginasColeccion = () => {
           element={<colorFR.PureBlackEN />}
         />
         {/* ---------------------marmol--------------------- */}
-        <Route
+        {/* <Route
           path='fr/colecciones/arabescatto-corchia'
           element={<marmolFR.ArabescattoEN />}
-        />
+        /> */}
         <Route
           path='fr/colecciones/atlantis'
           element={<marmolFR.AtlantisEN />}
@@ -736,11 +757,15 @@ const PaginasColeccion = () => {
           element={<marmolFR.EstatuarioBKAEN />}
         />
         <Route path='fr/colecciones/iceberg' element={<marmolFR.IcebergEN />} />
-        <Route
+        {/* <Route
           path='fr/colecciones/invisible-grey'
           element={<marmolFR.InvisibleGreyEN />}
-        />
+        /> */}
         <Route path='fr/colecciones/lilac' element={<marmolFR.LilacEN />} />
+        <Route
+          path='en/colecciones/melbourne'
+          element={<marmolFR.MelbourneEN />}
+        />
         <Route
           path='fr/colecciones/negro-marquina'
           element={<marmolFR.NegroMarqEN />}
@@ -750,12 +775,20 @@ const PaginasColeccion = () => {
           element={<marmolFR.NeroArdiEN />}
         />
         <Route path='fr/colecciones/paladio' element={<marmolFR.PaladioEN />} />
-        <Route
+        {/* <Route
           path='fr/colecciones/rosa-persia'
           element={<marmolFR.RosaPersiaEN />}
+        /> */}
+        <Route
+          path='fr/colecciones/sahara-noir'
+          element={<marmolFR.SaharaNoirEN />}
+        />
+        <Route
+          path='fr/colecciones/saint-laurent'
+          element={<marmolFR.SaintLaurenEN />}
         />
         <Route path='fr/colecciones/syrac' element={<marmolFR.SyracEN />} />
-        <Route path='fr/colecciones/volakas' element={<marmolFR.VolakasEN />} />
+        {/* <Route path='fr/colecciones/volakas' element={<marmolFR.VolakasEN />} /> */}
         {/* ---------------------madera--------------------- */}
         <Route path='fr/colecciones/canada' element={<maderaFR.CanadaEN />} />
         <Route
