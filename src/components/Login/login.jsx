@@ -25,6 +25,9 @@ const Login = () => {
       },
       { username: "user2", password: "pass2", permisos: "ver_tarifas" },
       { username: "A20163275", password: "112174XL", permisos: "ver_tarifas" },
+      { username: "juandetoro", password: "XLpass0", permisos: "ver_tarifas" },
+      { username: "joelfarres", password: "XLpass1", permisos: "ver_tarifas" },
+      { username: "carlorosati", password: "XLpass2", permisos: "ver_tarifas" },
     ];
 
     const user = users.find(
