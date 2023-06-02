@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Fondo,
   Formulario,
@@ -12,44 +12,23 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch("/users.csv");
-        const csvData = await response.text();
-        const parsedData = parseCSV(csvData);
-        setUsers(parsedData);
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    };
-
-    fetchUsers();
-  }, []);
-
-  const parseCSV = (csvData) => {
-    const lines = csvData.split("\n");
-    const headers = lines[0].split(",");
-    const parsedData = [];
-
-    for (let i = 1; i < lines.length; i++) {
-      const line = lines[i].split(",");
-      if (line.length === headers.length) {
-        const user = {};
-        for (let j = 0; j < headers.length; j++) {
-          user[headers[j].trim()] = line[j].trim();
-        }
-        parsedData.push(user);
-      }
-    }
-
-    return parsedData;
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Aquí es donde se verifican las credenciales
+    const users = [
+      {
+        username: "user1",
+        password: "pass1",
+        permisos: "ver_tarifas",
+      },
+      { username: "user2", password: "pass2", permisos: "ver_tarifas" },
+      { username: "A20163275", password: "112174XL", permisos: "ver_tarifas" },
+      { username: "juandetoro", password: "XLpass0", permisos: "ver_tarifas" },
+      { username: "joelfarres", password: "XLpass1", permisos: "ver_tarifas" },
+      { username: "carlorosati", password: "XLpass2", permisos: "ver_tarifas" },
+    ];
 
     const user = users.find(
       (u) => u.username === username && u.password === password
@@ -58,6 +37,7 @@ const Login = () => {
     if (!user) {
       setError("Credenciales inválidas");
     } else {
+      // Aquí es donde se hace lo que se necesita cuando el inicio de sesión es exitoso
       localStorage.setItem("user", JSON.stringify(user));
       window.location.href = "descargas";
       setError(null);
