@@ -41,7 +41,7 @@ export const SidebarBathEN = ({ isOpen, toggle }) => {
             Nos finitions
           </SidebarLink>
           <SidebarLink to='menuinteractivo' smooth={true} onClick={toggle}>
-            Échangeur interactif
+            Échangeur interactif de bain
           </SidebarLink>
           <SidebarLink to='forradomuebles' smooth={true} onClick={toggle}>
             Revêtement de meubles

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import styled from "styled-components";
 import NavbarBath from "../components/NavbarBath";
@@ -33,7 +33,6 @@ import PlatosDucha from "../modules/bathFr/11_PlatosDucha";
 import { platoObj } from "../modules/bathFr/11_PlatosDucha/Data";
 import XLPanel from "../modules/bathFr/12_XLPanel";
 import { xlpanelObj } from "../modules/bathFr/12_XLPanel/Data";
-import RotadorWebGl from "../modules/bathFr/_RotadowWebgl";
 import SidebarBathFr from "../components/SidebarBathFr";
 import ScrollToTop from "../components/GoTopBttn/ScrollToTop";
 const BathFr = () => {
@@ -41,6 +40,9 @@ const BathFr = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // Agrega una función que maneje el clic en el botón de scroll hacia arriba
   const handleScrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

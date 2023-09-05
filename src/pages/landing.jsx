@@ -27,6 +27,8 @@ import { descargasObj } from "../modules/09_Descargas/Data";
 import ScrollToTop from "../components/GoTopBttn/ScrollToTop";
 import XLBathSection from "../modules/09_XLBath";
 import { XlbathObj } from "../modules/09_XLBath/Data";
+import XLEncimera from "../modules/10_XLEncimera";
+import { XlencimeraObj } from "../modules/10_XLEncimera/Data";
 const Home = () => {
   const indiceRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
@@ -56,6 +58,7 @@ const Home = () => {
       <AcabadoSection {...acabadoObj} />
       <ColecSection {...colecObj} />
       <XLBathSection {...XlbathObj} />
+      <XLEncimera {...XlencimeraObj} />
       {/* <DescargasSection {...descargasObj} /> */}
       <FooterSection {...LandingFooter} />
     </>

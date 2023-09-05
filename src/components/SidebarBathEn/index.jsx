@@ -41,7 +41,7 @@ export const SidebarBathEN = ({ isOpen, toggle }) => {
             Our Finishes
           </SidebarLink>
           <SidebarLink to='menuinteractivo' smooth={true} onClick={toggle}>
-            Interactive configurator
+            Interactive bath configurator
           </SidebarLink>
           <SidebarLink to='forradomuebles' smooth={true} onClick={toggle}>
             XL Bathroom Adapt

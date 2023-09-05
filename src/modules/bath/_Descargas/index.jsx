@@ -17,6 +17,8 @@ import {
 const DescargasBath = ({
   descargaEspTec,
   descargaTarifas,
+  descargaTarifasEN,
+  descargaFolleto,
   descargaAcabadosHD,
   descargasAmbHD,
   descargasXLBathHD,
@@ -73,10 +75,16 @@ const DescargasBath = ({
         <br />
         {puedeVerTarifas && (
           <AreaListado>
-            <TituloListado>tarifas</TituloListado>
+            <TituloListado>tarifas y folletos</TituloListado>
             <ContApartados>
               <Apartado href={descargaTarifas} download=''>
                 <TextoApartado>tarifas 2023</TextoApartado>
+              </Apartado>
+              <Apartado href={descargaFolleto} download=''>
+                <TextoApartado>folleto expositor</TextoApartado>
+              </Apartado>
+              <Apartado href={descargaTarifasEN} download=''>
+                <TextoApartado>price list (tarifa) 2023</TextoApartado>
               </Apartado>
             </ContApartados>
           </AreaListado>
