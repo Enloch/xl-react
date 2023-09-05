@@ -441,7 +441,7 @@ export default function InterGrande() {
               duration: 0.2,
               ease: "easeIn",
             },
-            height: "20%",
+            height: "auto",
           }}
         >
           <ContenedorMateriales>
@@ -511,7 +511,7 @@ export default function InterGrande() {
               duration: 0.2,
               ease: "easeIn",
             },
-            height: "20%",
+            height: "auto",
           }}
         >
           <ContenedorMateriales>
