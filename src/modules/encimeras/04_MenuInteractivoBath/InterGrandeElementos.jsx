@@ -147,6 +147,22 @@ export const Icono1 = styled.img`
     transform: rotate(-45deg);
   }
 `;
+export const Icono2 = styled.img`
+  position: absolute;
+  cursor: pointer;
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 980px) {
+    scale: 0.75;
+  }
+  @media screen and (max-width: 480px) {
+    scale: 0.5;
+  }
+  transition: all 0.2s linear;
+  :hover {
+    transform: translateY(10px);
+  }
+`;
 
 export const MenuMateriales = styled(motion.div)`
   display: flex;

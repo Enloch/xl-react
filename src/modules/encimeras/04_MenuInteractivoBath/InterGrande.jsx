@@ -4,6 +4,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import icono_b from "../../../assets/icons/botones/boton_b.png";
 import icono from "../../../assets/icons/botones/boton.png";
 import icono_retroceso from "../../../assets/icons/botones/undo-svgrepo-com.svg";
+import descarga from "../../../assets/icons/descarga.svg";
 import {
   CementoMicrocemento,
   ColorUniforme,
@@ -32,6 +33,7 @@ import {
   TextoIntro,
   ContenedorIconos,
   Icono1,
+  Icono2,
   MenuMateriales,
   ContenedorMateriales,
   IconoMaterial,
@@ -74,9 +76,9 @@ export default function InterGrande() {
   );
   const [imagenMueble, setImagenMueble] = useState(ImagenMueble[1].textura);
   const [imagenFrente, setImagenFrente] = useState(ImagenFrente[0].textura);
-  const [miniMueble, setMiniMueble] = useState(MiniMueble[1].textura);
-  const [miniEncimera, setMiniEncimera] = useState(ColorUniforme[4].textura);
-  const [miniFrente, setMiniFrente] = useState(ColorUniforme[4].textura);
+  const [miniMueble, setMiniMueble] = useState(MiniMueble[1]);
+  const [miniEncimera, setMiniEncimera] = useState(ColorUniforme[4]);
+  const [miniFrente, setMiniFrente] = useState(ColorUniforme[4]);
 
   const handleGeneratePDF = () => {
     console.log("he entrado");
@@ -150,6 +152,7 @@ export default function InterGrande() {
       <Tooltip anchorId={"frente"} content={"frente"} />
       <Tooltip anchorId={"mueble"} content={"mueble"} />
       <Tooltip anchorId={"reiniciar"} content={"reiniciar"} />
+      <Tooltip anchorId={"descarga"} content={"descarga"} />
       {/*--------------botones--------------*/}
       <Icono1
         id='encimera'
@@ -200,14 +203,14 @@ export default function InterGrande() {
           left: "95%",
         }}
       />
-      <Icono1
-        id='imprimir'
+      <Icono2
+        id='descarga'
         onClick={() => handleGeneratePDF()}
-        src={icono_retroceso}
-        alt='reiniciar'
+        src={descarga}
+        alt='descarga'
         style={{
-          top: "92%",
-          left: "90%",
+          top: "84%",
+          left: "94.3%",
         }}
       />
     </ContenedorIconos>
@@ -267,7 +270,7 @@ export default function InterGrande() {
                   setNature(false);
                   setRobledo(false);
                   setImagenMueble(ImagenMueble[0].textura);
-                  setMiniMueble(MiniMueble[0].textura);
+                  setMiniMueble(MiniMueble[0]);
                 }}
               >
                 <IconoMaterial src={MiniMueble[0].textura} />
@@ -283,7 +286,7 @@ export default function InterGrande() {
                   setNature(false);
                   setRobledo(false);
                   setImagenMueble(ImagenMueble[1].textura);
-                  setMiniMueble(MiniMueble[1].textura);
+                  setMiniMueble(MiniMueble[1]);
                 }}
               >
                 <IconoMaterial src={MiniMueble[1].textura} />
@@ -299,7 +302,7 @@ export default function InterGrande() {
                   setNature(false);
                   setRobledo(false);
                   setImagenMueble(ImagenMueble[2].textura);
-                  setMiniMueble(MiniMueble[2].textura);
+                  setMiniMueble(MiniMueble[2]);
                 }}
               >
                 <IconoMaterial src={MiniMueble[2].textura} />
@@ -315,7 +318,7 @@ export default function InterGrande() {
                   setNature(false);
                   setRobledo(false);
                   setImagenMueble(ImagenMueble[3].textura);
-                  setMiniMueble(MiniMueble[3].textura);
+                  setMiniMueble(MiniMueble[3]);
                 }}
               >
                 <IconoMaterial src={MiniMueble[3].textura} />
@@ -331,7 +334,7 @@ export default function InterGrande() {
                   setNature(false);
                   setRobledo(false);
                   setImagenMueble(ImagenMueble[4].textura);
-                  setMiniMueble(MiniMueble[4].textura);
+                  setMiniMueble(MiniMueble[4]);
                 }}
               >
                 <IconoMaterial src={MiniMueble[4].textura} />
@@ -347,7 +350,7 @@ export default function InterGrande() {
                   setNature(true);
                   setRobledo(false);
                   setImagenMueble(ImagenMueble[5].textura);
-                  setMiniMueble(MiniMueble[5].textura);
+                  setMiniMueble(MiniMueble[5]);
                 }}
               >
                 <IconoMaterial src={MiniMueble[5].textura} />
@@ -363,7 +366,7 @@ export default function InterGrande() {
                   setNature(false);
                   setRobledo(true);
                   setImagenMueble(ImagenMueble[6].textura);
-                  setMiniMueble(MiniMueble[6].textura);
+                  setMiniMueble(MiniMueble[6]);
                 }}
               >
                 <IconoMaterial src={MiniMueble[6].textura} />
@@ -478,7 +481,7 @@ export default function InterGrande() {
               {CementoMicrocemento.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id)}
+                  onClick={() => handleMaterialEncimera(item.id, item)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -513,7 +516,7 @@ export default function InterGrande() {
               {ColorUniforme.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
+                  onClick={() => handleMaterialEncimera(item.id, item)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -548,7 +551,7 @@ export default function InterGrande() {
               {Madera.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
+                  onClick={() => handleMaterialEncimera(item.id, item)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -583,7 +586,7 @@ export default function InterGrande() {
               {Marmol.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
+                  onClick={() => handleMaterialEncimera(item.id, item)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -618,7 +621,7 @@ export default function InterGrande() {
               {Metal.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
+                  onClick={() => handleMaterialEncimera(item.id, item)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -653,7 +656,7 @@ export default function InterGrande() {
               {Piedra.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
+                  onClick={() => handleMaterialEncimera(item.id, item)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
