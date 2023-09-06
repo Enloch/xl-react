@@ -13,7 +13,7 @@ import {
   Piedra,
   MiniMueble,
 } from "./miniaturas";
-
+import generatePDF from "../../../components/PDF/pdfConfig";
 import {
   ImagenBase,
   ImagenMueble,
@@ -50,8 +50,12 @@ import {
 export default function InterGrande() {
   const [inicio, setInicio] = useState(true);
   const [iconos, setIconos] = useState(false);
-  const [Bromo, setBromo] = useState(false);
+  const [Arena, setArena] = useState(false);
   const [Blanco, setBlanco] = useState(true);
+  const [Bromo, setBromo] = useState(false);
+  const [Fume, setFume] = useState(false);
+  const [Gris, setGris] = useState(false);
+  const [Nature, setNature] = useState(false);
   const [Robledo, setRobledo] = useState(false);
   const [muebleVisible, setMuebleVisible] = useState(false);
   const [materialEncimera, setMaterialEncimera] = useState(
@@ -68,12 +72,43 @@ export default function InterGrande() {
   const [copeteVisible, setCopeteVisible] = useState(
     Encimera[13].TexturaCopete
   );
-  const handleMaterialEncimera = (material) => {
+  const [imagenMueble, setImagenMueble] = useState(ImagenMueble[1].textura);
+  const [imagenFrente, setImagenFrente] = useState(ImagenFrente[0].textura);
+  const [miniMueble, setMiniMueble] = useState(MiniMueble[1].textura);
+  const [miniEncimera, setMiniEncimera] = useState(ColorUniforme[4].textura);
+  const [miniFrente, setMiniFrente] = useState(ColorUniforme[4].textura);
+
+  const handleGeneratePDF = () => {
+    console.log("he entrado");
+    // Aquí puedes agregar tu lógica para generar el PDF
+    const encimera = materialEncimera; // Replace this with the selected type of encimera
+    const mueble = imagenMueble; // Replace this with the selected type of mueble
+    const frenteActivo = frenteVisible; // Replace this with the selected type of frente activa
+    const frente = imagenFrente; // Replace this with the selected type of frente
+    const copete = copeteVisible;
+    const frenteMini = miniFrente;
+    const muebleMini = miniMueble;
+    const encimeraMini = miniEncimera;
+
+    generatePDF({
+      encimera,
+      mueble,
+      frenteActivo,
+      frente,
+      copete,
+      frenteMini,
+      muebleMini,
+      encimeraMini,
+    });
+  };
+  const handleMaterialEncimera = (material, textura) => {
     let cambio = null;
     let cambio2 = null;
     cambio = Encimera.find((item) => item.id === material)?.textura || null;
     cambio2 =
       Encimera.find((item) => item.id === material)?.TexturaCopete || null;
+    setMiniEncimera(textura);
+    setMiniFrente(textura);
     setMaterialEncimera(cambio);
     setCopeteVisible(cambio2);
   };
@@ -101,6 +136,10 @@ export default function InterGrande() {
     setBromo(false);
     setBlanco(true);
     setRobledo(false);
+    setFume(false);
+    setGris(false);
+    setNature(false);
+    setArena(false);
     setMaterialEncimera(Encimera[13].textura);
     setFrenteVisible(false);
     setCopeteVisible(Encimera[13].TexturaCopete);
@@ -161,6 +200,16 @@ export default function InterGrande() {
           left: "95%",
         }}
       />
+      <Icono1
+        id='imprimir'
+        onClick={() => handleGeneratePDF()}
+        src={icono_retroceso}
+        alt='reiniciar'
+        style={{
+          top: "92%",
+          left: "90%",
+        }}
+      />
     </ContenedorIconos>
   );
   return (
@@ -210,19 +259,31 @@ export default function InterGrande() {
             <CajaMaterial>
               <ContIconText2
                 onClick={() => {
-                  setRobledo(false);
+                  setArena(true);
                   setBlanco(false);
-                  setBromo(true);
+                  setBromo(false);
+                  setFume(false);
+                  setGris(false);
+                  setNature(false);
+                  setRobledo(false);
+                  setImagenMueble(ImagenMueble[0].textura);
+                  setMiniMueble(MiniMueble[0].textura);
                 }}
               >
                 <IconoMaterial src={MiniMueble[0].textura} />
-                <TextoMaterial>Bromo</TextoMaterial>
+                <TextoMaterial>Arena</TextoMaterial>
               </ContIconText2>
               <ContIconText
                 onClick={() => {
-                  setRobledo(false);
+                  setArena(false);
                   setBlanco(true);
                   setBromo(false);
+                  setFume(false);
+                  setGris(false);
+                  setNature(false);
+                  setRobledo(false);
+                  setImagenMueble(ImagenMueble[1].textura);
+                  setMiniMueble(MiniMueble[1].textura);
                 }}
               >
                 <IconoMaterial src={MiniMueble[1].textura} />
@@ -230,12 +291,82 @@ export default function InterGrande() {
               </ContIconText>
               <ContIconText2
                 onClick={() => {
-                  setRobledo(true);
+                  setArena(false);
                   setBlanco(false);
-                  setBromo(false);
+                  setBromo(true);
+                  setFume(false);
+                  setGris(false);
+                  setNature(false);
+                  setRobledo(false);
+                  setImagenMueble(ImagenMueble[2].textura);
+                  setMiniMueble(MiniMueble[2].textura);
                 }}
               >
                 <IconoMaterial src={MiniMueble[2].textura} />
+                <TextoMaterial>Bromo</TextoMaterial>
+              </ContIconText2>
+              <ContIconText2
+                onClick={() => {
+                  setArena(false);
+                  setBlanco(false);
+                  setBromo(false);
+                  setFume(true);
+                  setGris(false);
+                  setNature(false);
+                  setRobledo(false);
+                  setImagenMueble(ImagenMueble[3].textura);
+                  setMiniMueble(MiniMueble[3].textura);
+                }}
+              >
+                <IconoMaterial src={MiniMueble[3].textura} />
+                <TextoMaterial>Fume</TextoMaterial>
+              </ContIconText2>
+              <ContIconText2
+                onClick={() => {
+                  setArena(false);
+                  setBlanco(false);
+                  setBromo(false);
+                  setFume(false);
+                  setGris(true);
+                  setNature(false);
+                  setRobledo(false);
+                  setImagenMueble(ImagenMueble[4].textura);
+                  setMiniMueble(MiniMueble[4].textura);
+                }}
+              >
+                <IconoMaterial src={MiniMueble[4].textura} />
+                <TextoMaterial>Gris</TextoMaterial>
+              </ContIconText2>
+              <ContIconText2
+                onClick={() => {
+                  setArena(false);
+                  setBlanco(false);
+                  setBromo(false);
+                  setFume(false);
+                  setGris(false);
+                  setNature(true);
+                  setRobledo(false);
+                  setImagenMueble(ImagenMueble[5].textura);
+                  setMiniMueble(MiniMueble[5].textura);
+                }}
+              >
+                <IconoMaterial src={MiniMueble[5].textura} />
+                <TextoMaterial>Nature</TextoMaterial>
+              </ContIconText2>
+              <ContIconText2
+                onClick={() => {
+                  setArena(false);
+                  setBlanco(false);
+                  setBromo(false);
+                  setFume(false);
+                  setGris(false);
+                  setNature(false);
+                  setRobledo(true);
+                  setImagenMueble(ImagenMueble[6].textura);
+                  setMiniMueble(MiniMueble[6].textura);
+                }}
+              >
+                <IconoMaterial src={MiniMueble[6].textura} />
                 <TextoMaterial>Robledo</TextoMaterial>
               </ContIconText2>
             </CajaMaterial>
@@ -382,7 +513,7 @@ export default function InterGrande() {
               {ColorUniforme.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id)}
+                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -417,7 +548,7 @@ export default function InterGrande() {
               {Madera.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id)}
+                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -452,7 +583,7 @@ export default function InterGrande() {
               {Marmol.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id)}
+                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -487,7 +618,7 @@ export default function InterGrande() {
               {Metal.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id)}
+                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -522,7 +653,7 @@ export default function InterGrande() {
               {Piedra.map((item, index) => (
                 <ContIconText2
                   key={index}
-                  onClick={() => handleMaterialEncimera(item.id)}
+                  onClick={() => handleMaterialEncimera(item.id, item.textura)}
                 >
                   <IconoMaterial src={item.textura} />
                   <TextoMaterial>{item.nombre}</TextoMaterial>
@@ -541,7 +672,7 @@ export default function InterGrande() {
       >
         <Imagen src={ImagenBase[0].textura} alt='fondo' />
       </ContenedorImagenBase>
-      {Bromo && (
+      {Arena && (
         <ContenedorImagen>
           <Imagen src={ImagenMueble[0].textura} alt='mueble' />
         </ContenedorImagen>
@@ -551,9 +682,29 @@ export default function InterGrande() {
           <Imagen src={ImagenMueble[1].textura} alt='mueble' />
         </ContenedorImagen>
       )}
-      {Robledo && (
+      {Bromo && (
         <ContenedorImagen>
           <Imagen src={ImagenMueble[2].textura} alt='mueble' />
+        </ContenedorImagen>
+      )}
+      {Fume && (
+        <ContenedorImagen>
+          <Imagen src={ImagenMueble[3].textura} alt='mueble' />
+        </ContenedorImagen>
+      )}
+      {Gris && (
+        <ContenedorImagen>
+          <Imagen src={ImagenMueble[4].textura} alt='mueble' />
+        </ContenedorImagen>
+      )}
+      {Nature && (
+        <ContenedorImagen>
+          <Imagen src={ImagenMueble[5].textura} alt='mueble' />
+        </ContenedorImagen>
+      )}
+      {Robledo && (
+        <ContenedorImagen>
+          <Imagen src={ImagenMueble[6].textura} alt='mueble' />
         </ContenedorImagen>
       )}
       <ContenedorImagen>

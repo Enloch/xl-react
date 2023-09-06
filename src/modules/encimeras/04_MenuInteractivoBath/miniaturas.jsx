@@ -76,13 +76,25 @@ import Vulcano from "../../../assets/images/encimera/intercambiador/minis/vulcan
 import WegaBlack from "../../../assets/images/encimera/intercambiador/minis/wega_black.webp";
 
 //Maderas
-import MuebleBromo from "../../../assets/images/encimera/intercambiador/minis/03_bromo.jpg";
-import MuebleBlanco from "../../../assets/images/encimera/intercambiador/minis/02_blanco.jpg";
+import MuebleArena from "../../../assets/images/encimera/intercambiador/minis/01_arena_mate.webp";
+import MuebleBromo from "../../../assets/images/encimera/intercambiador/minis/03_bromo.webp";
+import MuebleBlanco from "../../../assets/images/encimera/intercambiador/minis/02_blanco.webp";
+import MuebleFume from "../../../assets/images/encimera/intercambiador/minis/03_fume_mate.webp";
+import MuebleGris from "../../../assets/images/encimera/intercambiador/minis/04_gris.webp";
+import MuebleNature from "../../../assets/images/encimera/intercambiador/minis/04_kobe_nature.webp";
 import MuebleRobledo from "../../../assets/images/encimera/intercambiador/minis/05_kobe_robledo.webp";
 
 export const MiniMueble = [
-  { nombre: "Fénix Bromo", textura: MuebleBromo, id: "MuebleBromo" },
+  { nombre: "Lacado Arena", textura: MuebleArena, id: "MuebleArena" },
   { nombre: "Laminado Blanco", textura: MuebleBlanco, id: "MuebleBlanco" },
+  { nombre: "Fénix Bromo", textura: MuebleBromo, id: "MuebleBromo" },
+  { nombre: "Lacado Fume", textura: MuebleFume, id: "MuebleFume" },
+  { nombre: "Fénix Gris", textura: MuebleGris, id: "MuebleGris" },
+  {
+    nombre: "Laminado Veta Horizontal Nature",
+    textura: MuebleNature,
+    id: "MuebleNature",
+  },
   {
     nombre: "Laminado Veta Horizontal Robledo",
     textura: MuebleRobledo,
@@ -194,7 +206,12 @@ export const ColorUniforme = [
 ];
 
 export const Marmol = [
-  { nombre: "Atlantis", textura: Atlantis, id: "Atlantis", tipo: "Mármol" },
+  {
+    nombre: "Atlantis Gold",
+    textura: Atlantis,
+    id: "Atlantis",
+    tipo: "Mármol",
+  },
   {
     nombre: "Blanc Arabescato",
     textura: BlancArabescato,

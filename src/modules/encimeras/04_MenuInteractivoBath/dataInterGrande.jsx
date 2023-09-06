@@ -1,168 +1,180 @@
-import Base from "../../../assets/images/encimera/intercambiador/BASE.webp";
+import Base from "../../../assets/images/encimera/intercambiador/BASE.png";
 
 //Muebles
-import MuebleBromo from "../../../assets/images/encimera/intercambiador/MUEBLE_fenix bromo.webp";
-import MuebleBlanco from "../../../assets/images/encimera/intercambiador/MUEBLE_laminado blanco.webp";
-import MuebleRobledo from "../../../assets/images/encimera/intercambiador/MUEBLE_laminado veta horizontal robledo.webp";
+import MuebleArena from "../../../assets/images/encimera/intercambiador/MUEBLE_lacado arena mate.png";
+import MuebleBromo from "../../../assets/images/encimera/intercambiador/MUEBLE_fenix bromo.png";
+import MuebleBlanco from "../../../assets/images/encimera/intercambiador/MUEBLE_laminado blanco.png";
+import MuebleFume from "../../../assets/images/encimera/intercambiador/MUEBLE_lacado fume mate.png";
+import MuebleGris from "../../../assets/images/encimera/intercambiador/MUEBLE_fenix gris.png";
+import MuebleNature from "../../../assets/images/encimera/intercambiador/MUEBLE_laminado veta horizontal nature.png";
+import MuebleRobledo from "../../../assets/images/encimera/intercambiador/MUEBLE_laminado veta horizontal robledo.png";
 
 //Frente
-import FrenteAzulejo from "../../../assets/images/encimera/intercambiador/FRENTE AZULEJO.webp";
+import FrenteAzulejo from "../../../assets/images/encimera/intercambiador/FRENTE AZULEJO.png";
 
 //Copetes
-import CopeteAllure from "../../../assets/images/encimera/intercambiador/COPETE_allure anthracite.webp";
-import CopeteAllureLight from "../../../assets/images/encimera/intercambiador/COPETE_allure light grey.webp";
-import CopeteAmsterdam from "../../../assets/images/encimera/intercambiador/COPETE_amsterdam grey.webp";
-import CopeteAtlantis from "../../../assets/images/encimera/intercambiador/COPETE_atlantis gold.webp";
-import CopeteBasalt from "../../../assets/images/encimera/intercambiador/COPETE_basalt grey.webp";
-import CopeteBasaltina from "../../../assets/images/encimera/intercambiador/COPETE_basaltina beige.webp";
-import CopeteBasicNegro from "../../../assets/images/encimera/intercambiador/COPETE_basic negro.webp";
-import CopeteBasicBlanco from "../../../assets/images/encimera/intercambiador/COPETE_basic blanco.webp";
-import CopeteBateig from "../../../assets/images/encimera/intercambiador/COPETE_bateig blue.webp";
-import CopeteBeraIce from "../../../assets/images/encimera/intercambiador/COPETE_bera ice.webp";
-import CopeteBerenBlack from "../../../assets/images/encimera/intercambiador/COPETE_beren black.webp";
-import CopeteBerenLight from "../../../assets/images/encimera/intercambiador/COPETE_beren light grey.webp";
-import CopeteBlancArabescato from "../../../assets/images/encimera/intercambiador/COPETE_blanc arabescato.webp";
-import CopeteBlancBorghini from "../../../assets/images/encimera/intercambiador/COPETE_blanc borghini.webp";
-import CopeteBlancCalacattaGold from "../../../assets/images/encimera/intercambiador/COPETE_blanc calacatta gold.webp";
-import CopeteBlancCalacatta from "../../../assets/images/encimera/intercambiador/COPETE_blanc calacatta.webp";
-import CopeteBlancInvisible from "../../../assets/images/encimera/intercambiador/COPETE_blanc invisible.webp";
-import CopeteBlancStatuarietto from "../../../assets/images/encimera/intercambiador/COPETE_blanc statuarietto.webp";
-import CopeteBlancStatuarioGold from "../../../assets/images/encimera/intercambiador/COPETE_blanc statuario gold.webp";
-import CopeteBlueStoneGrey from "../../../assets/images/encimera/intercambiador/COPETE_blue stone gris.webp";
-import CopeteBrazilSuperWhite from "../../../assets/images/encimera/intercambiador/COPETE_brazil super white.webp";
-import CopeteCalacattaGold from "../../../assets/images/encimera/intercambiador/COPETE_calacatta gold.webp";
-import CopeteCalacattaPaonazzo from "../../../assets/images/encimera/intercambiador/COPETE_calacatta paonazzo.webp";
-import CopeteCalacatta from "../../../assets/images/encimera/intercambiador/COPETE_calacatta.webp";
-import CopeteCamargueArena from "../../../assets/images/encimera/intercambiador/COPETE_camargue arena.webp";
-import CopeteCamargueBlanco from "../../../assets/images/encimera/intercambiador/COPETE_camargue blanco.webp";
-import CopeteCanada from "../../../assets/images/encimera/intercambiador/COPETE_canadá.webp";
-import CopeteCorinto from "../../../assets/images/encimera/intercambiador/COPETE_corinto.webp";
-import CopeteCuarzoReno from "../../../assets/images/encimera/intercambiador/COPETE_cuarzo reno.webp";
-import CopeteDistritoAluminio from "../../../assets/images/encimera/intercambiador/COPETE_distrito aluminio.webp";
-import CopeteDistritoMarfil from "../../../assets/images/encimera/intercambiador/COPETE_distrito marfil.webp";
-import CopeteEdraGrey from "../../../assets/images/encimera/intercambiador/COPETE_edra grey.webp";
-import CopeteEdraLight from "../../../assets/images/encimera/intercambiador/COPETE_edra light.webp";
-import CopeteEdraSand from "../../../assets/images/encimera/intercambiador/COPETE_edra sand.webp";
-import CopeteEmeGrey from "../../../assets/images/encimera/intercambiador/COPETE_eme grey.webp";
-import CopeteEmeLightGrey from "../../../assets/images/encimera/intercambiador/COPETE_eme light grey.webp";
-import CopeteEraDeepBlack from "../../../assets/images/encimera/intercambiador/COPETE_era deep black.webp";
-import CopeteEraGrey from "../../../assets/images/encimera/intercambiador/COPETE_era grey.webp";
-import CopeteEraInfinityWhite from "../../../assets/images/encimera/intercambiador/COPETE_era infinity white.webp";
-import CopeteEraWhite from "../../../assets/images/encimera/intercambiador/COPETE_era white.webp";
-import CopeteEstatuarioBkA from "../../../assets/images/encimera/intercambiador/COPETE_estatuario bk-a.webp";
-import CopeteEstatuario from "../../../assets/images/encimera/intercambiador/COPETE_estatuario.webp";
-import CopeteIceberg from "../../../assets/images/encimera/intercambiador/COPETE_iceberg.webp";
-import CopeteIratiAbeto from "../../../assets/images/encimera/intercambiador/COPETE_irati abeto.webp";
-import CopeteKendoClassic from "../../../assets/images/encimera/intercambiador/COPETE_kendo classic.webp";
-import CopeteKendoLight from "../../../assets/images/encimera/intercambiador/COPETE_kendo light.webp";
-import CopeteKron from "../../../assets/images/encimera/intercambiador/COPETE_kron grey.webp";
-import CopeteLavaIron from "../../../assets/images/encimera/intercambiador/COPETE_lava iron.webp";
-import CopeteLilac from "../../../assets/images/encimera/intercambiador/COPETE_lilac.webp";
-import CopeteMelbourne from "../../../assets/images/encimera/intercambiador/COPETE_melbourne.webp";
-import CopeteMomaArena from "../../../assets/images/encimera/intercambiador/COPETE_moma arena.webp";
-import CopeteMomaGris from "../../../assets/images/encimera/intercambiador/COPETE_moma gris.webp";
-import CopeteMoodAnthracite from "../../../assets/images/encimera/intercambiador/COPETE_mood anthracite.webp";
-import CopeteMoodGrey from "../../../assets/images/encimera/intercambiador/COPETE_mood grey.webp";
-import CopeteNegroMarquina from "../../../assets/images/encimera/intercambiador/COPETE_negro marquina.webp";
-import CopeteNeroArdi from "../../../assets/images/encimera/intercambiador/COPETE_nero ardi.webp";
-import CopeteNoonGrey from "../../../assets/images/encimera/intercambiador/COPETE_noon grey.webp";
-import CopeteNoonSand from "../../../assets/images/encimera/intercambiador/COPETE_noon sand.webp";
-import CopetePaladio from "../../../assets/images/encimera/intercambiador/COPETE_paladio.webp";
-import CopetePorfidoBrown from "../../../assets/images/encimera/intercambiador/COPETE_pórfido brown.webp";
-import CopetePorfidoSand from "../../../assets/images/encimera/intercambiador/COPETE_pórfido sand.webp";
-import CopetePureBlack from "../../../assets/images/encimera/intercambiador/COPETE_pure black.webp";
-import CopetePureSuperWhite from "../../../assets/images/encimera/intercambiador/COPETE_pure super white.webp";
-import CopeteSahara from "../../../assets/images/encimera/intercambiador/COPETE_sahara noir.webp";
-import CopeteSaintLaurent from "../../../assets/images/encimera/intercambiador/COPETE_saint laurent.webp";
-import CopeteSyrac from "../../../assets/images/encimera/intercambiador/COPETE_syrac.webp";
-import CopeteTitanAnthracita from "../../../assets/images/encimera/intercambiador/COPETE_titan antracita.webp";
-import CopeteTitanCemento from "../../../assets/images/encimera/intercambiador/COPETE_titan cemento.webp";
-import CopeteVulcano from "../../../assets/images/encimera/intercambiador/COPETE_vulcano.webp";
-import CopeteWegaBlack from "../../../assets/images/encimera/intercambiador/COPETE_wega black.webp";
+import CopeteAllure from "../../../assets/images/encimera/intercambiador/COPETE_allure anthracite.png";
+import CopeteAllureLight from "../../../assets/images/encimera/intercambiador/COPETE_allure light grey.png";
+import CopeteAmsterdam from "../../../assets/images/encimera/intercambiador/COPETE_amsterdam grey.png";
+import CopeteAtlantis from "../../../assets/images/encimera/intercambiador/COPETE_atlantis gold.png";
+import CopeteBasalt from "../../../assets/images/encimera/intercambiador/COPETE_basalt grey.png";
+import CopeteBasaltina from "../../../assets/images/encimera/intercambiador/COPETE_basaltina beige.png";
+import CopeteBasicNegro from "../../../assets/images/encimera/intercambiador/COPETE_basic negro.png";
+import CopeteBasicBlanco from "../../../assets/images/encimera/intercambiador/COPETE_basic blanco.png";
+import CopeteBateig from "../../../assets/images/encimera/intercambiador/COPETE_bateig blue.png";
+import CopeteBeraIce from "../../../assets/images/encimera/intercambiador/COPETE_bera ice.png";
+import CopeteBerenBlack from "../../../assets/images/encimera/intercambiador/COPETE_beren black.png";
+import CopeteBerenLight from "../../../assets/images/encimera/intercambiador/COPETE_beren light grey.png";
+import CopeteBlancArabescato from "../../../assets/images/encimera/intercambiador/COPETE_blanc arabescato.png";
+import CopeteBlancBorghini from "../../../assets/images/encimera/intercambiador/COPETE_blanc borghini.png";
+import CopeteBlancCalacattaGold from "../../../assets/images/encimera/intercambiador/COPETE_blanc calacatta gold.png";
+import CopeteBlancCalacatta from "../../../assets/images/encimera/intercambiador/COPETE_blanc calacatta.png";
+import CopeteBlancInvisible from "../../../assets/images/encimera/intercambiador/COPETE_blanc invisible.png";
+import CopeteBlancStatuarietto from "../../../assets/images/encimera/intercambiador/COPETE_blanc statuarietto.png";
+import CopeteBlancStatuarioGold from "../../../assets/images/encimera/intercambiador/COPETE_blanc statuario gold.png";
+import CopeteBlueStoneGrey from "../../../assets/images/encimera/intercambiador/COPETE_blue stone gris.png";
+import CopeteBrazilSuperWhite from "../../../assets/images/encimera/intercambiador/COPETE_brazil super white.png";
+import CopeteCalacattaGold from "../../../assets/images/encimera/intercambiador/COPETE_calacatta gold.png";
+import CopeteCalacattaPaonazzo from "../../../assets/images/encimera/intercambiador/COPETE_calacatta paonazzo.png";
+import CopeteCalacatta from "../../../assets/images/encimera/intercambiador/COPETE_calacatta.png";
+import CopeteCamargueArena from "../../../assets/images/encimera/intercambiador/COPETE_camargue arena.png";
+import CopeteCamargueBlanco from "../../../assets/images/encimera/intercambiador/COPETE_camargue blanco.png";
+import CopeteCanada from "../../../assets/images/encimera/intercambiador/COPETE_canadá.png";
+import CopeteCorinto from "../../../assets/images/encimera/intercambiador/COPETE_corinto.png";
+import CopeteCuarzoReno from "../../../assets/images/encimera/intercambiador/COPETE_cuarzo reno.png";
+import CopeteDistritoAluminio from "../../../assets/images/encimera/intercambiador/COPETE_distrito aluminio.png";
+import CopeteDistritoMarfil from "../../../assets/images/encimera/intercambiador/COPETE_distrito marfil.png";
+import CopeteEdraGrey from "../../../assets/images/encimera/intercambiador/COPETE_edra grey.png";
+import CopeteEdraLight from "../../../assets/images/encimera/intercambiador/COPETE_edra light.png";
+import CopeteEdraSand from "../../../assets/images/encimera/intercambiador/COPETE_edra sand.png";
+import CopeteEmeGrey from "../../../assets/images/encimera/intercambiador/COPETE_eme grey.png";
+import CopeteEmeLightGrey from "../../../assets/images/encimera/intercambiador/COPETE_eme light grey.png";
+import CopeteEraDeepBlack from "../../../assets/images/encimera/intercambiador/COPETE_era deep black.png";
+import CopeteEraGrey from "../../../assets/images/encimera/intercambiador/COPETE_era grey.png";
+import CopeteEraInfinityWhite from "../../../assets/images/encimera/intercambiador/COPETE_era infinity white.png";
+import CopeteEraWhite from "../../../assets/images/encimera/intercambiador/COPETE_era white.png";
+import CopeteEstatuarioBkA from "../../../assets/images/encimera/intercambiador/COPETE_estatuario bk-a.png";
+import CopeteEstatuario from "../../../assets/images/encimera/intercambiador/COPETE_estatuario.png";
+import CopeteIceberg from "../../../assets/images/encimera/intercambiador/COPETE_iceberg.png";
+import CopeteIratiAbeto from "../../../assets/images/encimera/intercambiador/COPETE_irati abeto.png";
+import CopeteKendoClassic from "../../../assets/images/encimera/intercambiador/COPETE_kendo classic.png";
+import CopeteKendoLight from "../../../assets/images/encimera/intercambiador/COPETE_kendo light.png";
+import CopeteKron from "../../../assets/images/encimera/intercambiador/COPETE_kron grey.png";
+import CopeteLavaIron from "../../../assets/images/encimera/intercambiador/COPETE_lava iron.png";
+import CopeteLilac from "../../../assets/images/encimera/intercambiador/COPETE_lilac.png";
+import CopeteMelbourne from "../../../assets/images/encimera/intercambiador/COPETE_melbourne.png";
+import CopeteMomaArena from "../../../assets/images/encimera/intercambiador/COPETE_moma arena.png";
+import CopeteMomaGris from "../../../assets/images/encimera/intercambiador/COPETE_moma gris.png";
+import CopeteMoodAnthracite from "../../../assets/images/encimera/intercambiador/COPETE_mood anthracite.png";
+import CopeteMoodGrey from "../../../assets/images/encimera/intercambiador/COPETE_mood grey.png";
+import CopeteNegroMarquina from "../../../assets/images/encimera/intercambiador/COPETE_negro marquina.png";
+import CopeteNeroArdi from "../../../assets/images/encimera/intercambiador/COPETE_nero ardi.png";
+import CopeteNoonGrey from "../../../assets/images/encimera/intercambiador/COPETE_noon grey.png";
+import CopeteNoonSand from "../../../assets/images/encimera/intercambiador/COPETE_noon sand.png";
+import CopetePaladio from "../../../assets/images/encimera/intercambiador/COPETE_paladio.png";
+import CopetePorfidoBrown from "../../../assets/images/encimera/intercambiador/COPETE_pórfido brown.png";
+import CopetePorfidoSand from "../../../assets/images/encimera/intercambiador/COPETE_pórfido sand.png";
+import CopetePureBlack from "../../../assets/images/encimera/intercambiador/COPETE_pure black.png";
+import CopetePureSuperWhite from "../../../assets/images/encimera/intercambiador/COPETE_pure super white.png";
+import CopeteSahara from "../../../assets/images/encimera/intercambiador/COPETE_sahara noir.png";
+import CopeteSaintLaurent from "../../../assets/images/encimera/intercambiador/COPETE_saint laurent.png";
+import CopeteSyrac from "../../../assets/images/encimera/intercambiador/COPETE_syrac.png";
+import CopeteTitanAnthracita from "../../../assets/images/encimera/intercambiador/COPETE_titan antracita.png";
+import CopeteTitanCemento from "../../../assets/images/encimera/intercambiador/COPETE_titan cemento.png";
+import CopeteVulcano from "../../../assets/images/encimera/intercambiador/COPETE_vulcano.png";
+import CopeteWegaBlack from "../../../assets/images/encimera/intercambiador/COPETE_wega black.png";
 
 //Encimeras
 
-import EncimeraAllureAnthracite from "../../../assets/images/encimera/intercambiador/ENCIMERA_allure anthracite.webp";
-import EncimeraAllureLightGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_allure light grey.webp";
-import EncimeraAmsterdamGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_amsterdam grey.webp";
-import EncimeraAtlantisGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_atlantis gold.webp";
-import EncimeraBasalt from "../../../assets/images/encimera/intercambiador/ENCIMERA_basalt grey.webp";
-import EncimeraBasaltinaBeige from "../../../assets/images/encimera/intercambiador/ENCIMERA_basaltina beige.webp";
-import EncimeraBasicBlanco from "../../../assets/images/encimera/intercambiador/ENCIMERA_basic blanco.webp";
-import EncimeraBasicNegro from "../../../assets/images/encimera/intercambiador/ENCIMERA_basic negro.webp";
-import EncimeraBateigBlue from "../../../assets/images/encimera/intercambiador/ENCIMERA_bateig blue.webp";
-import EncimeraBeraIce from "../../../assets/images/encimera/intercambiador/ENCIMERA_bera ice.webp";
-import EncimeraBerenBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_beren black.webp";
-import EncimeraBerenLight from "../../../assets/images/encimera/intercambiador/ENCIMERA_beren light grey.webp";
-import EncimeraBlancArabescato from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc arabescato.webp";
-import EncimeraBlancBorghini from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc borghini.webp";
-import EncimeraBlancCalacatta from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc calacatta.webp";
-import EncimeraBlancCalacattaGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc calacatta gold.webp";
-import EncimeraBlancInvisible from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc invisible.webp";
-import EncimeraBlancStatuarietto from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc statuarietto.webp";
-import EncimeraBlancStatuarioGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc statuario gold.webp";
-import EncimeraBlueStoneGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_blue stone gris.webp";
-import EncimeraBrazilSuperWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_brazil super white.webp";
-import EncimeraCalacattaGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta gold.webp";
-import EncimeraCalacattaPaonazzo from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta paonazzo.webp";
-import EncimeraCalacattaPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta_pulido.webp";
-import EncimeraCalacatta from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta.webp";
-import EncimeraCamargueArena from "../../../assets/images/encimera/intercambiador/ENCIMERA_camargue arena.webp";
-import EncimeraCamargueBlanco from "../../../assets/images/encimera/intercambiador/ENCIMERA_camargue blanco.webp";
-import EncimeraCanada from "../../../assets/images/encimera/intercambiador/ENCIMERA_canadá.webp";
-import EncimeraCorinto from "../../../assets/images/encimera/intercambiador/ENCIMERA_corinto.webp";
-import EncimeraCuarzoRenoPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_cuarzo reno_pulido.webp";
-import EncimeraCuarzoReno from "../../../assets/images/encimera/intercambiador/ENCIMERA_cuarzo reno.webp";
-import EncimeraDistritoAluminio from "../../../assets/images/encimera/intercambiador/ENCIMERA_distrito aluminio.webp";
-import EncimeraDistritoMarfil from "../../../assets/images/encimera/intercambiador/ENCIMERA_distrito marfil.webp";
-import EncimeraEdraGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_edra grey.webp";
-import EncimeraEdraLight from "../../../assets/images/encimera/intercambiador/ENCIMERA_edra light.webp";
-import EncimeraEdraSand from "../../../assets/images/encimera/intercambiador/ENCIMERA_edra sand.webp";
-import EncimeraEmeLightGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_eme light grey.webp";
-import EncimeraEmeGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_eme grey.webp";
-import EncimeraEraDeepBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_era deep black.webp";
-import EncimeraEraGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_era grey.webp";
-import EncimeraEraInfinityWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_era infinity white.webp";
-import EncimeraEraWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_era white.webp";
-import EncimeraEstatuarioBkA from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario bk-a.webp";
-import EncimeraEstatuarioBkAPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario bk-a_pulido.webp";
-import EncimeraEstatuario from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario.webp";
-import EncimeraEstatuarioPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario_pulido.webp";
-import EncimeraIceberg from "../../../assets/images/encimera/intercambiador/ENCIMERA_iceberg.webp";
-import EncimeraIcebergPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_iceberg_pulido.webp";
-import EncimeraIratiAbeto from "../../../assets/images/encimera/intercambiador/ENCIMERA_irati abeto.webp";
-import EncimeraKendoClassic from "../../../assets/images/encimera/intercambiador/ENCIMERA_kendo classic.webp";
-import EncimeraKendoLight from "../../../assets/images/encimera/intercambiador/ENCIMERA_kendo light.webp";
-import EncimeraKronGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_kron grey.webp";
-import EncimeraLavaIron from "../../../assets/images/encimera/intercambiador/ENCIMERA_lava iron.webp";
-import EncimeraLilac from "../../../assets/images/encimera/intercambiador/ENCIMERA_lilac.webp";
-import EncimeraMelbourne from "../../../assets/images/encimera/intercambiador/ENCIMERA_melbourne.webp";
-import EncimeraMomaArena from "../../../assets/images/encimera/intercambiador/ENCIMERA_moma arena.webp";
-import EncimeraMomaGris from "../../../assets/images/encimera/intercambiador/ENCIMERA_moma gris.webp";
-import EncimeraMoodAnthracite from "../../../assets/images/encimera/intercambiador/ENCIMERA_mood anthracite.webp";
-import EncimeraMoodGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_mood grey.webp";
-import EncimeraNegroMarquina from "../../../assets/images/encimera/intercambiador/ENCIMERA_negro marquina.webp";
-import EncimeraNeroArdi from "../../../assets/images/encimera/intercambiador/ENCIMERA_nero ardi.webp";
-import EncimeraNoonGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_noon grey.webp";
-import EncimeraNoonSand from "../../../assets/images/encimera/intercambiador/ENCIMERA_noon sand.webp";
-import EncimeraPaladio from "../../../assets/images/encimera/intercambiador/ENCIMERA_paladio.webp";
-import EncimeraPorfidoBrown from "../../../assets/images/encimera/intercambiador/ENCIMERA_pórfido brown.webp";
-import EncimeraPorfidoSand from "../../../assets/images/encimera/intercambiador/ENCIMERA_pórfido sand.webp";
-import EncimeraPureBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_pure black.webp";
-import EncimeraPureSuperWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_pure super white.webp";
-import EncimeraSahara from "../../../assets/images/encimera/intercambiador/ENCIMERA_sahara noir.webp";
-import EncimeraSaintLaurent from "../../../assets/images/encimera/intercambiador/ENCIMERA_saint laurent.webp";
-import EncimeraSyrac from "../../../assets/images/encimera/intercambiador/ENCIMERA_syrac.webp";
-import EncimeraTitanAntracita from "../../../assets/images/encimera/intercambiador/ENCIMERA_titan antracita.webp";
-import EncimeraTitanCemento from "../../../assets/images/encimera/intercambiador/ENCIMERA_titan cemento.webp";
-import EncimeraVulcano from "../../../assets/images/encimera/intercambiador/ENCIMERA_vulcano.webp";
-import EncimeraWegaBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_wega black.webp";
+import EncimeraAllureAnthracite from "../../../assets/images/encimera/intercambiador/ENCIMERA_allure anthracite.png";
+import EncimeraAllureLightGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_allure light grey.png";
+import EncimeraAmsterdamGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_amsterdam grey.png";
+import EncimeraAtlantisGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_atlantis gold.png";
+import EncimeraBasalt from "../../../assets/images/encimera/intercambiador/ENCIMERA_basalt grey.png";
+import EncimeraBasaltinaBeige from "../../../assets/images/encimera/intercambiador/ENCIMERA_basaltina beige.png";
+import EncimeraBasicBlanco from "../../../assets/images/encimera/intercambiador/ENCIMERA_basic blanco.png";
+import EncimeraBasicNegro from "../../../assets/images/encimera/intercambiador/ENCIMERA_basic negro.png";
+import EncimeraBateigBlue from "../../../assets/images/encimera/intercambiador/ENCIMERA_bateig blue.png";
+import EncimeraBeraIce from "../../../assets/images/encimera/intercambiador/ENCIMERA_bera ice.png";
+import EncimeraBerenBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_beren black.png";
+import EncimeraBerenLight from "../../../assets/images/encimera/intercambiador/ENCIMERA_beren light grey.png";
+import EncimeraBlancArabescato from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc arabescato.png";
+import EncimeraBlancBorghini from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc borghini.png";
+import EncimeraBlancCalacatta from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc calacatta.png";
+import EncimeraBlancCalacattaGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc calacatta gold.png";
+import EncimeraBlancInvisible from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc invisible.png";
+import EncimeraBlancStatuarietto from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc statuarietto.png";
+import EncimeraBlancStatuarioGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_blanc statuario gold.png";
+import EncimeraBlueStoneGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_blue stone gris.png";
+import EncimeraBrazilSuperWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_brazil super white.png";
+import EncimeraCalacattaGold from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta gold.png";
+import EncimeraCalacattaPaonazzo from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta paonazzo.png";
+import EncimeraCalacattaPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta_pulido.png";
+import EncimeraCalacatta from "../../../assets/images/encimera/intercambiador/ENCIMERA_calacatta.png";
+import EncimeraCamargueArena from "../../../assets/images/encimera/intercambiador/ENCIMERA_camargue arena.png";
+import EncimeraCamargueBlanco from "../../../assets/images/encimera/intercambiador/ENCIMERA_camargue blanco.png";
+import EncimeraCanada from "../../../assets/images/encimera/intercambiador/ENCIMERA_canadá.png";
+import EncimeraCorinto from "../../../assets/images/encimera/intercambiador/ENCIMERA_corinto.png";
+import EncimeraCuarzoRenoPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_cuarzo reno_pulido.png";
+import EncimeraCuarzoReno from "../../../assets/images/encimera/intercambiador/ENCIMERA_cuarzo reno.png";
+import EncimeraDistritoAluminio from "../../../assets/images/encimera/intercambiador/ENCIMERA_distrito aluminio.png";
+import EncimeraDistritoMarfil from "../../../assets/images/encimera/intercambiador/ENCIMERA_distrito marfil.png";
+import EncimeraEdraGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_edra grey.png";
+import EncimeraEdraLight from "../../../assets/images/encimera/intercambiador/ENCIMERA_edra light.png";
+import EncimeraEdraSand from "../../../assets/images/encimera/intercambiador/ENCIMERA_edra sand.png";
+import EncimeraEmeLightGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_eme light grey.png";
+import EncimeraEmeGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_eme grey.png";
+import EncimeraEraDeepBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_era deep black.png";
+import EncimeraEraGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_era grey.png";
+import EncimeraEraInfinityWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_era infinity white.png";
+import EncimeraEraWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_era white.png";
+import EncimeraEstatuarioBkA from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario bk-a.png";
+import EncimeraEstatuarioBkAPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario bk-a_pulido.png";
+import EncimeraEstatuario from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario.png";
+import EncimeraEstatuarioPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_estatuario_pulido.png";
+import EncimeraIceberg from "../../../assets/images/encimera/intercambiador/ENCIMERA_iceberg.png";
+import EncimeraIcebergPulido from "../../../assets/images/encimera/intercambiador/ENCIMERA_iceberg_pulido.png";
+import EncimeraIratiAbeto from "../../../assets/images/encimera/intercambiador/ENCIMERA_irati abeto.png";
+import EncimeraKendoClassic from "../../../assets/images/encimera/intercambiador/ENCIMERA_kendo classic.png";
+import EncimeraKendoLight from "../../../assets/images/encimera/intercambiador/ENCIMERA_kendo light.png";
+import EncimeraKronGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_kron grey.png";
+import EncimeraLavaIron from "../../../assets/images/encimera/intercambiador/ENCIMERA_lava iron.png";
+import EncimeraLilac from "../../../assets/images/encimera/intercambiador/ENCIMERA_lilac.png";
+import EncimeraMelbourne from "../../../assets/images/encimera/intercambiador/ENCIMERA_melbourne.png";
+import EncimeraMomaArena from "../../../assets/images/encimera/intercambiador/ENCIMERA_moma arena.png";
+import EncimeraMomaGris from "../../../assets/images/encimera/intercambiador/ENCIMERA_moma gris.png";
+import EncimeraMoodAnthracite from "../../../assets/images/encimera/intercambiador/ENCIMERA_mood anthracite.png";
+import EncimeraMoodGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_mood grey.png";
+import EncimeraNegroMarquina from "../../../assets/images/encimera/intercambiador/ENCIMERA_negro marquina.png";
+import EncimeraNeroArdi from "../../../assets/images/encimera/intercambiador/ENCIMERA_nero ardi.png";
+import EncimeraNoonGrey from "../../../assets/images/encimera/intercambiador/ENCIMERA_noon grey.png";
+import EncimeraNoonSand from "../../../assets/images/encimera/intercambiador/ENCIMERA_noon sand.png";
+import EncimeraPaladio from "../../../assets/images/encimera/intercambiador/ENCIMERA_paladio.png";
+import EncimeraPorfidoBrown from "../../../assets/images/encimera/intercambiador/ENCIMERA_pórfido brown.png";
+import EncimeraPorfidoSand from "../../../assets/images/encimera/intercambiador/ENCIMERA_pórfido sand.png";
+import EncimeraPureBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_pure black.png";
+import EncimeraPureSuperWhite from "../../../assets/images/encimera/intercambiador/ENCIMERA_pure super white.png";
+import EncimeraSahara from "../../../assets/images/encimera/intercambiador/ENCIMERA_sahara noir.png";
+import EncimeraSaintLaurent from "../../../assets/images/encimera/intercambiador/ENCIMERA_saint laurent.png";
+import EncimeraSyrac from "../../../assets/images/encimera/intercambiador/ENCIMERA_syrac.png";
+import EncimeraTitanAntracita from "../../../assets/images/encimera/intercambiador/ENCIMERA_titan antracita.png";
+import EncimeraTitanCemento from "../../../assets/images/encimera/intercambiador/ENCIMERA_titan cemento.png";
+import EncimeraVulcano from "../../../assets/images/encimera/intercambiador/ENCIMERA_vulcano.png";
+import EncimeraWegaBlack from "../../../assets/images/encimera/intercambiador/ENCIMERA_wega black.png";
 
 export const ImagenBase = [{ textura: Base, id: "ImagenBase" }];
 
 export const ImagenMueble = [
-  { nombre: "Fénix Bromo", textura: MuebleBromo, id: "MuebleBromo" },
+  { nombre: "Lacado Arena", textura: MuebleArena, id: "MuebleArena" },
   { nombre: "Laminado Blanco", textura: MuebleBlanco, id: "MuebleBlanco" },
+  { nombre: "Fénix Bromo", textura: MuebleBromo, id: "MuebleBromo" },
+  { nombre: "Lacado Fume", textura: MuebleFume, id: "MuebleFume" },
+  { nombre: "Fénix Gris", textura: MuebleGris, id: "MuebleGris" },
+  {
+    nombre: "Laminado Veta Horizontal Nature",
+    textura: MuebleNature,
+    id: "MuebleNature",
+  },
   {
     nombre: "Laminado Veta Horizontal Robledo",
     textura: MuebleRobledo,
@@ -275,7 +287,7 @@ export const Encimera = [
     id: "Pure Super White",
   },
   {
-    nombre: "Atlantis",
+    nombre: "Atlantis Gold",
     textura: EncimeraAtlantisGold,
     TexturaCopete: CopeteAtlantis,
     id: "Atlantis",

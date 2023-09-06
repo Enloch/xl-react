@@ -1,7 +1,6 @@
-
 export const XlencimeraObj = {
   id: "bath",
-  headLine: "XL Encimeras //",
+  headLine: "XL Kitchen //",
   description:
     "En XL Encimeras, nos apasiona la innovación y el diseño en el sector de la cocina . Nos especializamos en la producción encimeras en gran formato.",
   description2: "conozca más //",

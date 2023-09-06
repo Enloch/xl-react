@@ -68,7 +68,7 @@ const PaginasColeccion = () => {
         <Route path='/en/bath' element={<BathEN />} />
         <Route path='/fr/bath' element={<BathFr />} />
         <Route path='bath/login' element={<Login />} />
-        <Route path='/encimera' element={<Encimera />} />
+        <Route path='/kitchen' element={<Encimera />} />
         <Route element={<PrivateRoute />}>
           <Route
             path='bath/descargas'
