@@ -15,14 +15,17 @@
   width: 3em;
   cursor: pointer;
   transition: all .5s ease-in-out;
+  mix-blend-mode: difference;
 }
+
 @media screen and (max-width: 980px) {
   .icon-position {
-      position: fixed;
-      top: 30px;
-      left: 10px;
-      z-index: 20;
-    }
+    position: fixed;
+    top: 30px;
+    left: 10px;
+    z-index: 20;
+  }
+
   .icon-style {
     height: 4em;
     width: 3em;
@@ -31,6 +34,7 @@
 
   }
 }
+
 @media screen and (max-width: 480px) {
   .icon-style {
     height: 4em;
@@ -47,5 +51,6 @@
 
 @keyframes movebtn {
   from {}
-  to{}
+
+  to {}
 }

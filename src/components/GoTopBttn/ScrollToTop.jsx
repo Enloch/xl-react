@@ -50,7 +50,7 @@ const ScrollToTop = () => {
         className='icon-position icon-style'
         onClick={goToTop}
         alt={"GoTopBttn"}
-        style={{ mixBlendMode: "difference" }}
+        // style={{ mixBlendMode: "difference" }}
       />
     </div>
   );
@@ -59,6 +59,7 @@ export default ScrollToTop;
 const Logotipo = styled.img`
   width: 65px;
   height: auto;
+  mix-blend-mode: difference;
   @media screen and (max-width: 980px) {
     width: 40px;
   }

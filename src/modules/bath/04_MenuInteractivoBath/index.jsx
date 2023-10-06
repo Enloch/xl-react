@@ -14,7 +14,7 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import config from "./indicadores";
 import InterGrande from "./InterGrande";
-import {InterGrandeObj} from "./dataInterGrande";
+import { InterGrandeObj } from "./dataInterGrande";
 
 const MenuInteractivo = ({ id, titulo, imgheader, subtitulo, alt }) => {
   return (

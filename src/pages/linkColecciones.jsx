@@ -53,6 +53,7 @@ import DescargasBath from "../modules/bath/_Descargas/index";
 import { descargasbathObj } from "../modules/bath/_Descargas/Data";
 import Login from "../components/Login/login";
 import PrivateRoute from "../components/PrivateRoute";
+import { XLHome } from "../modules/home";
 
 const PaginasColeccion = () => {
   return (
@@ -69,6 +70,7 @@ const PaginasColeccion = () => {
         <Route path='/fr/bath' element={<BathFr />} />
         <Route path='bath/login' element={<Login />} />
         <Route path='/kitchen' element={<Encimera />} />
+        <Route path='/home' element={<XLHome />} />
         <Route element={<PrivateRoute />}>
           <Route
             path='bath/descargas'
