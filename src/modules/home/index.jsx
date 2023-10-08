@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {
   MainContainer,
   Seccion,
@@ -190,9 +190,7 @@ export const XLHome = () => {
           <SeccionContenido>
             <WrapperContenido>
               <GridSeccion>
-                <GridTextoCabecera>
-                  Nuestros acabados
-                </GridTextoCabecera>
+                <GridTextoCabecera>Nuestros acabados</GridTextoCabecera>
               </GridSeccion>
               <ContenedorSeparador>
                 <SeparadorHeader />
@@ -242,7 +240,8 @@ export const XLHome = () => {
             <WrapperContenido>
               <ContenedorSubtitulos>
                 <LimiteSubtitulos>
-                  <Configurador />
+                    <Configurador />
+
                   <Caja25Flex></Caja25Flex>
                   <Caja75Flex></Caja75Flex>
                 </LimiteSubtitulos>

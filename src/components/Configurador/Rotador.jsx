@@ -135,7 +135,20 @@ export const TextoSubtitulos = styled.p`
   font-size: 12px;
   font-family: "Neue Montreal", sans-serif;
 `;
-
+const Spinner = () => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <div>Loading...</div>
+    </div>
+  );
+};
 const Rotador = () => {
   const [activePanel, setActivePanel] = useState(null); // null, 'main', 'top', 'middle'
   const gridTemplate = useMemo(() => {
@@ -177,6 +190,7 @@ const Rotador = () => {
   const view1 = useRef();
   const view2 = useRef();
   const view3 = useRef();
+
   return (
     <Container gridTemplate={gridTemplate}>
       <PanelRotador
@@ -272,22 +286,23 @@ const Rotador = () => {
         dpr={dpr}
         style={{ position: "absolute", top: 0, left: 0 }}
       >
-        <PerformanceMonitor
-          onIncline={() => setDpr(2)}
-          onDecline={() => setDpr(1)}
-        />
-        <View index={1} track={view1}>
-          <PerspectiveCamera
-            name='Camara Rotador'
-            makeDefault={true}
-            far={1000}
-            near={0.1}
-            fov={34.339}
-            position={[-7.103, 6.878, 5.663]}
-            rotation={[-0.873, -0.728, -0.653]}
+        <Suspense fallback={<></>}>
+          <PerformanceMonitor
+            onIncline={() => setDpr(2)}
+            onDecline={() => setDpr(1)}
           />
+          <View index={1} track={view1}>
+            <PerspectiveCamera
+              name='Camara Rotador'
+              makeDefault={true}
+              far={1000}
+              near={0.1}
+              fov={34.339}
+              position={[-7.103, 6.878, 5.663]}
+              rotation={[-0.873, -0.728, -0.653]}
+            />
 
-          {/* <Environment>
+            {/* <Environment>
             <Lightformer
               intensity={3}
               rotation-x={Math.PI / 2}
@@ -301,40 +316,40 @@ const Rotador = () => {
               scale={[10, 10, 1]}
             />
           </Environment> */}
-          {/* <ambientLight intensity={0.3} /> */}
-          <pointLight
-            castShadow
-            shadow-bias={-0.0001}
-            position={[2.91, 0.6, -7.5]}
-            intensity={0.2}
-          />
-          <pointLight
-            castShadow
-            shadow-bias={-0.0001}
-            position={[2.91, 0.6, 7.5]}
-            intensity={0.2}
-          />
-          <pointLight
-            castShadow
-            shadow-bias={-0.0001}
-            position={[-2.91, 0.6, -7.5]}
-            intensity={0.2}
-          />
-          <pointLight
-            castShadow
-            shadow-bias={-0.0001}
-            position={[-2.91, 0.6, 7.5]}
-            intensity={0.2}
-          />
-          <pointLight
-            shadow-bias={-0.0001}
-            position={[0, 6.2, 2.3]}
-            intensity={0.7}
-          />
-          {/* <Environment preset='warehouse' /> */}
-          <Environment files={"/HDRI/warehouse.hdr"} />
+            {/* <ambientLight intensity={0.3} /> */}
+            <pointLight
+              castShadow
+              shadow-bias={-0.0001}
+              position={[2.91, 0.6, -7.5]}
+              intensity={0.2}
+            />
+            <pointLight
+              castShadow
+              shadow-bias={-0.0001}
+              position={[2.91, 0.6, 7.5]}
+              intensity={0.2}
+            />
+            <pointLight
+              castShadow
+              shadow-bias={-0.0001}
+              position={[-2.91, 0.6, -7.5]}
+              intensity={0.2}
+            />
+            <pointLight
+              castShadow
+              shadow-bias={-0.0001}
+              position={[-2.91, 0.6, 7.5]}
+              intensity={0.2}
+            />
+            <pointLight
+              shadow-bias={-0.0001}
+              position={[0, 6.2, 2.3]}
+              intensity={0.7}
+            />
+            {/* <Environment preset='warehouse' /> */}
+            <Environment files={"/HDRI/warehouse.hdr"} />
 
-          {/* <AccumulativeShadows
+            {/* <AccumulativeShadows
             position={[0, -0.92, 0]}
             frames={300}
             alphaTest={0.8}
@@ -347,95 +362,99 @@ const Rotador = () => {
               position={[1, 5, -1]}
             />
           </AccumulativeShadows> */}
-          <Suspense fallback={null}>
-            <ContactShadows
-              opacity={0.1}
-              scale={10}
-              blur={1}
-              far={10}
-              frames={1}
-              position={[0, -0.9, 0]}
-              resolution={256}
-              color='#000000'
+            <Suspense fallback={null}>
+              <ContactShadows
+                opacity={0.1}
+                scale={10}
+                blur={1}
+                far={10}
+                frames={1}
+                position={[0, -0.9, 0]}
+                resolution={256}
+                color='#000000'
+              />
+              <Escena modelo={modeloMostrado} />
+            </Suspense>
+            <OrbitControls
+              enableRotater={false}
+              enablePan={false}
+              enableZoom={true}
+              autoRotate={true}
+              autoRotateSpeed={0.75}
+              maxPolarAngle={Math.PI / 2.2}
+              minPolarAngle={Math.PI / 6}
+              maxDistance={12}
+              minDistance={7}
             />
+          </View>
+          <View index={2} track={view2}>
+            <PerspectiveCamera
+              name='Camara Detalle'
+              makeDefault={true}
+              far={1000}
+              near={0.1}
+              fov={15.832}
+              position={[-4.65, 2.197, -3.73]}
+              rotation={[-2.35, -1.262, -2.358]}
+            />
+            <ambientLight intensity={0.1} />
+            <Environment files={"/HDRI/ciudad2.hdr"} />
+            <pointLight
+              castShadow
+              shadow-bias={-0.0001}
+              position={[5.91, 0.6, -7.5]}
+              intensity={0.1}
+            />
+            <pointLight
+              castShadow
+              shadow-bias={-0.0001}
+              position={[5.91, 2.92, -1.5]}
+              intensity={0.08}
+            />
+            <pointLight
+              position={[-10, 2.4, 0]}
+              shadow-bias={-0.0001}
+              intensity={0.4}
+              castShadow
+            />
+            <mesh
+              receiveShadow
+              position={[4, -2.5, -0.276]}
+              rotation={[0, 0, 0]}
+            >
+              <planeGeometry attach='geometry' args={[10, 10]} />
+              <shadowMaterial attach='material' transparent opacity={1} />
+            </mesh>
+
             <Escena modelo={modeloMostrado} />
-          </Suspense>
-          <OrbitControls
-            enableRotater={false}
-            enablePan={false}
-            enableZoom={true}
-            autoRotate={true}
-            autoRotateSpeed={0.75}
-            maxPolarAngle={Math.PI / 2.2}
-            minPolarAngle={Math.PI / 6}
-            maxDistance={12}
-            minDistance={7}
-          />
-        </View>
-        <View index={2} track={view2}>
-          <PerspectiveCamera
-            name='Camara Detalle'
-            makeDefault={true}
-            far={1000}
-            near={0.1}
-            fov={15.832}
-            position={[-4.65, 2.197, -3.73]}
-            rotation={[-2.35, -1.262, -2.358]}
-          />
-          <ambientLight intensity={0.1} />
-          <Environment files={"/HDRI/ciudad2.hdr"} />
-          <pointLight
-            castShadow
-            shadow-bias={-0.0001}
-            position={[5.91, 0.6, -7.5]}
-            intensity={0.1}
-          />
-          <pointLight
-            castShadow
-            shadow-bias={-0.0001}
-            position={[5.91, 2.92, -1.5]}
-            intensity={0.08}
-          />
-          <pointLight
-            position={[-10, 2.4, 0]}
-            shadow-bias={-0.0001}
-            intensity={0.4}
-            castShadow
-          />
-          <mesh receiveShadow position={[4, -2.5, -0.276]} rotation={[0, 0, 0]}>
-            <planeGeometry attach='geometry' args={[10, 10]} />
-            <shadowMaterial attach='material' transparent opacity={1} />
-          </mesh>
-
-          <Escena modelo={modeloMostrado} />
-        </View>
-        <View index={3} track={view3}>
-          <PerspectiveCamera
-            name='Camara Ambiente'
-            makeDefault={true}
-            far={1000}
-            near={0.1}
-            fov={34.339}
-            position={[-6.65, 6.878, 5.663]}
-            rotation={[-0.873, -0.728, -0.653]}
-          />
-          <ambientLight intensity={0.2} />
-          <Environment files={"/HDRI/ciudad2.hdr"} />
-          <directionalLight
-            position={[-0.5, 5, -3]}
-            castShadow
-            intensity={0.01}
-            shadow-bias={-0.0001}
-            shadow-mapSize={8192}
-          >
-            <orthographicCamera
-              attach='shadow-camera'
-              args={[-8.5, 8.5, 8.5, -8.5, 0.01, 100]}
+          </View>
+          <View index={3} track={view3}>
+            <PerspectiveCamera
+              name='Camara Ambiente'
+              makeDefault={true}
+              far={1000}
+              near={0.1}
+              fov={34.339}
+              position={[-6.65, 6.878, 5.663]}
+              rotation={[-0.873, -0.728, -0.653]}
             />
-          </directionalLight>
-          <SombrasAmbiente />
+            <ambientLight intensity={0.2} />
+            <Environment files={"/HDRI/ciudad2.hdr"} />
+            <directionalLight
+              position={[-0.5, 5, -3]}
+              castShadow
+              intensity={0.01}
+              shadow-bias={-0.0001}
+              shadow-mapSize={8192}
+            >
+              <orthographicCamera
+                attach='shadow-camera'
+                args={[-8.5, 8.5, 8.5, -8.5, 0.01, 100]}
+              />
+            </directionalLight>
+            <SombrasAmbiente />
 
-          {/* <AccumulativeShadows
+            {/* <AccumulativeShadows
             position={[0, -0.92, 0]}
             frames={600}
             alphaTest={0.8}
@@ -448,8 +467,9 @@ const Rotador = () => {
               position={[1, 5, -1]}
             />
           </AccumulativeShadows> */}
-          <Escena modelo={modeloMostrado} />
-        </View>
+            <Escena modelo={modeloMostrado} />
+          </View>
+        </Suspense>
       </Canvas>
     </Container>
   );
