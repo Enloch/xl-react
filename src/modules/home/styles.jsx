@@ -89,8 +89,7 @@ export const TituloHeader = styled.h1`
 `;
 export const GridTextoCabecera = styled.h2`
   margin: 0px;
-  font-family: "Helvetica Neue Autex", "Helvetica", "Roboto", "Arial",
-    sans-serif;
+  font-family: "Roboto", sans-serif !important;
   font-weight: 400;
   font-size: 3.75rem;
   line-height: 1.2;
@@ -106,6 +105,32 @@ export const GridTextoCabecera = styled.h2`
     letter-spacing: -0.03em;
     font-size: 56px;
     line-height: 56px;
+  }
+`;
+export const GridTextoCabecera2 = styled.h2`
+  margin: 0px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400;
+  font-size: 3.75rem;
+  line-height: 1.2;
+  max-width: 890px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  @media (min-width: 0px) {
+    letter-spacing: -0.02em;
+    font-size: 27px;
+    line-height: 28.35px;
+  }
+  @media (min-width: 900px) {
+    letter-spacing: -0.03em;
+    font-size: 120px;
+    line-height: 96px;
+  }
+  @media (min-width: 1200px) {
+    letter-spacing: -0.03em;
+    font-size: 204px;
+    line-height: 165.24px;
+    padding-top: 100px;
   }
 `;
 export const ContenedorSeparador = styled.div`
@@ -151,7 +176,7 @@ export const LimiteSubtitulos = styled.div`
   }
 `;
 export const Subtitulo = styled.p`
-  font-family: "Roboto Medium", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   font-weight: 400;
   font-size: 28px;
   line-height: 35px;
@@ -242,6 +267,78 @@ export const Caja75Flex = styled.div`
     max-width: 75%;
   }
 `;
+export const Caja15Flex = styled.div`
+  box-sizing: border-box;
+  margin: 0;
+  flex-direction: row;
+  flex-basis: 11%;
+  flex-grow: 0;
+  max-width: 11%;
+  padding-top: 16px;
+  padding-left: 16px;
+  max-width: none;
+  @media (min-width: 600px) {
+    flex-basis: 10%;
+    flex-grow: 0;
+    max-width: 10%;
+  }
+
+  @media (min-width: 900px) {
+    flex-basis: 11%;
+    flex-grow: 0;
+    max-width: 11%;
+  }
+
+  @media (min-width: 1200px) {
+    flex-basis: 11%;
+    flex-grow: 0;
+    max-width: 11%;
+  }
+
+  @media (min-width: 1536px) {
+    flex-basis: 11%;
+    flex-grow: 0;
+    max-width: 11%;
+  }
+`;
+export const Caja85Flex = styled.div`
+  box-sizing: border-box;
+  margin: 0;
+  flex-direction: row;
+  flex-basis: 89%;
+  flex-grow: 0;
+  max-width: 89%;
+  padding-top: 16px;
+  padding-left: 16px;
+  @media (min-width: 0px) {
+    flex-basis: 100%;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+  @media (min-width: 600px) {
+    flex-basis: 100%;
+    flex-grow: 0;
+    max-width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    flex-basis: 89%;
+    flex-grow: 0;
+    max-width: 89%;
+  }
+
+  @media (min-width: 1200px) {
+    flex-basis: 89%;
+    flex-grow: 0;
+    max-width: 89%;
+  }
+
+  @media (min-width: 1536px) {
+    flex-basis: 89%;
+    flex-grow: 0;
+    max-width: 89%;
+  }
+`;
 export const SeccionTituloPunto = styled.div`
   opacity: 1;
 `;
@@ -269,8 +366,7 @@ export const ContenedorTituloPunto = styled.div`
 
 export const TituloPunto = styled.p`
   margin: 0;
-  font-family: "Helvetica Neue Autex", "Helvetica", "Roboto", "Arial",
-    sans-serif;
+  font-family: "Roboto", sans-serif !important;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5;

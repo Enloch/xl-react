@@ -1,5 +1,34 @@
-import Connor from "../../assets/images/home/secciones/Sliders/Collection/Connor.jpg";
-import Kir from "../../assets/images/home/secciones/Sliders/Collection/Connor.webp";
+import Connor from "../../assets/images/home/secciones/Sliders/Collection/CONNOR.jpg";
+import Emma from "../../assets/images/home/secciones/Sliders/Collection/EMMA.jpg";
+import Gene from "../../assets/images/home/secciones/Sliders/Collection/GENE.jpg";
+import Grace from "../../assets/images/home/secciones/Sliders/Collection/GRACE.jpg";
+import Harp from "../../assets/images/home/secciones/Sliders/Collection/HARP.jpg";
+import Hulk from "../../assets/images/home/secciones/Sliders/Collection/HULK.jpg";
+import Ilia from "../../assets/images/home/secciones/Sliders/Collection/ILIA.jpg";
+import Kiff from "../../assets/images/home/secciones/Sliders/Collection/KIFF.jpg";
+import Lyre from "../../assets/images/home/secciones/Sliders/Collection/LYRE.jpg";
+import Mario from "../../assets/images/home/secciones/Sliders/Collection/MARIO.jpg";
+import Olympus from "../../assets/images/home/secciones/Sliders/Collection/OLYMPUS.jpg";
+import Pisa from "../../assets/images/home/secciones/Sliders/Collection/PISA.jpg";
+import Progetto from "../../assets/images/home/secciones/Sliders/Collection/PROGETTO.jpg";
+import Solo from "../../assets/images/home/secciones/Sliders/Collection/SOLO.jpg";
+import Toyo from "../../assets/images/home/secciones/Sliders/Collection/TOYO.jpg";
+import Victory from "../../assets/images/home/secciones/Sliders/Collection/VICTORY.jpg";
+//----------------------------------------Life----------------------------------------
+import Collins from "../../assets/images/home/secciones/Sliders/Collection/COLLINS.jpg";
+import Flip from "../../assets/images/home/secciones/Sliders/Collection/FLIP.jpg";
+import Gibson from "../../assets/images/home/secciones/Sliders/Collection/GIBSON.jpg";
+import Hakone from "../../assets/images/home/secciones/Sliders/Collection/HAKONE.jpg";
+import Hemingway from "../../assets/images/home/secciones/Sliders/Collection/HEMINGWAY.jpg";
+import Kir from "../../assets/images/home/secciones/Sliders/Collection/KIR.jpg";
+import Mary from "../../assets/images/home/secciones/Sliders/Collection/MARY.jpg";
+import Zama from "../../assets/images/home/secciones/Sliders/Collection/ZAMA.jpg";
+
+import Brezza from "../../assets/images/home/secciones/Sliders/Collection/BREZZA.jpg";
+import Manhattan from "../../assets/images/home/secciones/Sliders/Collection/MANHATTAN.jpg";
+import Rob from "../../assets/images/home/secciones/Sliders/Collection/ROB.jpg";
+import Spritz from "../../assets/images/home/secciones/Sliders/Collection/SPRITZ.jpg";
+
 export const CollectionSlider = [
   {
     img: Connor,
@@ -8,91 +37,91 @@ export const CollectionSlider = [
     link: "",
   },
   {
-    img: Kir,
+    img: Emma,
     alt: "Imagen Mesa/Table Image",
     text: "Emma",
     link: "",
   },
   {
-    img: Connor,
+    img: Gene,
     alt: "Imagen Mesa/Table Image",
     text: "Gene",
     link: "",
   },
   {
-    img: Connor,
+    img: Grace,
     alt: "Imagen Mesa/Table Image",
     text: "Grace",
     link: "",
   },
   {
-    img: Connor,
+    img: Harp,
     alt: "Imagen Mesa/Table Image",
     text: "Harp",
     link: "",
   },
   {
-    img: Connor,
+    img: Hulk,
     alt: "Imagen Mesa/Table Image",
     text: "Hulk",
     link: "",
   },
   {
-    img: Connor,
+    img: Ilia,
     alt: "Imagen Mesa/Table Image",
     text: "Ilia",
     link: "",
   },
   {
-    img: Connor,
+    img: Kiff,
     alt: "Imagen Mesa/Table Image",
     text: "Kiff",
     link: "",
   },
   {
-    img: Connor,
+    img: Lyre,
     alt: "Imagen Mesa/Table Image",
     text: "Lyre",
     link: "",
   },
   {
-    img: Connor,
+    img: Mario,
     alt: "Imagen Mesa/Table Image",
     text: "Mario",
     link: "",
   },
   {
-    img: Connor,
+    img: Olympus,
     alt: "Imagen Mesa/Table Image",
     text: "Olympus",
     link: "",
   },
   {
-    img: Connor,
+    img: Pisa,
     alt: "Imagen Mesa/Table Image",
     text: "Pisa",
     link: "",
   },
   {
-    img: Connor,
+    img: Progetto,
     alt: "Imagen Mesa/Table Image",
     text: "Progetto",
     link: "",
   },
   {
-    img: Connor,
+    img: Solo,
     alt: "Imagen Mesa/Table Image",
     text: "Solo",
     link: "",
   },
   {
-    img: Connor,
+    img: Toyo,
     alt: "Imagen Mesa/Table Image",
     text: "Toyo",
     link: "",
   },
   {
-    img: Connor,
+    img: Victory,
     alt: "Imagen Mesa/Table Image",
     text: "Victory",
     link: "",
@@ -101,49 +130,49 @@ export const CollectionSlider = [
 
 export const LiveSlider = [
   {
-    img: Connor,
+    img: Collins,
     alt: "Imagen Mesa/Table Image",
     text: "Collins",
     link: "",
   },
   {
-    img: Kir,
+    img: Flip,
     alt: "Imagen Mesa/Table Image",
     text: "Flip",
     link: "",
   },
   {
-    img: Connor,
+    img: Gibson,
     alt: "Imagen Mesa/Table Image",
     text: "Gibson",
     link: "",
   },
   {
-    img: Connor,
+    img: Hakone,
     alt: "Imagen Mesa/Table Image",
     text: "Hakone",
     link: "",
   },
   {
-    img: Connor,
+    img: Hemingway,
     alt: "Imagen Mesa/Table Image",
     text: "Hemingway",
     link: "",
   },
   {
-    img: Connor,
+    img: Kir,
     alt: "Imagen Mesa/Table Image",
     text: "Kir",
     link: "",
   },
   {
-    img: Connor,
+    img: Mary,
     alt: "Imagen Mesa/Table Image",
     text: "Mary",
     link: "",
   },
   {
-    img: Connor,
+    img: Zama,
     alt: "Imagen Mesa/Table Image",
     text: "Zama",
     link: "",
@@ -151,25 +180,25 @@ export const LiveSlider = [
 ];
 export const ContractSlider = [
   {
-    img: Connor,
+    img: Brezza,
     alt: "Imagen Mesa/Table Image",
     text: "Brezza",
     link: "",
   },
   {
-    img: Kir,
+    img: Manhattan,
     alt: "Imagen Mesa/Table Image",
     text: "Manhattan",
     link: "",
   },
   {
-    img: Connor,
+    img: Rob,
     alt: "Imagen Mesa/Table Image",
     text: "Rob",
     link: "",
   },
   {
-    img: Connor,
+    img: Spritz,
     alt: "Imagen Mesa/Table Image",
     text: "Spritz",
     link: "",
