@@ -4,7 +4,26 @@ import {
   MatMetal,
   // MatHaya,
 } from "./MaterialModelos";
-import { ModeloKirNoExt, ModeloKirExt, Emma, Connor, Gene, Grace } from "./Modelos";
+import {
+  ModeloKirNoExt,
+  ModeloKirExt,
+  Emma,
+  Connor,
+  Gene,
+  Grace,
+  Harp,
+  Hulk,
+  Ilia,
+  Kiff,
+  Lyre,
+  Mario,
+  Olympus,
+  Pisa,
+  Progetto,
+  Solo,
+  Toyo,
+  Victory,
+} from "./Modelos";
 //---------------------Collections------------------------
 export const DatosConnor = {
   id: "Connor",
@@ -94,7 +113,7 @@ export const DatosGrace = {
 };
 export const DatosHarp = {
   id: "Harp",
-  modelo3d: Emma,
+  modelo3d: Harp,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -115,7 +134,7 @@ export const DatosHarp = {
 };
 export const DatosHulk = {
   id: "Hulk",
-  modelo3d: Emma,
+  modelo3d: Hulk,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -136,7 +155,7 @@ export const DatosHulk = {
 };
 export const DatosIlia = {
   id: "Ilia",
-  modelo3d: Emma,
+  modelo3d: Ilia,
   formasobre: "Barril",
   cambiasobre: true,
   cuadrado: false,
@@ -157,7 +176,7 @@ export const DatosIlia = {
 };
 export const DatosKiff = {
   id: "Kiff",
-  modelo3d: Emma,
+  modelo3d: Kiff,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -178,7 +197,7 @@ export const DatosKiff = {
 };
 export const DatosLyre = {
   id: "Lyre",
-  modelo3d: Emma,
+  modelo3d: Lyre,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -199,7 +218,7 @@ export const DatosLyre = {
 };
 export const DatosMario = {
   id: "Mario",
-  modelo3d: Emma,
+  modelo3d: Mario,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -220,14 +239,14 @@ export const DatosMario = {
 };
 export const DatosOlympus = {
   id: "Olympus",
-  modelo3d: Emma,
-  formasobre: "Barril",
-  cambiasobre: true,
+  modelo3d: Olympus,
+  formasobre: "Circular",
+  cambiasobre: false,
   cuadrado: false,
-  rectangular: true,
-  circular: false,
-  ovalado: true,
-  barril: true,
+  rectangular: false,
+  circular: true,
+  ovalado: false,
+  barril: false,
   bisel: false,
   bastidor: false,
   metal: true,
@@ -241,7 +260,7 @@ export const DatosOlympus = {
 };
 export const DatosPisa = {
   id: "Pisa",
-  modelo3d: Emma,
+  modelo3d: Pisa,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -262,7 +281,7 @@ export const DatosPisa = {
 };
 export const DatosProgetto = {
   id: "Progetto",
-  modelo3d: Emma,
+  modelo3d: Progetto,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -283,7 +302,7 @@ export const DatosProgetto = {
 };
 export const DatosSolo = {
   id: "Solo",
-  modelo3d: Emma,
+  modelo3d: Solo,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -304,7 +323,7 @@ export const DatosSolo = {
 };
 export const DatosToyo = {
   id: "Toyo",
-  modelo3d: Emma,
+  modelo3d: Toyo,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,
@@ -325,7 +344,7 @@ export const DatosToyo = {
 };
 export const DatosVictory = {
   id: "Victory",
-  modelo3d: Emma,
+  modelo3d: Victory,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,

@@ -320,25 +320,29 @@ const Rotador = () => {
             <pointLight
               castShadow
               shadow-bias={-0.0001}
-              position={[2.91, 0.6, -7.5]}
+              shadow-mapSize={1024}
+              position={[2.91, 0.5, -7.5]}
               intensity={0.2}
             />
             <pointLight
               castShadow
               shadow-bias={-0.0001}
-              position={[2.91, 0.6, 7.5]}
+              shadow-mapSize={1024}
+              position={[2.91, 0.5, 7.5]}
               intensity={0.2}
             />
             <pointLight
               castShadow
               shadow-bias={-0.0001}
-              position={[-2.91, 0.6, -7.5]}
+              shadow-mapSize={1024}
+              position={[-2.91, 0.5, -7.5]}
               intensity={0.2}
             />
             <pointLight
               castShadow
+              shadow-mapSize={1024}
               shadow-bias={-0.0001}
-              position={[-2.91, 0.6, 7.5]}
+              position={[-2.91, 0.5, 7.5]}
               intensity={0.2}
             />
             <pointLight
@@ -445,7 +449,7 @@ const Rotador = () => {
               castShadow
               intensity={0.01}
               shadow-bias={-0.0001}
-              shadow-mapSize={8192}
+              shadow-mapSize={512}
             >
               <orthographicCamera
                 attach='shadow-camera'
