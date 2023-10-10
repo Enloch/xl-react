@@ -4,7 +4,7 @@ import {
   MatMetal,
   // MatHaya,
 } from "./MaterialModelos";
-import { ModeloKirNoExt, ModeloKirExt, Emma, Connor } from "./Modelos";
+import { ModeloKirNoExt, ModeloKirExt, Emma, Connor, Gene, Grace } from "./Modelos";
 //---------------------Collections------------------------
 export const DatosConnor = {
   id: "Connor",
@@ -52,7 +52,7 @@ export const DatosEmma = {
 
 export const DatosGene = {
   id: "Gene",
-  modelo3d: Emma,
+  modelo3d: Gene,
   formasobre: "Barril",
   cambiasobre: true,
   cuadrado: false,
@@ -73,7 +73,7 @@ export const DatosGene = {
 };
 export const DatosGrace = {
   id: "Grace",
-  modelo3d: Emma,
+  modelo3d: Grace,
   formasobre: "Rectangular",
   cambiasobre: true,
   cuadrado: false,

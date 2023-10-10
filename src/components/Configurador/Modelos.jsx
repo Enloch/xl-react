@@ -206,10 +206,8 @@ export function Connor(props) {
           >
             <meshPhysicalMaterial
               map={AcabadoSobre}
-              metalness={materialPatas.metalness}
-              roughness={materialPatas.roughness}
-              specularIntensity={materialPatas.specularIntensity}
-              reflectivity={materialPatas.reflectivity}
+              metalness={0.5}
+              roughness={0.5}
             />
           </mesh>
           <mesh
@@ -238,10 +236,8 @@ export function Connor(props) {
           >
             <meshPhysicalMaterial
               map={AcabadoSobre}
-              metalness={materialPatas.metalness}
-              roughness={materialPatas.roughness}
-              specularIntensity={materialPatas.specularIntensity}
-              reflectivity={materialPatas.reflectivity}
+              metalness={0.5}
+              roughness={0.5}
             />
           </mesh>
           <mesh
@@ -284,10 +280,8 @@ export function Connor(props) {
           >
             <meshPhysicalMaterial
               map={AcabadoSobre}
-              metalness={materialPatas.metalness}
-              roughness={materialPatas.roughness}
-              specularIntensity={materialPatas.specularIntensity}
-              reflectivity={materialPatas.reflectivity}
+              metalness={0.5}
+              roughness={0.5}
             />
           </mesh>
         </>
@@ -334,10 +328,8 @@ export function Emma(props) {
           >
             <meshPhysicalMaterial
               map={AcabadoSobre}
-              metalness={materialPatas.metalness}
-              roughness={materialPatas.roughness}
-              specularIntensity={materialPatas.specularIntensity}
-              reflectivity={materialPatas.reflectivity}
+              metalness={0.5}
+              roughness={0.5}
             />
           </mesh>
           <mesh
@@ -364,7 +356,11 @@ export function Emma(props) {
             geometry={nodes.SOBRE_RECTANGULAR.geometry}
             material={nodes.SOBRE_RECTANGULAR.material}
           >
-            <meshPhysicalMaterial map={AcabadoSobre} />
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
+            />
           </mesh>
           <mesh
             castShadow
@@ -391,7 +387,11 @@ export function Emma(props) {
             geometry={nodes.SOBRE_OVALADO.geometry}
             material={nodes.SOBRE_OVALADO.material}
           >
-            <meshPhysicalMaterial map={AcabadoSobre} />
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
+            />
           </mesh>
           <mesh
             castShadow
@@ -404,7 +404,242 @@ export function Emma(props) {
               metalness={materialPatas.metalness}
               roughness={materialPatas.roughness}
               specularIntensity={materialPatas.specularIntensity}
+            />
+          </mesh>
+        </>
+      )}
+    </group>
+  );
+}
+export function Gene(props) {
+  const {
+    materialSobre,
+    materialPatas,
+    encimeraRectangular,
+    encimeraOvalada,
+    encimeraBarril,
+  } = useModeloStore();
+  const AcabadoSobre = useTexture(materialSobre); // Assuming that materialSobre is a texture URL
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/GENE.gltf");
+
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GENE_PATAS.geometry}
+        material={nodes.GENE_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+
+      {encimeraBarril && (
+        <>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GENE_SOBRE_BARRIL.geometry}
+            material={nodes.GENE_SOBRE_BARRIL.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
+            />
+          </mesh>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GENE_BISEL_BARRIL.geometry}
+            material={nodes.GENE_BISEL_BARRIL.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoPatas}
+              metalness={materialPatas.metalness}
+              roughness={materialPatas.roughness}
+              specularIntensity={materialPatas.specularIntensity}
+              eflectivity={materialPatas.reflectivity}
+            />
+          </mesh>
+        </>
+      )}
+
+      {encimeraOvalada && (
+        <>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GENE_SOBRE_OVALADO.geometry}
+            material={nodes.GENE_SOBRE_OVALADO.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
+            />
+          </mesh>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GENE_BISEL_OVALADO.geometry}
+            material={nodes.GENE_BISEL_OVALADO.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoPatas}
+              metalness={materialPatas.metalness}
+              roughness={materialPatas.roughness}
+              specularIntensity={materialPatas.specularIntensity}
+              eflectivity={materialPatas.reflectivity}
+            />
+          </mesh>
+        </>
+      )}
+
+      {encimeraRectangular && (
+        <>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GENE_BISEL_RECTANGULAR.geometry}
+            material={nodes.GENE_BISEL_RECTANGULAR.material}
+          >
+            <meshPhysicalMaterial map={AcabadoPatas} />
+          </mesh>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GENE_SOBRE_RECTANGULAR.geometry}
+            material={nodes.GENE_SOBRE_RECTANGULAR.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
+            />
+          </mesh>
+        </>
+      )}
+    </group>
+  );
+}
+export function Grace(props) {
+  const {
+    materialSobre,
+    materialPatas,
+    encimeraRectangular,
+    encimeraOvalada,
+    encimeraBarril,
+  } = useModeloStore();
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/GRACE.gltf");
+
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.PATAS_GRACE.geometry}
+        material={nodes.PATAS_GRACE.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+
+      {encimeraBarril && (
+        <>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GRACE_SOBRE_BARRIL.geometry}
+            material={nodes.GRACE_SOBRE_BARRIL.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
+            />
+          </mesh>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GRACE_BISEL_BARRIL.geometry}
+            material={nodes.GRACE_BISEL_BARRIL.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoPatas}
+              metalness={materialPatas.metalness}
+              roughness={materialPatas.roughness}
+              specularIntensity={materialPatas.specularIntensity}
               reflectivity={materialPatas.reflectivity}
+            />
+          </mesh>
+        </>
+      )}
+
+      {encimeraOvalada && (
+        <>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GRACE_SOBRE_OVALADO.geometry}
+            material={nodes.GRACE_SOBRE_OVALADO.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
+            />
+          </mesh>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GRACE_BISEL_OVALADO.geometry}
+            material={nodes.GRACE_BISEL_OVALADO.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoPatas}
+              metalness={materialPatas.metalness}
+              roughness={materialPatas.roughness}
+              specularIntensity={materialPatas.specularIntensity}
+              reflectivity={materialPatas.reflectivity}
+            />
+          </mesh>
+        </>
+      )}
+
+      {encimeraRectangular && (
+        <>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GRACE_BISEL_RECTANGULAR.geometry}
+            material={nodes.GRACE_BISEL_RECTANGULAR.material}
+          >
+            <meshPhysicalMaterial map={AcabadoPatas} />
+          </mesh>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.GRACE_SOBRE_RECTANGULAR.geometry}
+            material={nodes.GRACE_SOBRE_RECTANGULAR.material}
+          >
+            <meshPhysicalMaterial
+              map={AcabadoSobre}
+              metalness={0.5}
+              roughness={0.5}
             />
           </mesh>
         </>
