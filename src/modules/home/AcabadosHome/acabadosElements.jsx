@@ -18,9 +18,9 @@ export const ColecContainer = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: repeat(12, 1fr); */
-  grid-auto-rows: auto;
+  /* grid-auto-rows: auto; */
   @media screen and (max-width: 1400px) {
     grid-template-columns: repeat(12, 1fr);
   }
@@ -95,7 +95,9 @@ export const ImageBoxWrapper = styled.div`
   grid-column: 2 / 4;
   display: flex;
   flex-wrap: wrap;
-  gap: 39px 20.5px;
+  /* justify-content: space-evenly; */
+  column-gap: 30px;
+  row-gap: 20.5px;
   @media screen and (max-width: 1400px) {
     grid-column: 2 / 11;
   }
@@ -116,8 +118,8 @@ export const ImageBox = styled.div`
 `;
 export const ImgMini = styled.img`
   cursor: pointer;
-  width: 122px;
-  max-height: 244px;
+  width: 150px;
+  max-height: 300px;
   padding-right: 0;
   :hover {
     transform: scale(1.1);

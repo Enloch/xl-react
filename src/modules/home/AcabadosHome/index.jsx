@@ -10,16 +10,17 @@ import {
   LinkBox,
   LinkHeader,
 } from "./acabadosElements";
-import { Acabados, LinkAcabados } from "./constructorAcabados";
-const AcabadosHome = ({ id, titulo, subtitulo }) => {
+import { generateAcabados, generateLinkAcabados } from "./constructorAcabados";
+const AcabadosHome = ({ id, titulo, subtitulo, data }) => {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
+  const AcabadosComponents = generateAcabados(data);
   return (
     <>
       <ColecContainer id={id}>
         <ContentWrapper>
-          <ImageBoxWrapper>{Acabados}</ImageBoxWrapper>
+          <ImageBoxWrapper>{AcabadosComponents}</ImageBoxWrapper>
         </ContentWrapper>
       </ColecContainer>
     </>

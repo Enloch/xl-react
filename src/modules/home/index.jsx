@@ -37,7 +37,12 @@ import ScrollToTop from "../../components/GoTopBttn/ScrollToTop";
 import FooterSection from "./FooterSection";
 import { LandingFooter } from "./FooterSection/data";
 import AcabadosHome from "./AcabadosHome";
-import { Acabados_InfoGeneral } from "./AcabadosHome/data";
+import {
+  Acabados_Encimeras,
+  Acabados_Metal,
+  Acabados_Haya,
+  Acabados_Fresno,
+} from "./AcabadosHome/data";
 export const XLHome = () => {
   const handleClickFlecha = (id) => {
     const element = document.getElementById(id);
@@ -186,7 +191,7 @@ export const XLHome = () => {
             </WrapperContenido>
           </SeccionContenido>
         </Seccion>
-        <Seccion className='Contract'>
+        <Seccion className='Acabados'>
           <SeccionContenido>
             <WrapperContenido>
               <GridSeccion>
@@ -210,7 +215,52 @@ export const XLHome = () => {
                     </SeccionTituloPunto>
                   </Caja25Flex>
                   <Caja75Flex>
-                    <AcabadosHome {...Acabados_InfoGeneral} />
+                    <AcabadosHome data={Acabados_Encimeras} />
+                  </Caja75Flex>
+                  <Caja25Flex>
+                    <SeccionTituloPunto>
+                      <AjusteTituloPunto>
+                        <Punto>
+                          <TituloPunto>//</TituloPunto>
+                        </Punto>
+                        <ContenedorTituloPunto>
+                          <TituloPunto>metal epoxy</TituloPunto>
+                        </ContenedorTituloPunto>
+                      </AjusteTituloPunto>
+                    </SeccionTituloPunto>
+                  </Caja25Flex>
+                  <Caja75Flex>
+                    <AcabadosHome data={Acabados_Metal} />
+                  </Caja75Flex>
+                  <Caja25Flex>
+                    <SeccionTituloPunto>
+                      <AjusteTituloPunto>
+                        <Punto>
+                          <TituloPunto>//</TituloPunto>
+                        </Punto>
+                        <ContenedorTituloPunto>
+                          <TituloPunto>madera de haya</TituloPunto>
+                        </ContenedorTituloPunto>
+                      </AjusteTituloPunto>
+                    </SeccionTituloPunto>
+                  </Caja25Flex>
+                  <Caja75Flex>
+                    <AcabadosHome data={Acabados_Haya} />
+                  </Caja75Flex>
+                  <Caja25Flex>
+                    <SeccionTituloPunto>
+                      <AjusteTituloPunto>
+                        <Punto>
+                          <TituloPunto>//</TituloPunto>
+                        </Punto>
+                        <ContenedorTituloPunto>
+                          <TituloPunto>madera de fresno</TituloPunto>
+                        </ContenedorTituloPunto>
+                      </AjusteTituloPunto>
+                    </SeccionTituloPunto>
+                  </Caja25Flex>
+                  <Caja75Flex>
+                    <AcabadosHome data={Acabados_Fresno} />
                   </Caja75Flex>
                 </LimiteSubtitulos>
               </ContenedorSubtitulos>
@@ -240,7 +290,7 @@ export const XLHome = () => {
             <WrapperContenido>
               <ContenedorSubtitulos>
                 <LimiteSubtitulos>
-                    <Configurador />
+                  <Configurador />
 
                   <Caja25Flex></Caja25Flex>
                   <Caja75Flex></Caja75Flex>

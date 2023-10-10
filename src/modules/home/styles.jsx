@@ -50,8 +50,8 @@ export const GridSeccion = styled.div`
   }
 
   @media (min-width: 900px) {
-    padding-top: 170px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -153,6 +153,7 @@ export const ContenedorSubtitulos = styled.div`
 
   @media (min-width: 0px) {
     padding-left: 20px;
+    /* margin-bottom: 50px; */
   }
 
   @media (min-width: 900px) {
@@ -346,8 +347,8 @@ export const SeccionTituloPunto = styled.div`
 export const AjusteTituloPunto = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 150px;
-  height: 150px;
+  max-width: 250px;
+  height: 25px;
   align-items: flex-start;
 
   &:not(style) + &:not(style) {
