@@ -58,6 +58,8 @@ export const PanelBottom = styled.div`
   /* background-size: 690px 450px; */
   background-repeat: no-repeat;
   /* padding: 20px; */
+  /* aspect-ratio: 16/9; */
+  background-position: center;
 `;
 
 export const ImagenFondo = styled.img`
@@ -86,6 +88,7 @@ const StyledButton = styled(({ isActive, ...rest }) => <a {...rest} />)`
   transition: transform 0.3s ease;
   transform: ${({ isActive }) =>
     isActive ? "rotate(180deg)" : "rotate(0deg)"};
+  z-index: 10;
 `;
 
 const StyledButtonTop = styled(({ isActive, ...rest }) => <a {...rest} />)`
@@ -97,6 +100,7 @@ const StyledButtonTop = styled(({ isActive, ...rest }) => <a {...rest} />)`
   transition: transform 0.3s ease;
   transform: ${({ isActive }) =>
     isActive ? "rotate(180deg)" : "rotate(0deg)"};
+  z-index: 10;
 `;
 
 const StyledButtonBottom = styled(({ isActive, ...rest }) => <a {...rest} />)`
@@ -108,6 +112,7 @@ const StyledButtonBottom = styled(({ isActive, ...rest }) => <a {...rest} />)`
   transition: transform 0.3s ease;
   transform: ${({ isActive }) =>
     isActive ? "rotate(180deg)" : "rotate(0deg)"};
+  z-index: 10;
 `;
 
 export const ConfiguracionElegida = styled.p`
@@ -316,39 +321,35 @@ const Rotador = () => {
               scale={[10, 10, 1]}
             />
           </Environment> */}
-            {/* <ambientLight intensity={0.3} /> */}
+            <ambientLight intensity={0.5} />
             <pointLight
               castShadow
               shadow-bias={-0.0001}
-              shadow-mapSize={1024}
-              position={[2.91, 0.5, -7.5]}
-              intensity={0.2}
+              position={[2.91, 0.6, -7.5]}
+              intensity={12}
             />
             <pointLight
               castShadow
               shadow-bias={-0.0001}
-              shadow-mapSize={1024}
-              position={[2.91, 0.5, 7.5]}
-              intensity={0.2}
+              position={[2.91, 0.6, 7.5]}
+              intensity={6}
             />
             <pointLight
               castShadow
               shadow-bias={-0.0001}
-              shadow-mapSize={1024}
-              position={[-2.91, 0.5, -7.5]}
-              intensity={0.2}
+              position={[-2.91, 0.6, -7.5]}
+              intensity={12}
             />
             <pointLight
               castShadow
-              shadow-mapSize={1024}
               shadow-bias={-0.0001}
-              position={[-2.91, 0.5, 7.5]}
-              intensity={0.2}
+              position={[-2.91, 0.6, 7.5]}
+              intensity={6}
             />
             <pointLight
               shadow-bias={-0.0001}
               position={[0, 6.2, 2.3]}
-              intensity={0.7}
+              intensity={40}
             />
             {/* <Environment preset='warehouse' /> */}
             <Environment files={"/HDRI/warehouse.hdr"} />
@@ -401,24 +402,24 @@ const Rotador = () => {
               position={[-4.65, 2.197, -3.73]}
               rotation={[-2.35, -1.262, -2.358]}
             />
-            <ambientLight intensity={0.1} />
+            <ambientLight intensity={2.1} />
             <Environment files={"/HDRI/ciudad2.hdr"} />
             <pointLight
               castShadow
               shadow-bias={-0.0001}
               position={[5.91, 0.6, -7.5]}
-              intensity={0.1}
+              intensity={20}
             />
             <pointLight
               castShadow
               shadow-bias={-0.0001}
               position={[5.91, 2.92, -1.5]}
-              intensity={0.08}
+              intensity={8}
             />
             <pointLight
               position={[-10, 2.4, 0]}
               shadow-bias={-0.0001}
-              intensity={0.4}
+              intensity={60}
               castShadow
             />
             <mesh
@@ -439,17 +440,17 @@ const Rotador = () => {
               far={1000}
               near={0.1}
               fov={34.339}
-              position={[-6.65, 6.878, 5.663]}
+              position={[-7.05, 6.878, 5.663]}
               rotation={[-0.873, -0.728, -0.653]}
             />
-            <ambientLight intensity={0.2} />
+            <ambientLight intensity={1.4} />
             <Environment files={"/HDRI/ciudad2.hdr"} />
             <directionalLight
               position={[-0.5, 5, -3]}
               castShadow
               intensity={0.01}
               shadow-bias={-0.0001}
-              shadow-mapSize={512}
+              shadow-mapSize={8192}
             >
               <orthographicCamera
                 attach='shadow-camera'

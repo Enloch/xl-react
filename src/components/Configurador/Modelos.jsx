@@ -2055,5 +2055,486 @@ export function Victory(props) {
     </group>
   );
 }
+//----------------------Life------------------------
+export function Collins(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/COLLINS.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='Bisel'
+        castShadow
+        receiveShadow
+        geometry={nodes.COLLINS_BISEL_BARRIL.geometry}
+        material={nodes.COLLINS_BISEL_BARRIL.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='Patas'
+        castShadow
+        receiveShadow
+        geometry={nodes.COLLINS_PATAS.geometry}
+        material={nodes.COLLINS_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='Sobre'
+        castShadow
+        receiveShadow
+        geometry={nodes.COLLINS_SOBRE_BARRIL.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='Tacos'
+        castShadow
+        receiveShadow
+        geometry={nodes.COLLINS_TACO.geometry}
+        material={nodes.COLLINS_TACO.material}
+      />
+    </group>
+  );
+}
+
+export function CollinsExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos//COLLINSEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["COLLINS_EXTENSIBLE_+70_BISEL_BARRIL"].geometry}
+        material={nodes["COLLINS_EXTENSIBLE_+70_BISEL_BARRIL"].material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["COLLINS_EXTENSIBLE_+70_TACO"].geometry}
+        material={nodes["COLLINS_EXTENSIBLE_+70_TACO"].material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["COLLINS_EXTENSIBLE_+70_PATAS"].geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["COLLINS_EXTENSIBLE_+70_GUIAS"].geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#8a8a8a"}
+          metalness={1}
+          roughness={0.3}
+          specularIntensity={1}
+          reflectivity={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["COLLINS_EXTENSIBLE_+70_SOBRE_BARRIL"].geometry}
+        material={nodes["COLLINS_EXTENSIBLE_+70_SOBRE_BARRIL"].material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["COLLINS_EXTENSIBLE_+70_BISEL_EXTENSIBLE"].geometry}
+        material={nodes["COLLINS_EXTENSIBLE_+70_BISEL_EXTENSIBLE"].material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["COLLINS_EXTENSIBLE_+70_SOBRE_EXTENSIBLE"].geometry}
+        material={nodes["COLLINS_EXTENSIBLE_+70_SOBRE_EXTENSIBLE"].material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function Flip(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/FLIP.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_BISEL_RECTANGULAR.geometry}
+        material={nodes.FLIP_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_ESTRUCTURA.geometry}
+        material={nodes.FLIP_ESTRUCTURA.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_TACOS.geometry}
+        material={nodes.FLIP_TACOS.material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_PATAS.geometry}
+        material={nodes.FLIP_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_SOBRE_RECTANGULAR.geometry}
+        material={nodes.FLIP_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function FlipExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/FLIPEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_EXTENSIBLE_TACOS.geometry}
+        material={nodes.FLIP_EXTENSIBLE_TACOS.material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_EXTENSIBLE_PATAS.geometry}
+        material={nodes.FLIP_EXTENSIBLE_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_EXTENSIBLE_ESTRUCTURA.geometry}
+        material={nodes.FLIP_EXTENSIBLE_ESTRUCTURA.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR_EXTRAIBLE.geometry}
+        material={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR_EXTRAIBLE.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR_EXTRAIBLE.geometry}
+        material={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR_EXTRAIBLE.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
+        material={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+export function Gibson(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/GIBSON.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_BISEL_RECTANGULAR.geometry}
+        material={nodes.GIBSON_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_SOBRE_RECTANGULAR.geometry}
+        material={nodes.GIBSON_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_TACOS.geometry}
+        material={nodes.GIBSON_TACOS.material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_PATAS.geometry}
+        material={nodes.GIBSON_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function GibsonExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/GIBSONEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_GUIAS.geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#8a8a8a"}
+          metalness={1}
+          roughness={0.3}
+          specularIntensity={1}
+          reflectivity={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_PATAS.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_TACOS.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_TACOS.material}
+      />
+    </group>
+  );
+}
+export function Hakone(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/HAKONE.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.HAKONE_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_BISEL_RECTANGULAR.geometry}
+        material={nodes.HAKONE_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_PATAS.geometry}
+        material={nodes.HAKONE_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+    </group>
+  );
+}
 useGLTF.preload("/modelos/FondoSombras.gltf");
 useGLTF.preload("/modelos/KIRFINAL.gltf");
