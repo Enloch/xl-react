@@ -22,6 +22,7 @@ import Humus from "../../assets/configurador/texturas/estructura/metal/HUMUS.jpg
 import Niebla from "../../assets/configurador/texturas/estructura/metal/NIEBLA.jpg";
 import Perla from "../../assets/configurador/texturas/estructura/metal/PERLA.jpg";
 //---------------Haya---------------
+import HayaRoughness from "../../assets/configurador/texturas/estructura/haya/ROUGHNESS.png";
 import Sbiancatto from "../../assets/configurador/texturas/estructura/haya/SBIANCATTO_MH.png";
 import Olmo from "../../assets/configurador/texturas/estructura/haya/OLMO_MH.png";
 import NogalClaro from "../../assets/configurador/texturas/estructura/haya/NOGAL CLARO_MH.jpg";
@@ -181,46 +182,51 @@ export const MatHaya = [
     id: "Sbiancattoh",
     nombre: "Sbiancatto",
     imagen: Sbiancatto,
-    metalness: " 0.1",
-    roughness: "0.7",
+     metalness: " 0",
+    roughness: "0.4",
     specularIntensity: "1",
     reflectivity: "0.4",
+    bumpMap: HayaRoughness,
   },
   {
     id: "OlmoH",
     nombre: "Olmo",
     imagen: Olmo,
-    metalness: " 0.1",
-    roughness: "0.7",
+    metalness: " 0",
+    roughness: "0.4",
     specularIntensity: "1",
     reflectivity: "0.4",
+    bumpMap: HayaRoughness,
   },
   {
     id: "NogalClaroH",
     nombre: "Nogal Claro",
     imagen: NogalClaro,
-    metalness: " 0.1",
-    roughness: "0.7",
+    metalness: " 0",
+    roughness: "0.4",
     specularIntensity: "1",
     reflectivity: "0.4",
+    bumpMap: HayaRoughness,
   },
   {
     id: "NocciolaH",
     nombre: "Nocciola",
     imagen: Nocciola,
-    metalness: " 0.1",
-    roughness: "0.7",
+    metalness: " 0",
+    roughness: "0.4",
     specularIntensity: "1",
     reflectivity: "0.4",
+    bumpMap: HayaRoughness,
   },
   {
     id: "SpruzzoH",
     nombre: "Spruzzo",
     imagen: Spruzzo,
-    metalness: " 0.1",
-    roughness: "0.7",
+    metalness: " 0",
+    roughness: "0.4",
     specularIntensity: "1",
     reflectivity: "0.4",
+    bumpMap: HayaRoughness,
   },
 ];
 

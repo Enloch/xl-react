@@ -32,6 +32,9 @@ import {
   Gibson,
   GibsonExt,
   Hakone,
+  HakoneExt,
+  Hemingway,
+  HeminwayExt,
 } from "./Modelos";
 //---------------------Collections------------------------
 export const DatosConnor = {
@@ -386,7 +389,7 @@ export const DatosCollins = {
   bisel: true,
   bastidor: false,
   metal: false,
-  fresno: false,
+  fresno: true,
   haya: true,
   setMaterialSobre: MatSobre[7].imagen,
   setMaterialBisel: MatBisel[0].imagen,
@@ -459,11 +462,11 @@ export const DatosHakone = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: true,
-  modeloExtension: ModeloKirExt,
+  modeloExtension: HakoneExt,
 };
 export const DatosHemingway = {
   id: "Hemingway",
-  modelo3d: ModeloKirNoExt,
+  modelo3d: Hemingway,
   formasobre: "Rectangular",
   cambiasobre: false,
   cuadrado: false,
@@ -481,7 +484,7 @@ export const DatosHemingway = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: true,
-  modeloExtension: ModeloKirExt,
+  modeloExtension: HeminwayExt,
 };
 export const DatosKir = {
   id: "Kir",

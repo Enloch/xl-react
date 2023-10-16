@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unknown-property */
 import { useGLTF, useTexture } from "@react-three/drei";
 import useModeloStore from "./modeloStore";
+import HayaRoughness from "../../assets/configurador/texturas/estructura/haya/ROUGHNESS.png";
 export function SombrasAmbiente(props) {
   const { nodes } = useGLTF("/modelos/FondoSombras.gltf");
   return (
@@ -2063,6 +2064,7 @@ export function Collins(props) {
   const AcabadoBisel = useTexture(materialBisel);
   const AcabadoBastidor = useTexture(materialBastidor.imagen);
   const AcabadoPatas = useTexture(materialPatas.imagen);
+  const Bump = useTexture(HayaRoughness);
   const { nodes } = useGLTF("/modelos/COLLINS.gltf");
   return (
     <group {...props} dispose={null}>
@@ -2088,6 +2090,8 @@ export function Collins(props) {
           roughness={materialPatas.roughness}
           specularIntensity={materialPatas.specularIntensity}
           reflectivity={materialPatas.reflectivity}
+          bumpScale={0.005}
+          bumpMap={Bump}
         />
       </mesh>
       <mesh
@@ -2098,8 +2102,10 @@ export function Collins(props) {
       >
         <meshPhysicalMaterial
           map={AcabadoSobre}
-          metalness={0.5}
+          metalness={0}
           roughness={0.5}
+          reflectivity={0.4}
+          specularIntensity={1}
         />
       </mesh>
       <mesh
@@ -2352,6 +2358,7 @@ export function FlipExt(props) {
     </group>
   );
 }
+
 export function Gibson(props) {
   const { materialSobre, materialBisel, materialBastidor, materialPatas } =
     useModeloStore(); // Usa el hook para acceder al estado
@@ -2387,7 +2394,14 @@ export function Gibson(props) {
         receiveShadow
         geometry={nodes.GIBSON_TACOS.geometry}
         material={nodes.GIBSON_TACOS.material}
-      />
+      >
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
@@ -2400,6 +2414,20 @@ export function Gibson(props) {
           roughness={materialPatas.roughness}
           specularIntensity={materialPatas.specularIntensity}
           reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_SOPORTE.geometry}
+        material={nodes.GIBSON_SOPORTE.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
         />
       </mesh>
     </group>
@@ -2418,20 +2446,8 @@ export function GibsonExt(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.GIBSON_EXTENSIBLE_GUIAS.geometry}
-      >
-        <meshPhysicalMaterial
-          color={"#8a8a8a"}
-          metalness={1}
-          roughness={0.3}
-          specularIntensity={1}
-          reflectivity={0.5}
-        />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR.material}
       >
         <meshPhysicalMaterial
           map={AcabadoSobre}
@@ -2442,7 +2458,22 @@ export function GibsonExt(props) {
       <mesh
         castShadow
         receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_GUIAS.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_GUIAS.material}
+      >
+        <meshPhysicalMateriala
+          color={"#8a8a8a"}
+          metalness={1}
+          roughness={0.3}
+          specularIntensity={1}
+          reflectivity={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.material}
       >
         <meshPhysicalMaterial
           map={AcabadoSobre}
@@ -2485,7 +2516,28 @@ export function GibsonExt(props) {
         receiveShadow
         geometry={nodes.GIBSON_EXTENSIBLE_TACOS.geometry}
         material={nodes.GIBSON_EXTENSIBLE_TACOS.material}
-      />
+      >
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_SOPORTE.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_SOPORTE.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
+        />
+      </mesh>
     </group>
   );
 }
@@ -2524,6 +2576,246 @@ export function Hakone(props) {
         receiveShadow
         geometry={nodes.HAKONE_PATAS.geometry}
         material={nodes.HAKONE_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function HakoneExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/HAKONEEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_PATAS.geometry}
+        material={nodes.HAKONE_EXTENSIBLE_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry}
+        material={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.geometry}
+        material={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
+        material={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function Hemingway(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/HEMINGWAY.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='HEMINGWAY_PATAS'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_PATAS.geometry}
+        material={nodes.HEMINGWAY_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_TACOS'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_TACOS.geometry}
+        material={nodes.HEMINGWAY_TACOS.material}
+      >
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_BISEL_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_BISEL_RECTANGULAR.geometry}
+        material={nodes.HEMINGWAY_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_SOBRE_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_SOBRE_RECTANGULAR.geometry}
+        material={nodes.HEMINGWAY_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function HeminwayExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/HEMINGWAYEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='HEMINGWAY_EXTENSIBLE_TACOS'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_EXTENSIBLE_TACOS.geometry}
+        material={nodes.HEMINGWAY_EXTENSIBLE_TACOS.material}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_EXTENSIBLE_GUIAS'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_EXTENSIBLE_GUIAS.geometry}
+        material={nodes.HEMINGWAY_EXTENSIBLE_GUIAS.material}
+      >
+        <meshPhysicalMaterial
+          color={"#8a8a8a"}
+          metalness={1}
+          roughness={0.3}
+          specularIntensity={1}
+          reflectivity={0.5}
+        />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry
+        }
+        material={
+          nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.material
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_EXTENSIBLE_BISEL_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
+        material={nodes.HEMINGWAY_EXTENSIBLE_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes.HEMINGWAY_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.geometry
+        }
+        material={
+          nodes.HEMINGWAY_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.material
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='HEMINGWAY_EXTENSIBLE_PATAS'
+        castShadow
+        receiveShadow
+        geometry={nodes.HEMINGWAY_EXTENSIBLE_PATAS.geometry}
+        material={nodes.HEMINGWAY_EXTENSIBLE_PATAS.material}
       >
         <meshPhysicalMaterial
           map={AcabadoPatas}

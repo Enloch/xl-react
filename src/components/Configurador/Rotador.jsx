@@ -328,31 +328,31 @@ const Rotador = () => {
               position={[2.91, 0.6, -7.5]}
               intensity={12}
             />
-            <pointLight
+            {/* <pointLight
               castShadow
               shadow-bias={-0.0001}
               position={[2.91, 0.6, 7.5]}
               intensity={6}
-            />
+            /> */}
             <pointLight
               castShadow
               shadow-bias={-0.0001}
               position={[-2.91, 0.6, -7.5]}
               intensity={12}
             />
-            <pointLight
+            {/* <pointLight
               castShadow
               shadow-bias={-0.0001}
               position={[-2.91, 0.6, 7.5]}
               intensity={6}
-            />
-            <pointLight
+            /> */}
+            {/* <pointLight
               shadow-bias={-0.0001}
               position={[0, 6.2, 2.3]}
               intensity={40}
-            />
+            /> */}
             {/* <Environment preset='warehouse' /> */}
-            <Environment files={"/HDRI/warehouse.hdr"} />
+            <Environment files={"/HDRI/Park4_5.hdr"} />
 
             {/* <AccumulativeShadows
             position={[0, -0.92, 0]}
@@ -374,7 +374,7 @@ const Rotador = () => {
                 blur={1}
                 far={10}
                 frames={1}
-                position={[0, -0.9, 0]}
+                position={[0, -0.92, 0]}
                 resolution={256}
                 color='#000000'
               />
@@ -402,34 +402,37 @@ const Rotador = () => {
               position={[-4.65, 2.197, -3.73]}
               rotation={[-2.35, -1.262, -2.358]}
             />
-            <ambientLight intensity={2.1} />
-            <Environment files={"/HDRI/ciudad2.hdr"} />
+            <ambientLight intensity={0.3} />
+            <Environment files={"/HDRI/Park4_5.hdr"} />
             <pointLight
+              name='Luz Izquierda'
               castShadow
               shadow-bias={-0.0001}
               position={[5.91, 0.6, -7.5]}
-              intensity={20}
+              intensity={5}
             />
             <pointLight
+              name='Luz Sobre'
               castShadow
               shadow-bias={-0.0001}
               position={[5.91, 2.92, -1.5]}
               intensity={8}
             />
             <pointLight
+              name='Frontal'
               position={[-10, 2.4, 0]}
               shadow-bias={-0.0001}
-              intensity={60}
+              intensity={70}
               castShadow
             />
-            <mesh
+            {/* <mesh
               receiveShadow
               position={[4, -2.5, -0.276]}
               rotation={[0, 0, 0]}
             >
               <planeGeometry attach='geometry' args={[10, 10]} />
               <shadowMaterial attach='material' transparent opacity={1} />
-            </mesh>
+            </mesh> */}
 
             <Escena modelo={modeloMostrado} />
           </View>
@@ -443,9 +446,9 @@ const Rotador = () => {
               position={[-7.05, 6.878, 5.663]}
               rotation={[-0.873, -0.728, -0.653]}
             />
-            <ambientLight intensity={1.4} />
-            <Environment files={"/HDRI/ciudad2.hdr"} />
-            <directionalLight
+            {/* <ambientLight intensity={1.4} /> */}
+            <Environment files={"/HDRI/Park4_7.hdr"} />
+            {/* <directionalLight
               position={[-0.5, 5, -3]}
               castShadow
               intensity={0.01}
@@ -457,9 +460,9 @@ const Rotador = () => {
                 args={[-8.5, 8.5, 8.5, -8.5, 0.01, 100]}
               />
             </directionalLight>
-            <SombrasAmbiente />
+            <SombrasAmbiente /> */}
 
-            {/* <AccumulativeShadows
+            <AccumulativeShadows
             position={[0, -0.92, 0]}
             frames={600}
             alphaTest={0.8}
@@ -471,7 +474,7 @@ const Rotador = () => {
               ambient={0.5}
               position={[1, 5, -1]}
             />
-          </AccumulativeShadows> */}
+          </AccumulativeShadows>
             <Escena modelo={modeloMostrado} />
           </View>
         </Suspense>

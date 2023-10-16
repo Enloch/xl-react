@@ -22,11 +22,11 @@ import Humus from "../../assets/configurador/texturas/estructura/metal/HUMUS.jpg
 import Niebla from "../../assets/configurador/texturas/estructura/metal/NIEBLA.jpg";
 import Perla from "../../assets/configurador/texturas/estructura/metal/PERLA.jpg";
 //---------------Haya---------------
-import Sbiancatto from "../../assets/configurador/texturas/estructura/haya/SBIANCATTO_MH.png";
-import Olmo from "../../assets/configurador/texturas/estructura/haya/OLMO_MH.png";
-import NogalClaro from "../../assets/configurador/texturas/estructura/haya/NOGAL CLARO_MH.jpg";
-import Nocciola from "../../assets/configurador/texturas/estructura/haya/NOCCIOLA_MH.png";
-import Spruzzo from "../../assets/configurador/texturas/estructura/haya/SPRUZZO_MH.jpg";
+import Sbiancatto from "../../assets/configurador/miniaturas/estructura/haya/SBIANCATTO MH.webp";
+import Olmo from "../../assets/configurador/miniaturas/estructura/haya/OLMO MH.webp";
+import NogalClaro from "../../assets/configurador/miniaturas/estructura/haya/NOGAL CLARO MH.webp";
+import Nocciola from "../../assets/configurador/miniaturas/estructura/haya/NOCCIOLA MH.webp";
+import Spruzzo from "../../assets/configurador/miniaturas/estructura/haya/SPRUZZO MH.webp";
 //---------------Fresno---------------
 import SbiancattoF from "../../assets/configurador/miniaturas/estructura/fresno/SBIANCATTO MF.webp";
 import OlmoF from "../../assets/configurador/miniaturas/estructura/fresno/OLMO MF.webp";
