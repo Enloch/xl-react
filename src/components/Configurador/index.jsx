@@ -81,7 +81,6 @@ function Configurador() {
         </ContenedorMenu>
         <ContenedorRotador>
           <Rotador
-
             rotadorRef={rotadorRef} // Aquí pasas la referencia
           />
         </ContenedorRotador>

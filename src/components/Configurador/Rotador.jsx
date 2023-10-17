@@ -42,6 +42,10 @@ export const PanelRotador = styled.div`
   position: relative;
   /* padding: 0px 15px; */
   margin-left: 20px;
+  @media (max-width: 600px) {
+    height: 40vh;
+    margin: 0px;
+  }
 `;
 export const PanelTop = styled.div`
   position: relative;

@@ -29,6 +29,9 @@ export const ContenedorCentro = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 export const ContenedorInferior = styled.div``;
 export const ContenedorMenu = styled.div`
@@ -36,6 +39,10 @@ export const ContenedorMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  @media (max-width: 600px) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
   @media (max-width: 1400px) {
     grid-column: 1 / 3;
   }
@@ -44,6 +51,10 @@ export const ContenedorRotador = styled.div`
   /* height: 80%; */
   grid-column: 2 / 9;
   /* background-color: #99feaf; */
+  @media (max-width: 600px) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
   @media (max-width: 1400px) {
     grid-column: 3 / -1;
   }
