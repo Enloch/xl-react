@@ -2063,7 +2063,6 @@ export function Collins(props) {
   const AcabadoBisel = useTexture(materialBisel);
   const AcabadoBastidor = useTexture(materialBastidor.imagen);
   const AcabadoPatas = useTexture(materialPatas.imagen);
-  const Bump = useTexture(HayaRoughness);
   const { nodes } = useGLTF("/modelos/COLLINS.gltf");
   return (
     <group {...props} dispose={null}>
@@ -2089,8 +2088,6 @@ export function Collins(props) {
           roughness={materialPatas.roughness}
           specularIntensity={materialPatas.specularIntensity}
           reflectivity={materialPatas.reflectivity}
-          bumpScale={0.005}
-          bumpMap={Bump}
         />
       </mesh>
       <mesh

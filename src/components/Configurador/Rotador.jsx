@@ -153,7 +153,9 @@ const Rotador = () => {
       case "middle":
         return `"middle middle middle middle"
                 "middle middle middle middle"
-                "middle middle middle middle"`;
+                "middle middle middle middle"
+
+                "bottomRotador bottomRotador bottomRotador bottomRotador"`;
       default:
         return `"main top"
                 "main bottom1"
@@ -251,7 +253,7 @@ const Rotador = () => {
       <PanelText
         style={{
           gridArea: "bottomRotador",
-          display: !activePanel ? "block" : "none",
+          // display: !activePanel ? "block" : "none",
         }}
       >
         <TextoSubtitulos
