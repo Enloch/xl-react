@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
-import { useState, Suspense, useRef, useMemo } from "react";
+import { useState, Suspense, useRef, useMemo, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
@@ -18,6 +18,7 @@ import Fondo from "../../assets/configurador/SinMesa.jpg";
 import FondoDetalle from "../../assets/configurador/FondoDetalle.webp";
 import useModeloStore from "./modeloStore";
 import FullScreenIcon from "../../assets/configurador/iconos/fscreen.svg";
+import { SombrasAmbiente } from "./Modelos";
 
 export const Container = styled.div`
   /* position: relative; */
@@ -28,12 +29,13 @@ export const Container = styled.div`
   grid-template-rows: 380px 50px 380px 20px;
   grid-template-areas: ${(props) => props.gridTemplate};
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1400px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
       "main main"
-      "top middle";
+      "main main"
+      "bottomRotador bottomRotador";
   }
 `;
 export const PanelRotador = styled.div`
@@ -138,23 +140,24 @@ export const TextoSubtitulos = styled.p`
   font-size: 12px;
   font-family: "Neue Montreal", sans-serif;
 `;
-const Rotador = () => {
+const Rotador = ({ rotadorRef }) => {
   const [activePanel, setActivePanel] = useState(null); // null, 'main', 'top', 'middle'
   const gridTemplate = useMemo(() => {
     switch (activePanel) {
       case "main":
         return `"main main main main"
                 "main main main main"
-                "main main main main"`;
+                "main main main main"
+                "bottomRotador bottomRotador bottomRotador bottomRotador"`;
       case "top":
         return `"top top top top"
                 "top top top top"
-                "top top top top"`;
+                "top top top top"
+                "bottomRotador bottomRotador bottomRotador bottomRotador"`;
       case "middle":
         return `"middle middle middle middle"
                 "middle middle middle middle"
                 "middle middle middle middle"
-
                 "bottomRotador bottomRotador bottomRotador bottomRotador"`;
       default:
         return `"main top"
@@ -181,9 +184,21 @@ const Rotador = () => {
   const view1 = useRef();
   const view2 = useRef();
   const view3 = useRef();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
-    <Container gridTemplate={gridTemplate}>
+    <Container gridTemplate={gridTemplate} ref={rotadorRef}>
       <PanelRotador
         ref={view1}
         style={{
@@ -191,65 +206,77 @@ const Rotador = () => {
           display: activePanel === "main" || !activePanel ? "block" : "none",
         }}
       >
-        <StyledButton
-          onClick={() => toggleActivePanel("main")}
-          isActive={activePanel === "main"}
-        >
-          <Fscreen src={FullScreenIcon} />
-        </StyledButton>
+        {windowWidth >= 1400 && (
+          <StyledButton
+            onClick={() => toggleActivePanel("main")}
+            isActive={activePanel === "main"}
+          >
+            <Fscreen src={FullScreenIcon} />
+          </StyledButton>
+        )}
         {/* <IconoPDF src={PDFIcon} /> */}
         <div style={{ position: "absolute", bottom: "0%", left: "0%" }}></div>
       </PanelRotador>
-      <PanelTop
-        ref={view2}
-        style={{
-          gridArea: "top",
-          display: activePanel === "top" || !activePanel ? "block" : "none",
-        }}
-      >
-        <StyledButtonTop
-          onClick={() => toggleActivePanel("top")}
-          isActive={activePanel === "top"}
+      {windowWidth >= 1400 && (
+        <PanelTop
+          ref={view2}
+          style={{
+            gridArea: "top",
+            display: activePanel === "top" || !activePanel ? "block" : "none",
+          }}
         >
-          <Fscreen
-            src={FullScreenIcon}
-            style={{ transform: "rotate(180deg)" }}
-          />
-        </StyledButtonTop>
-      </PanelTop>
-      <PanelText
-        style={{
-          gridArea: "bottom1",
-          display: !activePanel ? "block" : "none",
-        }}
-      >
-        <TextoSubtitulos>detalle canto / edge detail</TextoSubtitulos>
-      </PanelText>
-      <PanelBottom
-        ref={view3}
-        style={{
-          gridArea: "middle",
-          display: activePanel === "middle" || !activePanel ? "block" : "none",
-        }}
-      >
-        <StyledButtonBottom
-          onClick={() => toggleActivePanel("middle")}
-          isActive={activePanel === "middle"}
+          <StyledButtonTop
+            onClick={() => toggleActivePanel("top")}
+            isActive={activePanel === "top"}
+          >
+            <Fscreen
+              src={FullScreenIcon}
+              style={{ transform: "rotate(180deg)" }}
+            />
+          </StyledButtonTop>
+        </PanelTop>
+      )}
+      {windowWidth >= 1400 && (
+        <PanelText
+          style={{
+            gridArea: "bottom1",
+            display: !activePanel ? "block" : "none",
+          }}
         >
-          <Fscreen
-            src={FullScreenIcon}
-            style={{ transform: "rotate(270deg)" }}
-          />
-        </StyledButtonBottom>
-      </PanelBottom>
-      <PanelText
-        style={{
-          gridArea: "bottom2",
-          display: !activePanel ? "block" : "none",
-        }}
-      >
-        simulación ambiente / photo simulation
-      </PanelText>
+          <TextoSubtitulos>detalle canto / edge detail</TextoSubtitulos>
+        </PanelText>
+      )}
+      {windowWidth >= 1400 && (
+        <PanelBottom
+          ref={view3}
+          style={{
+            gridArea: "middle",
+            display:
+              activePanel === "middle" || !activePanel ? "block" : "none",
+          }}
+        >
+          <StyledButtonBottom
+            onClick={() => toggleActivePanel("middle")}
+            isActive={activePanel === "middle"}
+          >
+            <Fscreen
+              src={FullScreenIcon}
+              style={{ transform: "rotate(270deg)" }}
+            />
+          </StyledButtonBottom>
+        </PanelBottom>
+      )}
+      {windowWidth >= 1400 && (
+        <PanelText
+          style={{
+            gridArea: "bottom2",
+            display: !activePanel ? "block" : "none",
+          }}
+        >
+          simulación ambiente / photo simulation
+        </PanelText>
+      )}
+
       <PanelText
         style={{
           gridArea: "bottomRotador",
@@ -271,43 +298,43 @@ const Rotador = () => {
           {materialPatasNombre && <> patas en {materialPatasNombre}</>}
         </ConfiguracionElegida>
       </PanelText>
+
       <Canvas
         shadows
-        eventSource={document.getElementById("root")}
+        eventSource={rotadorRef.current}
         dpr={dpr}
         style={{ position: "absolute", top: 0, left: 0 }}
       >
-        <Suspense fallback={<></>}>
-          <PerformanceMonitor
-            onIncline={() => setDpr(2)}
-            onDecline={() => setDpr(1)}
+        <PerformanceMonitor
+          onIncline={() => setDpr(2)}
+          onDecline={() => setDpr(1)}
+        />
+        <View index={1} track={view1}>
+          <PerspectiveCamera
+            name='Camara Rotador'
+            makeDefault={true}
+            far={1000}
+            near={0.1}
+            fov={34.339}
+            position={[-7.103, 6.878, 5.663]}
+            rotation={[-0.873, -0.728, -0.653]}
           />
-          <View index={1} track={view1}>
-            <PerspectiveCamera
-              name='Camara Rotador'
-              makeDefault={true}
-              far={1000}
-              near={0.1}
-              fov={34.339}
-              position={[-7.103, 6.878, 5.663]}
-              rotation={[-0.873, -0.728, -0.653]}
-            />
-            <ambientLight intensity={0.5} />
-            <pointLight
-              castShadow
-              shadow-bias={-0.0001}
-              position={[2.91, 0.6, -7.5]}
-              intensity={12}
-            />
+          <ambientLight intensity={0.5} />
+          <pointLight
+            castShadow
+            shadow-bias={-0.0001}
+            position={[2.91, 0.6, -7.5]}
+            intensity={12}
+          />
 
-            <pointLight
-              castShadow
-              shadow-bias={-0.0001}
-              position={[-2.91, 0.6, -7.5]}
-              intensity={12}
-            />
-            <Environment files={"/HDRI/Park4_5.hdr"} />
-            {/* <AccumulativeShadows
+          <pointLight
+            castShadow
+            shadow-bias={-0.0001}
+            position={[-2.91, 0.6, -7.5]}
+            intensity={12}
+          />
+          <Environment files={"/HDRI/Park4_5.hdr"} />
+          {/* <AccumulativeShadows
             position={[0, -0.92, 0]}
             frames={300}
             alphaTest={0.8}
@@ -320,31 +347,32 @@ const Rotador = () => {
               position={[1, 5, -1]}
             />
           </AccumulativeShadows> */}
-            <Suspense fallback={null}>
-              <ContactShadows
-                opacity={0.1}
-                scale={10}
-                blur={1}
-                far={10}
-                frames={1}
-                position={[0, -0.92, 0]}
-                resolution={256}
-                color='#000000'
-              />
-              <Escena modelo={modeloMostrado} />
-            </Suspense>
-            <OrbitControls
-              enableRotater={false}
-              enablePan={false}
-              enableZoom={true}
-              autoRotate={true}
-              autoRotateSpeed={0.75}
-              maxPolarAngle={Math.PI / 2.2}
-              minPolarAngle={Math.PI / 6}
-              maxDistance={12}
-              minDistance={7}
-            />
-          </View>
+
+          <ContactShadows
+            opacity={0.1}
+            scale={10}
+            blur={1}
+            far={10}
+            frames={1}
+            position={[0, -0.92, 0]}
+            resolution={256}
+            color='#000000'
+          />
+          <Escena modelo={modeloMostrado} />
+
+          <OrbitControls
+            enableRotater={false}
+            enablePan={false}
+            enableZoom={true}
+            autoRotate={true}
+            autoRotateSpeed={0.75}
+            maxPolarAngle={Math.PI / 2.2}
+            minPolarAngle={Math.PI / 6}
+            maxDistance={12}
+            minDistance={7}
+          />
+        </View>
+        {windowWidth >= 1400 && (
           <View index={2} track={view2}>
             <PerspectiveCamera
               name='Camara Detalle'
@@ -380,6 +408,8 @@ const Rotador = () => {
             />
             <Escena modelo={modeloMostrado} />
           </View>
+        )}
+        {windowWidth >= 1400 && (
           <View index={3} track={view3}>
             <PerspectiveCamera
               name='Camara Ambiente'
@@ -391,22 +421,35 @@ const Rotador = () => {
               rotation={[-0.873, -0.728, -0.653]}
             />
             <Environment files={"/HDRI/Park4_7.hdr"} />
-            <AccumulativeShadows
-            position={[0, -0.92, 0]}
-            frames={600}
-            alphaTest={0.8}
-            scale={20}
-          >
-            <RandomizedLight
-              amount={2}
-              radius={10}
-              ambient={0.5}
-              position={[1, 5, -1]}
-            />
-          </AccumulativeShadows>
+            {/* <AccumulativeShadows
+                position={[0, -0.92, 0]}
+                frames={20}
+                alphaTest={0.8}
+                scale={20}
+              >
+                <RandomizedLight
+                  amount={2}
+                  radius={10}
+                  ambient={0.5}
+                  position={[1, 5, -1]}
+                />
+              </AccumulativeShadows> */}
+            <directionalLight
+              position={[-0.5, 5, -3]}
+              castShadow
+              intensity={0.01}
+              shadow-bias={-0.0001}
+              shadow-mapSize={8192}
+            >
+              <orthographicCamera
+                attach='shadow-camera'
+                args={[-8.5, 8.5, 8.5, -8.5, 0.01, 100]}
+              />
+            </directionalLight>
+            <SombrasAmbiente />
             <Escena modelo={modeloMostrado} />
           </View>
-        </Suspense>
+        )}
       </Canvas>
     </Container>
   );

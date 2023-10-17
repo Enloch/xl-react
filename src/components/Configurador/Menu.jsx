@@ -795,7 +795,7 @@ const Menu = ({
             <LinkDescargas href='#'>
               Ficha Técnica / Tech. datasheet
             </LinkDescargas>
-            <LinkDescargas href='#'>Archivo DWG / DWG File</LinkDescargas>
+            {/* <LinkDescargas href='#'>Archivo DWG / DWG File</LinkDescargas> */}
             <LinkDescargas href='#'>Modelo 3d / 3D model</LinkDescargas>
           </SectionContent>
         </Section>

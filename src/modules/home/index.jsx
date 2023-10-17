@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import {
   MainContainer,
   Seccion,
@@ -50,7 +50,6 @@ export const XLHome = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
   return (
     <>
       <MainContainer>
@@ -291,9 +290,6 @@ export const XLHome = () => {
               <ContenedorSubtitulos>
                 <LimiteSubtitulos>
                   <Configurador />
-
-                  <Caja25Flex></Caja25Flex>
-                  <Caja75Flex></Caja75Flex>
                 </LimiteSubtitulos>
               </ContenedorSubtitulos>
             </WrapperContenido>

@@ -88,7 +88,7 @@ export const MatSobre = [
   },
   {
     id: "TravertinoClassico",
-    nombre: "Travestino Clássico",
+    nombre: "Travertino Clássico",
     imagen: TravertinoClassico,
   },
   {
@@ -182,7 +182,7 @@ export const MatHaya = [
     id: "Sbiancattoh",
     nombre: "Sbiancatto",
     imagen: Sbiancatto,
-     metalness: " 0",
+    metalness: " 0",
     roughness: "0.4",
     specularIntensity: "1",
     reflectivity: "0.4",

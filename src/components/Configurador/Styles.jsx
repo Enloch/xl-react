@@ -12,10 +12,10 @@ export const ContenedorPrincipal = styled.div`
   width: 1920px;
   height: auto;
 
-  @media ${device.xs} {
-  }
-
-  @media ${device.sm} {
+  @media (max-width: 1400px) {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 `;
 export const ContenedorTituloPrincipal = styled.div`
@@ -36,11 +36,17 @@ export const ContenedorMenu = styled.div`
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  @media (max-width: 1400px) {
+    grid-column: 1 / 3;
+  }
 `;
 export const ContenedorRotador = styled.div`
   /* height: 80%; */
   grid-column: 2 / 9;
   /* background-color: #99feaf; */
+  @media (max-width: 1400px) {
+    grid-column: 3 / -1;
+  }
 `;
 export const FondoRotador = styled.div``;
 

@@ -605,7 +605,6 @@ export const DatosManhattan = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
-  modeloExtension: ModeloKirExt,
 };
 export const DatosRob = {
   id: "Rob",
@@ -627,7 +626,6 @@ export const DatosRob = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
-  modeloExtension: ModeloKirExt,
 };
 export const DatosSpritz = {
   id: "Spritz80",
@@ -649,7 +647,6 @@ export const DatosSpritz = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
-  modeloExtension: SprtizExt,
 };
 export const DatosSpritz120 = {
   id: "Spritz120",
@@ -671,5 +668,4 @@ export const DatosSpritz120 = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
-  modeloExtension: SprtizExt,
 };

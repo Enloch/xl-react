@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import {
   ContenedorCentro,
   ContenedorPrincipal,
@@ -9,7 +10,7 @@ import {
   IconoPDF,
 } from "./Styles";
 import Menu from "./Menu";
-import Rotador, { TextoSubtitulos } from "./Rotador";
+import Rotador from "./Rotador";
 import Logo7475 from "../../assets/configurador/iconos/7475.png";
 import useModeloStore from "./modeloStore";
 import PDFIcon from "../../assets/configurador/iconos/pdf.svg";
@@ -34,6 +35,8 @@ function Configurador() {
     setMaterialBastidorNombre,
     setMaterialPatasNombre,
   } = useModeloStore();
+  const rotadorRef = useRef();
+
   return (
     <ContenedorPrincipal>
       <ContenedorTituloPrincipal>
@@ -78,11 +81,11 @@ function Configurador() {
         </ContenedorMenu>
         <ContenedorRotador>
           <Rotador
-            modeloMostrado={modeloMostrado}
-            materialSobre={materialSobre}
+
+            rotadorRef={rotadorRef} // Aquí pasas la referencia
           />
         </ContenedorRotador>
-      </ContenedorCentro>{" "}
+      </ContenedorCentro>
       {/* <div style={{ display: "flex", gap: "5px" }}>
         <TextoSubtitulos
           style={{
