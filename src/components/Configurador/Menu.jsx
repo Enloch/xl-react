@@ -56,6 +56,7 @@ import {
   DatosManhattan,
   DatosRob,
   DatosSpritz,
+  DatosSpritz120,
 } from "./InfoModelos";
 import useModeloStore from "./modeloStore";
 const generatePhantomItems = (itemCount, itemsPerRow) => {
@@ -407,7 +408,10 @@ const Menu = ({
                           Rob
                         </Textos>
                         <Textos onClick={() => ActualizarMenu(DatosSpritz)}>
-                          Spritz
+                          Spritz 80
+                        </Textos>
+                        <Textos onClick={() => ActualizarMenu(DatosSpritz120)}>
+                          Spritz 120
                         </Textos>
                       </SectionContent>
                     )}
@@ -712,7 +716,9 @@ const Menu = ({
                         )
                       }
                     >
-                      <SubsectionTitle>Madera Olmo / Wood Ash</SubsectionTitle>
+                      <SubsectionTitle>
+                        Madera Fresno / Wood Ash
+                      </SubsectionTitle>
                     </SubsectionHeader>
                     <AnimatePresence>
                       {openSubsection === "Fresno" && (

@@ -2,7 +2,6 @@
 /* eslint-disable react/no-unknown-property */
 import { useGLTF, useTexture } from "@react-three/drei";
 import useModeloStore from "./modeloStore";
-import HayaRoughness from "../../assets/configurador/texturas/estructura/haya/ROUGHNESS.png";
 export function SombrasAmbiente(props) {
   const { nodes } = useGLTF("/modelos/FondoSombras.gltf");
   return (
@@ -2734,7 +2733,6 @@ export function HeminwayExt(props) {
         castShadow
         receiveShadow
         geometry={nodes.HEMINGWAY_EXTENSIBLE_TACOS.geometry}
-        material={nodes.HEMINGWAY_EXTENSIBLE_TACOS.material}
       >
         <meshPhysicalMaterial
           color={"#0C0C0C"}
@@ -2748,7 +2746,6 @@ export function HeminwayExt(props) {
         castShadow
         receiveShadow
         geometry={nodes.HEMINGWAY_EXTENSIBLE_GUIAS.geometry}
-        material={nodes.HEMINGWAY_EXTENSIBLE_GUIAS.material}
       >
         <meshPhysicalMaterial
           color={"#8a8a8a"}
@@ -2765,9 +2762,6 @@ export function HeminwayExt(props) {
         geometry={
           nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry
         }
-        material={
-          nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.material
-        }
       >
         <meshPhysicalMaterial
           map={AcabadoSobre}
@@ -2780,7 +2774,6 @@ export function HeminwayExt(props) {
         castShadow
         receiveShadow
         geometry={nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
-        material={nodes.HEMINGWAY_EXTENSIBLE_SOBRE_RECTANGULAR.material}
       >
         <meshPhysicalMaterial
           map={AcabadoSobre}
@@ -2816,6 +2809,843 @@ export function HeminwayExt(props) {
         receiveShadow
         geometry={nodes.HEMINGWAY_EXTENSIBLE_PATAS.geometry}
         material={nodes.HEMINGWAY_EXTENSIBLE_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function Mary(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/MARY.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='MARY_180X90_BISEL_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.MARY_180X90_BISEL_RECTANGULAR.geometry}
+        material={nodes.MARY_180X90_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='MARY_180X90_BISEL_RECTANGULAR_PARTE_ABAJO'
+        castShadow
+        receiveShadow
+        geometry={nodes.MARY_180X90_BISEL_RECTANGULAR_PARTE_ABAJO.geometry}
+        material={nodes.MARY_180X90_BISEL_RECTANGULAR_PARTE_ABAJO.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='MARY_180X90_ESTRUCTURA'
+        castShadow
+        receiveShadow
+        geometry={nodes.MARY_180X90_ESTRUCTURA.geometry}
+        material={nodes.MARY_180X90_ESTRUCTURA.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_PATAS'
+        castShadow
+        receiveShadow
+        geometry={nodes.MARY_180X90_PATAS.geometry}
+        material={nodes.MARY_180X90_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_SOBRE_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.MARY_180X90_SOBRE_RECTANGULAR.geometry}
+        material={nodes.MARY_180X90_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_TACOS'
+        castShadow
+        receiveShadow
+        geometry={nodes.MARY_180X90_TACOS.geometry}
+        material={nodes.MARY_180X90_TACOS.material}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function MaryExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/MARYEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_ESTRUCTURA'
+        castShadow
+        receiveShadow
+        geometry={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_ESTRUCTURA"].geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_PATAS'
+        castShadow
+        receiveShadow
+        geometry={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_PATAS"].geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR"].geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE"]
+            .geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR_EXTENSIBLE'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR_EXTENSIBLE"]
+            .geometry
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_TACOS'
+        castShadow
+        receiveShadow
+        geometry={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_TACOS"].geometry}
+        material={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_TACOS"].material}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_GUIAS'
+        castShadow
+        receiveShadow
+        geometry={nodes["MARY_180X90_EXTENSIBLE_+70_GUIAS"].geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#8a8a8a"}
+          metalness={1}
+          roughness={0.3}
+          specularIntensity={1}
+          reflectivity={0.5}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_SOBRE_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_SOBRE_RECTANGULAR"].geometry
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE_ddd6d27'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes[
+            "MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE_ddd6d27"
+          ].geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR_PARTE_ABAJO'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes[
+            "MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR_PARTE_ABAJO"
+          ].geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+export function Zama(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/ZAMA.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='ZAMA_180X90_ESTRUCTURA'
+        castShadow
+        receiveShadow
+        geometry={nodes.ZAMA_180X90_ESTRUCTURA.geometry}
+        material={nodes.ZAMA_180X90_ESTRUCTURA.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='ZAMA_180X90_TACOS'
+        castShadow
+        receiveShadow
+        geometry={nodes.ZAMA_180X90_TACOS.geometry}
+        material={nodes.ZAMA_180X90_TACOS.material}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='ZAMA_180X90_SOBRE_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.ZAMA_180X90_SOBRE_RECTANGULAR.geometry}
+        material={nodes.ZAMA_180X90_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='ZAMA_180X90_BISEL_RECTANGULAR'
+        castShadow
+        receiveShadow
+        geometry={nodes.ZAMA_180X90_BISEL_RECTANGULAR.geometry}
+        material={nodes.ZAMA_180X90_BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='ZAMA_180X90_PATAS'
+        castShadow
+        receiveShadow
+        geometry={nodes.ZAMA_180X90_PATAS.geometry}
+        material={nodes.ZAMA_180X90_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='ZAMA_180X90_BISEL_RECTANGULAR_PARTE_ABAJO'
+        castShadow
+        receiveShadow
+        geometry={nodes.ZAMA_180X90_BISEL_RECTANGULAR_PARTE_ABAJO.geometry}
+        material={nodes.ZAMA_180X90_BISEL_RECTANGULAR_PARTE_ABAJO.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+export function ZamaExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/ZAMAEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["ZAMA_180X90_EXTENSIBLE_+70_ESTRUCTURA"].geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoBastidor}
+          metalness={materialBastidor.metalness}
+          roughness={materialBastidor.roughness}
+          specularIntensity={materialBastidor.specularIntensity}
+          reflectivity={materialBastidor.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["ZAMA_180X90_EXTENSIBLE_+70_TACOS"].geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["ZAMA_180X90_EXTENSIBLE_+70_PATAS"].geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["ZAMA_180X90_EXTENSIBLE_+70_GUIAS"].geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#8a8a8a"}
+          metalness={1}
+          roughness={0.3}
+          specularIntensity={1}
+          reflectivity={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["ZAMA_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR"].geometry
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["ZAMA_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR_EXTENSIBLE"]
+            .geometry
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["ZAMA_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE"]
+            .geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["ZAMA_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR"].geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["ZAMA_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_PARTE_ABAJO"]
+            .geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes[
+            "ZAMA_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE_e4ea9c0"
+          ].geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+//--------------------Contract---------------------
+
+export function Brezza(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/BREZZA.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='BREZZA_90_TACOS001'
+        castShadow
+        receiveShadow
+        geometry={nodes.BREZZA_90_TACOS001.geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='BREZZA_90_BISEL001'
+        castShadow
+        receiveShadow
+        geometry={nodes.BREZZA_90_BISEL001.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='BREZZA_90_SOBRE001'
+        castShadow
+        receiveShadow
+        geometry={nodes.BREZZA_90_SOBRE001.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='BREZZA_90_PATAS001'
+        castShadow
+        receiveShadow
+        geometry={nodes.BREZZA_90_PATAS001.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='BREZZA_90_BISEL_PARTE_ABAJO'
+        castShadow
+        receiveShadow
+        geometry={nodes.BREZZA_90_BISEL_PARTE_ABAJO.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+export function BrezzaExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/BREZZAEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_BISEL_REDONDO__ETRAIBLE'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["BREZZA_90_EXTRAIBLE_+35_BISEL_REDONDO__ETRAIBLE"].geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_TACOS'
+        castShadow
+        receiveShadow
+        geometry={nodes["BREZZA_90_EXTRAIBLE_+35_TACOS"].geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_PATAS'
+        castShadow
+        receiveShadow
+        geometry={nodes["BREZZA_90_EXTRAIBLE_+35_PATAS"].geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_SOBRE_REDONDO_EXTRAIBLE'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["BREZZA_90_EXTRAIBLE_+35_SOBRE_REDONDO_EXTRAIBLE"].geometry
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_BISEL_REDONDO'
+        castShadow
+        receiveShadow
+        geometry={nodes["BREZZA_90_EXTRAIBLE_+35_BISEL_REDONDO"].geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_BISEL_PARTE_ABAJO'
+        castShadow
+        receiveShadow
+        geometry={nodes["BREZZA_90_EXTRAIBLE_+35_BISEL_PARTE_ABAJO"].geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_BISEL_REDONDO__ETRAIBLE_PARTE_ABAJO'
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["BREZZA_90_EXTRAIBLE_+35_BISEL_REDONDO__ETRAIBLE_PARTE_ABAJO"]
+            .geometry
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='BREZZA_90_EXTRAIBLE_+35_SOBRE_REDONDO'
+        castShadow
+        receiveShadow
+        geometry={nodes["BREZZA_90_EXTRAIBLE_+35_SOBRE_REDONDO"].geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function Manhattan(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/MANHATTAN.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='MANHATTAN_90_TACOS001'
+        castShadow
+        receiveShadow
+        geometry={nodes.MANHATTAN_90_TACOS001.geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='MANHATTAN_90_SOBRE001'
+        castShadow
+        receiveShadow
+        geometry={nodes.MANHATTAN_90_SOBRE001.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='MANHATTAN_90_PATAS001'
+        castShadow
+        receiveShadow
+        geometry={nodes.MANHATTAN_90_PATAS001.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='MANHATTAN_90_BISEL001'
+        castShadow
+        receiveShadow
+        geometry={nodes.MANHATTAN_90_BISEL001.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        name='MANHATTAN_90_BISEL_PARTE_ABAJO'
+        castShadow
+        receiveShadow
+        geometry={nodes.MANHATTAN_90_BISEL_PARTE_ABAJO.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+export function Rob(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/ROB.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh castShadow receiveShadow geometry={nodes.ROB_180X90_SOBRE.geometry}>
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh castShadow receiveShadow geometry={nodes.ROB_180X90_PATAS.geometry}>
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function Spritz(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/SPRITZ.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        name='SPRITZ_80_PATAS001'
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_80_PATAS001.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        name='SPRITZ_80_TACOS001'
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_80_TACOS001.geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        name='SPRITZ_80_SOBRE001'
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_80_SOBRE001.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        name='SPRITZ_80_BISEL001'
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_80_BISEL001.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+export function SprtizExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/SPRITZEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_120_BISEL001.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_120_SOBRE001.geometry}
+        material={nodes.SPRITZ_120_SOBRE001.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_120_TACOS001.geometry}
+      >
+        <meshPhysicalMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.SPRITZ_120_PATAS001.geometry}
       >
         <meshPhysicalMaterial
           map={AcabadoPatas}

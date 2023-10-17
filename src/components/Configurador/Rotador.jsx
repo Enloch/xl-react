@@ -14,11 +14,9 @@ import {
   RandomizedLight,
   AccumulativeShadows,
 } from "@react-three/drei";
-// import { SombrasAmbiente } from "./Modelos";
 import Fondo from "../../assets/configurador/SinMesa.jpg";
 import FondoDetalle from "../../assets/configurador/FondoDetalle.webp";
 import useModeloStore from "./modeloStore";
-import { SombrasAmbiente } from "./Modelos";
 import FullScreenIcon from "../../assets/configurador/iconos/fscreen.svg";
 
 export const Container = styled.div`
@@ -140,20 +138,6 @@ export const TextoSubtitulos = styled.p`
   font-size: 12px;
   font-family: "Neue Montreal", sans-serif;
 `;
-const Spinner = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <div>Loading...</div>
-    </div>
-  );
-};
 const Rotador = () => {
   const [activePanel, setActivePanel] = useState(null); // null, 'main', 'top', 'middle'
   const gridTemplate = useMemo(() => {
@@ -306,21 +290,6 @@ const Rotador = () => {
               position={[-7.103, 6.878, 5.663]}
               rotation={[-0.873, -0.728, -0.653]}
             />
-
-            {/* <Environment>
-            <Lightformer
-              intensity={3}
-              rotation-x={Math.PI / 2}
-              position={[0, 5, 0]}
-              scale={[10, 10, 1]}
-            />
-            <Lightformer
-              intensity={3}
-              rotation-x={Math.PI / 2}
-              position={[0, 5, 0]}
-              scale={[10, 10, 1]}
-            />
-          </Environment> */}
             <ambientLight intensity={0.5} />
             <pointLight
               castShadow
@@ -328,32 +297,14 @@ const Rotador = () => {
               position={[2.91, 0.6, -7.5]}
               intensity={12}
             />
-            {/* <pointLight
-              castShadow
-              shadow-bias={-0.0001}
-              position={[2.91, 0.6, 7.5]}
-              intensity={6}
-            /> */}
+
             <pointLight
               castShadow
               shadow-bias={-0.0001}
               position={[-2.91, 0.6, -7.5]}
               intensity={12}
             />
-            {/* <pointLight
-              castShadow
-              shadow-bias={-0.0001}
-              position={[-2.91, 0.6, 7.5]}
-              intensity={6}
-            /> */}
-            {/* <pointLight
-              shadow-bias={-0.0001}
-              position={[0, 6.2, 2.3]}
-              intensity={40}
-            /> */}
-            {/* <Environment preset='warehouse' /> */}
             <Environment files={"/HDRI/Park4_5.hdr"} />
-
             {/* <AccumulativeShadows
             position={[0, -0.92, 0]}
             frames={300}
@@ -425,15 +376,6 @@ const Rotador = () => {
               intensity={70}
               castShadow
             />
-            {/* <mesh
-              receiveShadow
-              position={[4, -2.5, -0.276]}
-              rotation={[0, 0, 0]}
-            >
-              <planeGeometry attach='geometry' args={[10, 10]} />
-              <shadowMaterial attach='material' transparent opacity={1} />
-            </mesh> */}
-
             <Escena modelo={modeloMostrado} />
           </View>
           <View index={3} track={view3}>
@@ -446,22 +388,7 @@ const Rotador = () => {
               position={[-7.05, 6.878, 5.663]}
               rotation={[-0.873, -0.728, -0.653]}
             />
-            {/* <ambientLight intensity={1.4} /> */}
             <Environment files={"/HDRI/Park4_7.hdr"} />
-            {/* <directionalLight
-              position={[-0.5, 5, -3]}
-              castShadow
-              intensity={0.01}
-              shadow-bias={-0.0001}
-              shadow-mapSize={8192}
-            >
-              <orthographicCamera
-                attach='shadow-camera'
-                args={[-8.5, 8.5, 8.5, -8.5, 0.01, 100]}
-              />
-            </directionalLight>
-            <SombrasAmbiente /> */}
-
             <AccumulativeShadows
             position={[0, -0.92, 0]}
             frames={600}
