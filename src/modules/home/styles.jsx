@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import Header from "../../assets/images/home/secciones/Landing/HeaderTemporal.jpg";
+import HeaderTablet from "../../assets/images/home/secciones/Landing/HeaderTablet.jpg";
+import HeaderPhone from "../../assets/images/home/secciones/Landing/HeaderMovil.jpg";
 
 const pulse = keyframes`
     0% {
@@ -66,6 +68,12 @@ export const ContenidoHeader = styled.div`
   transform-style: preserve-3d;
   will-change: transform;
   overflow: hidden;
+  @media (max-width: 1400px) {
+    background-image: url(${HeaderTablet});
+  }
+  @media (max-width: 600px) {
+    background-image: url(${HeaderPhone});
+  }
 `;
 export const TituloHeader = styled.h1`
   font-family: "Roboto", sans-serif !important;

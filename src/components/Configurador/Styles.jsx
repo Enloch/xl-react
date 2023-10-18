@@ -16,6 +16,7 @@ export const ContenedorPrincipal = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+    padding: 0 10px;
   }
 `;
 export const ContenedorTituloPrincipal = styled.div`
@@ -24,6 +25,9 @@ export const ContenedorTituloPrincipal = styled.div`
   display: flex;
   justify-content: space-between;
   height: 50px;
+  @media (max-width:900px) {
+    display : none;
+  }
 `;
 export const ContenedorCentro = styled.div`
   height: 100%;
@@ -157,7 +161,6 @@ export const SectionContent = styled(motion.div)`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: 200px;
 `;
 
 export const ThumbnailContainer = styled.div`

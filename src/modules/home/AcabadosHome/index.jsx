@@ -3,15 +3,10 @@ import { Link } from "react-router-dom";
 import {
   ColecContainer,
   ContentWrapper,
-  SubtitleWrapper,
-  Heading,
-  Subtitle,
   ImageBoxWrapper,
-  LinkBox,
-  LinkHeader,
 } from "./acabadosElements";
-import { generateAcabados, generateLinkAcabados } from "./constructorAcabados";
-const AcabadosHome = ({ id, titulo, subtitulo, data }) => {
+import { generateAcabados } from "./constructorAcabados";
+const AcabadosHome = ({ id, data }) => {
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);

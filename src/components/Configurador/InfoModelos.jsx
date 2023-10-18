@@ -484,7 +484,7 @@ export const DatosHemingway = {
   circular: false,
   ovalado: false,
   barril: false,
-  bisel: true,
+  bisel: false,
   bastidor: true,
   metal: true,
   fresno: true,
@@ -582,7 +582,7 @@ export const DatosBrezza = {
   setMaterialBisel: MatBisel[0].imagen,
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
-  extension: true,
+  extension: false,
   modeloExtension: BrezzaExt,
 };
 export const DatosManhattan = {

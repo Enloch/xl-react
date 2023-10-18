@@ -8,11 +8,11 @@ export const SliderImagePequeño = styled.img`
   height: 100%;
 
   @media (min-width: 0px) {
-    width: 300px;
+    /* width: 300px; */
   }
   @media (min-width: 600px) {
-    width: 500px;
-    width: 95%;
+    /* width: 500px; */
+    /* width: 95%; */
   }
 `;
 export const BarraInferior = styled.div`

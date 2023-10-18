@@ -13,7 +13,8 @@ export const ColecContainer = styled.div`
     padding: calc(8px + 1.5625vw);
     height: auto;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
+    padding: 0;
   }
 `;
 
@@ -22,12 +23,10 @@ export const ContentWrapper = styled.div`
   /* grid-template-columns: repeat(12, 1fr); */
   /* grid-auto-rows: auto; */
   @media screen and (max-width: 1400px) {
-    grid-template-columns: repeat(12, 1fr);
   }
   @media screen and (max-width: 980px) {
   }
   @media screen and (max-width: 480px) {
-    grid-template-columns: repeat(8, 1fr);
   }
 `;
 
@@ -104,8 +103,10 @@ export const ImageBoxWrapper = styled.div`
   @media screen and (max-width: 980px) {
     grid-column: 2 / 10;
   }
-  @media screen and (max-width: 480px) {
-    grid-column: 2 / 9;
+  @media screen and (max-width: 600px) {
+    grid-column: 1 /-1;
+    column-gap:   45px;
+    row-gap: 20px;
   }
 `;
 export const ImageBox = styled.div`
@@ -124,6 +125,9 @@ export const ImgMini = styled.img`
   :hover {
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
+  }
+  @media (max-width: 600px) {
+    max-height: 190px;
   }
 `;
 export const Text = styled.p`

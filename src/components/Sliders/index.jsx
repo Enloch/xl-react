@@ -18,6 +18,7 @@ export const CustomSliderPequeno = ({ images }) => {
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -33,6 +34,10 @@ export const CustomSliderPequeno = ({ images }) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          autoplay: true,
+          speed: 3000,
+          autoplaySpeed: 5000,
+          cssEase: "linear",
         },
       },
       {
@@ -40,6 +45,9 @@ export const CustomSliderPequeno = ({ images }) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          speed: 3000,
+          autoplaySpeed: 5000,
+          cssEase: "linear",
         },
       },
     ],

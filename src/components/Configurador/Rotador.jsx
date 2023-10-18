@@ -31,7 +31,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 1400px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
     grid-template-areas:
       "main main"
       "main main"
