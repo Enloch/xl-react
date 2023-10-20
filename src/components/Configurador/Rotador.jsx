@@ -1,7 +1,22 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import { useState, Suspense, useRef, useMemo, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
+import {
+  PanelRotador,
+  PanelTop,
+  PanelBottom,
+  PanelText,
+  StyledButton,
+  StyledButtonTop,
+  StyledButtonBottom,
+  ConfiguracionElegida,
+  IconoPDF,
+  Fscreen,
+  TextoSubtitulos,
+  ImagenFondo,
+  Container,
+} from "./Styles";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import {
@@ -13,137 +28,18 @@ import {
   ContactShadows,
   RandomizedLight,
   AccumulativeShadows,
+  Preload,
 } from "@react-three/drei";
-import Fondo from "../../assets/configurador/SinMesa.jpg";
-import FondoDetalle from "../../assets/configurador/FondoDetalle.webp";
+
 import useModeloStore from "./modeloStore";
 import FullScreenIcon from "../../assets/configurador/iconos/fscreen.svg";
 import { SombrasAmbiente } from "./Modelos";
+import { captureAndGeneratePDF } from "../PDF";
 
-export const Container = styled.div`
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 4fr 3fr;
-  grid-template-rows: 380px 50px 380px 20px;
-  grid-template-areas: ${(props) => props.gridTemplate};
+function Escena({ modelo: ModeloComponente }) {
+  return <ModeloComponente />;
+}
 
-  @media only screen and (max-width: 1400px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr auto;
-    grid-template-areas:
-      "main main"
-      "main main"
-      "bottomRotador bottomRotador";
-  }
-`;
-export const PanelRotador = styled.div`
-  position: relative;
-  /* padding: 0px 15px; */
-  margin-left: 20px;
-  @media (max-width: 600px) {
-    height: 40vh;
-    margin: 0px;
-  }
-`;
-export const PanelTop = styled.div`
-  position: relative;
-  margin-left: 20px;
-  background-image: url(${FondoDetalle});
-  background-size: cover;
-  /* padding: 20px; */
-`;
-export const PanelBottom = styled.div`
-  position: relative;
-  margin-left: 20px;
-  background-image: url(${Fondo});
-  background-size: cover;
-  /* background-size: 690px 450px; */
-  background-repeat: no-repeat;
-  /* padding: 20px; */
-  /* aspect-ratio: 16/9; */
-  background-position: center;
-`;
-
-export const ImagenFondo = styled.img`
-  width: 100%;
-  height: 100%;
-  /* background-image: url(${Fondo}); */
-  background-size: contain;
-  z-index: -1;
-`;
-
-export const PanelText = styled.div`
-  margin-left: 20px;
-  margin-top: 10px;
-  position: relative;
-  font-family: "Neue Montreal", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: ${theme.colors.secondaryTextColor};
-`;
-const StyledButton = styled(({ isActive, ...rest }) => <a {...rest} />)`
-  position: absolute;
-  top: 0.4%;
-  right: 0%;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  transform: ${({ isActive }) =>
-    isActive ? "rotate(180deg)" : "rotate(0deg)"};
-  z-index: 10;
-`;
-
-const StyledButtonTop = styled(({ isActive, ...rest }) => <a {...rest} />)`
-  position: absolute;
-  bottom: 3%;
-  left: 2%;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  transform: ${({ isActive }) =>
-    isActive ? "rotate(180deg)" : "rotate(0deg)"};
-  z-index: 10;
-`;
-
-const StyledButtonBottom = styled(({ isActive, ...rest }) => <a {...rest} />)`
-  position: absolute;
-  top: 3%;
-  left: 2%;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  transform: ${({ isActive }) =>
-    isActive ? "rotate(180deg)" : "rotate(0deg)"};
-  z-index: 10;
-`;
-
-export const ConfiguracionElegida = styled.p`
-  margin-top: 5px;
-  font-size: 12px;
-  color: #a6a9ab;
-  font-family: "Neue Montreal", sans-serif;
-`;
-
-export const IconoPDF = styled.img`
-  position: absolute;
-  top: 0%;
-  right: 2.5%;
-  height: 30px;
-  z-index: 10;
-  cursor: pointer;
-`;
-export const Fscreen = styled.img`
-  height: 20px;
-  z-index: 10;
-  cursor: pointer;
-`;
-
-export const TextoSubtitulos = styled.p`
-  font-size: 12px;
-  font-family: "Neue Montreal", sans-serif;
-`;
 const Rotador = ({ rotadorRef }) => {
   const [activePanel, setActivePanel] = useState(null); // null, 'main', 'top', 'middle'
   const gridTemplate = useMemo(() => {
@@ -183,6 +79,7 @@ const Rotador = ({ rotadorRef }) => {
     materialBiselNombre,
     materialBastidorNombre,
     materialPatasNombre,
+    camara,
   } = useModeloStore();
   const [dpr, setDpr] = useState(1.5);
   const view1 = useRef();
@@ -201,8 +98,18 @@ const Rotador = ({ rotadorRef }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const [renderKey, setRenderKey] = useState(0);
+  const handleButtonClick = () => {
+    setTimeout(() => {
+      setRenderKey((prevKey) => prevKey + 1); // Incrementa la clave para forzar la re-renderización
+    }, 0);
+  };
   return (
-    <Container gridTemplate={gridTemplate} ref={rotadorRef}>
+    <Container
+      gridTemplate={gridTemplate}
+      ref={rotadorRef}
+      id='contenedor-rotador-canvas'
+    >
       <PanelRotador
         ref={view1}
         style={{
@@ -212,7 +119,10 @@ const Rotador = ({ rotadorRef }) => {
       >
         {windowWidth >= 1400 && (
           <StyledButton
-            onClick={() => toggleActivePanel("main")}
+            onClick={() => {
+              handleButtonClick();
+              toggleActivePanel("main");
+            }}
             isActive={activePanel === "main"}
           >
             <Fscreen src={FullScreenIcon} />
@@ -230,7 +140,10 @@ const Rotador = ({ rotadorRef }) => {
           }}
         >
           <StyledButtonTop
-            onClick={() => toggleActivePanel("top")}
+            onClick={() => {
+              handleButtonClick();
+              toggleActivePanel("top");
+            }}
             isActive={activePanel === "top"}
           >
             <Fscreen
@@ -260,7 +173,10 @@ const Rotador = ({ rotadorRef }) => {
           }}
         >
           <StyledButtonBottom
-            onClick={() => toggleActivePanel("middle")}
+            onClick={() => {
+              handleButtonClick();
+              toggleActivePanel("middle");
+            }}
             isActive={activePanel === "middle"}
           >
             <Fscreen
@@ -302,9 +218,11 @@ const Rotador = ({ rotadorRef }) => {
           {materialPatasNombre && <> patas en {materialPatasNombre}</>}
         </ConfiguracionElegida>
       </PanelText>
-
       <Canvas
+        key={renderKey} // Usa la clave para forzar la re-renderización
+        id='Canvas'
         shadows
+        gl={{ preserveDrawingBuffer: true, rendering: true }}
         eventSource={rotadorRef.current}
         dpr={dpr}
         style={{ position: "absolute", top: 0, left: 0 }}
@@ -365,6 +283,7 @@ const Rotador = ({ rotadorRef }) => {
           <Escena modelo={modeloMostrado} />
 
           <OrbitControls
+            makeDefault
             enableRotater={false}
             enablePan={false}
             enableZoom={true}
@@ -378,15 +297,28 @@ const Rotador = ({ rotadorRef }) => {
         </View>
         {windowWidth >= 1400 && (
           <View index={2} track={view2}>
-            <PerspectiveCamera
-              name='Camara Detalle'
-              makeDefault={true}
-              far={1000}
-              near={0.1}
-              fov={15.832}
-              position={[-4.65, 2.197, -3.73]}
-              rotation={[-2.35, -1.262, -2.358]}
-            />
+            {camara === false && (
+              <PerspectiveCamera
+                name='Camara Detalle'
+                makeDefault={true}
+                far={1000}
+                near={0.1}
+                fov={15.832}
+                position={[-4.65, 2.197, -3.73]}
+                rotation={[-2.35, -1.262, -2.358]}
+              />
+            )}
+            {camara === true && (
+              <PerspectiveCamera
+                name='Camara Detalle'
+                makeDefault={true}
+                far={1000}
+                near={0.1}
+                fov={15.832}
+                position={[-4.65, 2.4, -1.95]}
+                rotation={[-2.35, -1.262, -2.358]}
+              />
+            )}
             <ambientLight intensity={0.3} />
             <Environment files={"/HDRI/Park4_5.hdr"} />
             <pointLight
@@ -454,16 +386,10 @@ const Rotador = ({ rotadorRef }) => {
             <Escena modelo={modeloMostrado} />
           </View>
         )}
+        <Preload all />
       </Canvas>
     </Container>
   );
 };
 
 export default Rotador;
-function Escena({ modelo: ModeloComponente }) {
-  return (
-    <>
-      <ModeloComponente />
-    </>
-  );
-}

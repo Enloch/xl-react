@@ -107,6 +107,9 @@ const Menu = ({
     setEncimeraCircular,
     setEncimeraOvalada,
     setEncimeraBarril,
+    modeloMostradoNombre,
+    camara,
+    setCamara,
   } = useModeloStore();
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
@@ -134,6 +137,7 @@ const Menu = ({
       setTieneMetal(modelo.metal);
       setTieneHaya(modelo.haya);
       setTieneFresno(modelo.fresno);
+      setCamara(modelo.camara);
       // Aquí uso el estado actual para comparar y decidir si actualizar o no
       if (modelo.setMaterialSobre !== undefined) {
         setMaterialSobre(modelo.setMaterialSobre);
@@ -203,6 +207,9 @@ const Menu = ({
       cambio = MatFresno.find((item) => item.id === material);
       nombrematerial = MatFresno.find((item) => item.id === material).nombre;
     }
+    if (tieneBastidor === false) {
+      setMaterialBastidorNombre(nombrematerial);
+    }
     setMaterialPatasNombre(nombrematerial);
     setMaterialPatas(cambio);
   };
@@ -231,7 +238,10 @@ const Menu = ({
       <MenuSelector>
         <Section>
           <SectionHeader onClick={() => toggleSection("Mesa")}>
-            <SectionTitle>Mesa / Table</SectionTitle>
+            <SectionTitle>Mesa / Table :</SectionTitle>
+            <SectionTitle style={{ fontWeight: "400" }}>
+              {modeloMostradoNombre}
+            </SectionTitle>
             <SectionIcon src={flecha} />
           </SectionHeader>
           <AnimatePresence>

@@ -2280,14 +2280,34 @@ export function FlipExt(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.FLIP_EXTENSIBLE_TACOS.geometry}
-        material={nodes.FLIP_EXTENSIBLE_TACOS.material}
-      />
+        geometry={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_BISEL_RECTANGULAR"].geometry
+        }
+        material={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_BISEL_RECTANGULAR"].material
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.FLIP_EXTENSIBLE_PATAS.geometry}
-        material={nodes.FLIP_EXTENSIBLE_PATAS.material}
+        geometry={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_BISEL_RECTANGULAR_EXTRAIBLE"]
+            .geometry
+        }
+        material={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_BISEL_RECTANGULAR_EXTRAIBLE"]
+            .material
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["FLIP_180X90_EXTENSIBLE_+50X2_PATAS"].geometry}
+        material={nodes["FLIP_180X90_EXTENSIBLE_+50X2_PATAS"].material}
       >
         <meshPhysicalMaterial
           map={AcabadoPatas}
@@ -2300,8 +2320,12 @@ export function FlipExt(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
-        material={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR.material}
+        geometry={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_SOBRE_RECTANGULAR"].geometry
+        }
+        material={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_SOBRE_RECTANGULAR"].material
+        }
       >
         <meshPhysicalMaterial
           map={AcabadoSobre}
@@ -2312,8 +2336,39 @@ export function FlipExt(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.FLIP_EXTENSIBLE_ESTRUCTURA.geometry}
-        material={nodes.FLIP_EXTENSIBLE_ESTRUCTURA.material}
+        geometry={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_SOBRE_RECTANGULAR_EXTRAIBLE"]
+            .geometry
+        }
+        material={
+          nodes["FLIP_180X90_EXTENSIBLE_+50X2_SOBRE_RECTANGULAR_EXTRAIBLE"]
+            .material
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["FLIP_180X90_EXTENSIBLE_+50X2_TACOS"].geometry}
+        material={nodes["FLIP_180X90_EXTENSIBLE_+50X2_TACOS"].material}
+      >
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["FLIP_180X90_EXTENSIBLE_+50X2_ESTRUCTURA"].geometry}
+        material={nodes["FLIP_180X90_EXTENSIBLE_+50X2_ESTRUCTURA"].material}
       >
         <meshPhysicalMaterial
           map={AcabadoBastidor}
@@ -2326,30 +2381,16 @@ export function FlipExt(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR_EXTRAIBLE.geometry}
-        material={nodes.FLIP_EXTENSIBLE_SOBRE_RECTANGULAR_EXTRAIBLE.material}
+        geometry={nodes.GUIAS.geometry}
+        material={nodes.GUIAS.material}
       >
         <meshPhysicalMaterial
-          map={AcabadoSobre}
-          metalness={0.5}
-          roughness={0.5}
+          color={"#8a8a8a"}
+          metalness={1}
+          roughness={0.3}
+          specularIntensity={1}
+          reflectivity={0.5}
         />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR_EXTRAIBLE.geometry}
-        material={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR_EXTRAIBLE.material}
-      >
-        <meshPhysicalMaterial map={AcabadoBisel} />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
-        material={nodes.FLIP_EXTENSIBLE_BISEL_RECTANGULAR.material}
-      >
-        <meshPhysicalMaterial map={AcabadoBisel} />
       </mesh>
     </group>
   );
@@ -2436,62 +2477,22 @@ export function GibsonExt(props) {
   const AcabadoBisel = useTexture(materialBisel);
   const AcabadoBastidor = useTexture(materialBastidor.imagen);
   const AcabadoPatas = useTexture(materialPatas.imagen);
-  const { nodes } = useGLTF("/modelos/GIBSONEXT.gltf");
+  const { nodes, material } = useGLTF("/modelos/GIBSONEXT.gltf");
   return (
     <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
-        material={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR.material}
-      >
-        <meshPhysicalMaterial
-          map={AcabadoSobre}
-          metalness={0.5}
-          roughness={0.5}
-        />
-      </mesh>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.GIBSON_EXTENSIBLE_GUIAS.geometry}
         material={nodes.GIBSON_EXTENSIBLE_GUIAS.material}
       >
-        <meshPhysicalMateriala
+        <meshPhysicalMaterial
           color={"#8a8a8a"}
           metalness={1}
           roughness={0.3}
           specularIntensity={1}
           reflectivity={0.5}
         />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry}
-        material={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.material}
-      >
-        <meshPhysicalMaterial
-          map={AcabadoSobre}
-          metalness={0.5}
-          roughness={0.5}
-        />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.geometry}
-        material={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.material}
-      >
-        <meshPhysicalMaterial map={AcabadoBisel} />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
-        material={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR.material}
-      >
-        <meshPhysicalMaterial map={AcabadoBisel} />
       </mesh>
       <mesh
         castShadow
@@ -2534,9 +2535,74 @@ export function GibsonExt(props) {
           reflectivity={materialBastidor.reflectivity}
         />
       </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE__BISEL_RECTANGULAR.geometry}
+        material={nodes.GIBSON_EXTENSIBLE__BISEL_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE_ABAJO.geometry
+        }
+        material={
+          nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE_ABAJO.material
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_PARTE_ABAJO.geometry
+        }
+        material={
+          nodes.GIBSON_EXTENSIBLE_BISEL_RECTANGULAR_PARTE_ABAJO.material
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry}
+        material={nodes.GIBSON_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
     </group>
   );
 }
+
 export function Hakone(props) {
   const { materialSobre, materialBisel, materialBastidor, materialPatas } =
     useModeloStore(); // Usa el hook para acceder al estado
@@ -2917,10 +2983,10 @@ export function MaryExt(props) {
   return (
     <group {...props} dispose={null}>
       <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_ESTRUCTURA'
         castShadow
         receiveShadow
         geometry={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_ESTRUCTURA"].geometry}
+        material={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_ESTRUCTURA"].material}
       >
         <meshPhysicalMaterial
           map={AcabadoBastidor}
@@ -2931,10 +2997,10 @@ export function MaryExt(props) {
         />
       </mesh>
       <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_PATAS'
         castShadow
         receiveShadow
         geometry={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_PATAS"].geometry}
+        material={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_PATAS"].material}
       >
         <meshPhysicalMaterial
           map={AcabadoPatas}
@@ -2945,43 +3011,18 @@ export function MaryExt(props) {
         />
       </mesh>
       <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR'
         castShadow
         receiveShadow
         geometry={
           nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR"].geometry
         }
-      >
-        <meshPhysicalMaterial map={AcabadoBisel} />
-      </mesh>
-      <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE'
-        castShadow
-        receiveShadow
-        geometry={
-          nodes["MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE"]
-            .geometry
+        material={
+          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR"].material
         }
       >
         <meshPhysicalMaterial map={AcabadoBisel} />
       </mesh>
       <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR_EXTENSIBLE'
-        castShadow
-        receiveShadow
-        geometry={
-          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR_EXTENSIBLE"]
-            .geometry
-        }
-      >
-        <meshPhysicalMaterial
-          map={AcabadoSobre}
-          metalness={0.5}
-          roughness={0.5}
-        />
-      </mesh>
-      <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_TACOS'
         castShadow
         receiveShadow
         geometry={nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_TACOS"].geometry}
@@ -2995,10 +3036,10 @@ export function MaryExt(props) {
         />
       </mesh>
       <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_GUIAS'
         castShadow
         receiveShadow
         geometry={nodes["MARY_180X90_EXTENSIBLE_+70_GUIAS"].geometry}
+        material={nodes["MARY_180X90_EXTENSIBLE_+70_GUIAS"].material}
       >
         <meshPhysicalMaterial
           color={"#8a8a8a"}
@@ -3009,11 +3050,13 @@ export function MaryExt(props) {
         />
       </mesh>
       <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_SOBRE_RECTANGULAR'
         castShadow
         receiveShadow
         geometry={
           nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_SOBRE_RECTANGULAR"].geometry
+        }
+        material={
+          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_SOBRE_RECTANGULAR"].material
         }
       >
         <meshPhysicalMaterial
@@ -3023,19 +3066,6 @@ export function MaryExt(props) {
         />
       </mesh>
       <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE_ddd6d27'
-        castShadow
-        receiveShadow
-        geometry={
-          nodes[
-            "MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE_ddd6d27"
-          ].geometry
-        }
-      >
-        <meshPhysicalMaterial map={AcabadoBisel} />
-      </mesh>
-      <mesh
-        name='MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR_PARTE_ABAJO'
         castShadow
         receiveShadow
         geometry={
@@ -3043,12 +3073,64 @@ export function MaryExt(props) {
             "MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR_PARTE_ABAJO"
           ].geometry
         }
+        material={
+          nodes[
+            "MARY_180X90_EXTENSIBLE_+70_SOBRE_BISEL_RECTANGULAR_PARTE_ABAJO"
+          ].material
+        }
       >
         <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE"]
+            .geometry
+        }
+        material={
+          nodes["MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE"]
+            .material
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE_ABAJO"]
+            .geometry
+        }
+        material={
+          nodes["MARY_180X90_EXTENSIBLE_+70_BISEL_RECTANGULAR_EXTENSIBLE_ABAJO"]
+            .material
+        }
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={
+          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR_EXTENSIBLE"]
+            .geometry
+        }
+        material={
+          nodes["MARY_180X90_EXTENSIBLE_+70_SOBRE_RECTANGULAR_EXTENSIBLE"]
+            .material
+        }
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
       </mesh>
     </group>
   );
 }
+
 export function Zama(props) {
   const { materialSobre, materialBisel, materialBastidor, materialPatas } =
     useModeloStore(); // Usa el hook para acceder al estado
@@ -3067,7 +3149,7 @@ export function Zama(props) {
         material={nodes.ZAMA_180X90_ESTRUCTURA.material}
       >
         <meshPhysicalMaterial
-          map={AcabadoBastidor}
+          map={AcabadoPatas}
           metalness={materialBastidor.metalness}
           roughness={materialBastidor.roughness}
           specularIntensity={materialBastidor.specularIntensity}
@@ -3153,7 +3235,7 @@ export function ZamaExt(props) {
         geometry={nodes["ZAMA_180X90_EXTENSIBLE_+70_ESTRUCTURA"].geometry}
       >
         <meshPhysicalMaterial
-          map={AcabadoBastidor}
+          map={AcabadoPatas}
           metalness={materialBastidor.metalness}
           roughness={materialBastidor.roughness}
           specularIntensity={materialBastidor.specularIntensity}

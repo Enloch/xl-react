@@ -87,7 +87,7 @@ export const Sobre = [
   },
   {
     id: "TravertinoClassico",
-    nombre: "Travestino Clássico",
+    nombre: "Travertino Clássico",
     imagen: TravertinoClassico,
   },
   {

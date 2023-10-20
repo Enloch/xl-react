@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   ContenedorCentro,
   ContenedorPrincipal,
@@ -14,6 +14,7 @@ import Rotador from "./Rotador";
 import Logo7475 from "../../assets/configurador/iconos/7475.png";
 import useModeloStore from "./modeloStore";
 import PDFIcon from "../../assets/configurador/iconos/pdf.svg";
+import { captureAndGeneratePDF } from "../PDF";
 function Configurador() {
   const {
     modeloMostrado,
@@ -36,7 +37,11 @@ function Configurador() {
     setMaterialPatasNombre,
   } = useModeloStore();
   const rotadorRef = useRef();
+  // Función para introducir un retraso
 
+  const handleCaptureAndGeneratePDF = async () => {
+    captureAndGeneratePDF();
+  };
   return (
     <ContenedorPrincipal>
       <ContenedorTituloPrincipal>
@@ -53,9 +58,12 @@ function Configurador() {
             top: "2.5%",
             right: "1%",
           }}
+          onClick={handleCaptureAndGeneratePDF}
         >
           <IconoPDF src={PDFIcon} />
-          <p style={{ color: "#a6a9ab", fontSize: "12px" }}>resumen / resume</p>
+          <span style={{ color: "#a6a9ab", fontSize: "12px" }}>
+            resumen / resume
+          </span>
         </div>
       </ContenedorTituloPrincipal>
       <ContenedorCentro>

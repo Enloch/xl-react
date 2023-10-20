@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { device } from "../../styles/Breakpoints";
 import { theme } from "../../styles/Theme";
 import { motion } from "framer-motion";
+import Fondo from "../../assets/configurador/SinMesa.jpg";
+import FondoDetalle from "../../assets/configurador/FondoDetalle.webp";
 //-----------------Contenedores----------------
 export const ContenedorPrincipal = styled.div`
   padding: 15px 15px 15px 30px;
@@ -214,4 +216,129 @@ export const IconoPDF = styled.img`
   height: 30px;
   z-index: 10;
   cursor: pointer;
+`;
+
+
+//------------------------------
+export const Container = styled.div`
+  /* position: relative; */
+  background-color: "#fff";
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: 380px 50px 380px 20px;
+  grid-template-areas: ${(props) => props.gridTemplate};
+
+  @media only screen and (max-width: 1400px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas:
+      "main main"
+      "main main"
+      "bottomRotador bottomRotador";
+  }
+`;
+export const PanelRotador = styled.div`
+  position: relative;
+  /* padding: 0px 15px; */
+  margin-left: 20px;
+  @media (max-width: 600px) {
+    height: 40vh;
+    margin: 0px;
+  }
+`;
+export const PanelTop = styled.div`
+  position: relative;
+  margin-left: 20px;
+  background-image: url(${FondoDetalle});
+  background-size: cover;
+  background-color: "#fff";
+  /* padding: 20px; */
+`;
+export const PanelBottom = styled.div`
+  position: relative;
+  margin-left: 20px;
+  background-image: url(${Fondo});
+  background-size: cover;
+  /* background-size: 690px 450px; */
+  background-repeat: no-repeat;
+  /* padding: 20px; */
+  /* aspect-ratio: 16/9; */
+  background-position: center;
+`;
+
+export const ImagenFondo = styled.img`
+  width: 100%;
+  height: 100%;
+  /* background-image: url(${Fondo}); */
+  background-size: contain;
+  z-index: -1;
+`;
+
+export const PanelText = styled.div`
+  margin-left: 20px;
+  margin-top: 10px;
+  position: relative;
+  font-family: "Neue Montreal", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: ${theme.colors.secondaryTextColor};
+`;
+export const StyledButton = styled(({ isActive, ...rest }) => <a {...rest} />)`
+  position: absolute;
+  top: 0.4%;
+  right: 0%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: ${({ isActive }) =>
+    isActive ? "rotate(180deg)" : "rotate(0deg)"};
+  z-index: 10;
+`;
+
+export const StyledButtonTop = styled(({ isActive, ...rest }) => (
+  <a {...rest} />
+))`
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: ${({ isActive }) =>
+    isActive ? "rotate(180deg)" : "rotate(0deg)"};
+  z-index: 10;
+`;
+
+export const StyledButtonBottom = styled(({ isActive, ...rest }) => (
+  <a {...rest} />
+))`
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: ${({ isActive }) =>
+    isActive ? "rotate(180deg)" : "rotate(0deg)"};
+  z-index: 10;
+`;
+
+export const ConfiguracionElegida = styled.p`
+  margin-top: 5px;
+  font-size: 12px;
+  color: #a6a9ab;
+  font-family: "Neue Montreal", sans-serif;
+`;
+
+export const Fscreen = styled.img`
+  height: 20px;
+  z-index: 10;
+  cursor: pointer;
+`;
+
+export const TextoSubtitulos = styled.p`
+  font-size: 12px;
+  font-family: "Neue Montreal", sans-serif;
 `;

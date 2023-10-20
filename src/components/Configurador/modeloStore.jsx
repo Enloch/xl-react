@@ -28,7 +28,7 @@ const useModeloStore = create((set) => ({
   materialPatasNombre: "Antracita",
   modeloOriginal: ModeloKirNoExt,
   modeloExtension: ModeloKirExt,
-
+  camara: false,
   setEncimeraCuadrada: (estado) => set({ encimeraCuadrada: estado }),
   setEncimeraRectangular: (estado) => set({ encimeraRectangular: estado }),
   setEncimeraCircular: (estado) => set({ encimeraCircular: estado }),
@@ -68,6 +68,7 @@ const useModeloStore = create((set) => ({
   setMaterialPatas: (material) => {
     set({ materialPatas: material });
   },
+  setCamara: (estado) => set({ camara: estado }), // Añadir el setter para la cámara
 }));
 
 export default useModeloStore;

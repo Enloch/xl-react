@@ -4,7 +4,6 @@ import {
   MatMetal,
   MatFresno,
   MatHaya,
-  // MatHaya,
 } from "./MaterialModelos";
 import {
   ModeloKirNoExt,
@@ -67,6 +66,7 @@ export const DatosConnor = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 
 export const DatosEmma = {
@@ -89,6 +89,7 @@ export const DatosEmma = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 
 export const DatosGene = {
@@ -111,6 +112,7 @@ export const DatosGene = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosGrace = {
   id: "Grace",
@@ -132,6 +134,7 @@ export const DatosGrace = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosHarp = {
   id: "Harp",
@@ -153,6 +156,7 @@ export const DatosHarp = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosHulk = {
   id: "Hulk",
@@ -174,6 +178,7 @@ export const DatosHulk = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosIlia = {
   id: "Ilia",
@@ -195,6 +200,7 @@ export const DatosIlia = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosKiff = {
   id: "Kiff",
@@ -216,6 +222,7 @@ export const DatosKiff = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosLyre = {
   id: "Lyre",
@@ -237,6 +244,7 @@ export const DatosLyre = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosMario = {
   id: "Mario",
@@ -258,6 +266,7 @@ export const DatosMario = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosOlympus = {
   id: "Olympus",
@@ -279,6 +288,7 @@ export const DatosOlympus = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: true,
 };
 export const DatosPisa = {
   id: "Pisa",
@@ -300,6 +310,7 @@ export const DatosPisa = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosProgetto = {
   id: "Progetto",
@@ -321,6 +332,7 @@ export const DatosProgetto = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosSolo = {
   id: "Solo",
@@ -342,6 +354,7 @@ export const DatosSolo = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosToyo = {
   id: "Toyo",
@@ -363,6 +376,7 @@ export const DatosToyo = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosVictory = {
   id: "Victory",
@@ -384,6 +398,7 @@ export const DatosVictory = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 //----------------------Life------------------------
 export const DatosCollins = {
@@ -399,7 +414,7 @@ export const DatosCollins = {
   bisel: true,
   bastidor: false,
   metal: false,
-  fresno: true,
+  fresno: false,
   haya: true,
   setMaterialSobre: MatSobre[7].imagen,
   setMaterialBisel: MatBisel[0].imagen,
@@ -407,6 +422,7 @@ export const DatosCollins = {
   setMaterialPatas: MatHaya[3],
   extension: true,
   modeloExtension: CollinsExt,
+  camara: false,
 };
 export const DatosFlip = {
   id: "Flip",
@@ -418,7 +434,7 @@ export const DatosFlip = {
   circular: false,
   ovalado: false,
   barril: false,
-  bisel: true,
+  bisel: false,
   bastidor: true,
   metal: true,
   fresno: false,
@@ -429,6 +445,7 @@ export const DatosFlip = {
   setMaterialPatas: MatMetal[3],
   extension: true,
   modeloExtension: FlipExt,
+  camara: false,
 };
 export const DatosGibson = {
   id: "Gibson",
@@ -451,6 +468,7 @@ export const DatosGibson = {
   setMaterialPatas: MatFresno[3],
   extension: true,
   modeloExtension: GibsonExt,
+  camara: false,
 };
 export const DatosHakone = {
   id: "Hakone",
@@ -473,6 +491,7 @@ export const DatosHakone = {
   setMaterialPatas: MatMetal[3],
   extension: true,
   modeloExtension: HakoneExt,
+  camara: false,
 };
 export const DatosHemingway = {
   id: "Hemingway",
@@ -487,7 +506,7 @@ export const DatosHemingway = {
   bisel: false,
   bastidor: true,
   metal: true,
-  fresno: true,
+  fresno: false,
   haya: false,
   setMaterialSobre: MatSobre[4].imagen,
   setMaterialBisel: MatBisel[0].imagen,
@@ -495,6 +514,7 @@ export const DatosHemingway = {
   setMaterialPatas: MatMetal[3],
   extension: true,
   modeloExtension: HeminwayExt,
+  camara: false,
 };
 export const DatosKir = {
   id: "Kir",
@@ -517,6 +537,7 @@ export const DatosKir = {
   setMaterialPatas: MatMetal[3],
   extension: true,
   modeloExtension: ModeloKirExt,
+  camara: false,
 };
 export const DatosMary = {
   id: "Mary",
@@ -539,6 +560,7 @@ export const DatosMary = {
   setMaterialPatas: MatMetal[3],
   extension: true,
   modeloExtension: MaryExt,
+  camara: false,
 };
 export const DatosZama = {
   id: "Zama",
@@ -551,16 +573,17 @@ export const DatosZama = {
   ovalado: false,
   barril: false,
   bisel: true,
-  bastidor: true,
+  bastidor: false,
   metal: false,
   fresno: true,
   haya: false,
   setMaterialSobre: MatSobre[4].imagen,
   setMaterialBisel: MatBisel[0].imagen,
-  setMaterialBastidor: MatMetal[3],
+  setMaterialBastidor: MatFresno[3],
   setMaterialPatas: MatMetal[3],
   extension: true,
   modeloExtension: ZamaExt,
+  camara: false,
 };
 //------------------------Contract------------------------
 export const DatosBrezza = {
@@ -584,6 +607,7 @@ export const DatosBrezza = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   modeloExtension: BrezzaExt,
+  camara: true,
 };
 export const DatosManhattan = {
   id: "Manhattan",
@@ -595,7 +619,7 @@ export const DatosManhattan = {
   circular: true,
   ovalado: false,
   barril: false,
-  bisel: true,
+  bisel: false,
   bastidor: false,
   metal: true,
   fresno: false,
@@ -605,6 +629,7 @@ export const DatosManhattan = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: true,
 };
 export const DatosRob = {
   id: "Rob",
@@ -626,6 +651,7 @@ export const DatosRob = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: false,
 };
 export const DatosSpritz = {
   id: "Spritz80",
@@ -647,6 +673,7 @@ export const DatosSpritz = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: true,
 };
 export const DatosSpritz120 = {
   id: "Spritz120",
@@ -668,4 +695,5 @@ export const DatosSpritz120 = {
   setMaterialBastidor: MatMetal[3],
   setMaterialPatas: MatMetal[3],
   extension: false,
+  camara: true,
 };
