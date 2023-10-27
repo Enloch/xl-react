@@ -44,6 +44,10 @@ import {
   Rob,
   Spritz,
   SprtizExt,
+  Gene120,
+  Ilia120,
+  HakoneCircle,
+  HakoneCircleExt,
 } from "./Modelos";
 //---------------------Collections------------------------
 export const DatosConnor = {
@@ -67,8 +71,9 @@ export const DatosConnor = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/connor.pdf",
+  zip: "downloads/modelos/CONNOR.zip",
 };
-
 export const DatosEmma = {
   id: "Emma",
   modelo3d: Emma,
@@ -90,8 +95,9 @@ export const DatosEmma = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/emma.pdf",
+  zip: "downloads/modelos/EMMA.zip",
 };
-
 export const DatosGene = {
   id: "Gene",
   modelo3d: Gene,
@@ -113,6 +119,32 @@ export const DatosGene = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/gene.pdf",
+  zip: "downloads/modelos/GENE.zip",
+};
+export const DatosGene120 = {
+  id: "Gene 120",
+  modelo3d: Gene120,
+  formasobre: "Circular",
+  cambiasobre: false,
+  cuadrado: false,
+  rectangular: false,
+  circular: true,
+  ovalado: false,
+  barril: false,
+  bisel: false,
+  bastidor: false,
+  metal: true,
+  fresno: false,
+  haya: false,
+  setMaterialSobre: MatSobre[4].imagen,
+  setMaterialBisel: MatMetal[3],
+  setMaterialBastidor: MatMetal[3],
+  setMaterialPatas: MatMetal[3],
+  extension: false,
+  camara: true,
+  pdf: "downloads/fichasmesa/gene.pdf",
+  zip: "downloads/modelos/GENE.zip",
 };
 export const DatosGrace = {
   id: "Grace",
@@ -135,6 +167,8 @@ export const DatosGrace = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/grace.pdf",
+  zip: "downloads/modelos/GRACE.zip",
 };
 export const DatosHarp = {
   id: "Harp",
@@ -157,6 +191,8 @@ export const DatosHarp = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/harp.pdf",
+  zip: "downloads/modelos/HARP.zip",
 };
 export const DatosHulk = {
   id: "Hulk",
@@ -179,6 +215,8 @@ export const DatosHulk = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/hulk.pdf",
+  zip: "downloads/modelos/HULK.zip",
 };
 export const DatosIlia = {
   id: "Ilia",
@@ -201,6 +239,32 @@ export const DatosIlia = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/ilia.pdf",
+  zip: "downloads/modelos/ILIA.zip",
+};
+export const DatosIlia120 = {
+  id: "Ilia 120",
+  modelo3d: Ilia120,
+  formasobre: "Circular",
+  cambiasobre: false,
+  cuadrado: false,
+  rectangular: false,
+  circular: true,
+  ovalado: false,
+  barril: false,
+  bisel: false,
+  bastidor: false,
+  metal: true,
+  fresno: false,
+  haya: false,
+  setMaterialSobre: MatSobre[4].imagen,
+  setMaterialBisel: MatMetal[3],
+  setMaterialBastidor: MatMetal[3],
+  setMaterialPatas: MatMetal[3],
+  extension: false,
+  camara: true,
+  pdf: "downloads/fichasmesa/ilia.pdf",
+  zip: "downloads/modelos/ILIA.zip",
 };
 export const DatosKiff = {
   id: "Kiff",
@@ -223,6 +287,8 @@ export const DatosKiff = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/kiff.pdf",
+  zip: "downloads/modelos/KIFF.zip",
 };
 export const DatosLyre = {
   id: "Lyre",
@@ -245,6 +311,8 @@ export const DatosLyre = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/lyre.pdf",
+  zip: "downloads/modelos/LYRE.zip",
 };
 export const DatosMario = {
   id: "Mario",
@@ -267,6 +335,8 @@ export const DatosMario = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/mario.pdf",
+  zip: "downloads/modelos/MARIO.zip",
 };
 export const DatosOlympus = {
   id: "Olympus",
@@ -289,6 +359,8 @@ export const DatosOlympus = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: true,
+  pdf: "downloads/fichasmesa/olympus.pdf",
+  zip: "downloads/modelos/OLYMPUS.zip",
 };
 export const DatosPisa = {
   id: "Pisa",
@@ -311,6 +383,8 @@ export const DatosPisa = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/pisa.pdf",
+  zip: "downloads/modelos/PISA.zip",
 };
 export const DatosProgetto = {
   id: "Progetto",
@@ -333,6 +407,8 @@ export const DatosProgetto = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/progetto.pdf",
+  zip: "downloads/modelos/PROGETTO.zip",
 };
 export const DatosSolo = {
   id: "Solo",
@@ -355,6 +431,8 @@ export const DatosSolo = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/solo.pdf",
+  zip: "downloads/modelos/SOLO.zip",
 };
 export const DatosToyo = {
   id: "Toyo",
@@ -377,6 +455,8 @@ export const DatosToyo = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/toyo.pdf",
+  zip: "downloads/modelos/TOYO.zip",
 };
 export const DatosVictory = {
   id: "Victory",
@@ -399,6 +479,8 @@ export const DatosVictory = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/victory.pdf",
+  zip: "downloads/modelos/VICTORY.zip",
 };
 //----------------------Life------------------------
 export const DatosCollins = {
@@ -423,6 +505,8 @@ export const DatosCollins = {
   extension: true,
   modeloExtension: CollinsExt,
   camara: false,
+  pdf: "downloads/fichasmesa/collins.pdf",
+  zip: "downloads/modelos/COLLINS.zip",
 };
 export const DatosFlip = {
   id: "Flip",
@@ -446,6 +530,8 @@ export const DatosFlip = {
   extension: true,
   modeloExtension: FlipExt,
   camara: false,
+  pdf: "downloads/fichasmesa/flip.pdf",
+  zip: "downloads/modelos/FLIP.zip",
 };
 export const DatosGibson = {
   id: "Gibson",
@@ -469,6 +555,8 @@ export const DatosGibson = {
   extension: true,
   modeloExtension: GibsonExt,
   camara: false,
+  pdf: "downloads/fichasmesa/gibson.pdf",
+  zip: "downloads/modelos/GIBSON.zip",
 };
 export const DatosHakone = {
   id: "Hakone",
@@ -492,6 +580,33 @@ export const DatosHakone = {
   extension: true,
   modeloExtension: HakoneExt,
   camara: false,
+  pdf: "downloads/fichasmesa/hakone.pdf",
+  zip: "downloads/modelos/HAKONE.zip",
+};
+export const DatosHakoneCircular = {
+  id: "Hakone",
+  modelo3d: HakoneCircle,
+  formasobre: "Circular",
+  cambiasobre: false,
+  cuadrado: false,
+  rectangular: true,
+  circular: true,
+  ovalado: false,
+  barril: false,
+  bisel: false,
+  bastidor: false,
+  metal: true,
+  fresno: false,
+  haya: false,
+  setMaterialSobre: MatSobre[4].imagen,
+  setMaterialBisel: MatBisel[0].imagen,
+  setMaterialBastidor: MatMetal[3],
+  setMaterialPatas: MatMetal[3],
+  extension: true,
+  modeloExtension: HakoneCircleExt,
+  camara: true,
+  pdf: "downloads/fichasmesa/hakone.pdf",
+  zip: "downloads/modelos/HAKONE.zip",
 };
 export const DatosHemingway = {
   id: "Hemingway",
@@ -515,6 +630,8 @@ export const DatosHemingway = {
   extension: true,
   modeloExtension: HeminwayExt,
   camara: false,
+  pdf: "downloads/fichasmesa/hemingway.pdf",
+  zip: "downloads/modelos/HEMINGWAY.zip",
 };
 export const DatosKir = {
   id: "Kir",
@@ -538,6 +655,8 @@ export const DatosKir = {
   extension: true,
   modeloExtension: ModeloKirExt,
   camara: false,
+  pdf: "downloads/fichasmesa/kir.pdf",
+  zip: "downloads/modelos/KIR.zip",
 };
 export const DatosMary = {
   id: "Mary",
@@ -561,6 +680,8 @@ export const DatosMary = {
   extension: true,
   modeloExtension: MaryExt,
   camara: false,
+  pdf: "downloads/fichasmesa/mary.pdf",
+  zip: "downloads/modelos/MARY.zip",
 };
 export const DatosZama = {
   id: "Zama",
@@ -584,6 +705,8 @@ export const DatosZama = {
   extension: true,
   modeloExtension: ZamaExt,
   camara: false,
+  pdf: "downloads/fichasmesa/zama.pdf",
+  zip: "downloads/modelos/ZAMA.zip",
 };
 //------------------------Contract------------------------
 export const DatosBrezza = {
@@ -608,6 +731,8 @@ export const DatosBrezza = {
   extension: false,
   modeloExtension: BrezzaExt,
   camara: true,
+  pdf: "downloads/fichasmesa/brezza.pdf",
+  zip: "downloads/modelos/BEZZA.zip",
 };
 export const DatosManhattan = {
   id: "Manhattan",
@@ -630,6 +755,8 @@ export const DatosManhattan = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: true,
+  pdf: "downloads/fichasmesa/manhattan.pdf",
+  zip: "downloads/modelos/MANHATTAN.zip",
 };
 export const DatosRob = {
   id: "Rob",
@@ -652,6 +779,8 @@ export const DatosRob = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: false,
+  pdf: "downloads/fichasmesa/rob.pdf",
+  zip: "downloads/modelos/ROB.zip",
 };
 export const DatosSpritz = {
   id: "Spritz80",
@@ -674,6 +803,8 @@ export const DatosSpritz = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: true,
+  pdf: "downloads/fichasmesa/spritz.pdf",
+  zip: "downloads/modelos/Spritz.zip",
 };
 export const DatosSpritz120 = {
   id: "Spritz120",
@@ -696,4 +827,6 @@ export const DatosSpritz120 = {
   setMaterialPatas: MatMetal[3],
   extension: false,
   camara: true,
+  pdf: "downloads/fichasmesa/spritz.pdf",
+  zip: "downloads/modelos/Spritz.zip",
 };

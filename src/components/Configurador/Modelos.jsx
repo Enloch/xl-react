@@ -530,6 +530,63 @@ export function Gene(props) {
     </group>
   );
 }
+
+export function Gene120(props) {
+  const {
+    materialSobre,
+    materialPatas,
+    encimeraRectangular,
+    encimeraOvalada,
+    encimeraBarril,
+  } = useModeloStore();
+  const AcabadoSobre = useTexture(materialSobre); // Assuming that materialSobre is a texture URL
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes } = useGLTF("/modelos/GENE120.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GENE_120_SOBRE_CIRCULAR.geometry}
+        material={nodes.GENE_120_SOBRE_CIRCULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GENE_120_PATAS.geometry}
+        material={nodes.GENE_120_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.GENE_120_BISEL_CIRCULAR.geometry}
+        material={nodes.GENE_120_BISEL_CIRCULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+    </group>
+  );
+}
 export function Grace(props) {
   const {
     materialSobre,
@@ -1018,6 +1075,59 @@ export function Ilia(props) {
     </group>
   );
 }
+export function Ilia120(props) {
+  const { materialSobre, materialPatas } = useModeloStore();
+
+  const AcabadoSobre = useTexture(materialSobre);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+
+  const { nodes } = useGLTF("/modelos/ILIA120.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.ILIA_120_BISEL.geometry}
+        material={nodes.ILIA_120_BISEL.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.ILIA_120_SOBRE.geometry}
+        material={nodes.ILIA_120_SOBRE.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.ILIA_120_PATAS.geometry}
+        material={nodes.ILIA_120_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+    </group>
+  );
+}
+
 export function Kiff(props) {
   const {
     materialSobre,
@@ -2616,13 +2726,15 @@ export function Hakone(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.HAKONE_SOBRE_RECTANGULAR.geometry}
-        material={nodes.HAKONE_SOBRE_RECTANGULAR.material}
+        geometry={nodes.HAKONE_BASTIDOR.geometry}
+        material={nodes.HAKONE_BASTIDOR.material}
       >
         <meshPhysicalMaterial
-          map={AcabadoSobre}
-          metalness={0.5}
-          roughness={0.5}
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
         />
       </mesh>
       <mesh
@@ -2647,6 +2759,31 @@ export function Hakone(props) {
           reflectivity={materialPatas.reflectivity}
         />
       </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.HAKONE_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_TACO.geometry}
+        material={nodes.HAKONE_TACO.material}
+      >
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
     </group>
   );
 }
@@ -2660,6 +2797,33 @@ export function HakoneExt(props) {
   const { nodes, materials } = useGLTF("/modelos/HAKONEEXT.gltf");
   return (
     <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_BASTIDOR_EXTENSIBLE.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
@@ -2677,6 +2841,18 @@ export function HakoneExt(props) {
       <mesh
         castShadow
         receiveShadow
+        geometry={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
+        material={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.geometry}
         material={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR_EXTENSIBLE.material}
       >
@@ -2689,29 +2865,178 @@ export function HakoneExt(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.geometry}
-        material={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR_EXTENSIBLE.material}
+        geometry={nodes.HAKONE_EXTENSIBLE_TACOS.geometry}
+        material={nodes.HAKONE_EXTENSIBLE_TACOS.material}
       >
-        <meshPhysicalMaterial map={AcabadoBisel} />
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+    </group>
+  );
+}
+export function HakoneCircle(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/HAKONECIRCLE.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_CIRCULAR__PATAS.geometry}
+        material={nodes.HAKONE_CIRCULAR__PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
       </mesh>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR.geometry}
-        material={nodes.HAKONE_EXTENSIBLE_BISEL_RECTANGULAR.material}
+        geometry={nodes.HAKONE_EXTRAIBLE_CIRCULAR_TACOS001.geometry}
+        material={nodes.HAKONE_EXTRAIBLE_CIRCULAR_TACOS001.material}
       >
-        <meshPhysicalMaterial map={AcabadoBisel} />
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
       </mesh>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR.geometry}
-        material={nodes.HAKONE_EXTENSIBLE_SOBRE_RECTANGULAR.material}
+        geometry={nodes.HAKONE_CIRCULAR_BASTIDOR.geometry}
+        material={nodes.HAKONE_CIRCULAR_BASTIDOR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_CIRCULAR_SOBRE.geometry}
+        material={nodes.HAKONE_CIRCULAR_SOBRE.material}
       >
         <meshPhysicalMaterial
           map={AcabadoSobre}
           metalness={0.5}
           roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_CIRCULAR_BISEL.geometry}
+        material={nodes.HAKONE_CIRCULAR_BISEL.material}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+    </group>
+  );
+}
+export function HakoneCircleExt(props) {
+  const { materialSobre, materialBisel, materialBastidor, materialPatas } =
+    useModeloStore(); // Usa el hook para acceder al estado
+  const AcabadoSobre = useTexture(materialSobre); // Suponiendo que materialSobre es una URL de textura
+  const AcabadoBisel = useTexture(materialBisel);
+  const AcabadoBastidor = useTexture(materialBastidor.imagen);
+  const AcabadoPatas = useTexture(materialPatas.imagen);
+  const { nodes, materials } = useGLTF("/modelos/HAKONECIRCLEEXT.gltf");
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTRAIBLE_SOBRE_REDONDO_EXTRAIBLE.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTRAIBLE__BISEL_REDONDO_ETRAIBLE.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTRAIBLE_SOBRE_REDONDO.geometry}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoSobre}
+          metalness={0.5}
+          roughness={0.5}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTRAIBLE_BISEL_REDONDO.geometry}
+      >
+        <meshPhysicalMaterial map={AcabadoBisel} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTRAIBLE_CIRCULAR_TACOS.geometry}
+        material={nodes.HAKONE_EXTRAIBLE_CIRCULAR_TACOS.material}
+      >
+        <meshStandardMaterial
+          color={"#0C0C0C"}
+          metalness={0}
+          roughness={0.3}
+          specularIntensity={1}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTRAIBLE_CIRCULAR_BASTIDOR.geometry}
+        material={nodes.HAKONE_EXTRAIBLE_CIRCULAR_BASTIDOR.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
+        />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.HAKONE_EXTRAIBLE_CIRCULAR_PATAS.geometry}
+        material={nodes.HAKONE_EXTRAIBLE_CIRCULAR_PATAS.material}
+      >
+        <meshPhysicalMaterial
+          map={AcabadoPatas}
+          metalness={materialPatas.metalness}
+          roughness={materialPatas.roughness}
+          specularIntensity={materialPatas.specularIntensity}
+          reflectivity={materialPatas.reflectivity}
         />
       </mesh>
     </group>

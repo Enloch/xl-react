@@ -54,6 +54,38 @@ import { descargasbathObj } from "../modules/bath/_Descargas/Data";
 import Login from "../components/Login/login";
 import PrivateRoute from "../components/PrivateRoute";
 import { XLHome } from "../modules/home";
+//-------------------------Mesas--------------------------------
+//-------------------------Collection--------------------------------
+import Connor from "../modules/home/PaginasModelos/Collection/connor";
+import Emma from "../modules/home/PaginasModelos/Collection/emma";
+import Gene from "../modules/home/PaginasModelos/Collection/gene";
+import Grace from "../modules/home/PaginasModelos/Collection/grace";
+import Harp from "../modules/home/PaginasModelos/Collection/harp";
+import Hulk from "../modules/home/PaginasModelos/Collection/hulk";
+import Ilia from "../modules/home/PaginasModelos/Collection/ilia";
+import Kiff from "../modules/home/PaginasModelos/Collection/kiff";
+import Lyre from "../modules/home/PaginasModelos/Collection/lyre";
+import Mario from "../modules/home/PaginasModelos/Collection/mario";
+import Olympus from "../modules/home/PaginasModelos/Collection/olympus";
+import Pisa from "../modules/home/PaginasModelos/Collection/pisa";
+import Progetto from "../modules/home/PaginasModelos/Collection/progetto";
+import Solo from "../modules/home/PaginasModelos/Collection/solo";
+import Toyo from "../modules/home/PaginasModelos/Collection/toyo";
+import Victory from "../modules/home/PaginasModelos/Collection/victory";
+//-------------------------Life--------------------------------
+import Collins from "../modules/home/PaginasModelos/Life/collins";
+import Flip from "../modules/home/PaginasModelos/Life/flip";
+import Gibson from "../modules/home/PaginasModelos/Life/gibson";
+import Hakone from "../modules/home/PaginasModelos/Life/hakone";
+import Hemingway from "../modules/home/PaginasModelos/Life/hemingway";
+import Kir from "../modules/home/PaginasModelos/Life/kir";
+import Mary from "../modules/home/PaginasModelos/Life/mary";
+import Zama from "../modules/home/PaginasModelos/Life/zama";
+//-------------------------Contract--------------------------------
+import Brezza from "../modules/home/PaginasModelos/Contract/brezza";
+import Manhattan from "../modules/home/PaginasModelos/Contract/manhattan";
+import Rob from "../modules/home/PaginasModelos/Contract/rob";
+import Spritz from "../modules/home/PaginasModelos/Contract/spritz";
 
 const PaginasColeccion = () => {
   return (
@@ -905,6 +937,35 @@ const PaginasColeccion = () => {
           path='fr/colecciones/wega-black'
           element={<piedraFR.WegaBlackEN />}
         />
+        {/* ---------------------Home--------------------- */}
+        <Route path='home/connor' element={<Connor />} />
+        <Route path='home/emma' element={<Emma />} />
+        <Route path='home/gene' element={<Gene />} />
+        <Route path='home/grace' element={<Grace />} />
+        <Route path='home/harp' element={<Harp />} />
+        <Route path='home/hulk' element={<Hulk />} />
+        <Route path='home/ilia' element={<Ilia />} />
+        <Route path='home/kiff' element={<Kiff />} />
+        <Route path='home/lyre' element={<Lyre />} />
+        <Route path='home/mario' element={<Mario />} />
+        <Route path='home/olympus' element={<Olympus />} />
+        <Route path='home/pisa' element={<Pisa />} />
+        <Route path='home/progetto' element={<Progetto />} />
+        <Route path='home/solo' element={<Solo />} />
+        <Route path='home/toyo' element={<Toyo />} />
+        <Route path='home/victory' element={<Victory />} />
+        <Route path='home/collins' element={<Collins />} />
+        <Route path='home/flip' element={<Flip />} />
+        <Route path='home/gibson' element={<Gibson />} />
+        <Route path='home/hakone' element={<Hakone />} />
+        <Route path='home/hemingway' element={<Hemingway />} />
+        <Route path='home/kir' element={<Kir />} />
+        <Route path='home/mary' element={<Mary />} />
+        <Route path='home/zama' element={<Zama />} />
+        <Route path='home/brezza' element={<Brezza />} />
+        <Route path='home/manhattan' element={<Manhattan />} />
+        <Route path='home/rob' element={<Rob />} />
+        <Route path='home/spritz' element={<Spritz />} />
       </Routes>
     </Router>
   );

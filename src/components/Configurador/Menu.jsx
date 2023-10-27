@@ -31,10 +31,12 @@ import {
   DatosConnor,
   DatosEmma,
   DatosGene,
+  DatosGene120,
   DatosGrace,
   DatosHarp,
   DatosHulk,
   DatosIlia,
+  DatosIlia120,
   DatosKiff,
   DatosLyre,
   DatosMario,
@@ -57,6 +59,7 @@ import {
   DatosRob,
   DatosSpritz,
   DatosSpritz120,
+  DatosHakoneCircular,
 } from "./InfoModelos";
 import useModeloStore from "./modeloStore";
 const generatePhantomItems = (itemCount, itemsPerRow) => {
@@ -110,6 +113,10 @@ const Menu = ({
     modeloMostradoNombre,
     camara,
     setCamara,
+    pdfdownload,
+    setPdfDownload,
+    zipdownload,
+    setZipDownload,
   } = useModeloStore();
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
@@ -138,6 +145,8 @@ const Menu = ({
       setTieneHaya(modelo.haya);
       setTieneFresno(modelo.fresno);
       setCamara(modelo.camara);
+      setPdfDownload(modelo.pdf);
+      setZipDownload(modelo.zip);
       // Aquí uso el estado actual para comparar y decidir si actualizar o no
       if (modelo.setMaterialSobre !== undefined) {
         setMaterialSobre(modelo.setMaterialSobre);
@@ -289,6 +298,9 @@ const Menu = ({
                         <Textos onClick={() => ActualizarMenu(DatosGene)}>
                           Gene
                         </Textos>
+                        <Textos onClick={() => ActualizarMenu(DatosGene120)}>
+                          Gene Circular
+                        </Textos>
                         <Textos onClick={() => ActualizarMenu(DatosGrace)}>
                           Grace
                         </Textos>
@@ -300,6 +312,9 @@ const Menu = ({
                         </Textos>
                         <Textos onClick={() => ActualizarMenu(DatosIlia)}>
                           Ilia
+                        </Textos>
+                        <Textos onClick={() => ActualizarMenu(DatosIlia120)}>
+                          Ilia Circular
                         </Textos>
                         <Textos onClick={() => ActualizarMenu(DatosKiff)}>
                           Kiff
@@ -367,6 +382,11 @@ const Menu = ({
                         </Textos>
                         <Textos onClick={() => ActualizarMenu(DatosHakone)}>
                           Hakone
+                        </Textos>
+                        <Textos
+                          onClick={() => ActualizarMenu(DatosHakoneCircular)}
+                        >
+                          Hakone Circular
                         </Textos>
                         <Textos onClick={() => ActualizarMenu(DatosHemingway)}>
                           Hemingway
@@ -802,11 +822,13 @@ const Menu = ({
             <SectionIcon src={flecha} />
           </SectionHeader>
           <SectionContent>
-            <LinkDescargas href='#'>
+            <LinkDescargas href={pdfdownload} download>
               Ficha Técnica / Tech. datasheet
             </LinkDescargas>
             {/* <LinkDescargas href='#'>Archivo DWG / DWG File</LinkDescargas> */}
-            <LinkDescargas href='#'>Modelo 3d / 3D model</LinkDescargas>
+            <LinkDescargas href={zipdownload} download>
+              Modelo 3d / 3D model
+            </LinkDescargas>
           </SectionContent>
         </Section>
       </MenuDescargas>

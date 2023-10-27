@@ -112,7 +112,7 @@ export const XLHome = () => {
                         <Punto>
                           <TituloPunto>//</TituloPunto>
                         </Punto>
-                        <ContenedorTituloPunto>
+                        <ContenedorTituloPunto id='collection'>
                           <TituloPunto>Collection</TituloPunto>
                         </ContenedorTituloPunto>
                       </AjusteTituloPunto>
@@ -276,7 +276,7 @@ export const XLHome = () => {
               <ContenedorSubtitulos>
                 <LimiteSubtitulos>
                   <Caja15Flex></Caja15Flex>
-                  <Caja85Flex>
+                  <Caja85Flex id='configurador'>
                     <GridTextoCabecera2>Configurador</GridTextoCabecera2>
                   </Caja85Flex>
                 </LimiteSubtitulos>

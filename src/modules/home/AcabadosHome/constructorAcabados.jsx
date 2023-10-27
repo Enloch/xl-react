@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
 import { ImageBox, ImgMini, Text, LinkLista } from "./acabadosElements";
 
-export const generateAcabados = (data) =>
+export const generateAcabados = (
+  data,
+  setSelectedImage,
+  setSelectedName,
+  setModalOpen
+) =>
   data.map((item) => (
     <ImageBox key={item.id}>
-      <Link to={item.url}>
+      <div
+        onClick={() => {
+          setSelectedImage(item.full);
+          setSelectedName(item.desc[0]); // Asume que desc[0] contiene el nombre del material
+          setModalOpen(true);
+        }}
+      >
         <ImgMini src={item.img} alt={item.alt} loading={"lazy"} />
-      </Link>
+      </div>
       <Text>
         <b>{item.desc[0]}</b>
         <br />
@@ -16,6 +27,7 @@ export const generateAcabados = (data) =>
       </Text>
     </ImageBox>
   ));
+
 
 export const generateLinkAcabados = (data) =>
   data.map((item) => (
