@@ -10,10 +10,13 @@ import Gene2 from "../../../assets/images/home/Slidermesas/GENE_2.jpg";
 import Gene3 from "../../../assets/images/home/Slidermesas/GENE_3.jpg";
 import Grace1 from "../../../assets/images/home/Slidermesas/GRACE_1.jpg";
 import Grace2 from "../../../assets/images/home/Slidermesas/GRACE_2.jpg";
+import Grace3 from "../../../assets/images/home/Slidermesas/GRACE_3.jpg";
 import Harp1 from "../../../assets/images/home/Slidermesas/HARP_1.jpg";
 import Harp2 from "../../../assets/images/home/Slidermesas/HARP_2.jpg";
+import Harp3 from "../../../assets/images/home/Slidermesas/HARP_3.jpg";
 import Hulk1 from "../../../assets/images/home/Slidermesas/HULK_1.jpg";
 import Hulk2 from "../../../assets/images/home/Slidermesas/HULK_2.jpg";
+import Hulk3 from "../../../assets/images/home/Slidermesas/HULK_3.jpg";
 import Ilia1 from "../../../assets/images/home/Slidermesas/ILIA_1.jpg";
 import Ilia2 from "../../../assets/images/home/Slidermesas/ILIA_2.jpg";
 import Ilia3 from "../../../assets/images/home/Slidermesas/ILIA_3.jpg";
@@ -22,19 +25,25 @@ import Kiff2 from "../../../assets/images/home/Slidermesas/KIFF_2.jpg";
 import Kiff3 from "../../../assets/images/home/Slidermesas/KIFF_3.jpg";
 import Lyre1 from "../../../assets/images/home/Slidermesas/LYRE_1.jpg";
 import Lyre2 from "../../../assets/images/home/Slidermesas/LYRE_2.jpg";
+import Lyre3 from "../../../assets/images/home/Slidermesas/LYRE_3.jpg";
 import Mario1 from "../../../assets/images/home/Slidermesas/MARIO_1.jpg";
 import Mario2 from "../../../assets/images/home/Slidermesas/MARIO_2.jpg";
+import Mario3 from "../../../assets/images/home/Slidermesas/MARIO_3.jpg";
 import Olympus1 from "../../../assets/images/home/Slidermesas/OLYMPUS_1.jpg";
 import Olympus2 from "../../../assets/images/home/Slidermesas/OLYMPUS_2.jpg";
+import Olympus3 from "../../../assets/images/home/Slidermesas/OLYMPUS_3.jpg";
 import Pisa1 from "../../../assets/images/home/Slidermesas/PISSA_1.jpg";
 import Pisa2 from "../../../assets/images/home/Slidermesas/PISSA_2.jpg";
 import Pisa3 from "../../../assets/images/home/Slidermesas/PISSA_3.jpg";
 import Progetto1 from "../../../assets/images/home/Slidermesas/PROGETTO_1.jpg";
 import Progetto2 from "../../../assets/images/home/Slidermesas/PROGETTO_2.jpg";
+import Progetto3 from "../../../assets/images/home/Slidermesas/PROGETTO_3.jpg";
 import Solo1 from "../../../assets/images/home/Slidermesas/SOLO_1.jpg";
 import Solo2 from "../../../assets/images/home/Slidermesas/SOLO_2.jpg";
+import Solo3 from "../../../assets/images/home/Slidermesas/SOLO_3.jpg";
 import Toyo1 from "../../../assets/images/home/Slidermesas/TOYO_1.jpg";
 import Toyo2 from "../../../assets/images/home/Slidermesas/TOYO_2.jpg";
+import Toyo3 from "../../../assets/images/home/Slidermesas/TOYO_3.jpg";
 import Victory1 from "../../../assets/images/home/Slidermesas/VICTORY_1.jpg";
 import Victory2 from "../../../assets/images/home/Slidermesas/VICTORY_2.jpg";
 import Victory3 from "../../../assets/images/home/Slidermesas/VICTORY_3.jpg";
@@ -51,6 +60,8 @@ import Gibson3 from "../../../assets/images/home/Slidermesas/GIBSON_3.jpg";
 import Hakone1 from "../../../assets/images/home/Slidermesas/HAKONE_1.jpg";
 import Hakone2 from "../../../assets/images/home/Slidermesas/HAKONE_2.jpg";
 import Hakone3 from "../../../assets/images/home/Slidermesas/HAKONE_3.jpg";
+import Hakone4 from "../../../assets/images/home/Slidermesas/HAKONE_4.jpg";
+import Hakone5 from "../../../assets/images/home/Slidermesas/HAKONE_5.jpg";
 import Hemingway1 from "../../../assets/images/home/Slidermesas/HEMINGWAY_1.jpg";
 import Hemingway2 from "../../../assets/images/home/Slidermesas/HEMINGWAY_2.jpg";
 import Hemingway3 from "../../../assets/images/home/Slidermesas/HEMINGWAY_3.jpg";
@@ -69,11 +80,13 @@ import Brezza2 from "../../../assets/images/home/Slidermesas/BREZZA_2.jpg";
 import Brezza3 from "../../../assets/images/home/Slidermesas/BREZZA_3.jpg";
 import Manhattan1 from "../../../assets/images/home/Slidermesas/MANHATTAN_1.jpg";
 import Manhattan2 from "../../../assets/images/home/Slidermesas/MANHATTAN_2.jpg";
+import Manhattan3 from "../../../assets/images/home/Slidermesas/MANHATTAN_3.jpg";
 import Rob1 from "../../../assets/images/home/Slidermesas/ROB_1.jpg";
 import Rob2 from "../../../assets/images/home/Slidermesas/ROB_2.jpg";
 import Rob3 from "../../../assets/images/home/Slidermesas/ROB_3.jpg";
 import Spritz1 from "../../../assets/images/home/Slidermesas/SPRITZ_1.jpg";
 import Spritz2 from "../../../assets/images/home/Slidermesas/SPRITZ_2.jpg";
+import Spritz3 from "../../../assets/images/home/Slidermesas/SPRITZ_3.jpg";
 
 export const ConnorData = {
   imagenes: [Connor1, Connor2, Connor3],
@@ -132,7 +145,7 @@ export const GeneData = {
 };
 
 export const GraceData = {
-  imagenes: [Grace1, Grace2],
+  imagenes: [Grace1, Grace2, Grace3],
   titulo: "Grace //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/grace.pdf",
@@ -152,7 +165,7 @@ export const GraceData = {
 };
 
 export const HarpData = {
-  imagenes: [Harp1, Harp2],
+  imagenes: [Harp1, Harp2, Harp3],
   titulo: "Harp //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/harp.pdf",
@@ -171,7 +184,7 @@ export const HarpData = {
 };
 
 export const HulkData = {
-  imagenes: [Hulk1, Hulk2],
+  imagenes: [Hulk1, Hulk2, Hulk3],
   titulo: "Hulk //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/hulk.pdf",
@@ -229,7 +242,7 @@ export const KiffData = {
 };
 
 export const LyreData = {
-  imagenes: [Lyre1, Lyre2],
+  imagenes: [Lyre1, Lyre2, Lyre3],
   titulo: "Lyre //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/lyre.pdf",
@@ -248,7 +261,7 @@ export const LyreData = {
 };
 
 export const MarioData = {
-  imagenes: [Mario1, Mario2],
+  imagenes: [Mario1, Mario2, Mario3],
   titulo: "Mario //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/mario.pdf",
@@ -267,7 +280,7 @@ export const MarioData = {
 };
 
 export const OlympusData = {
-  imagenes: [Olympus1, Olympus2],
+  imagenes: [Olympus1, Olympus2, Olympus3],
   titulo: "Olympus //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/olympus.pdf",
@@ -306,7 +319,7 @@ export const PisaData = {
 };
 
 export const ProgettoData = {
-  imagenes: [Progetto1, Progetto2],
+  imagenes: [Progetto1, Progetto2, Progetto3],
   titulo: "Progetto //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/progetto.pdf",
@@ -325,7 +338,7 @@ export const ProgettoData = {
 };
 
 export const SoloData = {
-  imagenes: [Solo1, Solo2],
+  imagenes: [Solo1, Solo2, Solo3],
   titulo: "Solo //",
   parrafo1:
     " Mesa fija con forma y acabado de encimera, y base personalizable.",
@@ -342,7 +355,7 @@ export const SoloData = {
 };
 
 export const ToyoData = {
-  imagenes: [Toyo1, Toyo2],
+  imagenes: [Toyo1, Toyo2, Toyo3],
   titulo: "Toyo //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/toyo.pdf",
@@ -506,7 +519,7 @@ export const GibsonData = {
   ],
 };
 export const HakoneData = {
-  imagenes: [Hakone1, Hakone2, Hakone3],
+  imagenes: [Hakone1, Hakone2, Hakone3, Hakone4, Hakone5],
   titulo: "Hakone //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/hakone.pdf",
@@ -767,7 +780,7 @@ export const BrezzaData = {
   tamanosCircularExt: [],
 };
 export const ManhattanData = {
-  imagenes: [Manhattan1, Manhattan2],
+  imagenes: [Manhattan1, Manhattan2, Manhattan3],
   titulo: "Manhattan //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/manhattan.pdf",
@@ -826,7 +839,7 @@ export const RobData = {
   tamanosCircularExt: [],
 };
 export const SpritzData = {
-  imagenes: [Spritz1, Spritz2],
+  imagenes: [Spritz1, Spritz2, Spritz3],
   titulo: "Spritz //",
   subtitulo: "Especificaciones",
   pdf: "/downloads/fichasmesa/spritz.pdf",
