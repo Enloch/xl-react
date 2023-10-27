@@ -144,7 +144,7 @@ export const XLHome = () => {
                           <TituloPunto>//</TituloPunto>
                         </Punto>
                         <ContenedorTituloPunto>
-                          <TituloPunto>Live</TituloPunto>
+                          <TituloPunto>Life</TituloPunto>
                         </ContenedorTituloPunto>
                       </AjusteTituloPunto>
                     </SeccionTituloPunto>

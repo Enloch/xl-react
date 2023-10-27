@@ -5,15 +5,17 @@ export const generateAcabados = (
   data,
   setSelectedImage,
   setSelectedName,
-  setModalOpen
+  setModalOpen,
+  setSelectedIndex // Añadir este argumento
 ) =>
-  data.map((item) => (
+  data.map((item, index) => (
     <ImageBox key={item.id}>
       <div
         onClick={() => {
           setSelectedImage(item.full);
-          setSelectedName(item.desc[0]); // Asume que desc[0] contiene el nombre del material
+          setSelectedName(item.desc[0]);
           setModalOpen(true);
+          setSelectedIndex(index); // Añadir esta línea
         }}
       >
         <ImgMini src={item.img} alt={item.alt} loading={"lazy"} />
@@ -27,6 +29,7 @@ export const generateAcabados = (
       </Text>
     </ImageBox>
   ));
+
 
 
 export const generateLinkAcabados = (data) =>
