@@ -60,6 +60,9 @@ export const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to='encimera' smooth={true} onClick={toggle}>
             XL Kitchen
           </SidebarLink>
+          <SidebarLink to='home' smooth={true} onClick={toggle}>
+            XL Home
+          </SidebarLink>
           <SidebarLink3 to='contacto' onClick={null}>
             Contacto
           </SidebarLink3>

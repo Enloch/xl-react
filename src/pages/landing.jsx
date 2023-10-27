@@ -29,6 +29,8 @@ import XLBathSection from "../modules/09_XLBath";
 import { XlbathObj } from "../modules/09_XLBath/Data";
 import XLEncimera from "../modules/10_XLEncimera";
 import { XlencimeraObj } from "../modules/10_XLEncimera/Data";
+import SeccionHome from "../modules/11_XLHome";
+import { XlhomeObj } from "../modules/11_XLHome/Data";
 const Home = () => {
   const indiceRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
@@ -59,6 +61,7 @@ const Home = () => {
       <ColecSection {...colecObj} />
       <XLBathSection {...XlbathObj} />
       <XLEncimera {...XlencimeraObj} />
+      <SeccionHome {...XlhomeObj} />
       {/* <DescargasSection {...descargasObj} /> */}
       <FooterSection {...LandingFooter} />
     </>

@@ -12,7 +12,9 @@ const FooterSection = ({ footerImg, footer, footer2, footer3 }) => {
     <>
       <FooterContainer>
         <FooterWrapper>
-          <FooterLogo src={footerImg} />
+          <a href='/'>
+            <FooterLogo src={footerImg} />
+          </a>
           <LinkBox>
             <Link
               to='/privacidad'
