@@ -241,8 +241,8 @@ const Rotador = ({ rotadorRef }) => {
             position={[-7.103, 6.878, 5.663]}
             rotation={[-0.873, -0.728, -0.653]}
           />
-          <ambientLight intensity={0.5} />
-          <pointLight
+          {/* <ambientLight intensity={0.5} /> */}
+          {/* <pointLight
             castShadow
             shadow-bias={-0.0001}
             position={[2.91, 0.6, -7.5]}
@@ -254,8 +254,10 @@ const Rotador = ({ rotadorRef }) => {
             shadow-bias={-0.0001}
             position={[-2.91, 0.6, -7.5]}
             intensity={12}
-          />
-          <Environment files={"/HDRI/Park4_5.hdr"} />
+          /> */}
+          <pointLight position={[-0.5, 5, 0]} decay={0.8} intensity={12} />
+          <pointLight position={[0.5, 5, 0]} decay={0.8} intensity={12} />
+          <Environment files={"/HDRI/bueno.hdr"} />
           {/* <AccumulativeShadows
             position={[0, -0.92, 0]}
             frames={300}
@@ -265,21 +267,30 @@ const Rotador = ({ rotadorRef }) => {
             <RandomizedLight
               amount={8}
               radius={10}
-              ambient={0.5}
+              ambient={0.2}
               position={[1, 5, -1]}
             />
           </AccumulativeShadows> */}
-
-          <ContactShadows
-            opacity={0.1}
+          <AccumulativeShadows
+            temporal
+            frames={100}
+            scale={10}
+            position={[0, -0.92, 0]}
+            color='#2f2f2f'
+            opacity={0.25}
+          >
+            <RandomizedLight amount={8} position={[0, 5, 0]} radius={0.5}/>
+          </AccumulativeShadows>
+          {/* <ContactShadows
+            opacity={0.2}
             scale={10}
             blur={1}
             far={10}
             frames={1}
             position={[0, -0.92, 0]}
-            resolution={256}
+            resolution={512}
             color='#000000'
-          />
+          /> */}
           <Escena modelo={modeloMostrado} />
 
           <OrbitControls
